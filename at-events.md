@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-05-03"
+lastupdated: "2023-06-08"
 
 keywords: projects, audit, events, activity tracker
 
@@ -32,6 +32,7 @@ As a security officer, auditor, or manager, you can use the {{site.data.keyword.
 | `project.project.delete` | Delete a project.     |
 | `project.config.create` | Create a project config.     |
 | `project.config.read` | Read a project config.     |
+| `project.config.validate` | Validate a project config.     |
 | `project.config.list` | List all project configs under the account.     |
 | `project.config.update` | Update a project config.     |
 | `project.config.approve` | Approve a project config draft.     |
