@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-06-08"
+lastupdated: "2023-11-07"
 
 keywords: projects, audit, events, activity tracker
 
@@ -27,19 +27,25 @@ As a security officer, auditor, or manager, you can use the {{site.data.keyword.
 |--------------------|------------------|
 | `project.project.create` | Create a project.     |
 | `project.project.read` | Read a project.     |
-| `project.project.list` | Read all projects under the account.     |
+| `project.project.list` | List all projects under the account.     |
 | `project.project.update` | Update a project.     |
 | `project.project.delete` | Delete a project.     |
 | `project.config.create` | Create a project config.     |
 | `project.config.read` | Read a project config.     |
-| `project.config.validate` | Validate a project config. |
+| `project.config.update` | Update a project config.     |
+| `project.config.validate` | Validate a project config.     |
 | `project.config.list` | List all project configs under the account.     |
 | `project.config.update` | Update a project config.     |
 | `project.config.approve` | Approve a project config draft.     |
 | `project.config.force-approve` | Force approve a project config draft.     |
 | `project.config.delete` | Delete a project config.     |
-| `project.config.install` | Install (deploy) a project config.     |
-| `project.config.uninsall` | Uninstall (destroy) a project config.     |
+| `project.config.deploy` | Deploy a project config.     |
+| `project.config.undeploy` | Undeploy (destroy) a project config.     |
+| `project.environment.create` | Create a project environment.     |
+| `project.environment.read` | Read a project environment.     |
+| `project.environment.list` | List all project environments under the account.     |
+| `project.environment.update` | Update a project environment.     |
+| `project.environment.delete` | Delete a project environment.     |
 {: caption="Table 1. Actions that generate management events" caption-side="bottom"}
 
 For a complete list of custom request and response parameters for each event, see the [Project API](https://{DomainName}/apidocs/projects). The update actions don't provide information about the delta, only the new value is provided.
