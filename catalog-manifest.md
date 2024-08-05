@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-17"
+lastupdated: "2024-08-05"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -281,13 +281,13 @@ The products value indicates an array of products with size one or more. If a ca
 :   A link to documentation about the product that users can access.
 
 `offering_icon_url`
-:   A link to the URL where icon that you want to appear on the product's catalog entry page is located.
+:   A link to the URL where the icon that you want to appear on the product's catalog entry page is located.
 
 `support_details`
 :   Support information in markdown format that can include support contacts, support locations, and support methods.
 
 `features`
-:   Section header for details that highlight the processes, abilities, and results of the product. These product-level features are listed on your catalog entry page with your product description. For example, features might incluce CPU requirements, security features, or more. Each entry is defined as an array as shown in the example manifest in the previous section.
+:   Section header for details that highlight the processes, abilities, and results of the product. These product-level features are listed on your catalog entry page with your product description. For example, features might include CPU requirements, security features, or more. Each entry is defined as an array as shown in the example manifest in the previous section.
 
     `title`
     :   The name of the feature.
@@ -347,10 +347,10 @@ Section header for information about the deployable architecture variations. Fla
     | Template variable | Replacement value |
     |:------------------|:------------------|
     | ${{version}} | The version string of this variation or flavor. |
-    | ${{flavor}} | The programtic name of the variation or flavor. |
+    | ${{flavor}} | The programmatic name of the variation or flavor. |
     | ${{kind}} | The implementation kind. I.e. `terraform`. |
     | ${{id}} | The offering or product ID. |
-    | ${{name}} | The programatic name of the offering or product. |
+    | ${{name}} | The programmatic name of the offering or product. |
     | ${{catalogID}} | The ID of the catalog where the offering or product is located. |
     | ${{workingDirectory}} | The working directory of the flavor or variation. |
     {: caption=" Table 1. Usage template values and descriptions" caption-side="bottom"}
@@ -401,11 +401,11 @@ Section header for information about the deployable architecture variations. Fla
     ```
     {: codeblock}
 
-    You can list multiple profiles in your catalog manifest JSON file, but note that only the first profile is added to your compliance information in a private catalog.
+    You can list multiple profiles in your catalog manifest JSON file, but only the first profile is added to your compliance information in a private catalog.
     {: important}
 
     `authority`
-    :   IBM Cloud Security and Compliance Center v3 is the only authority accepted. This is programatically written as `scc-v3`.
+    :   {{site.data.keyword.compliance_long}} v3 is the only authority accepted. This is programmatically written as `scc-v3`.
 
     `profiles`
     :   Section header that indicates the profile that contains the controls that are being claimed. You can view predefined profiles in {{site.data.keyword.compliance_short}}.
@@ -439,12 +439,12 @@ Section header for information about the deployable architecture variations. Fla
         ```
         {: codeblock}
 
-    If you have included controls in your readme and your catalog manifest file, the manifest file takes precedence. It is best practice to make sure the controls listed in your catalog manifest file match the controls in your readme file.
+    If you have included controls in your readme and your catalog manifest file, the manifest file takes precedence. It is best practice to make sure the controls that are listed in your catalog manifest file match the controls in your readme file.
     {: note}
 
 
 `change_notices` (optional)
-:   A list of the three types of changes that you might want to alert your users to when releasing a new version of your deployable architecture. You can specify `breaking changes`, `new features`, and `general updates`. Breaking changes are those updates that break functionality that was available through a previous version. New features highlight any new functionality that a user might encounter with the new version. Updates encompass any changes that you want to highlight to a user such as a modified behavior that doesn't neccessarily break existing functionality or changes that make the deployable architecture easier for them to use.
+:   A list of the three types of changes that you might want to alert your users to when releasing a new version of your deployable architecture. You can specify `breaking changes`, `new features`, and `general updates`. Breaking changes are those updates that break functionality that was available through a previous version. New features highlight any new functionality that a user might encounter with the new version. Updates encompass any changes that you want to highlight to a user such as a modified behavior that doesn't necessarily break existing functionality or changes that make the deployable architecture easier for them to use.
 
     ```json
     "change_notices": {
@@ -539,7 +539,7 @@ Section header for information about the deployable architecture variations. Fla
     {: codeblock}
 
     `features`
-    :   Information that highlights the processes, abilities, and results of the version, or if applicable, architecture variation. When onboarding using the console, these details are called highlights. These details appear on the variation selection box within your catalog entry. If your product has multiple architecture variations, users can compare the variation-level features to decide which variation suits their needs.
+    :   Information that highlights the processes, abilities, and results of the version, or if applicable, architecture variation. When onboarding by using the console, these details are called highlights. These details appear on the variation selection box within your catalog entry. If your product has multiple architecture variations, users can compare the variation-level features to decide which variation suits their needs.
 
         `title`
         :   Name of the feature.
@@ -566,7 +566,7 @@ Section header for information about the deployable architecture variations. Fla
                 :   The URL to the proxied image.
 
                 `sha`
-                :   The `sha` indientifier of the image.
+                :   The `sha` identifier of the image.
 
             `caption`
             :   A short label for the architecture diagram.
@@ -620,7 +620,7 @@ Section header for information about the deployable architecture variations. Fla
 :   URL to the architecture's release notes.
 
 `configuration`
-:   Section header for that specifies the configuration of deployment variables for specific variation. Catalog data types are used to extend native types and faciliate for a better user experience when you're working in the IBM Cloud console. If you are running your code on a local machine or another environment, the variables are not used. An example might be a catalog type of `password` that is used to extend the capabilities of a Terraform variable defined with a type of `string` so that it is treated as sensitive in the UI.
+:   Section header for that specifies the configuration of deployment variables for specific variation. Catalog data types are used to extend native types and facilitate for a better user experience when you're working in the {{site.data.keyword.cloud_notm}} console. If you are running your code on a local machine or another environment, the variables are not used. An example might be a catalog type of `password` that is used to extend the capabilities of a Terraform variable defined with a type of `string` so that it is treated as sensitive in the UI.
 
     ```json
     {
@@ -654,31 +654,7 @@ Section header for information about the deployable architecture variations. Fla
     :   The configuration key. The value should match the name of a deployment variable.
 
     `type`
-    :   The type of input. The data type must be supported by the Catalog Management service. Native Terraform types map to one of the supported types. For example, the Terraform type `map` equates to `object`. The Terraform type `list` equates to `array`. A Terraform type `string` with a sensitive attribute, equates to `password`.
-
-        Supported predefined types:
-        * `boolean`
-        * `float`
-        * `int`
-        * `number`
-        * `password`
-        * `string`
-        * `object`
-
-        Supported custom types:
-        * `array`
-        * `region`
-        * `textarea`
-        * `vpc`
-        * `vpc ssh key`
-        * `vpc region`
-        * `cluster`
-        * `power iaas`
-        * `resource group`
-        * `multi-line secure value`
-        * `schematics workspace`
-        * `json editor`
-        * `preset configuration`
+    :   The type of input that a customer can define or select. The data type must be supported by the Catalog Management service. Native Terraform types map to some of the supported types. For example, the Terraform type `map` equates to `object`. The Terraform type `list` equates to `array`. A Terraform type `string` with a sensitive attribute equates to `password`. Customers that consume your deployable architecture must provide values for the input type that you define in the catalog manifest.
 
     `default_value`
     :   The value that is to be set as the default.
@@ -723,7 +699,7 @@ Section header for information about the deployable architecture variations. Fla
     :   The name of an associated configuration group.
 
 `schematics_env_values`
-:   A list of the values and variables that need to be passed to the Schematics service to be used as environment variables during the execution of the Terraform. This might be a secure value, a setting of the Terraform logging or something else. You can choose to specify a string or crete a reference to Secrets Manager. If both are specified, then the Secrets Manager reference is used.
+:   A list of the values and variables that need to be passed to the {{site.data.keyword.bpshort}} service to be used as environment variables during the execution of the Terraform. This might be a secure value, a setting of the Terraform logging or something else. You can choose to specify a string or create a reference to {{site.data.keyword.secrets-manager_short}}. If both are specified, then the {{site.data.keyword.secrets-manager_short}} reference is used.
 
     ```json
     {
