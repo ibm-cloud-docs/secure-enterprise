@@ -18,7 +18,7 @@ subcollection: secure-enterprise
 The catalog manifest file specifies the information about your onboarded solution that you want to share with users through a catalog. You can provide licensing and compliance information, make specific settings, and provide descriptions about the intended purpose of your product.
 {: shortdesc}
 
-Prefer to use the console to edit your catalog details? You can make the selections by following the [provided wizard and then export the manifest file](/docs/secure-enterprise?topic=secure-enterprise-onboard-da) to add to your source repo. If you are [stacking deployable architectures](/docs/secure-enterprise?topic=secure-enterprise-config-stack&interface=ui), the catalog manifest is created for you when you add the stack to a private catalog from your project. 
+Prefer to use the console to edit your catalog details? You can make the selections by following the [provided wizard and then export the manifest file](/docs/secure-enterprise?topic=secure-enterprise-onboard-da) to add to your source repo. If you are [stacking deployable architectures](/docs/secure-enterprise?topic=secure-enterprise-config-stack&interface=ui), the catalog manifest is created for you when you add the stack to a private catalog from your project.
 {: tip}
 
 ## Mapping catalog details to the manifest file
@@ -655,6 +655,32 @@ Section header for information about the deployable architecture variations. Fla
 
     `type`
     :   The type of input that a customer can define or select. The data type must be supported by the Catalog Management service. Native Terraform types map to some of the supported types. For example, the Terraform type `map` equates to `object`. The Terraform type `list` equates to `array`. A Terraform type `string` with a sensitive attribute equates to `password`. Customers that consume your deployable architecture must provide values for the input type that you define in the catalog manifest.
+
+        Supported predefined types:
+        * `boolean` requires a `true` or `false` string input from users.
+        * `float` requires a point decimal from users.
+        * `int` requires an integer input from users.
+        * `number` requires a numeric value. The `number` type can represent both whole numbers and fractional values like `4.56`.
+        * `password` requires a string input from users. The string is redacted in the console and logs.
+        * `string` requires a sequence of Unicode characters representing text.
+        * `object` requires a Terraform object input from users. For more information, see [`map`](https://developer.hashicorp.com/terraform/language/expressions/types#map){: external}.
+
+        Predefined types require manual input from users.
+        {: note}
+
+        Supported custom types:
+        * `array` requires a list of values separated by a comma.
+        * `region` requires user to select a region to deploy the deployable architecture from a dropdown list. You can filter the regions that are available to end users. For example, you might specify `country_id:us,ca,jp` in the Region filter to limit the available regions to those countries. For more information, see [Filtering syntax](/docs-draft/hybrid-workloads?topic=hybrid-workloads-managing_locations#filtering_syntax).
+        * `textarea` requires users to input text that can be split into multiple lines. For example, a description.
+        * `vpc` requires users to select a VPC by name from a dropdown list. The output is the VPC name or ID that your template requires.
+        * `vpc ssh key` requires users to select a VPC SSH key for authentication to a virtual machine.
+        * `cluster` requires users to select a {{site.data.keyword.containershort}} or {{site.data.keyword.redhat_openshift_notm}} cluster. The output is the cluster ID.
+        * `power iaas` requires users to select a {{site.data.keyword.powerSys_notm}} instance.
+        * `resource group` requires users to select a resource group. The output is the resource ID or name.
+        * `multi-line secure value` requires users to input text that can be split into multiple lines, which is redacted in the console and logs. For example, if a long key is required, the value is hidden in workspaces.
+        * `schematics workspace` requires users to select a specific workspace form a dropdown list. This list is dynamically filtered based on dependencies defined in the deployable architecture. For example, if your deployable architecture, `example-da-1`, depends on another deployable architecture, `example-da-2`, the input dropdown list for `example-da-1` shows only workspaces associated with `example-da-2`. Users then select the appropriate instance of `example-da-2`'s workspace when setting up `example-da-1`. For more information, see [`dependencies`](/docs/secure-enterprise?topic=secure-enterprise-manifest-values#:~:text=the%20deployable%20architecture.-,dependencies,-Section%20header%20for).
+        * `json editor` gives users a space to specify larger JSON inputs or plain text files.
+        * `Platform resource` requires users to select an instance resource from a dropdown list for the type of resource that you specify. The resource type can be VPC Subnet, VPC Image, or VPC Floating IPs. You can specify the ID or name as the values that users can choose from and allow a single or multiple selections. The output is the name or ID that your template requires.
 
     `default_value`
     :   The value that is to be set as the default.
