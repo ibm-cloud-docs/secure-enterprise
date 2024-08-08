@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-08-21"
+lastupdated: "2024-08-08"
 
 keywords: enterprise, enterprise account, multiple accounts, assign access, enterprise access, templates, enterprise managed, access, trusted profile, migrate version, upgrade version, new version
 
@@ -180,7 +180,7 @@ To create a new version of a trusted profile template, complete the following st
    1. (Optional) Select **Access**.
 1. Click **Create**.
 1. Make any other adjustments to the configuration.
-1. Click **Review** and commit the new version. For more information, see [Reviewing your access group template](/docs/secure-enterprise?topic=secure-enterprise-tp-template-create&interface=ui#review-tp-template).
+1. Click **Review** and commit the new version. For more information, see [Reviewing your trusted profile template](/docs/secure-enterprise?topic=secure-enterprise-tp-template-create&interface=ui#review-tp-template).
 
 To assign a new version of a trusted profile template, complete the following steps:
 1. Go to **Manage > Access (IAM) > Templates** in the {{site.data.keyword.cloud_notm}} console.
