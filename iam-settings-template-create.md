@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-21"
 
 keywords: enterprise, enterprise account, multiple accounts, assign access, enterprise access, templates, enterprise managed, access, settings, migrate version, upgrade version, new version
 
@@ -56,57 +56,13 @@ To create a settings template, complete the following steps:
 1. Enter a name and description for the settings template that describes its purpose for enterprise users.
 1. Click **Create**.
 
-### (Optional) Add IAM account settings
+### (Optional) Adding IAM account settings
 {: #iam-account-settings-template}
 {: ui}
 
-Make your enterprise secure by default by defining IAM account settings in child accounts.
+Customize your enterprise to meet business and regulatory requirements by defining IAM account settings in child accounts.
 
 
-
-#### Restricting domains for account invitations
-{: #invite-domains-template}
-{: ui}
-
-You can restrict membership to child accounts based on the domain of the users that are added to your allowlist. This way, only users with a specific domain or domains can be invited to the account.
-
-Domain restrictions are implemented by setting email patterns. For example, `**@ibm.com`, `**@*.ibm.com`, `**@?.ibm.com`. A single asterisk `*` represents any sequence of zero or more characters in a string, except the sequence ends if a period `.` or at sign `@` is found. A double asterisk `**` represents any sequence of zero or more characters in the string without limit. A question mark `?` represents any single character.
-
-Take a closer look at the example `**@*.ibm.com`. The username part of the email address specifies `**`. Since the sequence is not limited by `.`, an email address like `my.name.is.bob@us.ibm.com` is valid. The subdomain `us` is also valid because it is a string of letters, where the sequence ends with `.`.
-
-To enable domain restrictions for account invitations, complete the following steps:
-
-1. Go to **Manage > Access (IAM) > Templates** in the {{site.data.keyword.cloud_notm}}.
-1. Enter the domains that can access child accounts. Any domain that isn't added to this list is restricted.
-1. Click **Add**.
-1. Click **Save**.
-
-When you disable the User domains setting, users in child accounts can send account invitations to any domain, which removes the previously set allowed domain access. To disable restrictions on specific domains, complete the following steps:
-
-1. Disable the **User domains** setting in the Account section.
-1. Select an option for disabling the setting.
-   1. To disable the setting and save the allowlist of domains, select **Disable and save domains**.
-   1. To disable the setting and delete the allowlist, select **Disable and delete domains**.
-1. Click **Yes**.
-
-#### Restricting view access on the user list
-{: #user-view-acces-template}
-{: ui}
-
-By using the user visibility setting, you can control how users see others across the account.
-
-{{site.data.keyword.cloud}} account owners can view all users in their account regardless of the setting.
-{: note}
-
-By default, the setting is disabled and any user in the account can view other users from the Users page in {{site.data.keyword.cloud_notm}} console. When the setting is enabled, users can view only specific types of users in the account:
-
-- Users invited by the user
-- Users who are their descendants in the classic infrastructure user hierarchy, meaning the users that they invited or that one of their descendants invited.
-
-To update this setting, complete the following steps:
-
-1. Enable the **User list visibility** setting in the Account section.
-1. Click **Yes** to confirm.
 
 #### Restricting users from creating API keys
 {: #restrict-api-key-template}
@@ -163,7 +119,7 @@ To restrict all users to using only specific IP addresses, complete the followin
 1. Click **Save**.
 
 
-### (Optional) Add authentication setting
+### (Optional) Adding authentication setting
 {: #authentication-settings-template}
 {: ui}
 
@@ -188,7 +144,7 @@ To enable MFA in a settings template, complete the following steps:
 
 
 
-### (Optional) Add login session settings
+### (Optional) Adding login session settings
 {: #login-session-settings-template}
 {: ui}
 
