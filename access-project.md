@@ -4,7 +4,7 @@ copyright:
 
   years: 2022, 2024
 
-lastupdated: "2024-07-25"
+lastupdated: "2024-08-27"
 
 keywords: project access, iam projects, assigning project access, assign access, access project
 
@@ -67,6 +67,5 @@ An IAM administrator or a user with the required roles on those services can aut
 | Manager and Administrator | {{site.data.keyword.cloud_notm}} Projects service | {{site.data.keyword.bpshort}} service | This account |
 | Viewer | {{site.data.keyword.cloud_notm}} Projects service | Resource group only \n \n All resource groups in the account | This account |
 | Viewer | {{site.data.keyword.cloud_notm}} Projects service | Catalog Management service | This account |
-| Viewer | {{site.data.keyword.cloud_notm}} Projects service | {{site.data.keyword.compliance_short}} service | This account |
 | Viewer and SecretsReader| {{site.data.keyword.cloud_notm}} Projects service | {{site.data.keyword.secrets-manager_short}} service | This account |
 {: caption="Table 2. Projects service to service authorizations " caption-side="top"}
