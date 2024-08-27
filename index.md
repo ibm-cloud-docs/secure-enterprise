@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2022, 2023
+  years: 2022, 2024
 
-lastupdated: "2023-07-03"
+lastupdated: "2024-08-27"
 
 keywords: configurations, deployments, project components, understanding projects, projects, deployable architecture, needs attention, project dashboard
 
@@ -18,7 +18,7 @@ subcollection: secure-enterprise
 # Using projects for IaC deployments
 {: #understanding-projects}
 
-{{site.data.keyword.cloud}} projects are a named collection of configurations that are used to manage related resources and deployments across accounts, embracing an Infrastracture as Code (IaC) approach to deployments. They enable teams to configure, deploy, and monitor deployments by using DevOps best practices. Each project includes tools to scan for potentially harmful resource changes, compliance, security, and cost, as well as tracking configuration versioning and governance. They're designed with an IaC and a compliance-first approach that helps to ensure that a project is managed, secure, and always compliant.
+{{site.data.keyword.cloud}} projects are a named collection of configurations that are used to manage related resources and deployments across accounts, embracing an Infrastructure as Code (IaC) approach to deployments. They enable teams to configure, deploy, and monitor deployments by using DevOps best practices. Each project includes tools to scan for potentially harmful resource changes, compliance, security, and cost, as well as tracking configuration versioning and governance. They're designed with an IaC and a compliance-first approach that helps to ensure that a project is managed, secure, and always compliant.
 
 ![The diagram shows the flow that a user would take when working with projects. The information is conveyed in the surrounding text.](images/projects-flow.svg){: caption="Figure 1. Understanding the projects workflow." caption-side="bottom"}
 
