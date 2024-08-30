@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-05"
+lastupdated: "2024-08-30"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -614,13 +614,15 @@ Section header for information about the deployable architecture variations. Fla
     :   A version or range of versions to include as dependencies in SemVer format.
 
     `flavors` (optional)
-    :   List of variations that the architecture depends on.
+    :   List of variations that the architecture depends on. 
+
+
 
 `release_notes_url`
 :   URL to the architecture's release notes.
 
 `configuration`
-:   Section header for that specifies the configuration of deployment variables for specific variation. Catalog data types are used to extend native types and facilitate for a better user experience when you're working in the {{site.data.keyword.cloud_notm}} console. If you are running your code on a local machine or another environment, the variables are not used. An example might be a catalog type of `password` that is used to extend the capabilities of a Terraform variable defined with a type of `string` so that it is treated as sensitive in the UI.
+:   Section header that specifies the configuration of deployment variables for specific variation. Catalog data types are used to extend native types and facilitate for a better user experience when you're working in the {{site.data.keyword.cloud_notm}} console. If you are running your code on a local machine or another environment, the variables are not used. An example might be a catalog type of `password` that is used to extend the capabilities of a Terraform variable defined with a type of `string` so that it is treated as sensitive in the UI.
 
     ```json
     {
