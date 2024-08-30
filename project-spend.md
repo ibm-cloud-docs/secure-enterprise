@@ -4,7 +4,7 @@ copyright:
 
   years: 2024
 
-lastupdated: "2024-03-26"
+lastupdated: "2024-08-30"
 
 keywords: Projects, usage, billing, spend, bill back
 
@@ -19,6 +19,8 @@ subcollection: secure-enterprise
 
 As a billing or FinOps manager, you need to track spending for teams in your organization and bill them back for the resources that they deploy. [Projects](#x2035151){: term} help with accounting by ensuring that all resources that are associated with a project can be tracked back to the project with tagging and resource usage reports.
 {: shortdesc}
+
+
 
 
 
