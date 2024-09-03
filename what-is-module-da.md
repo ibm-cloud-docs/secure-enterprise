@@ -4,7 +4,7 @@ copyright:
 
   years: 2022, 2024
 
-lastupdated: "2024-05-16"
+lastupdated: "2024-09-03"
 
 keywords: deployable architecture, deployment architecture, da, module, infrastructure as code, what is, stack, variation
 
@@ -19,7 +19,7 @@ subcollection: secure-enterprise
 
 Creating secure, compliant, and scalable application infrastructure can be difficult to set up and costly to maintain. Instead of figuring out how to assemble a compliant infrastructure architecture on your own, you can take advantage of modules and deployable architectures. Modules and deployable architectures can help you to create a framework around how resources are deployed in your organization's accounts. By working with these reusable configurations, you can define the standard for deployment once and ensure that it is easily repeatable for each member of your organization.
 
-For example, think about an architect who is building an apartment complex. These designs are typically executed in a modular way. There are patterns for standard one-bedroom, two, or three-bedroom apartments. The builder can combine the standard apartments, each functional in their own way, into a larger, more complex, but functional living arrangement. IBM applied this same analogy to deploying solutions on the cloud. Rather than your organization spending months figuring out how to get services and software to work together, you can use {{site.data.keyword.cloud_notm}}'s well-architected patterns. Each pattern is packaged as composable, automated building bocks known as modules and deployable architectures.
+For example, think about an architect who is building an apartment complex. These designs are typically executed in a modular way. There are patterns for standard one-bedroom, two, or three-bedroom apartments. The builder can combine the standard apartments, each functional in their own way, into a larger, more complex, but functional living arrangement. IBM applied this same analogy to deploying solutions on the cloud. Rather than your organization spending months figuring out how to get services and software to work together, you can use {{site.data.keyword.cloud_notm}}'s well-architected patterns. Each pattern is packaged as composable, automated building blocks known as modules and deployable architectures.
 
 
 ## What is a module?
