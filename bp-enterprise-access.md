@@ -231,11 +231,14 @@ I create an access group template for each type of user that exists in child acc
 - Create an access group template for users who need to debug code. Assign a policy with a reader role on all IAM-enabled services. Scope the policy to specific resources by selecting the attribute for access management tags. Enter the tags `env:dev` and `resource:storage`, which gives child account users in the enterprise-managed access group reader access to `storage` resources in the development environment.
 - Create an access group template for users who need to push code to development and test environments. Assign a policy with a writer role on all IAM-enabled services. Scope the policy to specific resources by selecting the attribute for access management tags. Enter the tags `env:dev`, `env:test`, `resource:storage`, and `resource:containers`, which gives child account users in the enterprise-managed access group administrator access to `storage` and `containers` resources in development and test environments.
 
-### Allow a central backup service to backup Cloud Object Storage across your enterprise
+### Allow a central backup for vpc service to create backup snapshots across your enterprise and store them in Object Storage. 
 
-To allow an Enterprise administrator to centrally manage backups, child accounts must authorize the enterprise's central backup service to interact with their resources.
+To allow an Enterprise administrator to centrally manage backups, child accounts must authorize the enterprise's central backup service to interact with their backup snapshot resources. Specifically, the central backup service needs to be authorized to work with **Block Storage for VPC**, **Snapshots for VPC**, and **Virtual Server for VPC services**. Authorization templates can simplify the creation and management of these relationships across many accounts. 
 
 - Create an authorization template that specifies the source service as a backup service instance in a particular enterprise account. Select **Source account > Specific account** and enter the account ID where you have the backup service instance.
-- Then go to **Service > Service instance** and select **IBM Cloud Backup for VPC** instance. For the Target set the resource as **Cloud Object Storage** without specifying a specific account.
+- Then go to **Service > Service instance** and select **IBM Cloud Backup for VPC** instance. 
 
-When this template is applied to child accounts, an authorization policy is automatically created in each, granting the **IBM Cloud Backup for VPC** instance access to all **Cloud Object Storage** resources. For a more detailed example, including role definitions, see [Establishing service-to-service authorizations for the Backup service.](/docs/vpc?topic=vpc-backup-s2s-auth&interface=ui) 
+- For the target service, select **VPC Infrastructure Services** from the list. Click Next. 
+- Iterate over the various snapshot [options](/docs/vpc?topic=vpc-backup-s2s-auth&interface=ui) and their recommended roles, creating an authorization template for each one.
+
+When these templates are applied to child accounts, authorization policies are automatically created, granting the **IBM Cloud Backup for VPC** instance access to snapshot resources.
