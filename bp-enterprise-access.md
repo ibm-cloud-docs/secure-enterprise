@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-06-27"
+lastupdated: "2024-09-18"
 
 subcollection: secure-enterprise
 
@@ -96,7 +96,7 @@ Authorization templates make it easy to create predefined permission sets that a
 
 In an authorization policy, the source service gains access to the target service based on assigned roles. While the target service is always within the account where the authorization is created, source services can be from the same or different accounts. Authorization templates standardize authorization policies across your enterprise, ensuring consistent and secure configurations while minimizing unauthorized access.
 
- 
+
 
 ## Action controls
 {: #action-controls}
@@ -167,7 +167,7 @@ Create an authorization template to define the source account and targeted resou
 - Starting with the **Source** of the authorization set the **Source account** using **Specific account** to indicate the account that contains the centrally managed resource instance. The **Service** and **Service instance** should also be added to refine access granularity.
 - For the **Target** resource, set the **Service** and potentially the **Resource type** of the resource being accessed.
 - Lastly, select the **Roles** that grant the least privileged access the **Source** service instance needs against the **Target** resource.
-  
+
 Assigning the template results in the creation of the corresponding authorization policy in each assigned sub-accounts.
 
 ### Set up pre-defined service to service access relationship within sub-accounts
@@ -175,11 +175,11 @@ Assigning the template results in the creation of the corresponding authorizatio
 
 Create an authorization template that specifies the target and source service and resources. You can omit any account IDs. This way, the unique account IDs of each assigned account is used in the policy.
 
-- Set the **Source account to Assigned accounts(s)**. 
-- Set the applicable **Service** and add any relevant **Resources** 
+- Set the **Source account to Assigned accounts(s)**.
+- Set the applicable **Service** and add any relevant **Resources**
 - For the Target resource, set the Service and the Resource type of the resource being accessed.
 - Select the **Roles** that grant the least privileged access that the **Source** needs on the **Target** resource.
-  
+
 When you assign the authorization template to child accounts, you create a corresponding authorization policy in each assigned child account.
 
 
@@ -238,4 +238,20 @@ To allow an Enterprise administrator to centrally manage backups, child accounts
 - Create an authorization template that specifies the source service as a backup service instance in a particular enterprise account. Select **Source account > Specific account** and enter the account ID where you have the backup service instance.
 - Then go to **Service > Service instance** and select **IBM Cloud Backup for VPC** instance. For the Target set the resource as **Cloud Object Storage** without specifying a specific account.
 
-When this template is applied to child accounts, an authorization policy is automatically created in each, granting the **IBM Cloud Backup for VPC** instance access to all **Cloud Object Storage** resources. For a more detailed example, including role definitions, see [Establishing service-to-service authorizations for the Backup service.](/docs/vpc?topic=vpc-backup-s2s-auth&interface=ui) 
+When this template is applied to child accounts, an authorization policy is automatically created in each, granting the **IBM Cloud Backup for VPC** instance access to all **Cloud Object Storage** resources. For a more detailed example, including role definitions, see [Establishing service-to-service authorizations for the Backup service.](/docs/vpc?topic=vpc-backup-s2s-auth&interface=ui)
+
+## Enterprise-managed IAM limitations
+{: #enterprise-limitations}
+
+You can't assign an IAM template to the enteprise account, only child accounts of the enterprise.
+
+| Resource                               | Max  |
+|----------------------------------------|------|
+| Access group templates per enterprise account | 100 |
+| Account settings templates per enterprise account | 10 |
+| Policy templates per enterprise account | 500 |
+| Trusted profile templates per enterprise account | 100 |
+| Versions per enterprise-managed template | 100 |
+{: caption="Table 1. Enterprise-managed IAM account limits" caption-side="top"}
+
+For more information, see [{{site.data.keyword.Bluemix_notm}} IAM limits](/docs/account?topic=account-cloudaccess#iam_limits).
