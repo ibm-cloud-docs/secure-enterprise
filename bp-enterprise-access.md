@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-09-18"
+lastupdated: "2024-09-23"
 
 subcollection: secure-enterprise
 
@@ -96,6 +96,7 @@ Authorization templates make it easy to create predefined permission sets that a
 
 In an authorization policy, the source service gains access to the target service based on assigned roles. While the target service is always within the account where the authorization is created, source services can be from the same or different accounts. Authorization templates standardize authorization policies across your enterprise, ensuring consistent and secure configurations while minimizing unauthorized access.
 
+For more information, see [Creating authorization policy templates](/docs/account?topic=create-authorization-templates&interface=ui).
 
 
 ## Action controls
