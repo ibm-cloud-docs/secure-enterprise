@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-08-21"
+lastupdated: "2024-09-18"
 
 keywords: enterprise, enterprise account, multiple accounts, assign access, enterprise access, templates, enterprise managed, access, settings, migrate version, upgrade version, new version
 
@@ -1531,3 +1531,8 @@ response, err := iamIdentityService.DeleteAllVersionsOfAccountSettingsTemplate(d
 ```
 {: go}
 {: codeblock}
+
+## Settings template limitations
+{: #settings-template-limits}
+
+Only one settings template can be assigned in an enteprise. You can assign multiple versions of the template, but not different templates.

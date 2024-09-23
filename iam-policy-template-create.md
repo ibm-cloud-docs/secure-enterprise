@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-06-04"
+lastupdated: "2024-09-18"
 
 keywords: enterprise, enterprise account, multiple accounts, enterprise access, policy templates, enterprise managed, policies, enterprise policy, template
 
@@ -661,3 +661,11 @@ if response.StatusCode != 204 {
 ```
 {: go}
 {: codeblock}
+
+## Policy template limitations
+{: #policy-template-limits}
+
+You can create access policy templates without an explicit subject by using the CLI or API, but using the {{site.data.keyword.cloud_notm}} console to complete this task is not supported.
+
+When you assign access to an access group template or a trusted profile template in the console, a policy template is automatically created based on the policy that you assign. Go to **Manage > Access (IAM) > Templates > Policies** to view the policy templates.
+{: note}

@@ -112,6 +112,8 @@ toc:
                 navtitle: Creating settings templates
               - topic: iam-policy-template-create.md
                 navtitle: Creating policy templates
+              - topic: iam-auth-template.md
+                navtitle: Creating authorization templates
               - topic: iam-template-versions.md
           - topicgroup:
               label: Administering trusted profiles
