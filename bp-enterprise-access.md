@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-09-24"
+lastupdated: "2024-09-27"
 
 subcollection: secure-enterprise
 
@@ -138,7 +138,7 @@ Account management roles are a great candidate for enterprise-managed access gro
 ### Sample access policy for all of a service's resources
 {: #ent-all-resources}
 
-- A policy that grants a platform administrator role on the **IBM Cloud Kubernetes Service**. Users with this policy can access all instances of the service. Users with an administrator role that is assigned on any resource can also grant access to that resource.
+- A policy that grants a platform administrator role on the **{{site.data.keyword.containerfull_notm}}**. Users with this policy can access all instances of the service. Users with an administrator role that is assigned on any resource can also grant access to that resource.
 
 ### Sample access policy for a specific group of resources
 {: #ent-specific-resources}
