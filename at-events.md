@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-06-26"
+lastupdated: "2024-09-27"
 
 keywords: projects, audit, events, activity tracker
 
@@ -12,7 +12,7 @@ subcollection: secure-enterprise
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Auditing events for a project
+# Activity tracking events for a project
 {: #at_events}
 
 As a security officer, auditor, or manager, you can use the {{site.data.keyword.at_full}} service to track how users and applications interact with the {{site.data.keyword.cloud_notm}} Projects service.
