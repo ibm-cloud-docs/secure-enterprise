@@ -28,7 +28,7 @@ Review the following scenarios to understand how authorization policy templates 
 
 1. Replicating authorization relationships in various child accounts in an enterprise.
 
-   - For example, an enterprise that uses the service "File Storage for VPC" might want to establish a disaster recovery pattern by enabling cross-region replication of critical data. To enable data replication, you must create an authorization policy template and assign it in each child account. The authorization policy grants the file service in one VPC access to interact with the file service of another VPC located in a different geographical region in the same account. You can create an authorization policy template and specify "File Storage for VPC" for both the source and target. For a detailed example of this authorization policy template, review the examples in this topic. For more information, see [Establishing service-to-service authorizations for File Storage for VPC](/docs/vpc?topic=vpc-file-s2s-auth&interface=ui).
+   - For example, an enterprise that uses the service "{{site.data.keyword.filestorage_vpc_short}}" might want to establish a disaster recovery pattern by enabling cross-region replication of critical data. To enable data replication, you must create an authorization policy template and assign it in each child account. The authorization policy grants the file service in one VPC access to interact with the file service of another VPC located in a different geographical region in the same account. You can create an authorization policy template and specify "{{site.data.keyword.filestorage_vpc_short}}" for both the source and target. For a detailed example of this authorization policy template, review the examples in this topic. For more information, see [Establishing service-to-service authorizations for {{site.data.keyword.filestorage_vpc_short}}](/docs/vpc?topic=vpc-file-s2s-auth&interface=ui).
 
 2. Allowing a service instance in an enterprise account to access resources in many child accounts.
 
@@ -61,13 +61,13 @@ Next complete the following steps to build the authorization rules:
    1. Select the scope by clicking **Specific resources**.
    1. Click **Select an attribute**.
    1. From the list, select **Resource type**.
-   1. In the next field, select **File Storage for VPC**.
+   1. In the next field, select **{{site.data.keyword.filestorage_vpc_short}}**.
    1. Click **Next**.
 1. For the target service, select **VPC Infrastructure Services** from the list. Click **Next**.
    1. Select the scope by clicking **Specific resources**.
    1. Click **Select an attribute**.
    1. From the list, select **Resource type**.
-   1. In the next field, select **File Storage for VPC**.
+   1. In the next field, select **{{site.data.keyword.filestorage_vpc_short}}**.
    1. Click **Next**.
 1. Select the role `Editor`.
 1. Click **Review** and **Save**.
@@ -75,7 +75,7 @@ Next complete the following steps to build the authorization rules:
 
 This example creates authorization policies that help enable data replication in various child accounts where the template is assigned.
 
-Templates are valuable only if they are generic enough to apply to multiple accounts. The previous example specifies File Storage for VPC for both the source and target, but does not include specific instance IDs because those are specific to the resources in each child account.
+Templates are valuable only if they are generic enough to apply to multiple accounts. The previous example specifies {{site.data.keyword.filestorage_vpc_short}} for both the source and target, but does not include specific instance IDs because those are specific to the resources in each child account.
 {: note}
 
 ## Deleting an authorization policy template in the console
@@ -111,7 +111,7 @@ To create an authorization policy template, complete the following steps in the 
 
 1. Create a JSON file that configures the definition of the authorization policy template. For more information about the attributes that you can use in your JSON file, see the [IAM Policy Management API](/apidocs/iam-policy-management#create-policy-template).
 
-   The following example JSON file specifies the `name` and `description` of the template and the `account_id` of the enterprise account. Then, the `authorization policy` definition is defined. This authorization template grants an Editor role between all "File Storage for VPC" in the assigned accounts.
+   The following example JSON file specifies the `name` and `description` of the template and the `account_id` of the enterprise account. Then, the `authorization policy` definition is defined. This authorization template grants an Editor role between all "{{site.data.keyword.filestorage_vpc_short}}" in the assigned accounts.
 
     ```json
         {
