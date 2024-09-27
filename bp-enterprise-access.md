@@ -236,8 +236,8 @@ I create an access group template for each type of user that exists in child acc
 
 Allow a central backup for VPC to create backup snapshots across your enterprise and store them in {{site.data.keyword.cos_short}}. To allow an Enterprise administrator to centrally manage backups, child accounts must authorize the enterprise's central backup service to interact with their backup snapshot resources. Specifically, the central backup service needs to be authorized to work with **{{site.data.keyword.block_storage_is_short}}**, **Snapshots for VPC**, and **{{site.data.keyword.vsi_is_short}}** services. Authorization templates can simplify the creation and management of these relationships across many accounts.
 
-- Create an authorization template that specifies the source service as a backup service instance in a particular enterprise account. Select **Source account** > **Specific account** and enter the account ID where you have the backup service instance.
-- Then go to **Service** > **Service instance** and select **{{site.data.keyword.cloud_notm}} Backup for VPC** instance.
+- Create an authorization template that specifies the source service as a backup service instance in a particular enterprise account. Select **Source account > Specific account** and enter the account ID where you have the backup service instance.
+- Then go to **Service > Service instance** and select **{{site.data.keyword.cloud_notm}} Backup for VPC** instance.
 - For the target service, select **VPC Infrastructure Services** from the list. Click Next.
 - Iterate over the various snapshot [options](/docs/vpc?topic=vpc-backup-s2s-auth&interface=ui) and their recommended roles, creating an authorization template for each one.
 
