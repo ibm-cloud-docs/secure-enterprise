@@ -40,7 +40,7 @@ Review the following scenarios to understand how authorization policy templates 
 
 To create an authorization policy template, complete the following steps:
 
-1. Go to **Manage > Access (IAM) > Templates** in the console.
+1. Go to **Manage** > **Access (IAM)** > **Templates** in the console.
 1. Select **Authorizations** and click **Create**.
 1. Enter a name and description for the authorization template that describes its purpose for enterprise users.
 1. Enter a description for the enterprise-managed authorization policy that describes its purpose for child account users.
@@ -86,7 +86,7 @@ Deleting an authorization policy template deletes all version of the template. Y
 
 To delete a policy template in the console, complete the following steps:
 
-1. Go to **Manage > Access (IAM) > Templates** in the {{site.data.keyword.cloud_notm}}.
+1. Go to **Manage** > **Access (IAM)** > **Templates** in the {{site.data.keyword.cloud_notm}}.
 1. Click **Authorizations**.
 1. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") > **Delete template**.
 1. Confirm that you want to delete the template.
@@ -97,7 +97,7 @@ To delete a policy template in the console, complete the following steps:
 
 To delete only a specific version, complete the following steps:
 
-1. Go to **Manage > Access (IAM) > Templates** in the {{site.data.keyword.cloud_notm}}.
+1. Go to **Manage** > **Access (IAM)** > **Templates** in the {{site.data.keyword.cloud_notm}}.
 1. Click **Authorizations**.
 1. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") > **Delete version**.
 1. Confirm that you want to delete the version.
