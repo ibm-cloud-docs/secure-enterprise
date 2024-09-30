@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-06-04"
+lastupdated: "2024-09-30"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -169,7 +169,7 @@ Document the instructions for installing your deployable architecture in the rea
 ### Validating the version
 {: #validate-version}
 
-Select the target for validation. When a product is validated, the resources are deployed. For a stand-alone deployable architecture, the target can be either a Schematics workspace in your current account or a specific project. For a deployable architcture stack, you must use a project. Depending on the option that you select, more configuration information might be required. After your target is configured, you must provide the values for the input and output variables that are required for your architecture to successfully deploy to the target. After your variables are configured, you can validate the version.
+Select the target for validation. When a product is validated, the resources are deployed. For a stand-alone deployable architecture, the target can be either a Schematics workspace in your current account or a specific project. For a deployable architecture stack, you must use a project. Depending on the option that you select, more configuration information might be required. After your target is configured, you must provide the values for the input and output variables that are required for your architecture to successfully deploy to the target. After your variables are configured, you can validate the version.
 
 Do not clean up the resources in your account until after you run the compliance evaluation in the managing security and compliance section.
 {: note}
