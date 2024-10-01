@@ -4,9 +4,9 @@ copyright:
 
   years: 2023, 2024
 
-lastupdated: "2024-07-03"
+lastupdated: "2024-10-01"
 
-keywords: manage project, destroy resources, remove resources, resource, resources, delete resources, Terraform resources, Terraform workspace
+keywords: manage project, destroy resources, remove resources, resource, resources, delete resources, Terraform resources, Terraform workspace, undeploy configurations
 
 subcollection: secure-enterprise
 
@@ -75,5 +75,3 @@ If you no longer need a configuration and want to remove any resources that were
     {: important}
 
 1. Click **Delete**.
-
-
