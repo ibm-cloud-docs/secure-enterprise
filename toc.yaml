@@ -155,6 +155,8 @@ toc:
              - topic: module-onboard.md
                navtitle: Onboarding a module
              - catalog-enterprise-share.md
+             - topic: vs-code-extension-onboard.md
+               navtitle: Onboard by using Visual Studio Code
       - topicgroup:
           label: Deploying architectures with projects
           topics:
