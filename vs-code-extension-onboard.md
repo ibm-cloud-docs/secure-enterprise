@@ -4,7 +4,7 @@ copyright:
 
   years: 2024
 
-lastupdated: "2024-10-01"
+lastupdated: "2024-10-03"
 
 keywords: vs code extension, extension, onboard, deployable architecture
 
@@ -33,7 +33,6 @@ Before you can onboard your deployable architecture, be sure that you complete t
    * Other roles that are required for specific resources in your customized deployable architecture.
 * Ensure that you have the source code for your deployable architecture stored in a GitHub. For help with getting your source code into a repository, see [Setting up your source code repository](/docs/sell?topic=sell-source-repo-setup).
 * A Terraform module in a public or private GitHub repository that is cloned to a local folder. For experimentation, you can make a fork of this [sample Terraform module](https://github.com/l2fprod/simple-da). If your repository is private, you will need a personal access token with `repo` and `read:user` permissions.
-* [Node v20.x](https://nodejs.org/en){: external}. Errors while logging into IBM Cloud have been observed with v21 or greater.
 
 ## Getting the VS Code extension
 {: #getting-extension}
