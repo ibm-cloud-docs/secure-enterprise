@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-09-27"
+lastupdated: "2024-10-07"
 
 keywords: projects, audit, events, activity tracker
 
@@ -53,8 +53,6 @@ For information on launching the {{site.data.keyword.logs_full_notm}} UI, see [L
 
 ## List of management events
 {: #at_actions}
-
-
 
 {{site.data.keyword.cloud_notm}} Projects supports the management events that are indicated in the following table. 
 
