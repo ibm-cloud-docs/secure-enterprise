@@ -4,7 +4,7 @@ copyright:
 
   years: 2024
 
-lastupdated: "2024-10-07"
+lastupdated: "2024-10-08"
 
 keywords: vs code extension, extension, onboard, deployable architecture
 
@@ -37,7 +37,7 @@ Before you can onboard your deployable architecture, be sure that you complete t
 ## Getting the VS Code extension
 {: #getting-extension}
 
-To get the extension, open VS Code, go to **Extensions**, search for and select **{{site.data.keyword.cloud_notm}} Deployable Architecture Builder** to download. After you download, you can follow the walkthrough to get started or use the following steps. If the walkthrough doesn't automatically open, you can use the command palette. Go to **View** > **Command Palette**. Search for `Walkthrough`, click **Welcome: Open Walkthrough...**, then select **Get started with {{site.data.keyword.cloud_notm}} Deployable Architecture Builder**.
+To get the extension, open VS Code, go to **Extensions**, search for and select **{{site.data.keyword.cloud_notm}} Deployable Architecture Builder** to download. After you download, you can follow the walkthrough to get started or use the following steps. If the walkthrough doesn't automatically open, you can use the command palette. Go to **View > Command Palette**. Search for `Walkthrough`, click **Welcome: Open Walkthrough...**, then select **Get started with {{site.data.keyword.cloud_notm}} Deployable Architecture Builder**.
 
 ## Onboarding your deployable architecture
 {: #extension-onboard-da}
@@ -48,19 +48,19 @@ The first time that you validate your deployable architecture, you go through th
    1. To log in to your account, click **View** and select **Command Palette**.
    1. In the search field, search for `IBM Cloud - Log in`.
    1. Select **{{site.data.keyword.cloud_notm}} - Log in** and log in with an API key, federated ID, or username and password.
-   1. (Optional) You can change your login environment. Click **View**, select **Command Palette**, search for `IBM Cloud - Log in`, and select **{{site.data.keyword.cloud_notm}} - Log in** > **Change login environment**. From the menu, select **Production** or **Staging**.
+   1. (Optional) You can change your login environment. Click **View**, select **Command Palette**, search for `IBM Cloud - Log in`, and select **{{site.data.keyword.cloud_notm}} - Log in > Change login environment**. From the menu, select **Production** or **Staging**.
 1. Make sure that you're logged in to GitHub from VS Code.
    1. Select the ![Avatar icon](../icons/i-avatar-icon.svg "Avatar") > **Sign in to Sync Settings**.
    1. Select your account.
    1. Click **Authorize Visual-Studio-Code**.
 1. Clone your repo and add it to a VS Code workspace.
    1. Clone your deployable architectures repo from GitHub.
-   1. To add it to your workspace within VS Code, click **File** > **Add folder to workspace...**, then select the repo from your files.
+   1. To add it to your workspace within VS Code, click **File > Add folder to workspace...**, then select the repo from your files.
 1. Add the catalog manifest files to the Terraform module.
    1. To add the catalog manifest, right-click the module folder in your workspace.
-   1. Select **{{site.data.keyword.cloud_notm}}** > **Add deployable architecture manifest files**.
+   1. Select **{{site.data.keyword.cloud_notm}} > Add deployable architecture manifest files**.
 1. Onboard and validate your deployable architecture.
-   1. Right-click the `ibm_catalog.json` file, and select **{{site.data.keyword.cloud_notm}}** > **Validate a deployable architecture on {{site.data.keyword.cloud_notm}}**.
+   1. Right-click the `ibm_catalog.json` file, and select **{{site.data.keyword.cloud_notm}} > Validate a deployable architecture on {{site.data.keyword.cloud_notm}}**.
    1. Select the repo branch. Or you can click **+** and enter the name of a new one that will be created.
    1. Select an existing private catalog. Or you can click **+** and enter the name of a new one that will be created.
    1. Enter the offering version.
