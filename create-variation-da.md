@@ -2,7 +2,7 @@
 
 copyright:
    years: 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -30,7 +30,7 @@ The variations of the core architecture often vary in the following key areas:
 
 Here's an example of a deployable architecture with two variations in the catalog. These are two variations that use the same source URL, product name, and version during onboarding to the catalog to ensure that they show up side by side after a user selects the catalog tile:
 
-![A deployable architecture with two variations](images/variation-example.png "Deployable architecture with two variations"){: caption="Figure 1. Deployable architecture with two variations" caption-side="bottom"}
+![A deployable architecture with two variations](images/variation-example.png "Deployable architecture with two variations"){: caption="Deployable architecture with two variations" caption-side="bottom"}
 
 ## Adding a variation to an existing deployable architecture
 {: #add-variation}

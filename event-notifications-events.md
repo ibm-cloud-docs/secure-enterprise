@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-10-09"
 
 keywords: project events, needs attention, project attention, attention events
 
@@ -40,7 +40,7 @@ The following table lists the projects events.
 | `config.defn.updated`           | Changes are ready to deploy. An event is generated when a configuration is updated in the project. |
 | `config.install-job.succeeded`           | Deployment complete. An event is generated when a configuration is successfully deployed. |
 | `config.uninstall-job.succeeded`           | Destroy resources complete. An event is generated when deployed resources are successfully destroyed. |
-{: caption="Table 1. Actions that generate event notifications in projects" caption-side="bottom"}
+{: caption="Actions that generate event notifications in projects" caption-side="bottom"}
 
 ## Enabling notifications
 {: #event-notifications-enable}
@@ -158,4 +158,4 @@ Review following table for more information about event notification properties.
 | `source_instance_crn` | The Cloud Resource Name (CRN) that uniquely identifies your {{site.data.keyword.cloud_notm}} Projects service instance. |
 | `source_instance_dashboard_url` | The URL to your {{site.data.keyword.cloud_notm}} Projects service dashboard in the console. |
 | `source_service` | The display name of the service that sent the event notification. |
-{: caption="Table 2. Properties in an event notification payload" caption-side="bottom"}
+{: caption="Properties in an event notification payload" caption-side="bottom"}

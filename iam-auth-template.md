@@ -22,7 +22,7 @@ Create predefined authorization policies for your enterprise that enable a sourc
 | This account        | Child account   | Service in the enterprise account gets access to a service in the child account where the template is assigned. |
 | Assigned account(s) | Child account   | Service in the assigned child account gets access to another service in the same child account. |
 | Specific account    | Child account   | Service in the specified child account gets access to a service in the child account where the template is assigned. |
-{: caption="Table 1. Example authorization policy templates." caption-side="top"}
+{: caption="Example authorization policy templates." caption-side="top"}
 
 Review the following scenarios to understand how authorization policy templates simplify the creation and management of many authorization policies:
 

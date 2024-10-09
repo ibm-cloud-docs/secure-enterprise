@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-06-24"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -43,7 +43,7 @@ A best practice is to include infrastructure resources that are typically deploy
 | Network infrastructure   | Includes subnets, public gateways, ACLs, transit gateways, and security groups |
 | Edge networking  | Isolates traffic to the public internet |
 | Monitoring and logging  | Integrates Flow Logs for observability and auditing of the VPC traffic |
-{: caption="Table 1. Resources in the VPC landingn zone DA" caption-side="top"}
+{: caption="Resources in the VPC landingn zone DA" caption-side="top"}
 
 These resources are typically deployed together as a unit, require similar network administrative rights and permissions, and have the same lifecycle, meaning that they:
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-04-23"
+lastupdated: "2024-10-09"
 
 keywords: enterprise, enterprise account, multiple accounts, assign access, enterprise access, templates, enterprise managed, access, enterprise settings
 
@@ -24,7 +24,7 @@ Customize the IAM settings for all of the accounts in your enterprise to meet co
 
 The tutorial uses a fictitious company that's called *Example Corp*, which [set up an enterprise](/docs/secure-enterprise?topic=secure-enterprise-enterprise-tutorial) with the following structure. As you complete the tutorial, adapt each step to match your organization's security setting requirements.
 
-![A four-tier enterprise that groups accounts according to department in an organization. For example, account groups are named Marketing, Development, and Sales. The account groups contain accounts for teams within those departments. For example, the Sales account group contains accounts for Direct, Online, and Enablement.](images/enterprise-by-dept.svg "An enterprise that organizes accounts according to department in the organization."){: caption="Figure 1. An enterprise that is organized by department" caption-side="bottom"}
+![A four-tier enterprise that groups accounts according to department in an organization. For example, account groups are named Marketing, Development, and Sales. The account groups contain accounts for teams within those departments. For example, the Sales account group contains accounts for Direct, Online, and Enablement.](images/enterprise-by-dept.svg "An enterprise that organizes accounts according to department in the organization."){: caption="An enterprise that is organized by department" caption-side="bottom"}
 
 ## Before you begin
 {: #before-settings-iam-tutorial}

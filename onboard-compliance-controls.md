@@ -4,7 +4,7 @@ copyright:
 
   years: 2024
 
-lastupdated: "2024-05-16"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -22,7 +22,7 @@ By using the `ibm_cloud.json` manifest file, you can include claims that your de
 
 Here's an example from the VSI on VPC landing zone's catalog page where the Standard variation meets the {{site.data.keyword.framework-fs_full}} v1.6.0 profile:
 
-![Deployable architecture compliance claim on the catalog details page](images/da-compliance-mapping.png "Deployable architecture compliance claim on the catalog details page"){: caption="Figure 1. Deployable architecture compliance" caption-side="bottom"}
+![Deployable architecture compliance claim on the catalog details page](images/da-compliance-mapping.png "Deployable architecture compliance claim on the catalog details page"){: caption="Deployable architecture compliance" caption-side="bottom"}
 
 The process to make a compliance claim for your deployable architecture includes steps that must be completed before and during the onboarding process to a catalog:
 
@@ -44,7 +44,7 @@ Before you onboard your deployable architecture to a catalog, verify compliance 
 1. Select the profile name that represents the controls that are most relevant to your solution. For example, the **{{site.data.keyword.cloud_notm}} Framework for Financial Services** profile is a set of controls that are built specifically for and with the financial services industry. For a list of profiles, see [Available predefined profiles](https://cloud.ibm.com/docs/security-compliance?topic=security-compliance-predefined-profiles).
 1. Select the profile from the list, and copy the profile name that displays at the beginning of the page and the version number. Save this information locally because you need these values for updating the `ibm_cloud.json` manifest file.
 
-   ![Profile name and version in {{site.data.keyword.compliance_short}}](images/scc-profile-name.png){: caption="Figure 2. Profile name and version" caption-side="bottom"}
+   ![Profile name and version in {{site.data.keyword.compliance_short}}](images/scc-profile-name.png){: caption="Profile name and version" caption-side="bottom"}
 
 1. Click **Attachments > Create**.
 1. Enter a name for the attachment, and click **Next**

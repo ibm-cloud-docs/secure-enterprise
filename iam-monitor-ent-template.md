@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-05-28"
+lastupdated: "2024-10-09"
 
 keywords: monitoring, iam templates, monitoring iam templates, activity tracker
 
@@ -136,7 +136,7 @@ An access policy template that is named `SecretsEditor` is created and has the f
 | `description` | `Grant Editor Role on Secrets Manager service.` | The description of the policy. |
 | `transaction_id` | `99450571-2df3-51c2-tn24-565813689t91` | Used for debug interactions and tracing the request with support. |
 | `errors` | `{  "code": "insufficent_permissions",  "message": "You are not allowed to create the requested policy template."}` | If the `outcome` is `failure`, an error message is shown. |
-{: caption="Table 1. Sample policy template attributes and values in Activity Tracker" caption-side="top"}
+{: caption="Sample policy template attributes and values in Activity Tracker" caption-side="top"}
 
 #### Example `policy`
 {: #example-policy-structure}
@@ -171,7 +171,7 @@ An access group template that is named `dev-group-1` hasn't been committed yet:
 | `name` | `groupName 1690274020835 - VPC-Staging` | The acces group name shown in child accounts. |
 | `policy_template_references` | See Example `policy_template_references` | Existing policy templates that you can reference to assign access in the trusted profile template. |
 | `errors` | `"code": "template_conflict_error", "message": "An access group template with the name "AccessGroup" already exists. Enter a different name."` | If the `outcome` is `failure`, an error message is shown. |
-{: caption="Table 2. Sample access group template creattion attributes and values in Activity Tracker" caption-side="top"}
+{: caption="Sample access group template creattion attributes and values in Activity Tracker" caption-side="top"}
 
 #### Example `group`
 {: #example-groups-structure}
@@ -225,7 +225,7 @@ An access group template named `dev-group-1` that's assigned to child accouts ha
 | `target` | `a5d1c4130c62404dbc857a37237c49bf` | The ID of the target account or account group. |
 | `target_type` | `AccountGroup` | The target can be either an `Account` or an `AccountGroup`. |
 | `template_id` | `AccessGroupTemplateId-274f883e-fe00-4445-8e75-1698a7c76918` | ID of the access group template assigned. |
-{: caption="Table 3. Sample access group template assignment attributes and values in Activity Tracker" caption-side="top"}
+{: caption="Sample access group template assignment attributes and values in Activity Tracker" caption-side="top"}
 
 ### Trusted profile template creation
 {: #tp-template-event}
@@ -239,7 +239,7 @@ An access group template named `dev-group-1` that's assigned to child accouts ha
 | `initiator name` | `user@example.com` | The email of the requester.|
 | `realm_id` | `IBMid` | The identity provider. |
 | `template_committed` | `false` | Committed flag determines if the template is ready for assignment. |
-{: caption="Table 4. Sample trusted profile template attributes and values in Activity Tracker" caption-side="top"}
+{: caption="Sample trusted profile template attributes and values in Activity Tracker" caption-side="top"}
 
 ### Trusted profile template assignment
 {: #tp-template-assignment-event}
@@ -258,7 +258,7 @@ An access group template named `dev-group-1` that's assigned to child accouts ha
 | `template_type` | `profile` | The type of IAM template. |
 | `template_version` | `1` | The version number of the trusted profile template. |
 | `instance_id` | `TemplateAssignment-691487d2-a249-4475-b976-a7bf655ef3be` | The assignment ID. Once profiles are created in the target accounts, individual events in each account referencing the assignment are created. |
-{: caption="Table 5. Sample trusted profile assignment attributes and values in Activity Tracker" caption-side="top"}
+{: caption="Sample trusted profile assignment attributes and values in Activity Tracker" caption-side="top"}
 
 #### Example `url` curl request
 {: #url-example}
@@ -281,4 +281,4 @@ curl -H "Authorization: Bearer $TOKEN" "https://iam.test.cloud.ibm.com/v1/profil
 | `success`     | The assignment process has completed and the template has been assigned to all target accounts and account groups successfully. |
 | `fail`        | The assignment process is complete but there is one or more target accounts where the template failed to be assigned. |
 | `superseded`  | The assignment has been superseded by another assignment record with the same template at a target account group higher in the enterprise accounts hierarchy. For more information, see [Superseeding a version](/docs/secure-enterprise?topic=secure-enterprise-working-with-versions#template-superseded). |
-{: caption="Table 6. The possible states for an IAM template assignment in Activity Tracker" caption-side="top"}
+{: caption="The possible states for an IAM template assignment in Activity Tracker" caption-side="top"}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-04-17"
+lastupdated: "2024-10-09"
 
 keywords: HA for IBM projects, DR for IBM projects, high availability for IBM projects, disaster recovery for IBM projects, failover for IBM projects, BC for IBM projects, DR for IBM projects, business continuity for IBM projects, disaster recovery for IBM projects
 
@@ -34,7 +34,7 @@ For more information about your responsibilities when using projects, see [Share
 |---|---|
 |  RPO | 1 hour  |
 |  RTO | 4 hours   |
-{: caption="Table 1. RPO and RTO for projects" caption-side="top"}
+{: caption="RPO and RTO for projects" caption-side="top"}
 
 ## Locations
 {: #ha-locations-bc-dr}

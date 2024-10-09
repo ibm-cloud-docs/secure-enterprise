@@ -4,7 +4,7 @@ copyright:
   years: 2022, 2023
 
 
-lastupdated: "2024-07-03"
+lastupdated: "2024-10-09"
 
 
 keywords: best practice projects, manage projects, project, environment
@@ -89,7 +89,7 @@ Use a naming convention for your configurations so that users can understand the
 | Prod-Kub-London | Kubernetes Cluster | Production | Create the cluster in London for production |
 | Prod-Kub-Tokyo | Kubernetes Cluster | Production | Create the cluster in Tokyo for production |
 | Prod-Kub-Sydney | Kubernetes Cluster | Production | Create the cluster in Sydney for production |
-{: caption="Table 1. Configuration name examples" caption-side="top"}
+{: caption="Configuration name examples" caption-side="top"}
 
 You can duplicate the development configuration in the `project.json` file and modify it as needed to quickly creating production deployments from their tested development deployments.
 {: tip}
@@ -103,7 +103,7 @@ Access to projects is controlled by Identity and Access Management (IAM). It's r
 |--------------|-------|
 | *ProjectName*-Reader | Reader, Viewer |
 | *ProjectName*-Writer | Manager, Operator |
-{: caption="Table 2. Project access groups and roles" caption-side="top"}
+{: caption="Project access groups and roles" caption-side="top"}
 
 To create new projects, users must be assigned specific access. For more information, see [Assigning users access to projects](/docs/secure-enterprise?topic=secure-enterprise-access-project).
 {: note}

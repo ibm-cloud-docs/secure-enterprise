@@ -2,7 +2,7 @@
 
 copyright:
    years: 2024
-lastupdated: "2024-07-24"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -30,7 +30,7 @@ The following table provides a comparison and quick summary of the key differenc
 | Deployable architecture | Medium to broad | Tight | Yes | Developer |
 | Deployable architecture stack | Broad | Loose | Yes | Anyone |
 {: row-headers}
-{: caption="Table 1. Comparison of concepts" caption-side="bottom"}
+{: caption="Comparison of concepts" caption-side="bottom"}
 
 
 The following table can help you decide whether to use a module, a deployable architecture, or a deployable architecture stack depending on your use case.
@@ -43,7 +43,7 @@ The following table can help you decide whether to use a module, a deployable ar
 | User-created solutions or architectures | Stacked deployable architectures | Stacked deployable architectures allow users to create and publish their own repeatable patterns that are still safe, as they are composed of secure and compliant deployable architectures. |
 | Decoupled architecture components | Stacked deployable architectures | Deployable architectures can be independently developed and versioned, but then combined into a stacked deployable architecture for deployment. |
 | Simplified user experience | Deployable architecture | Deployable architectures can provide a small or simple list of inputs to the user even for large or complex architectures. Deployable architectures are simple to understand and deploy. In comparison, stacking deployable architectures is a little more complex as the deployable architectures are exposed. |
-{: caption="Table 2. Help me choose the component to use" caption-side="bottom"}
+{: caption="Help me choose the component to use" caption-side="bottom"}
 
 [{{site.data.keyword.cloud_notm}} projects](/docs/secure-enterprise?topic=secure-enterprise-understanding-projects) ensure that resources are deployed through deployable architectures from the catalog and operate within the security and compliance guardrails of the organization. They also ensure that these resources are kept up to date and do not drift.
 
@@ -52,7 +52,7 @@ The following table can help you decide whether to use a module, a deployable ar
 
 Dependencies arise when resources that are provisioned by one deployable architecture are required by another. That is, the resources that one deployable architecture provisions are used during the deployment of another architecture, as illustrated in the following image.
 
-![A visual representation of a deployable architecture with a dependency. Deployable architecture A outputs resources that are then used as inputs in deployable architecture B.](images/dependency-concept.svg "Deployable architecture dependencies."){: caption="Figure 1. Deployable architecture dependencies" caption-side="bottom"}
+![A visual representation of a deployable architecture with a dependency. Deployable architecture A outputs resources that are then used as inputs in deployable architecture B.](images/dependency-concept.svg "Deployable architecture dependencies."){: caption="Deployable architecture dependencies" caption-side="bottom"}
 
 One way to work with dependencies is to stack deployable architectures and add references between them in a project. For example, the [VSI on VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-slz-vsi-ef663980-4c71-4fac-af4f-4a510a9bcf68-global?catalog_query=aHR0cHM6Ly9jbG91ZC5pYm0uY29tL2NhdGFsb2c%2Fc2VhcmNoPXZwYyUyNTIwbGFuZGluZyUyNTIwem9uZSUyNTIwd2l0aCUyNTIwcm9rcyUyNTIwbGFiZWwlMjUzQWRlcGxveWFibGVfYXJjaGl0ZWN0dXJlI3NlYXJjaF9yZXN1bHRz&kind=terraform&format=terraform&version=db410822-02be-41fe-ab3e-fa5a6a02f3da-global#prerequisites){: external} deployable architecture includes a variation that extends the [{{site.data.keyword.redhat_openshift_notm}} Container Platform on VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-slz-ocp-95fccffc-ae3b-42df-b6d9-80be5914d852-global){: external} deployable architecture. Consider stacking these architectures together in a project. This approach works well if the prerequisite architecture isn't deployed yet. You also don't need to edit code to stack deployable architectures.
 
@@ -76,7 +76,7 @@ In {{site.data.keyword.cloud_notm}}, a deployable architecture must use Terrafor
 | Focus | Infrastructure | Configuration |
 | Drift | Comparison with wanted state | Idempotent tasks |
 {: row-headers}
-{: caption="Table 3. Comparison of configuration languages" caption-side="bottom"}
+{: caption="Comparison of configuration languages" caption-side="bottom"}
 {: summary="The first column are categories used to compare Terraform and Ansible. The second column provides information about how Terraform relates to the set category in column one and the third column provides information about how Ansible relates to the set category in column one."}
 
 Terraform is excellent at creating and managing infrastructure, whereas Ansible is excellent at configuring the software and operating systems that are running on that infrastructure. Because Ansible is procedural, you can also script one-time operations. Maintenance tasks, like restoring from backup, are easy in Ansible.
@@ -89,7 +89,7 @@ Terraform is excellent at creating and managing infrastructure, whereas Ansible 
 | Input validation | Terraform or Ansible | Terraform has limited ability to do input validation, but it is declarative and can be used by user interfaces. Ansible adds the ability to do dynamic input validation where inputs to a deployable architecture are checked against a remote service. |
 | Day 2 maintenance actions | Ansible | Day 2 maintenance is generally procedural in nature and best completed in Ansible. Examples include manual backup, restore, or key rotations. |
 | Drift management | * Terraform \n * Ansible | * Terraform can be used to determine whether drift occurred and what that drift is, which can help you decide how to manage the drift. The drift information is powerful because it might indicate that you can add a change to automation. \n * Ansible can't detect drift. But by regularly reapplying an idempotent ansible script, you can prevent drift. |
-{: caption="Table 4. Help me choose the configuration language to use" caption-side="bottom"}
+{: caption="Help me choose the configuration language to use" caption-side="bottom"}
 
 For more information about including pre- or post-scripts with your deployable architectures, see [Creating scripts for deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-understand-scripts).
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-30"
+lastupdated: "2024-10-09"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -28,21 +28,21 @@ To help visualize how the content added to the manifest file is displayed to use
 
 Let's look at how the deployable architecture name, description, features, and variations are defined in the catalog manifest file and how the user sees the information on the catalog details page.
 
-![Deployable architecture title, description, features text mapping to the source file](images/da-basic-catalog-details-mapping.png "Deployable architecture title, description, features text mapping to the source file"){: caption="Figure 2. Deployable architecture title, description, features text mapping to the source file" caption-side="bottom"}
+![Deployable architecture title, description, features text mapping to the source file](images/da-basic-catalog-details-mapping.png "Deployable architecture title, description, features text mapping to the source file"){: caption="Deployable architecture title, description, features text mapping to the source file" caption-side="bottom"}
 
 Let's look at how the variation features list is used to help users compare variations based on how it's defined in the catalog manifest file.
 
-![Deployable architecture variation feature comparison](images/da-feature-highlights-mapping.png "Deployable architecture variation feature comparison"){: caption="Figure 3. Deployable architecture variation feature comparison" caption-side="bottom"}
+![Deployable architecture variation feature comparison](images/da-feature-highlights-mapping.png "Deployable architecture variation feature comparison"){: caption="Deployable architecture variation feature comparison" caption-side="bottom"}
 
 Let's look at where the permissions and architecture diagram details are specified in the catalog manifest file and how it's displayed on the catalog details page.
 
-![Deployable architecture permissions and architecture text mapping to the source file](images/da-arch-iam-details-mapping.png "Deployable architecture permissions and architecture text mapping to the source file"){: caption="Figure 4. Deployable architecture permissions and architecture text mapping to the source file" caption-side="bottom"}
+![Deployable architecture permissions and architecture text mapping to the source file](images/da-arch-iam-details-mapping.png "Deployable architecture permissions and architecture text mapping to the source file"){: caption="Deployable architecture permissions and architecture text mapping to the source file" caption-side="bottom"}
 
 And, if your architecture meets a specific level of compliance that is verified with a scan by using the {{site.data.keyword.compliance_short}}, you can add a compliance claim per variation. You define how your architecture meets a certain level of compliance in the `ibm_catalog.json` file by specifying the {{site.data.keyword.compliance_short}} profile. You must also run a scan on the resources that your architecture creates before onboarding to {{site.data.keyword.cloud_notm}}. For more information, see [Managing compliance information for your deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-format-controls).
 
 See in the following example how the compliance information that is defined in the manifest file is displayed to users.
 
-![Deployable architecture compliance](images/da-compliance-mapping.png "Deployable architecture compliance"){: caption="Figure 5. Deployable architecture compliance" caption-side="bottom"}
+![Deployable architecture compliance](images/da-compliance-mapping.png "Deployable architecture compliance"){: caption="Deployable architecture compliance" caption-side="bottom"}
 
 ## Editing your manifest
 {: #edit-manifest}
@@ -353,7 +353,7 @@ Section header for information about the deployable architecture variations. Fla
     | ${{name}} | The programmatic name of the offering or product. |
     | ${{catalogID}} | The ID of the catalog where the offering or product is located. |
     | ${{workingDirectory}} | The working directory of the flavor or variation. |
-    {: caption=" Table 1. Usage template values and descriptions" caption-side="bottom"}
+    {: caption="Usage template values and descriptions" caption-side="bottom"}
 
 `licenses`
 :   Information about the end user license agreements that users are required to accept when they install the product. The license agreements are in addition to the {{site.data.keyword.cloud_notm}} Services Agreement.

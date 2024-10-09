@@ -4,7 +4,7 @@ copyright:
 
   years: 2022, 2024
 
-lastupdated: "2024-06-04"
+lastupdated: "2024-10-09"
 
 keywords: known issues, known limitations
 
@@ -56,7 +56,7 @@ The following table lists the maximum limits for {{site.data.keyword.cloud_notm}
 |----------------------------------------|------|
 | Account groups per enterprise          | 500  |
 | Accounts per enterprise                | 1000 |
-{: caption="Table 3. Enterprise limits" caption-side="top"}
+{: caption="Enterprise limits" caption-side="top"}
 
 {{../account/known-issues.md#policy-version-limit}}
 

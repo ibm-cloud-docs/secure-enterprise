@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-04-01"
+lastupdated: "2024-10-09"
 
 keywords: enterprise, enterprise account, multiple accounts, organization, hierarchy
 
@@ -53,7 +53,7 @@ At its core, an enterprise consists of three main building blocks:
 - Accounts, which are just like stand-alone {{site.data.keyword.Bluemix_notm}} accounts in that they contain resources and resource groups and independent access permissions. However, one major difference is that each account in an enterprise doesn't manage its own billing or payments because these are handled at the enterprise account level.
 
 You create tiers in your enterprise by nesting an account group within an account group.
-![A diagram that shows four enterprise tiers. The first tier is the enterprise, which contains two tiers of account groups. Then, the account group contains accounts.](images/enterprise-hierarchy.svg "Enterprise tiers are created by adding account groups."){: caption="Figure 1. A four-tier enterprise hierarchy" caption-side="bottom"}
+![A diagram that shows four enterprise tiers. The first tier is the enterprise, which contains two tiers of account groups. Then, the account group contains accounts.](images/enterprise-hierarchy.svg "Enterprise tiers are created by adding account groups."){: caption="A four-tier enterprise hierarchy" caption-side="bottom"}
 
 An enterprise can contain up to five tiers of accounts and account groups. In its most basic form, an enterprise has two tiers: The enterprise account, and a single child account. A maximum of 1000 accounts can be added to an enterprise.
 
@@ -64,7 +64,7 @@ Your enterprise structure is flexible and can grow and change as your needs do. 
 
 In an enterprise, all billing is managed through the enterprise account. Enterprises require [subscription billing](/docs/account?topic=account-accounts#subscription-account) or an account with the [Enterprise Savings Plan billing model](/docs/billing-usage?topic=billing-usage-committed-use). Subscription billing means that you purchase a subscription for an amount of credit to spend during the subscription term, and usage is deducted from the subscription credit at a discounted rate. Subscription credit, as well as credit from any promotions, is added to the enterprise credit pool, which is shared across all accounts in the enterprise. As accounts use resources, credit is spent from the credit pool. The Pay as you go with Committed Use billing model is similar to the billing model for Subscription accounts. You commit to spend a certain amount on {{site.data.keyword.Bluemix_notm}} and receive discounts across the platform. You are billed monthly based on your usage and you continue to receive a discount even after you reach your committed amount.
 
-![A diagram that shows that credit from accounts is added to the enterprise credit pool, which is managed by the billing administrator in the enterprise account.](images/enterprise-billing.svg "Billing for all accounts is managed by the billing administrator in the enterprise account."){: caption="Figure 2. Enterprise billing management" caption-side="bottom"}
+![A diagram that shows that credit from accounts is added to the enterprise credit pool, which is managed by the billing administrator in the enterprise account.](images/enterprise-billing.svg "Billing for all accounts is managed by the billing administrator in the enterprise account."){: caption="Enterprise billing management" caption-side="bottom"}
 
 Because billing is consolidated, enterprises make managing invoicing and payments across multiple accounts easier with these key benefits:
 * A credit pool of subscriptions that span multiple accounts, so you can size your subscriptions for all of your usage rather than usage per account
@@ -83,7 +83,7 @@ The level of support that is assigned to an {{site.data.keyword.Bluemix_notm}} e
 
 Resources and services within an enterprise function the same as in stand-alone accounts. Each account in an enterprise can contain resources in resource groups. Account groups can't contain resources. For more information, see [Managing resources](/docs/account?topic=account-manage_resource).
 
-![A diagram that shows that resources are contained in accounts in the enterprise.](images/enterprise-resources.svg "Resources are tied to the account in the enterprise, just like a stand-alone account."){: caption="Figure 3. Resources in an enterprise" caption-side="bottom"}
+![A diagram that shows that resources are contained in accounts in the enterprise.](images/enterprise-resources.svg "Resources are tied to the account in the enterprise, just like a stand-alone account."){: caption="Resources in an enterprise" caption-side="bottom"}
 
 As with all accounts, resources are tied to the resource group and account in which they're created, so they can't be moved between accounts in the enterprise. However, the enterprise's flexible account structure means you can move resources within the enterprise by moving the accounts that contain them.
 
@@ -126,14 +126,14 @@ Enterprises can be valuable for large organizations that otherwise require multi
 
 If your organization has global teams that share a budget, you can model your enterprise structure after their departments. With this structure, you can view usage costs that are aggregated for each department.
 
-![A four-tier enterprise that groups accounts according to department in an organization. For example, account groups are named Marketing, Development, and Sales. The account groups contain accounts for teams within those departments. For example, the Sales account group contains accounts for Direct, Online, and Enablement.](images/enterprise-by-dept.svg "An enterprise that organizes accounts according to department in the organization."){: caption="Figure 4. An enterprise that is organized by department" caption-side="bottom"}
+![A four-tier enterprise that groups accounts according to department in an organization. For example, account groups are named Marketing, Development, and Sales. The account groups contain accounts for teams within those departments. For example, the Sales account group contains accounts for Direct, Online, and Enablement.](images/enterprise-by-dept.svg "An enterprise that organizes accounts according to department in the organization."){: caption="An enterprise that is organized by department" caption-side="bottom"}
 
 #### Organize by geography
 {: #enterprise-by-geo}
 
 Or, if your organization has separate budgets by geography, you can structure your enterprise to group costs for each geographical entity.
 
-![A four-tier enterprise that groups accounts according to geography. For example, account groups are named Americas, Europe, and Asia-Pacific. The account groups contain accounts for countries within those locations. For example, the Asia-Pacific account group contains accounts for China, Japan, and India.](images/enterprise-by-geo.svg "An enterprise that organizes accounts according to geography."){: caption="Figure 5. An enterprise that is organized by geography" caption-side="bottom"}
+![A four-tier enterprise that groups accounts according to geography. For example, account groups are named Americas, Europe, and Asia-Pacific. The account groups contain accounts for countries within those locations. For example, the Asia-Pacific account group contains accounts for China, Japan, and India.](images/enterprise-by-geo.svg "An enterprise that organizes accounts according to geography."){: caption="An enterprise that is organized by geography" caption-side="bottom"}
 
 ### Educational institutions
 {: #enterprise-edu}
@@ -142,7 +142,7 @@ Educational institutions might want to provide {{site.data.keyword.Bluemix_notm}
 
 Within each account, students can create resources to build their projects and collaborate with other students in the account. The university has a complete view of the costs of each department and course.
 
-![A three-tier enterprise that models how a university can organize their accounts. For example, account groups are named for each department: Data Science, Computer Science, and Computer Engineering. Each account group contains individual accounts for each class, such as DS101 and DS102.](images/enterprise-edu.svg "An enterprise for a university that has account groups for each department, and individual accounts for each class."){: caption="Figure 6. An enterprise for a university" caption-side="bottom"}
+![A three-tier enterprise that models how a university can organize their accounts. For example, account groups are named for each department: Data Science, Computer Science, and Computer Engineering. Each account group contains individual accounts for each class, such as DS101 and DS102.](images/enterprise-edu.svg "An enterprise for a university that has account groups for each department, and individual accounts for each class."){: caption="An enterprise for a university" caption-side="bottom"}
 
 ## Enterprise limits
 {: #enterprise-limit}
@@ -153,4 +153,4 @@ The following table lists the maximum limits for {{site.data.keyword.cloud_notm}
 |----------------------------------------|------|
 | Account groups per enterprise          | 500  |
 | Accounts per enterprise                | 1000 |
-{: caption="Table 1. Enterprise limits" caption-side="top"}
+{: caption="Enterprise limits" caption-side="top"}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-10-07"
+lastupdated: "2024-10-09"
 
 keywords: projects, audit, events, activity tracker
 
@@ -81,7 +81,7 @@ For information on launching the {{site.data.keyword.logs_full_notm}} UI, see [L
 | `project.environment.list` | List all project environments under the account.     |
 | `project.environment.update` | Update a project environment.     |
 | `project.environment.delete` | Delete a project environment.     |
-{: caption="Table 1. Actions that generate management events" caption-side="bottom"}
+{: caption="Actions that generate management events" caption-side="bottom"}
 
 For a complete list of custom request and response parameters for each event, see the [Project API](https://{DomainName}/apidocs/projects). The update actions don't provide information about the delta, only the new value is provided.
 {: note}
