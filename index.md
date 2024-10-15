@@ -4,7 +4,7 @@ copyright:
 
   years: 2022, 2024
 
-lastupdated: "2024-08-27"
+lastupdated: "2024-10-09"
 
 keywords: configurations, deployments, project components, understanding projects, projects, deployable architecture, needs attention, project dashboard
 
@@ -20,7 +20,7 @@ subcollection: secure-enterprise
 
 {{site.data.keyword.cloud}} projects are a named collection of configurations that are used to manage related resources and deployments across accounts, embracing an Infrastructure as Code (IaC) approach to deployments. They enable teams to configure, deploy, and monitor deployments by using DevOps best practices. Each project includes tools to scan for potentially harmful resource changes, compliance, security, and cost, as well as tracking configuration versioning and governance. They're designed with an IaC and a compliance-first approach that helps to ensure that a project is managed, secure, and always compliant.
 
-![The diagram shows the flow that a user would take when working with projects. The information is conveyed in the surrounding text.](images/projects-flow.svg){: caption="Figure 1. Understanding the projects workflow." caption-side="bottom"}
+![The diagram shows the flow that a user would take when working with projects. The information is conveyed in the surrounding text.](images/projects-flow.svg){: caption="Understanding the projects workflow." caption-side="bottom"}
 
 After choosing a [deployable architecture](#x10293733){: term} from the catalog, you can add its configuration to a new or existing project, and configure it to your enterprise's needs. Before you use the configuration to deploy resources to a specific environment, validation is performed on your code by completing commit checks, vulnerability scans, and cost estimations, so that your team has all of the essential information that it needs before deploying. And, if the validation fails, the team can work to update the configuration and run the validation again until it passes. With an approval, resources can be deployed and monitored by using {{site.data.keyword.bplong}}. Then, if an update to the deployable architecture becomes available, your team is notified within your project and can update the version on your schedule.
 

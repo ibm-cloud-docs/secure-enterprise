@@ -4,7 +4,7 @@ copyright:
 
   years: 2019, 2023
 
-lastupdated: "2023-05-11"
+lastupdated: "2024-10-09"
 
 keywords: enterprise policy, enterprise access, assign enterprise access, enterprise service, enterprise IAM, enterprise-managed, IAM templates
 
@@ -39,7 +39,7 @@ Typically, the enterprise account itself doesn't contain many resources. Instead
 
 The first diagram shows how you can assign a policy to a user in the enterprise account to manage the entire enterprise. The second diagram shows a policy that is scoped to an account group that provides access to manage only that account group and the child accounts that are organized within it.
 
-![Enterprise access](images/enterprise-access.svg "Diagram showing that enterprise users have access to manage only the enterprise entities"){: caption="Figure 1. Diagram for enterprise access" caption-side="bottom"}
+![Enterprise access](images/enterprise-access.svg "Diagram showing that enterprise users have access to manage only the enterprise entities"){: caption="Diagram for enterprise access" caption-side="bottom"}
 
 The target and role of the policy is important in determining the scope of access. A user, service ID, or access group in an enterprise can complete enterprise management tasks:
 
@@ -51,7 +51,7 @@ For example, a user can complete tasks within an account group if they're assign
 
 You can assign users in a child account in the enterprise access policies that apply to the management of only that account or the resources that it contains. For example, if you assign a user in a child account a role on the Enterprise account management service, the user can't take actions at the enterprise account level. You must add them to the enterprise account and assign the policy in that context.
 
-![Account access](images/account-access.svg "Diagram showing that child account users have access within their account only and not to the rest of the enterprise"){: caption="Figure 2. Diagram for account access" caption-side="bottom"}
+![Account access](images/account-access.svg "Diagram showing that child account users have access within their account only and not to the rest of the enterprise"){: caption="Diagram for account access" caption-side="bottom"}
 
 ## Required policies for specific jobs
 {: #sample-enterprise-policies}

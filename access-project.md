@@ -4,7 +4,7 @@ copyright:
 
   years: 2022, 2024
 
-lastupdated: "2024-08-27"
+lastupdated: "2024-10-09"
 
 keywords: project access, iam projects, assigning project access, assign access, access project
 
@@ -31,7 +31,7 @@ The following table includes the actions that users can take when they are assig
 | Operator | Operators can perform the same actions as viewers, with more permissions beyond the viewer role, including planning project deployments | All viewer project permissions \n \n Validate a configuration \n \n Edit a configuration |
 | Editor | Editors can perform the same actions as operators, with more permissions beyond the operator role, including creating projects and deploying resources. | All viewer and operator project permissions \n \n Create a project \n \n Edit a project \n \n Edit project settings \n \n Delete a project \n \n Create a configuration \n \n  Discard a draft configuration \n \n Approve configuration changes \n \n Deploy configuration changes \n \n Destroy resources \n \n Create an environment \n \n Edit an environment \n \n Delete an environment |
 | Administrator | Administrators can perform the same actions as editors, with more permissions beyond the editor role, including updating project statuses and planning new or changed project deployments. | All viewer, operator, and editor project permissions \n \n Force approve changes that failed validation |
-{: caption="Table 1. Access roles for projects" caption-side="top"}
+{: caption="Access roles for projects" caption-side="top"}
 
 In addition to access on the {{site.data.keyword.cloud_notm}} Projects service, you must be assigned the following IAM privileges on the project tooling resources within the account:
 
@@ -68,4 +68,4 @@ An IAM administrator or a user with the required roles on those services can aut
 | Viewer | {{site.data.keyword.cloud_notm}} Projects service | Resource group only \n \n All resource groups in the account | This account |
 | Viewer | {{site.data.keyword.cloud_notm}} Projects service | Catalog Management service | This account |
 | Viewer and SecretsReader| {{site.data.keyword.cloud_notm}} Projects service | {{site.data.keyword.secrets-manager_short}} service | This account |
-{: caption="Table 2. Projects service to service authorizations " caption-side="top"}
+{: caption="Projects service to service authorizations " caption-side="top"}

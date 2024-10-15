@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-02-22"
+lastupdated: "2024-10-09"
 
 keywords: enterprise, enterprise account, create enterprise, set up enterprise, enterprise users, enterprise access, enterprise tutorial
 
@@ -26,7 +26,7 @@ This tutorial walks you through how to set up an enterprise by department so you
 
 The tutorial uses a fictitious company that is called *Example Corp* that wants to create an enterprise with the following structure. As you complete the tutorial, adapt each step to match your organization's accounts and desired structure.
 
-![A four-tier enterprise that groups accounts according to department in an organization. For example, account groups are named Marketing, Development, and Sales. The account groups contain accounts for teams within those departments. For example, the Sales account group contains accounts for Direct, Online, and Enablement.](images/enterprise-by-dept.svg "An enterprise that organizes accounts according to department in the organization."){: caption="Figure 1. An enterprise that is organized by department" caption-side="bottom"}
+![A four-tier enterprise that groups accounts according to department in an organization. For example, account groups are named Marketing, Development, and Sales. The account groups contain accounts for teams within those departments. For example, the Sales account group contains accounts for Direct, Online, and Enablement.](images/enterprise-by-dept.svg "An enterprise that organizes accounts according to department in the organization."){: caption="An enterprise that is organized by department" caption-side="bottom"}
 
 ## Before you begin
 {: #setting-prereqs}
@@ -120,7 +120,7 @@ Repeat the steps to create more accounts. As an example, the Example Corp enterp
 | Direct | Sales |
 | Online | Sales |
 | Enablement | Sales |
-{: caption="Table 1. Child account and parent account group hierarchy" caption-side="top"}
+{: caption="Child account and parent account group hierarchy" caption-side="top"}
 
 ## Explore subscriptions
 {: #explore-sub_tutorial}

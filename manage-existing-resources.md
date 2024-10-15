@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2024
 
-lastupdated: "2024-07-02"
+lastupdated: "2024-10-09"
 
 keywords: target account, manage resources, enterprise architecture, administration account, resources, existing resources, organize resources
 
@@ -24,7 +24,7 @@ You can use a project to organize and track resources across accounts, which can
 This is an experimental feature that is available for evaluation and testing purposes and might change without notice.
 {: experimental}
 
-![An enterprise account with an administration account and two business unit account groups A and B. Account group B contains an administration account and two other accounts, workload accounts A and B. The group B administration account includes a project with two configurations that contain resources from workload accounts A and B.](images/manage-resources.svg "An administration account that tracks resources from business unit accounts"){: caption="Figure 1. An administration account that tracks resources from business unit accounts" caption-side="bottom"}
+![An enterprise account with an administration account and two business unit account groups A and B. Account group B contains an administration account and two other accounts, workload accounts A and B. The group B administration account includes a project with two configurations that contain resources from workload accounts A and B.](images/manage-resources.svg "An administration account that tracks resources from business unit accounts"){: caption="An administration account that tracks resources from business unit accounts" caption-side="bottom"}
 
 Within an enterprise account architecture, tracking resources in a project can help a user in a [business unit administration account](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-bu-admin-account) manage separate workload accounts and applications. The resources exist in different accounts, for example, workload account A, and workload account B. But by adding resources from workload account A and B to a project in the administration account, the resources are visible from the project in the administration account as well.
 
@@ -90,4 +90,3 @@ To remove resources from a project, complete the following steps:
 1. In the project, go to the Resources tab and find the resource that you want to remove.
 1. Click the **Actions** icon ![Actions icon](../icons//action-menu-icon.svg "Actions") > **Remove**.
 1. Click **Remove** to confirm that you want to remove the selected resource from the project.
-

@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2024
 
-lastupdated: "2024-02-22"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -92,7 +92,7 @@ When your scan completes, the results are available on the **Dashboard** tab in 
 
 When you visit the dashboard, you can see three graphical representations of data that has been aggregated from your scans.
 
-![A visual representation of the service dashboard. The concepts are fully explained in the surrounding text.](images/dashboard.svg){: caption="Figure 1. Example dashboard" caption-side="bottom"}
+![A visual representation of the service dashboard. The concepts are fully explained in the surrounding text.](images/dashboard.svg){: caption="Example dashboard" caption-side="bottom"}
 
 
 The three graphs that you can see are:

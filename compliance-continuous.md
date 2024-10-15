@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-04-03"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -64,7 +64,7 @@ As a regulated business, there are specific standards that apply to your industr
 
 During your investigation phase, you might also want to review the available infrastructure [deployable architectures](/catalog#referencearchitecture) in the catalog. {{site.data.keyword.cloud_notm}} has created automation for the deployment of common architectural patterns that combine one or more cloud resources and designed for easy scalability and modularity. You can review the components of the architecture and the level of compliance each deployable architecture meets by reviewing the details directly in the catalog detail pages, and you can customize these architectures to meet your exact needs.
 
-![IBM Cloud catalog showing deployable architecture tiles](images/catalog.svg){: caption="Figure 2. IBM Cloud catalog showing deployable architecture tiles" caption-side="bottom"}
+![IBM Cloud catalog showing deployable architecture tiles](images/catalog.svg){: caption="IBM Cloud catalog showing deployable architecture tiles" caption-side="bottom"}
 
 ## Deploying your infrastructure and applications
 {: #deploy}
@@ -77,7 +77,7 @@ Before you deploy an architecture, a validation check is run on your configurati
 
 After your infrastructure is deployed and your [DevSecOps toolchains](/docs/devsecops-alm?topic=devsecops-alm-devsecops-alm-overview) are configured, you're ready to deploy your app by using the DevSecOps continuous integration and continuous deployment pipelines. These pipelines can help your enterprise to shift left and reduce the possibility of human error or introduction of new vulnerabilities before code ever reaches production to help mitigate any major security or financial risks.
 
-![A visual representation of a process that includes continuous integration, deployment, and compliance.](images/cd.svg){: caption="Figure 3. Continuous integration, deployment, and compliance" caption-side="bottom"}
+![A visual representation of a process that includes continuous integration, deployment, and compliance.](images/cd.svg){: caption="Continuous integration, deployment, and compliance" caption-side="bottom"}
 
 
 ## Staying compliant
@@ -85,7 +85,7 @@ After your infrastructure is deployed and your [DevSecOps toolchains](/docs/devs
 
 After you deploy resources that you know are compliant, you can ensure that you remain compliant in two ways. First, by validating your resource configurations with {{site.data.keyword.compliance_short}}. {{site.data.keyword.compliance_short}} regularly scans your configurations of the resources in your account to ensure that there hasn't been a drift in compliance.
 
-![A visual representation of the Security and Compliance Center dashboard](images/dashboard.svg){: caption="Figure 4. Example Security and Compliance Center dashboard" caption-side="bottom"}
+![A visual representation of the Security and Compliance Center dashboard](images/dashboard.svg){: caption="Example Security and Compliance Center dashboard" caption-side="bottom"}
 
 Second, you can ensure that you're deploying your code by using DevSecOps pipelines. When you use the continuous compliance toolchain, scans are reexecuted against your current production code artifacts. This continuous scanning helps to ensure that any code that is deployed in to production is checked for the latest known vulnerabilities allowing for regular revalidation of deployed code and remediation of any new issues that are discovered since the last scan.
 

@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2024
-lastupdated: "2024-05-16"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -26,7 +26,7 @@ First, you need to know whether you're creating a module or deployable architect
 |------------------|--------------------|
 | Module           | Private catalog |
 | Deployable architecture | Private catalog  \n {{site.data.keyword.cloud_notm}} catalog |
-{: caption="Table 1. Publishing options" caption-side="top"}
+{: caption="Publishing options" caption-side="top"}
 
 
 
@@ -55,7 +55,7 @@ If you plan to build a deployable architecture, you might choose to share it wit
 |I'm creating an experimental type of pattern | Private catalog |
 |The pattern applies broadly to a larger customer base | {{site.data.keyword.cloud_notm}} catalog |
 |My team has development resources to provide support and ongoing maintenance | {{site.data.keyword.cloud_notm}} catalog |
-{: caption="Table 2. Scenarios for publishing location" caption-side="top"}
+{: caption="Scenarios for publishing location" caption-side="top"}
 
 If you plan to offer your deployable architecture in the {{site.data.keyword.cloud_notm}} catalog, there are required tasks and approvals that must be completed in Partner Center. For more information, see the [Checklist for selling deployable architectures](/docs/sell?topic=sell-checklist-da).
 

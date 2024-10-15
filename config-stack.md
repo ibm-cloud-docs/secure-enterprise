@@ -4,7 +4,7 @@ copyright:
 
   years: 2024
 
-lastupdated: "2024-05-16"
+lastupdated: "2024-10-09"
 
 keywords: stack, configure stack, deployable architecture stack, stacked deployable architecture
 
@@ -67,7 +67,7 @@ To onboard your deployable architecture stack to a private catalog, you must cre
 
 The stack definition contains inputs and outputs at the stack level that can be referenced in the member deployable architectures within the stack. You can also include references between members of the stack, which links the member deployable architectures together for users. Inputs that require a specific value or reference to deploy the stack successfully need to be included in the stack definition.
 
-![A diagram of a deployable architecture stack. Three input values are defined at the stack level, a prefix, an ssh_key, and an ssh_private_key. The test-slz architecture within the stack references the prefix and ssh_key as two of its input values. While the custom-apache architecture within the stack references an output from test-slz as one of its inputs, along with the ssh_private_key from the stack level.](images/apache-stack.svg "A deployable architecture stack with references"){: caption="Figure 1. A deployable architecture stack with references" caption-side="bottom"}
+![A diagram of a deployable architecture stack. Three input values are defined at the stack level, a prefix, an ssh_key, and an ssh_private_key. The test-slz architecture within the stack references the prefix and ssh_key as two of its input values. While the custom-apache architecture within the stack references an output from test-slz as one of its inputs, along with the ssh_private_key from the stack level.](images/apache-stack.svg "A deployable architecture stack with references"){: caption="A deployable architecture stack with references" caption-side="bottom"}
 
 Currently, members can't reference outputs from the stack level.
 {: note}

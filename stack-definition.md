@@ -2,7 +2,7 @@
 
 copyright:
    years: 2022, 2024
-lastupdated: "2024-09-30"
+lastupdated: "2024-10-09"
 
 keywords: onboard, catalog management, private catalog, stack definition, software, automation, metadata
 
@@ -20,7 +20,7 @@ The stack definition file defines the member deployable architectures that are g
 
 The stack definition contains stack variables. These variables are inputs that users can configure and outputs from deployable architectures within the stack that display at the stack level. Those input values are referenced in the member deployable architectures within the stack, as illustrated in the following image. The stack definition also includes inputs from member deployable architectures within the stack. These inputs can be references that link the member deployable architectures together. Inputs that require a specific value or reference to deploy the stack successfully need to be included in the stack definition. For an example, see [Creating the stack definition by using the CLI](/docs/secure-enterprise?topic=secure-enterprise-config-stack&interface=cli#stack-define-variables).
 
-![A visual representation of a stack definition. At the stack level, one input named "prefix" is included. Member deployable architecture A is using that prefix as an input. A creates outputs. Member deployable architecture B then uses one of those outputs as an input and creates outputs when it is deployed.](images/stack-concept02.svg "Visualizing the stack definition."){: caption="Figure 1. Visualizing the stack definition" caption-side="bottom"}
+![A visual representation of a stack definition. At the stack level, one input named "prefix" is included. Member deployable architecture A is using that prefix as an input. A creates outputs. Member deployable architecture B then uses one of those outputs as an input and creates outputs when it is deployed.](images/stack-concept02.svg "Visualizing the stack definition."){: caption="Visualizing the stack definition" caption-side="bottom"}
 
 ## Using the console to create the stack definition in a project
 {: #project-create-stack-definition}
@@ -33,7 +33,7 @@ In a project, your stack definition is created automatically when you stack depl
 
 In the project, you can select which inputs you want included at the stack level. These inputs are included in the `inputs` section of the stack definition and are configured as references in the member deployable architecture in your project. In the following image, the `prefix` input is highlighted within the `Custom Apache` member deployable architecture. If this input is selected, the `Default value` changes to a reference to the stack level input. When a user adds the stack to a project from a catalog, they can configure the `prefix` input and the `Custom Apache` member architecture will reference that value. The `fp_vsi_floating_ip_address` input references an output from another member deployable architecture. That input shouldn't be selected, as that reference links the member architectures together within the stack. Such inputs from member architectures are included in the `members` section of the stack definition file. 
 
-![Defining stack variables in a project.](images/stack-definition.svg "Defining stack variables modal in a project."){: caption="Figure 2. Defining stack variables in a project" caption-side="bottom"}
+![Defining stack variables in a project.](images/stack-definition.svg "Defining stack variables modal in a project."){: caption="Defining stack variables in a project" caption-side="bottom"}
 
 ## Editing your stack definition
 {: #edit-stack-definition}

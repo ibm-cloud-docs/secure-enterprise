@@ -2,7 +2,7 @@
 
 copyright:
    years: 2024
-lastupdated: "2024-07-12"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -28,7 +28,7 @@ You can choose to build your own deployable architecture with Terraform followin
 
 A deployable architecture, which this documentation describes, is made up of 1 or more modules. A deployable architecture is composed of the following in the source repo:
 
-![Deployable architecture anatomy](images/da-anatomy.png "Deployable architecture anatomy"){: caption="Figure 1. Anatomy of a terraform-based deployable architecture" caption-side="bottom"}
+![Deployable architecture anatomy](images/da-anatomy.png "Deployable architecture anatomy"){: caption="Anatomy of a terraform-based deployable architecture" caption-side="bottom"}
 
 Terraform code
 :   Your source repo includes [Terraform files](#required-files). These files declare the desired infrastructure (end-state) and rely on Terraform providers that perform the actual API requests to create, update, and delete the infrastructure. Some of the most common providers used are {{site.data.keyword.cloud}} Terraform provider and Helm/Kubernetes/Rest API provider.

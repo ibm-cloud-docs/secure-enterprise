@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-09-27"
+lastupdated: "2024-10-09"
 
 subcollection: secure-enterprise
 
@@ -255,6 +255,6 @@ You can't assign an IAM template to the enteprise account, only child accounts o
 | Policy templates per enterprise account | 500 |
 | Trusted profile templates per enterprise account | 100 |
 | Versions per enterprise-managed template | 100 |
-{: caption="Table 1. Enterprise-managed IAM account limits" caption-side="top"}
+{: caption="Enterprise-managed IAM account limits" caption-side="top"}
 
 For more information, see [{{site.data.keyword.Bluemix_notm}} IAM limits](/docs/account?topic=account-cloudaccess#iam_limits).
