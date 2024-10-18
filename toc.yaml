@@ -10,18 +10,13 @@ toc:
     use-case: CICD, CloudComputing
     href: /docs/secure-enterprise
     path: secure-enterprise
-    description: Use IBM Cloud enterprises and a variety of tools and products to securely develop, deploy, and manage your regulated, mission-critical enterprise workloads in the cloud.
-    label: Running secure enterprise workloads
+    description: Use a variety of IBM Cloud tools and products to securely develop, deploy, and manage your regulated, mission-critical enterprise workloads in the cloud.
+    label: Running secure workloads
   entries:
   - navgroup:
       id: overview
       topics:
       - what-is-module-da.md
-      - topicgroup:
-          label: Learn about enterprise accounts
-          topics:
-            - enterprises.md
-            - include: ../billing-usage/enterprise.md
       - topicgroup:
           label: Learn about access management
           topics:
@@ -41,8 +36,6 @@ toc:
       - topicgroup:
           label: Best practices
           topics:
-          - bp_enterprise.md
-          - bp-enterprise-access.md
           - bp_projects.md
           - bp-da.md
           - include: ../security-compliance/best-practices.md
@@ -55,16 +48,10 @@ toc:
               - planning-architecture.md
               - planning-da.md
               - da-publish.md
+      - security-setup.md
   - navgroup:
       id: tutorial
       topics:
-      - topicgroup:
-          label: Creating a secure enterprise
-          topics:
-          - enterprise-tutorial.md
-          - iam-secure-account-tutorial.md
-          - iam-ent-template-tutorial.md
-          - security-setup.md
       - topicgroup:
           label: Creating deployable architectures
           topics:
@@ -76,45 +63,16 @@ toc:
       id: howto
       topics:
       - topicgroup:
-          label: Centrally managing accounts with enterprises
-          topics:
-          - enterprise-create.md
-          - enterprise-add-accounts.md
-          - enterprise-organize-accounts.md
-          - enterprise-update-group-contact.md
-          - topicgroup:
-              label: Managing enterprise billing
-              topics:
-              - include: ../billing-usage/enterprise-usage.md
-              - include: ../billing-usage/enterprise-report.md
-      - topicgroup:
           label: Managing access
           topics:
-          - enterprise-access.md
           - topicgroup:
               label: Assigning access
               topics:
-                - enterprise-assign-access.md
                 - access-project.md
                 - include: ../account/catalog-access-reqs.md
                 - include: ../account/iam-groups.md
                 - include: ../account/iam-authorizations.md
                 - include: ../account/iam-audit-policies.md
-          - topicgroup:
-              label: Centrally managing access in child accounts
-              topics:
-              - iam-enterprise-opt-in.md
-              - topic: iam-ag-template-create.md
-                navtitle: Creating access group templates
-              - topic: iam-tp-template-create.md
-                navtitle: Creating trusted profile templates
-              - topic: iam-settings-template-create.md
-                navtitle: Creating settings templates
-              - topic: iam-policy-template-create.md
-                navtitle: Creating policy templates
-              - topic: iam-auth-template.md
-                navtitle: Creating authorization templates
-              - topic: iam-template-versions.md
           - topicgroup:
               label: Administering trusted profiles
               topics:
@@ -127,6 +85,18 @@ toc:
               - include: ../account/context-restrictions-create.md
               - include: ../account/context-restrictions-update.md
               - include: ../account/context-restrictions-remove.md
+      - topicgroup:
+          label: Ensuring continuous compliance
+          topics:
+          - compliance-enterprise.md
+          - continuous-app-compliance.md
+      - topicgroup:
+          label: Logging and monitoring
+          topics:
+            - at-events.md
+            - event-notifications-events.md
+            - include: ../account/monitoring.md
+            - iam-monitor-ent-template.md
       - topicgroup:
           label: Creating automated solutions
           topics:
@@ -143,22 +113,22 @@ toc:
               - stack-definition.md
           - create-variation-da.md
           - catalog-manifest.md
-          - scripts.md
           - topic: onboard-compliance-controls.md
             navtitle: Managing compliance information
-          - topicgroup:
-             label: Using private catalogs to share solutions
-             topics:
-             - catalog-enterprise-filters.md
-             - topic: catalog-onboard-da.md
-               navtitle: Onboarding a deployable architecture
-             - topic: module-onboard.md
-               navtitle: Onboarding a module
-             - catalog-enterprise-share.md
-             - topic: vs-code-extension-onboard.md
-               navtitle: Onboard by using Visual Studio Code
       - topicgroup:
-          label: Deploying architectures with projects
+          label: Using private catalogs to share solutions
+          topics:
+          - scripts.md
+          - catalog-enterprise-filters.md
+          - topic: catalog-onboard-da.md
+            navtitle: Onboarding a deployable architecture
+          - topic: module-onboard.md
+            navtitle: Onboarding a module
+          - catalog-enterprise-share.md
+          - topic: vs-code-extension-onboard.md
+            navtitle: Onboard by using Visual Studio Code
+      - topicgroup:
+          label: Deploying architectures and managing resources with projects
           topics:
           - create-project.md
           - create-environment.md
@@ -176,32 +146,19 @@ toc:
               - cost-estimate.md
               - override-failed-validations.md
               - deploy-project.md
-      - topicgroup:
-          label: Managing deployments and resources
-          topics:
-          - locations-management.md
+              - drift-detection.md
           - topicgroup:
-              label: Ensuring continuous compliance
-              topics:
-              - compliance-enterprise.md
-              - continuous-app-compliance.md
-          - drift-detection.md
-          - attention-items.md
-          - project-spend.md
-          - delete-project.md
-          - topicgroup:
-              label: Managing resources
+              label: Managing existing resources
               topics:
               - move-deployed-resource-project.md
               - manage-existing-resources.md
               - removing-resources.md
-      - topicgroup:
-          label: Logging and monitoring
-          topics:
-            - at-events.md
-            - event-notifications-events.md
-            - include: ../account/monitoring.md
-            - iam-monitor-ent-template.md
+          - topicgroup:
+              label: Managing your project lifecycle
+              topics:
+              - attention-items.md
+              - delete-project.md
+          - project-spend.md
   - navgroup:
       id: reference
       topics:
@@ -220,15 +177,6 @@ toc:
           - link:
               label: Catalog Management
               href: https://{DomainName}/apidocs/resource-catalog/private-catalog
-          - link:
-              label: Enterprise Billing Units
-              href: https://{DomainName}/apidocs/enterprise-apis/billing-unit
-          - link:
-              label: Enterprise Management
-              href: https://{DomainName}/apidocs/enterprise-apis/enterprise
-          - link:
-              label: Enterprise Usage Reports
-              href: https://{DomainName}/apidocs/enterprise-apis/resource-usage-reports
           - link:
               label: IAM Access Groups
               href: https://{DomainName}/apidocs/iam-access-groups
@@ -250,7 +198,6 @@ toc:
           label: Command reference
           topics:
           - include: ../cli/plugins/catalogs/manage-catalogs.md
-          - include: ../cli/reference/ibmcloud/cli_enterprise.md
           - include: ../cli/reference/ibmcloud/cli_api_policy.md
           - include: ../cli/plugins/projects/projects-cli.md
           - projects-cli-change-log.md
@@ -262,9 +209,6 @@ toc:
           - link:
               label: Catalog Management
               href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cm_catalog
-          - link:
-              label: Enterprise Management
-              href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/enterprise
           - link:
               label: Global Tagging
               href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/resource_tag
@@ -279,33 +223,4 @@ toc:
       topics:
       - known-issues.md
       - faqs-projects.md
-      - faqs-enterprise.md
-      - topicgroup:
-          label: Troubleshooting enterprise accounts
-          topics:
-          - ts-view-enterprise.md
-          - ts-import-enterprise.md
-          - ts-create-enterprise-acct.md
-          - ts-subscriptions-enterprise.md
-          - ts-enterprise-apply.md
-      - topicgroup:
-          label: Troubleshooting projects
-          topics:
-          - ts-project-access.md
-          - ts-projects-create.md
-          - ts-project-delete.md
-          - ts-projects-deploy.md
-          - ts-failure-validate.md
-          - ts-needs-attention.md
-          - ts-deploy.md
-          - ts-destroy-fail.md
-          - ts-terraform.md
-          - ts-resources-list.md
-          - ts-resource-status.md
-      - topicgroup:
-           label: Troubleshooting enterprise IAM templates
-           topics:
-           - ts-access-ent-iam-templates.md
-           - ts-access-child-accts.md
-           - ts-iam-template-fail.md
-      - get-help.md
+      - ts-projects.md
