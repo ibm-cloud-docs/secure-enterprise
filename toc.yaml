@@ -10,8 +10,8 @@ toc:
     use-case: CICD, CloudComputing
     href: /docs/secure-enterprise
     path: secure-enterprise
-    description: Use IBM Cloud enterprises and a variety of tools and products to securely develop, deploy, and manage your regulated, mission-critical enterprise workloads in the cloud.
-    label: Running secure enterprise workloads
+    description: Use a variety of IBM Cloud tools and products to securely develop, deploy, and manage your regulated, mission-critical enterprise workloads in the cloud.
+    label: Running secure workloads
   entries:
   - navgroup:
       id: overview
