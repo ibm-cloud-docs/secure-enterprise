@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2024
 
-lastupdated: "2024-07-02"
+lastupdated: "2024-10-22"
 
 keywords: manage project, rename project, move project, deploy project, merge request, merge changes, deploy configuration
 
@@ -53,7 +53,7 @@ The general format to reference a value in a configuration is as follows:
 
 `ref:/configs/<config_name>/inputs_or_outputs/<input_or_output_name>`.
 
-You can reference an input or an output from a configuration that has been deployed from your project. For example, the following reference points to an output that is named `cluster_id` within the `ProdCluster` configuration: `ref:/configs/ProdCluster/outputs/cluster_id`.
+You can reference an input or an output from a configuration that was deployed from your project. For example, the following reference points to an output that is named `cluster_id` within the `ProdCluster` configuration: `ref:/configs/ProdCluster/outputs/cluster_id`.
 
 You can add a relative reference to another input within the configuration that you're currently editing. The configuration does not need to be deployed to do so.
 {: remember}
@@ -97,17 +97,17 @@ To create a customized configuration, complete the following steps:
     * Any extra controls that the architecture owner added that are not included in the list of supported rules are not checked when you validate your configuration.
     * If the owner of the deployable architecture didn't add compliance controls to their product, the full set of {{site.data.keyword.compliance_short}} rules is used.
 
-    To view the list of added controls, go the [{{site.data.keyword.cloud}} catalog](/catalog){: external} and select the deployable architecture that you're configuring. The Security & compliance tab lists all of the controls that were added to the deployable architecture.
+    To view the list of added controls, go to the [{{site.data.keyword.cloud}} catalog](/catalog){: external} and select the deployable architecture that you're configuring. The Security & compliance tab lists all of the controls that were added to the deployable architecture.
     {: tip}
 
-    If you select **Select from {{site.data.keyword.compliance_short}}**, you must have an instance of the service and an attachment through {{site.data.keyword.compliance_short}} in the target account that you want to deploy to. For help creating an attachment, see [Evaluating resource configuration with {{site.data.keyword.compliance_long}}](/docs/secure-enterprise?topic=secure-enterprise-security-compliance-scanning).
+    If you select **Select from {{site.data.keyword.compliance_short}}**, you must have an instance of the service and an attachment through {{site.data.keyword.compliance_short}} in the target account that you want to deploy to. For help with creating an attachment, see [Evaluating resource configuration with {{site.data.keyword.compliance_long}}](/docs/secure-enterprise?topic=secure-enterprise-security-compliance-scanning).
 
 1. From the **Required** panel, enter values for the required inputs for the deployable architecture configuration.
 1. Optional: You can add values by going to the **Optional** panel.
 1. Click **Save**.
 1. Click **Validate**. The modal that is displayed provides more details about your in-progress validation.
 
-   If the validation fails, you can [troubleshoot the failure](/docs/secure-enterprise?topic=secure-enterprise-ts-na-failures). Or, an administrator on the {{site.data.keyword.cloud_notm}} Projects service can review the results through the {{site.data.keyword.bpshort}} service and [override the failure and approve](/docs/secure-enterprise?topic=secure-enterprise-approve-failed-validation) the configuration to deploy anyway. However, ensure that the pipeline failed due to the Code Risk Analyzer scan and not because of a validation or plan failure. It is not recommended to override a failure that is flagged due to a validation or plan failure as the configuration might not deploy successfully. For more information about security and compliance in projects, see [Achieving continuous compliance as an enterprise](/docs/secure-enterprise?topic=secure-enterprise-continuous-compliance).
+   If the validation fails, you can [troubleshoot the failure](/docs/secure-enterprise?topic=secure-enterprise-troubleshooting-for-projects#ts-na-failures). Or, an administrator on the {{site.data.keyword.cloud_notm}} Projects service can review the results through the {{site.data.keyword.bpshort}} service and [override the failure and approve](/docs/secure-enterprise?topic=secure-enterprise-approve-failed-validation) the configuration to deploy anyway. However, ensure that the pipeline failed due to the Code Risk Analyzer scan and not because of a validation or plan failure. It is not recommended to override a failure that is flagged due to a validation or plan failure as the configuration might not deploy successfully. For more information about security and compliance in projects, see [Achieving continuous compliance as an enterprise](/docs/secure-enterprise?topic=secure-enterprise-continuous-compliance).
 
 If you're configuring a deployable architecture stack, make sure to validate each architecture in the stack according to their dependencies.
 {: important}
@@ -162,5 +162,3 @@ For more information about the command parameters, see [**`ibmcloud project conf
    {: codeblock}
 
    For more information about the command parameters, see [**`ibmcloud project config-approve`**](/docs/cli?topic=cli-projects-cli#project-cli-config-approve-command).
-
-
