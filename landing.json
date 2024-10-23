@@ -35,18 +35,15 @@
     "tiles": [
       {
         "date": "03 October 2024",
-        "title": "Project widget updates",
-        "description": "From the Overview tab in a project, you can now view the resource summary and configuration usage widgets to quickly get an overview of the resources and usage in your project. These widgets provide a snapshot of key metrics, such as cost and counts of resources by category, simplifying the process of monitoring and managing resources within a project."
+        "title": "Project widget updates"
       },
       {
         "date": "07 August 2024",
-        "title": "Experimental: Access resources from the Resources tab",
-        "description": "A link to resources is now available from the Resources tab in a project. If the resource exists in a different account, the console automatically switches to that account if you have access to it. If you don't have access to that account, the console displays an error message."
+        "title": "Experimental: Access resources from the Resources tab"
       },
       {
         "date": "07 August 2024",
-        "title": "View counts for all resources in the resource summary widget",
-        "description": "The resource summary widget for a project now shows resource counts for all resources in a project by default. The All resources option in the widget's menu is selected by default. To view resource counts for a specific configuration, select that configuration from the menu."
+        "title": "View counts for all resources in the resource summary widget"
       }
     ]
   }
