@@ -86,18 +86,6 @@ toc:
               - include: ../account/context-restrictions-update.md
               - include: ../account/context-restrictions-remove.md
       - topicgroup:
-          label: Ensuring continuous compliance
-          topics:
-          - compliance-enterprise.md
-          - continuous-app-compliance.md
-      - topicgroup:
-          label: Logging and monitoring
-          topics:
-            - at-events.md
-            - event-notifications-events.md
-            - include: ../account/monitoring.md
-            - iam-monitor-ent-template.md
-      - topicgroup:
           label: Creating automated solutions
           topics:
           - create-module.md
@@ -159,6 +147,18 @@ toc:
               - attention-items.md
               - delete-project.md
           - project-spend.md
+      - topicgroup:
+          label: Ensuring continuous compliance
+          topics:
+          - compliance-enterprise.md
+          - continuous-app-compliance.md
+      - topicgroup:
+          label: Logging and monitoring
+          topics:
+            - at-events.md
+            - event-notifications-events.md
+            - include: ../account/monitoring.md
+            - iam-monitor-ent-template.md
   - navgroup:
       id: reference
       topics:
