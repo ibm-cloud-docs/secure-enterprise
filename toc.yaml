@@ -223,4 +223,18 @@ toc:
       topics:
       - known-issues.md
       - faqs-projects.md
-      - ts-projects.md
+      - faqs-enterprise.md
+      - topicgroup:
+          label: Troubleshooting projects
+          topics:
+          - ts-project-access.md
+          - ts-projects-create.md
+          - ts-project-delete.md
+          - ts-projects-deploy.md
+          - ts-failure-validate.md
+          - ts-needs-attention.md
+          - ts-deploy.md
+          - ts-destroy-fail.md
+          - ts-terraform.md
+          - ts-resources-list.md
+          - ts-resource-status.md
