@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2022, 2023
+  years: 2022, 2024
 
-lastupdated: "2024-06-04"
+lastupdated: "2024-11-15"
 
 keywords: add project, create project, set project
 
@@ -84,14 +84,8 @@ You can also add a deployable architecture to a project directly from the catalo
 
 Check out the steps on how to [configure and deploy a deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-config-project) when you're ready to deploy resources from a deployable architecture from a project.
 
-
-
 ## Exporting the project JSON
 {: #json-export}
-
-
-
-
 
 As a user that’s working with projects, you can export the project JSON to manually manage the project in your own public or private repository. For example, you might want to push updates to the JSON by calling the project API using CLI commands or by using your own CICD tools. You might also export the JSON as a way to backup the project information outside of the {{site.data.keyword.cloud_notm}} Projects service.
 
@@ -101,7 +95,3 @@ To export the project JSON, complete the following steps:
 1. From the modal, click **Export**.
 
 For more information about the project JSON, see [Project JSON](/docs/secure-enterprise?topic=secure-enterprise-json-project).
-
-
-
-
