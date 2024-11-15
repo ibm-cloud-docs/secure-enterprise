@@ -111,7 +111,7 @@ Each validated and approved configuration in a project has an object in the conf
 {: #json-export}
 {: ui}
 
-As a user that’s working with projects, you can export the project JSON to manually manage the project in your own public or private repository. For example, you might want to push updates to the JSON by calling the project API using CLI commands or by using your own CICD tools. You might also export the JSON as a way to backup the project information outside of the {{site.data.keyword.cloud_notm}} Projects service.
+As a user that’s working with projects, you can export the project JSON to manually manage the project in your own public or private repository. For example, you might want to push updates to the JSON by calling the project API using CLI commands or by using your own CICD tools. You might also export the JSON as a way to back up the project information outside of the {{site.data.keyword.cloud_notm}} Projects service.
 
 To export the project JSON, complete the following steps:
 1. In the {{site.data.keyword.cloud_notm}} console, click the **Navigation menu** icon ![Navigation Menu icon](../icons/icon_hamburger.svg "Menu") > **Projects**.
@@ -133,7 +133,7 @@ By using the following `--output json` option on the command line, you can set t
 {: #json-export-cli}
 {: cli}
 
-As a user that’s working with projects, you can export the project JSON to manually manage the project in your own public or private repository. For example, you might want to push updates to the JSON by calling the project API using CLI commands or by using your own CICD tools. You might also export the JSON as a way to backup the project information outside of the {{site.data.keyword.cloud_notm}} Projects service.
+As a user that’s working with projects, you can export the project JSON to manually manage the project in your own public or private repository. For example, you might want to push updates to the JSON by calling the project API using CLI commands or by using your own CICD tools. You might also export the JSON as a way to back up the project information outside of the {{site.data.keyword.cloud_notm}} Projects service.
 
 To export the project JSON by using the CLI, run the following `ibmcloud project get` command: 
 
@@ -148,7 +148,7 @@ See [**`ibmcloud project get`**](/docs/secure-enterprise?topic=secure-enterprise
 {: #json-export-api}
 {: api}
 
-As a user that’s working with projects, you can export the project JSON to manually manage the project in your own public or private repository. For example, you might want to push updates to the JSON by calling the project API using CLI commands or by using your own CICD tools. You might also export the JSON as a way to backup the project information outside of the {{site.data.keyword.cloud_notm}} Projects service.
+As a user that’s working with projects, you can export the project JSON to manually manage the project in your own public or private repository. For example, you might want to push updates to the JSON by calling the project API using CLI commands or by using your own CICD tools. You might also export the JSON as a way to back up the project information outside of the {{site.data.keyword.cloud_notm}} Projects service.
 
 You can programmatically export the project JSON by calling the [Projects API](/apidocs/projects#get-project){: external} as shown in the following sample request: 
 
