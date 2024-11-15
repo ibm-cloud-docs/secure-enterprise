@@ -25,9 +25,6 @@ In a [project](#x2035151){: term}, you can add deployable architectures from the
 
 You can create a project by going to the **Navigation menu** icon ![Navigation Menu icon](../icons/icon_hamburger.svg "Menu") and selecting **[Projects](/projects/)** or from a deployable architecture in the [catalog](/catalog/). Projects can also be created by using the [Project API](https://{DomainName}/apidocs/projects).
 
-To back up the project information outside of the {{site.data.keyword.cloud_notm}} Projects service, you can export the project. For more information, go to [Project JSON](/docs/secure-enterprise?topic=secure-enterprise-json-project&interface=ui).
-{: tip}
-
 
 
 ## Before you begin
@@ -84,5 +81,8 @@ You can also add a deployable architecture to a project directly from the catalo
 1. You can create a new project or add to an existing project.
 1. Enter the required details for the deployable architecture.
 1. Click **Add**.
+
+To back up the project information outside of the {{site.data.keyword.cloud_notm}} Projects service, you can export the project. For more information, go to [Project JSON](/docs/secure-enterprise?topic=secure-enterprise-json-project&interface=ui).
+{: tip}
 
 Check out the steps on how to [configure and deploy a deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-config-project) when you're ready to deploy resources from a deployable architecture from a project.
