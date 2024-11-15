@@ -18,8 +18,6 @@ keywords: project json, project metadata, JSON config, project config, export JS
 
 Each configuration in a project is stored as JSON in a file called `project.json`. Projects require governance over configuration changes that are stored in `project.json`, for example, requiring approvals and ensuring that automated checks pass before changes are saved.
 
-You can export and edit a project JSON to a public or private Git repository of your choice and push direct edits to the code. For more information, see [Exporting a JSON](/docs/secure-enterprise?topic=secure-enterprise-setup-project#json-export).
-
 ## What's in my Project.json file?
 {: #project-json}
 
