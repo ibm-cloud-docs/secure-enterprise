@@ -171,6 +171,7 @@ toc:
           topics:
             - zero_downtime.md
             - ha-dr.md
+      - data-portability.md
       - topicgroup:
           label: API reference
           topics:
