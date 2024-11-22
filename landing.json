@@ -34,16 +34,16 @@
     "view_more": "/docs/overview?topic=overview-whatsnew",
     "tiles": [
       {
+        "date": "21 November 2024",
+        "title": "Experimental: Connect your project to a Git repository"
+      },
+      {
         "date": "03 October 2024",
         "title": "Project widget updates"
       },
       {
         "date": "07 August 2024",
         "title": "Experimental: Access resources from the Resources tab"
-      },
-      {
-        "date": "07 August 2024",
-        "title": "View counts for all resources in the resource summary widget"
       }
     ]
   }
