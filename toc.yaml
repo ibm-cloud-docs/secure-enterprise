@@ -59,6 +59,7 @@ toc:
             - topic: custom-share.md
               navtitle: Sharing your deployable architecture
       - deploy-regions.md
+      - git-tutorial.md
   - navgroup:
       id: howto
       topics:
@@ -120,6 +121,7 @@ toc:
           topics:
           - create-project.md
           - create-environment.md
+          - connect-git.md
           - topicgroup:
               label: Authorizing deployments
               topics:

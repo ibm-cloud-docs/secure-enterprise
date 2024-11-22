@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-11-15"
+lastupdated: "2024-11-22"
 
 subcollection: secure-enterprise
 
@@ -148,7 +148,10 @@ See [**`ibmcloud project get`**](/docs/secure-enterprise?topic=secure-enterprise
 {: #json-export-api}
 {: api}
 
-As a user that’s working with projects, you can export the project JSON to manually manage the project in your own public or private repository. For example, you might want to push updates to the JSON by calling the project API using CLI commands or by using your own CICD tools. You might also export the JSON as a way to back up the project information outside of the {{site.data.keyword.cloud_notm}} Projects service.
+As a user that's working with projects, you can export the project JSON to back up the project information outside of the {{site.data.keyword.cloud_notm}} Projects service. 
+
+Interested in managing your project in your own Git repository? While you can export the project JSON to manually manage your project, you can also integrate your project with a Git repository directly. For more information, go to [Integrating a project with a Git repository](/docs/secure-enterprise?topic=secure-enterprise-connect-to-git).
+{: tip}
 
 You can programmatically export the project JSON by calling the [Projects API](/apidocs/projects#get-project){: external} as shown in the following sample request: 
 
