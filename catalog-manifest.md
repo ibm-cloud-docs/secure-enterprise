@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-12-05"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -618,6 +618,7 @@ Section header for information about the deployable architecture variations. Fla
 
 
 
+
 `release_notes_url`
 :   URL to the architecture's release notes.
 
@@ -736,6 +737,8 @@ Section header for information about the deployable architecture variations. Fla
     }
     ```
     {: codeblock}
+
+
 
 `terraform_version`
 :   The Hashicorp Terraform runtime version that is needed to validate and install the version. Setting this value in the manifest overrides what is specified in the source code.
