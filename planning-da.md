@@ -2,7 +2,7 @@
 
 copyright:
    years: 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-12-10"
 
 keywords:
 
@@ -60,6 +60,8 @@ Many deployable architectures are stand-alone and aren't extensions of other arc
 {: tip}
 
 However, if you already deployed {{site.data.keyword.redhat_openshift_notm}} Container Platform and you need to deploy VSI, the resources that are required for VSI are already provisioned. You don't need to deploy the {{site.data.keyword.redhat_openshift_notm}} Container Platform architecture again. Since the VSI architecture is an extension of the {{site.data.keyword.redhat_openshift_notm}} Container Platform, you can deploy VSI and the architecture uses the resources from the {{site.data.keyword.redhat_openshift_notm}} Container Platform as needed. 
+
+
 
 For more information, see [Specifying dependencies](/docs/secure-enterprise?topic=secure-enterprise-create-da#fullstackvext). 
 

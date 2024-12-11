@@ -224,6 +224,7 @@ toc:
   - navgroup:
       id: help
       topics:
+      - get-help.md 
       - known-issues.md
       - faqs-projects.md
       - faqs-enterprise.md
