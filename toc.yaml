@@ -168,6 +168,7 @@ toc:
       - project-responsibilities.md
       - deployable-architecture-responsibilities.md
       - architecture-workload-isolation.md
+      - service-dependency.md
       - topicgroup:
           label: High availability and disaster recovery
           topics:
