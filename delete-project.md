@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2022, 2023
+  years: 2022, 2024
 
-lastupdated: "2023-07-06"
+lastupdated: "2024-12-16"
 
 keywords: manage project, rename project, move project, deploy project
 
@@ -25,14 +25,9 @@ By default, when you delete a project, any resources that were deployed are dest
 
 
 
-To delete a project, complete the following steps:
+Make sure that you want to delete a project because this action can't be undone. To delete a project, complete the following steps:
 
 1. In the {{site.data.keyword.cloud}} console, click the **Navigation menu** icon ![Navigation Menu icon](../icons/icon_hamburger.svg "Menu") > **Projects**.
-2. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") > **Delete project** for the project that you want to delete.
-3. Enter the project name into the required field.
-    Make sure that you want to delete a project because after you delete a project, the action can't be undone.
-    {: important}
-
-4. Click **Delete**.
-
-
+1. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") > **Delete project** for the project that you want to delete.
+1. Enter the project name into the required field.
+1. Click **Delete**.
