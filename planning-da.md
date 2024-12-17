@@ -2,7 +2,7 @@
 
 copyright:
    years: 2024
-lastupdated: "2024-12-10"
+lastupdated: "2024-12-17"
 
 keywords:
 
@@ -61,7 +61,13 @@ Many deployable architectures are stand-alone and aren't extensions of other arc
 
 However, if you already deployed {{site.data.keyword.redhat_openshift_notm}} Container Platform and you need to deploy VSI, the resources that are required for VSI are already provisioned. You don't need to deploy the {{site.data.keyword.redhat_openshift_notm}} Container Platform architecture again. Since the VSI architecture is an extension of the {{site.data.keyword.redhat_openshift_notm}} Container Platform, you can deploy VSI and the architecture uses the resources from the {{site.data.keyword.redhat_openshift_notm}} Container Platform as needed. 
 
+### Optional and swappable components 
+{: #optional-swappable}
 
+This is an experimental feature that is available for evaluation and testing purposes and might change without notice.
+{: experimental}
+
+Some architectures might work well with a deployable architecture that you're onboarding without being a required prerequisite for your product. If that's the case for the product that you're onboarding, you can specify other architectures as optional components, also known as [optional dependencies in the catalog manifest file](/docs/secure-enterprise?topic=secure-enterprise-manifest-values#optional-components). When a user adds your deployable architecture to a project from a catalog, they can customize it by adding the optional component if they want to. Any dependency, whether it's optional or required for your product, can be swappable with other architectures. Swappable components provide the same function, and the user can select the architecture that best meets their needs. 
 
 For more information, see [Specifying dependencies](/docs/secure-enterprise?topic=secure-enterprise-create-da#fullstackvext). 
 

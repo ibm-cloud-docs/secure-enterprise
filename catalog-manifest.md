@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-05"
+lastupdated: "2024-12-17"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -580,8 +580,8 @@ Section header for information about the deployable architecture variations. Fla
         `description`
         :   Information about architecture diagram as a whole, including the outline of the system and the relationships, constraints, and boundaries between components of the deployable architecture.
 
-`dependencies`
-:   Section header for a list of prerequisite products that are required to deploy the architecture. Information includes the programmatic name of the product and product versions. Optionally, you can include the catalog ID and a list of dependent variations.
+`dependencies` {: #optional-components}
+:   Section header for a list of products that are compatible with the deployable architecture. Dependencies can be required or optional. A dependency included here can't be added to the `swappable_dependencies` section as well. Information includes the programmatic name of the product and product versions. Optionally, you can include the catalog ID and a list of dependent variations.
 
     ```json
     {
@@ -594,6 +594,21 @@ Section header for information about the deployable architecture variations. Fla
        ],
        "install_type": "fullstack or extension",
        "catalog_id": "catalog ID"
+       "optional": true,
+       "input_mapping": [
+       {
+           "dependency_output": "kms_instance_crn",
+           "version_input": "existing_kms_instance_crn"
+       },
+       {
+           "version_input": "region",
+           "value": "us-south"
+       },
+       {
+           "version_input": "prefix"
+           "reference_version": true
+       }
+       ]
     }
     ```
     {: codeblock}
@@ -614,10 +629,88 @@ Section header for information about the deployable architecture variations. Fla
     :   A version or range of versions to include as dependencies in SemVer format.
 
     `flavors` (optional)
-    :   List of variations that the architecture depends on. 
+    :   List of variations that the architecture is compatible with.
 
+    `optional` [Experimental]{: tag-purple}
+    :   Specifies whether the dependency is required or not required. The default value is `false`. To use this property, you must also set `dependency_version_2` to `true`. 
 
+    `on_by_default` [Experimental]{: tag-purple}
+    :   Specifies whether an optional dependency is selected for users when they add your deployable architecture to a project from a catalog. Users can deselect the component if they do not want it. The default value is `false`. To use this property, you must also set `dependency_version_2` and `optional` to `true`. 
 
+    `input_mapping` (optional) [Experimental]{: tag-purple}
+    :   Section header that specifies the values that are referenced between the compatible architecture and the architecture that you're onboarding. To use this property, you must also set `dependency_version_2` to `true`. 
+
+        `dependency_output` or `dependency_input` (optional)
+        :   Specifies the variable from the dependency that the architecture that you're onboarding references. The value is the name of the variable from the dependency. Only one of these two properties should be provided. If `reference_version` is set to `true`, then this variable references the `version_input` variable from the architecture that you’re onboarding.
+
+        `version_input` (optional)
+        :   Specifies the name of the input variable in the architecture that you're onboarding that references the `dependency_output` or `dependency_input` value. If `reference_version` is set to `true`, then the `dependency_input` variable references the `version_input` variable from the architecture that you’re onboarding. 
+
+        `value` (optional)
+        :   Specifies the preset value for an input from the architecture that you’re onboarding (`version_input`) or its dependency (`dependency_input`). The value that is specified here is only used if a `version_input` or `dependency_input` is provided, and `dependency_output` is not provided. If `version_input` is provided, then when the architecture and its dependency are added to a project by a user, the architecture’s `version_input` is preset to the value specified here. If `dependency_input` is provided, then when the architecture and its dependency are added to a project by a user, the dependency’s `dependency_input` is preset to the value specified here.
+
+        `reference_version` (optional) 
+        :   Indicates the flow of references between the architecture that you’re onboarding and its dependency. The default value is `false`. The default behavior is for the architecture input (`version_input`) to reference either an input or output from the dependency (`dependency_input` or `dependency_output`). When this flag is set to `true`, the `dependency_input` references a value from the `version_input`.
+
+`ignore_auto_referencing` (optional) [Experimental]{: tag-purple}
+:   An array of strings that are the dependency’s inputs. When the architecture that you’re onboarding and the dependency have the same input name on both of their versions, and no references are set to the `dependency_input` by using `input_mapping`, the architecture’s `version_input` value is automatically used in the dependency’s `dependency_input`. You can override this behavior by adding the input’s name to this array. You can also add `“*”` and all automatic referencing is ignored. 
+
+`dependency_version_2` (optional) [Experimental]{: tag-purple}
+:   Specifies that the updated dependency handling is used with this deployable architecture. If you are using the `optional` property or the `input_mapping` sections within the `dependencies` section, set this value to `true`. If not, set it to `false`. If this property is set to `true`, all dependencies that have the `optional` property set to `false` are required to deploy the architecture that you're onboarding. 
+
+`swappable_dependencies` (optional) [Experimental]{: tag-purple}
+:   Section header for a list of products that are compatible with the deployable architecture. Unlike the `dependencies` array, the products in this section are swappable. The user can pick which product they want to use to meet the dependency. Swappable dependencies can be required or optional. A dependency included here can't be added to the `dependencies` array as well. Information includes the programmatic name of the product and product versions. Optionally, you can include the catalog ID and a list of dependent variations.
+
+    ```json
+    {
+      "optional": "true or false",
+      "name": "Name for this group of swappable dependencies",
+      "default_dependency": "the name of the dependency that is selected by default", 
+      "dependencies": [
+        {
+          	"name": "offering name"
+          	"id": "offering ID"
+          	"kind": "terraform"
+          	"version": "SemVer version e.g. 3.1.2",
+          	"flavors": [
+               "flavor name"
+            ],
+          	"install_type": "fullstack or extension",
+          	"catalog_id": "catalog ID",
+          	"input_mapping": [
+            {
+                "dependency_output": "kms_instance_crn",
+                "version_input": "existing_kms_instance_crn"
+            }
+            ]
+        },
+        {
+          	"name": "offering name"
+          	"id": "offering ID"
+          	"kind": "terraform"
+          	"version": "SemVer version e.g. 3.1.2",
+          	"flavors": [
+               "flavor name"
+            ],
+          	"install_type": "fullstack or extension",
+          	"catalog_id": "catalog ID",
+          	"input_mapping": [
+            {
+                "dependency_output": "kms_instance_crn",
+                "version_input": "existing_kms_instance_crn"
+            }
+            ]
+        }
+      ]
+    }
+    ```
+    {: codeblock}
+
+    `name` (optional)
+    :   Used when the architecture is onboarded to a catalog to help you identify the specific group of `swappable_dependencies`. 
+
+    `default_dependency` (optional)
+    :   The `name` of one of the dependencies in the group that is selected for users by default.
 
 `release_notes_url`
 :   URL to the architecture's release notes.
