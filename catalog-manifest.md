@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-12-17"
+  years: 2022, 2025
+lastupdated: "2025-01-03"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -854,7 +854,7 @@ Section header for information about the deployable architecture variations. Fla
     :   A short summary of the output value.
 
 `install_type`
-:   Specifies whether a deployable architecture is `fullstack` or `extension`. Architectures listed as extensions require prerequisites. The `dependencies` array must also completed if you set this value to `extension`.
+:   Specifies whether a deployable architecture is `fullstack` or `extension`. Architectures listed as extensions require prerequisites. The `dependencies` array must also completed if you set this value to `extension`. This property is ignored if `dependency_version_2` is set to `true`. 
 
 
 `scripts`
