@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2024
-lastupdated: "2024-10-09"
+   years: 2025
+lastupdated: "2025-01-03"
 
 keywords:
 
@@ -48,16 +48,19 @@ Catalog manifest file
 Variations
 :   A deployable architecture can include variations of capability or complexity. For example, you might create a quick start variation with basic capabilities for a simple, low-cost deployment, and then you might have a standard variation with a more complex architecture that would be used in production. Each of these variations is itself a deployable architecture, which is onboarded and configured to appear together in a catalog. These variations are sourced in the same repo in different working directories and are defined in your `ibm_catalog.json` file. For more information, see [Creating a variation](#create-variation).
 
-## Specifying dependencies
+## Specifying dependencies and optional components
 {: #fullstackvext}
 
-There are two `install_type` options that you can specify when creating your deployable architecture. One specifies that dependent deployable architectures that must be deployed first, and one specifies that it can be deployed without any prerequisites.
+There are two `install_type` options that you can specify when creating your deployable architecture. One specifies that dependent deployable architectures must be deployed first, or optional architectures are available that work with your deployable architecture. The other option specifies that your deployable architecture is a full end-to-end solution that is always deployed as-is. 
 
 `fullstack`
-:   It is a full end-to-end solution that is always deployed as-is. The `fullstack` value is set in the `ibm_catalog.json` manifest file for `install_type` to specify that the deployable architecture does not have any dependencies (prerequisites).
+:   It is a full end-to-end solution that is always deployed as-is. The `fullstack` value is set in the `ibm_catalog.json` manifest file for `install_type` to specify that the deployable architecture does not have any dependencies (prerequisites) or optional architectures that can be added on.
+
+   A deployable architecture with `fullstack` defined in the manifest file should not be confused with a deployable architecture stack, which is made up of one or more deployable architectures instead of modules. 
+   {: important}
 
 `extension`
-:   A deployable architecture that depends on another deployable architecture being deployed first. The prerequisite deployable architecture is the base on which the extension deployable architecture is built. This dependency, or prerequisite, must be met to deploy the extension. The `extension` value is set in the `ibm_catalog.json` manifest file for the `install_type`, and the `dependencies` array must be completed to specify the dependent deployable architecture in the manifest file.
+:   A deployable architecture that depends on another deployable architecture being deployed first, or works well with other deployable architectures that can be optionally added on. Often, the prerequisite deployable architecture is the base on which the extension deployable architecture is built. If it is required, this dependency, or prerequisite, must be met to deploy the extension. The `extension` value is set in the `ibm_catalog.json` manifest file for the `install_type`, and the `dependencies` or `swappable_dependencies` array must be completed to specify the required or optional deployable architectures in the manifest file.
 
 For more information and setting these values, see [Locally editing the catalog manifest](/docs/secure-enterprise?topic=secure-enterprise-manifest-values).
 
