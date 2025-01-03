@@ -854,7 +854,7 @@ Section header for information about the deployable architecture variations. Fla
     :   A short summary of the output value.
 
 `install_type`
-:   Specifies whether a deployable architecture is `fullstack` or `extension`. Architectures listed as extensions require prerequisites, or optional components are available that work with the deployable architecture that you're onboarding. The `dependencies` or `swappable_dependencies` array must also be completed if you set this value to `extension`.
+:   Specifies whether a deployable architecture is `fullstack` or `extension`. Architectures listed as extensions require prerequisites. The `dependencies` array must also completed if you set this value to `extension`. This property is ignored if `dependency_version_2` is set to `true`. 
 
 
 `scripts`
