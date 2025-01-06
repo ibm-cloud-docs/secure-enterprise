@@ -2,7 +2,7 @@
 
 copyright:
    years: 2025
-lastupdated: "2025-01-03"
+lastupdated: "2025-01-06"
 
 keywords:
 
@@ -58,6 +58,9 @@ There are two `install_type` options that you can specify when creating your dep
 
 `extension`
 :   A deployable architecture that depends on another deployable architecture being deployed first. The prerequisite deployable architecture is the base on which the extension deployable architecture is built. This dependency, or prerequisite, must be met to deploy the extension. The `extension` value is set in the `ibm_catalog.json` manifest file for the `install_type`, and the `dependencies` array must be completed to specify the dependent deployable architecture in the manifest file.
+
+If your deployable architecture is compatible with other architectures, but doesn't require them to deploy, you can include those architectures as optional components for your users. To include optional components, set `dependency_version_2` to `true` in the catalog manifest file. If you do so, the `install_type` option is ignored. Then, use the `dependencies` or `swappable_dependencies` array to specify required and optional components.
+{: note}
 
 For more information and setting these values, see [Locally editing the catalog manifest](/docs/secure-enterprise?topic=secure-enterprise-manifest-values).
 
