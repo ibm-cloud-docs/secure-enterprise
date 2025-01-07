@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2023, 2024
+  years: 2023, 2025
 
-lastupdated: "2024-10-22"
+lastupdated: "2025-01-07"
 
 keywords: manage project, rename project, move project, deploy project, merge request, merge changes, deploy configuration
 
@@ -23,7 +23,7 @@ After you add a deployable architecture to your project, you can edit the input 
 
 Configurations can be generic, but many projects use a configuration, or a group of configurations, to deploy resources to different environments. For example, a group of configurations can be used to deploy resources to development, test, and production environments and set up common services outside of the environments. When you deploy your configuration, {{site.data.keyword.bplong}} uses Terraform to apply the underlying plan. 
 
-Before you can deploy your project, the inputs, plan, compliance, and estimated cost for the deployable architecture must be validated. Any changes that are made to the configuration are validated to ensure that there aren't any issues or failures.
+Before you can deploy your architecture, the inputs, plan, compliance, and estimated cost for the deployable architecture must be validated. Any changes that are made to the configuration are validated to ensure that there aren't any issues or failures.
 {: note}
 
 
