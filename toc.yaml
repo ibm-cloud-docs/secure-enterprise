@@ -56,7 +56,7 @@ toc:
           label: Creating deployable architectures
           topics:
             - custom-basic.md
-            - topic: custom-share.md
+            - include: ../enterprise-management/custom-share.md
               navtitle: Sharing your deployable architecture
       - deploy-regions.md
       - git-tutorial.md
