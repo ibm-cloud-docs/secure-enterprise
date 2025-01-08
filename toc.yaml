@@ -108,7 +108,7 @@ toc:
           label: Using private catalogs to share solutions
           topics:
           - scripts.md
-          - catalog-enterprise-filters.md
+          - include: ../enterprise-management/catalog-enterprise-filters.md
           - topic: catalog-onboard-da.md
             navtitle: Onboarding a deployable architecture
           - topic: module-onboard.md
