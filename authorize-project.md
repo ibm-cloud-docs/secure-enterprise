@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2023, 2024
+  years: 2023, 2025
 
 
-lastupdated: "2024-06-18"
+lastupdated: "2025-01-08"
 
 
 keywords: authorizing a project, add project to account, project secrets, project API key, authenticate, authentication for a project, target account
@@ -82,5 +82,5 @@ After you create a secret, you can use that secret as a reference to authorize y
 1. In the Configure section, hover over the API key field, and select the **Key icon**.
 1. Choose the service instance and select the secret that you want to use and click **OK**.
 
-You can also use a trusted profile as a reference. In the Configure section, for the method, select **Trusted profile** and enter your trusted profile ID. For more information, see [Using trusted profiles](/docs-draft/secure-enterprise?topic=secure-enterprise-tp-project&interface=ui).
+You can also use a trusted profile as a reference. In the Configure section, for the method, select **Trusted profile** and enter your trusted profile ID. For more information, see [Using trusted profiles](/docs/secure-enterprise?topic=secure-enterprise-tp-project&interface=ui).
 {: note}

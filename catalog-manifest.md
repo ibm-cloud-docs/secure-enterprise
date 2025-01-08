@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-01-03"
+lastupdated: "2025-01-08"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -766,7 +766,7 @@ Section header for information about the deployable architecture variations. Fla
 
         Supported custom types:
         * `array` requires a list of values separated by a comma.
-        * `region` requires user to select a region to deploy the deployable architecture from a dropdown list. You can filter the regions that are available to end users. For example, you might specify `country_id:us,ca,jp` in the Region filter to limit the available regions to those countries. For more information, see [Filtering syntax](/docs-draft/hybrid-workloads?topic=hybrid-workloads-managing_locations#filtering_syntax).
+        * `region` requires user to select a region to deploy the deployable architecture from a dropdown list. You can filter the regions that are available to end users. For example, you might specify `country_id:us,ca,jp` in the Region filter to limit the available regions to those countries. For more information, see [Filtering syntax](/docs/hybrid-workloads?topic=hybrid-workloads-managing_locations#filtering_syntax).
         * `textarea` requires users to input text that can be split into multiple lines. For example, a description.
         * `vpc` requires users to select a VPC by name from a dropdown list. The output is the VPC name or ID that your template requires.
         * `vpc ssh key` requires users to select a VPC SSH key for authentication to a virtual machine.
