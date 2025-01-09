@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-06-04"
+  years: 2024, 2025
+lastupdated: "2025-01-09"
 
-keywords: drift detection, deploying architecture, drift, deployable, project, scan
+keywords: drift detection, deploying architecture, drift, deployable, project, scan, monitor, monitor drift
 
 subcollection: secure-enterprise
 
@@ -30,7 +30,7 @@ You or members of your team can enable automatic drift detection by updating the
 2. Click **Settings**.
 3. Toggle **Detect drift** to **On**.
 
-If your use case requires it, you can run a drift detection scan manually from the Schematics workspace job page. You can trigger the scan manually without worrying about any impact to the schedule for automatic drift detection. For more information, check out [Detecting drift in workspaces](/docs/schematics?topic=schematics-drift-note).
+If your use case requires it, you can run a drift detection scan manually from the {{site.data.keyword.bplong}} workspace job page. You can trigger the scan manually without worrying about any impact to the schedule for automatic drift detection. For more information, check out [Detecting drift in workspaces](/docs/schematics?topic=schematics-drift-note).
 {: note}
 
 ## Fixing drift
