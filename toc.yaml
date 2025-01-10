@@ -71,21 +71,13 @@ toc:
               topics:
                 - access-project.md
                 - include: ../account/catalog-access-reqs.md
-                - include: ../account/iam-groups.md
-                - include: ../account/iam-authorizations.md
-                - include: ../account/iam-audit-policies.md
-          - topicgroup:
-              label: Administering trusted profiles
-              topics:
-              - include: ../account/trustedprofile-create.md
-              - include: ../account/trustedprofile-update.md
-              - include: ../account/trustedprofile-remove.md
+                - include: ../account/iam-cross-acct-restriction.md
           - topicgroup:
               label: Controlling context-based restrictions
               topics:
               - include: ../account/context-restrictions-create.md
-              - include: ../account/context-restrictions-update.md
-              - include: ../account/context-restrictions-remove.md
+              - include: ../account/context-restrictions-manage.md
+              - include: ../account/iam-cbr.md
       - topicgroup:
           label: Creating automated solutions
           topics:
