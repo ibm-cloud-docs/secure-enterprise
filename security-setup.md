@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-01-08"
+lastupdated: "2025-01-13"
 
 keywords: customize, deployable architecture, set up, security and compliance center, custom profiles
 
@@ -34,8 +34,8 @@ You can follow the [Using {{site.data.keyword.cloud_notm}} deployable architectu
 
 Before you get started, be sure that you have the following prerequisites.
 
-* Check whether you are part of the relevant [access group](/docs/secure-enterprise?topic=secure-enterprise-enterprise-iam-ag-tutorial) in your enterprise's account. The access group must have the required permissions to select a profile, set up attachments, run scans, view detailed results, and more.
-  * To manage your security and compliance evaluations, you need to make sure that you have the [**Editor** platform role or higher](/docs/security-compliance?topic=security-compliance-assign-roles).
+* Check whether you are part of the relevant [access group](/docs/enterprise-management?topic=enterprise-management-enterprise-iam-ag-tutorial) in your enterprise's account. The access group must have the required permissions to select a profile, set up attachments, run scans, view detailed results, and more.
+* To manage your security and compliance evaluations, you need to make sure that you have the [**Editor** platform role or higher](/docs/security-compliance?topic=security-compliance-assign-roles).
 * Make sure that you have an [authorization](/docs/account?topic=account-serviceauth) with **Writer** access permissions in place to enable communication between {{site.data.keyword.compliance_short}} and {{site.data.keyword.cos_full_notm}}.
 
 ## Setting up storage for your scan results
