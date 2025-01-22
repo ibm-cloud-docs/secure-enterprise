@@ -71,7 +71,6 @@ toc:
               topics:
                 - access-project.md
                 - include: ../account/catalog-access-reqs.md
-                - include: ../account/iam-cross-acct-restriction.md
           - topicgroup:
               label: Controlling context-based restrictions
               topics:
