@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2022, 2024
+  years: 2022, 2025
 
-lastupdated: "2024-10-09"
+lastupdated: "2025-01-27"
 
 keywords: deployable architecture, deployment architecture, da, module, infrastructure as code, what is, stack, variation
 
@@ -52,11 +52,11 @@ Dependencies
 Stacks [Experimental]{: tag-purple}
 :   A deployable architecture stack links together multiple architectures to create an end-to-end solution. This linking is achieved by specifying references in the configuration of each architecture's inputs. You do not need to be an expert in Terraform, or have any Terraform coding skills, to create and deploy a stack.
 
-:   Deployable architecture stacks are created with {{site.data.keyword.cloud_notm}} Projects and can be shared with others through a private catalog. A stacked deployable architecture has independent configuration states for each of the architectures in the stack. This allows each component deployable architecture to be individually deployed, updated, or undeployed independently. The deployable architecture stack derives much of its cost, compliance, support, and quality assurances from its included deployable architectures. However, each stack is uniquely versioned and has its own descriptions and architecture diagram.
+:   Deployable architecture stacks are created with {{site.data.keyword.cloud_notm}} Projects and can be shared with others through a private catalog. A stacked deployable architecture has independent configuration states for each of the architectures in the stack. This allows each component deployable architecture to be individually deployed, updated, or undeployed independently. The deployable architecture stack derives much of its cost, compliance, support, and quality assurances from its included deployable architectures. However, each stack is uniquely versioned and has its own descriptions and architecture diagram. The following diagram shows how a deployable architecture stack can be made of multiple deployable architectures to create a single deployable architecture.
 
    ![A deployable architecture stack](images/deployable-architecture-stack.png){: caption="Deployable architecture stack" caption-side="bottom"}
 
-:   For an example, see the [Retrieval Augmented Generation Pattern deployable architecture](https://cloud.ibm.com/catalog/7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3/architecture/Retrieval_Augmented_Generation_Pattern-5fdd0045-30fc-4013-a8bc-6db9d5447a52-global){: external}, which is assembled from separate deployable architectures. For more information, see [stacking deployable architectures](/docs/secure-enterprise?topic=secure-enterprise-config-stack). The following diagram shows how a deployable architecture stack can be made of multiple deployable architectures to create a single deployable architecture.
+:   For an example, see the [Retrieval Augmented Generation Pattern deployable architecture](https://cloud.ibm.com/catalog/7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3/architecture/Retrieval_Augmented_Generation_Pattern-5fdd0045-30fc-4013-a8bc-6db9d5447a52-global){: external}, which is assembled from separate deployable architectures. For more information, see [stacking deployable architectures](/docs/secure-enterprise?topic=secure-enterprise-config-stack).
 
 ## What are projects and how do they work with deployable architectures?
 {: #what-are-projects}
