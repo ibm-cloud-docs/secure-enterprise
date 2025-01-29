@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2022, 2023
+  years: 2022, 2025
 
 
-lastupdated: "2024-06-04"
+lastupdated: "2025-01-29"
 
 keywords: project access, project, project cost, project estimate, project users
 
@@ -16,7 +16,7 @@ content-type: faq
 
 {{site.data.keyword.attribute-definition-list}}
 
-# FAQs about projects
+# FAQ about projects
 {: #project-faqs}
 
 FAQs for {{site.data.keyword.cloud}} projects might include questions about support options, configurations, access to projects, and cost estimation.
