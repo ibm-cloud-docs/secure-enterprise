@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2022, 2024
+  years: 2022, 2025
 
-lastupdated: "2024-10-09"
+lastupdated: "2025-01-29"
 
 keywords: known issues, known limitations
 
@@ -19,6 +19,9 @@ subcollection: secure-enterprise
 
 Known issues and limitations include configuration management, user access to projects, and identity and access management (IAM) limits.
 {: shortdesc}
+
+To review the default IAM limits for your enterprise, see [Enterprise limits](/docs/enterprise-management?topic=enterprise-management-what-is-enterprise#enterprise-limit). To review the default limits for an account, see [{{site.data.keyword.cloud_notm}} IAM limits](/docs/account?topic=account-cloudaccess#iam_limits).
+{: note}
 
 ## Authorization
 {: #auth-known-issue}
@@ -41,22 +44,6 @@ Cost estimation is available for deployable architectures in the {{site.data.key
 {: #api-sdk-tf-known-issue}
 
 The projects API, SDK, and Terraform functionalities are beta for this release. Beta products are made solely available for evaluation and testing purposes. There are no warranties, SLAs, or support provided and beta products are not intended for production use.
-
-
-{{../account/known-issues.md#iam_limits}}
-
-{{../account/known-issues.md#cbr-limits}}
-
-## Enterprise limits
-{: #enterprise-limits}
-
-The following table lists the maximum limits for {{site.data.keyword.cloud_notm}} [enterprises](/docs/secure-enterprise?topic=secure-enterprise-what-is-enterprise). These limits apply to any user who can create an enterprise, add accounts to an enterprise, or create and update account groups.
-
-| Resource                               | Max  |
-|----------------------------------------|------|
-| Account groups per enterprise          | 500  |
-| Accounts per enterprise                | 1000 |
-{: caption="Enterprise limits" caption-side="top"}
 
 {{../account/known-issues.md#policy-version-limit}}
 
