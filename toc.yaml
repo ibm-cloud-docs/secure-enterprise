@@ -219,7 +219,8 @@ toc:
       topics:
       - get-help.md 
       - known-issues.md
-      - faqs-projects.md
+      - topic: faqs-projects.md
+        navtitle: FAQ
       - faqs-enterprise.md
       - topicgroup:
           label: Troubleshooting projects
