@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-01-08"
+lastupdated: "2025-02-04"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -630,6 +630,9 @@ Section header for information about the deployable architecture variations. Fla
 
     `flavors` (optional)
     :   List of variations that the architecture is compatible with.
+
+    `default_flavor` (optional) [Experimental]{: tag-purple}
+    :   Specifies a default variation that is selected for your users when multiple variations are compatible with or requird to deploy your architecture. Your users can select a different variation if it's included in the `flavors` property. The value is the `name` of the variation. To use this property, you must also set `dependency_version_2` to `true`. If not set, then a default variation is not provided for your users. 
 
     `optional` [Experimental]{: tag-purple}
     :   Specifies whether the dependency is required or not required. The default value is `false`. To use this property, you must also set `dependency_version_2` to `true`. 
