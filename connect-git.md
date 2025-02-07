@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-22"
+lastupdated: "2025-02-07"
 
 keywords: Git, Git integration, Connect to Git, Github, Gitlab, GitHub enterprise, pipelines, toolchains, workflow
 
@@ -25,7 +25,7 @@ Pipelines and toolchains are customizable, so you can automate many actions betw
 
 
 
-Connecting a project to a Git repository works best with a new project that doesn't contain any configurations. If your project contains configurations, those configurations aren't saved to your repository. In a project, draft configurations can be saved to any branch in your repository. However, you can validate and deploy draft configurations only after they are merged to the branch in your repository that manages your CD pipelines. You must also sync the updates from your repository into your project by updating configurations before you can validate and deploy those configurations. You can automate this update by using the [`project.config.update`](/apidocs/projects#update-config) API method or by using the [`ibmcloud project config-update`](/docs/secure-enterprise?topic=secure-enterprise-projects-cli#project-cli-config-update-command) CLI command. 
+In a project, draft configurations can be saved to any branch in your repository. However, you can validate and deploy draft configurations only after they are merged to the branch in your repository that manages your CD pipelines. You must also sync the updates from your repository into your project by updating configurations before you can validate and deploy those configurations. You can automate this update by using the [`project.config.update`](/apidocs/projects#update-config) API method or by using the [`ibmcloud project config-update`](/docs/secure-enterprise?topic=secure-enterprise-projects-cli#project-cli-config-update-command) CLI command. 
 {: important}
 
 ## Before you begin
@@ -43,9 +43,6 @@ Connecting a project to a Git repository works best with a new project that does
 
 Connect your Git repository to your project. By doing so, configuration changes are saved to your repository, as opposed to the project JSON file. Because your project needs to save configurations to your repository, you must provide an access token to authenticate with the repository from your project. 
 
-Connecting a project to a Git repository works best with a new project that doesn't contain any configurations. If your project contains configurations, those configurations aren't saved to your repository.
-{: remember}
-
 1. In the {{site.data.keyword.cloud_notm}} console, click the **Navigation menu** icon ![Navigation Menu icon](../icons/icon_hamburger.svg "Menu") > **[Projects](/projects/)** and select a project.
 1. From the Manage tab, select **Integrations**.
 1. In the Git repository integration section, click **Connect**. 
@@ -53,6 +50,7 @@ Connecting a project to a Git repository works best with a new project that does
 1. Enter the URL to the repository. 
 1. Optionally, specify a folder within the repository. Consider specifying a folder if you want to integrate your repository with multiple projects. Each project can have its own folder. 
 1. Hover or click the access token field, then click the **Secrets** icon ![Key icon](../icons/secret-key.svg "Secrets") to select the secret that contains your access token. 
+1. If your project already contains configurations, select **Copy existing configuration files to this repository** to save existing configurations to your repository. 
 1. Click **Save**. 
 
 ## Next steps
