@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2025
 
-lastupdated: "2025-02-07"
+lastupdated: "2025-02-10"
 
 keywords: trusted profile, projects trusted profile, authorization, project auth, project security
 
@@ -82,7 +82,8 @@ Complete the following steps:
 
       You can choose from a couple of approaches to grant the service ID access to authorize deployments in your account. See [Granting wide-ranging access](/docs/secure-enterprise?topic=secure-enterprise-tp-project#serviceid-access-wide) or [Granting specific access](/docs/secure-enterprise?topic=secure-enterprise-tp-project#serviceid-access-specific) for more information.
 
-   1. Click **Create**.
+   1. Click **Add**.
+1. Click **Create**. 
 
 ### Granting wide-ranging access
 {: #serviceid-access-wide}
@@ -99,7 +100,7 @@ It's secure and convenient to give the trusted profile a wide range of access be
    1. Click **Add**.
 1. For the second policy, select **All Account Management services** and click **Next**.
    1. Select the Administrator role and click **Next**.
-1. Click **Add**.
+   1. Click **Add**.
 1. Click **Create**. 
 
 ### Granting specific access based on the deployable architecture
