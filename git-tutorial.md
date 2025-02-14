@@ -4,7 +4,7 @@ copyright:
 
   years: 2024
 
-lastupdated: "2024-11-22"
+lastupdated: "2025-02-07"
 
 keywords: Git, Git integration, Connect to Git, Github, Gitlab, GitHub enterprise, pipelines, toolchains, workflow
 
@@ -35,7 +35,7 @@ This tutorial focuses on a simple use case of updating a configuration in a proj
 
 Since pipelines and toolchains are customizable, the principles in this tutorial can help you automate other common actions within a project, such as validating and deploying configuration changes after they are merged to the main branch in your repository. This tutorial uses GitHub actions and workflows to automate a pipeline between the repository and the project. As you complete the tutorial, adapt each step to match your repository's CI and CD pipelines and processes. 
 
-Connecting a project to a Git repository works best with a new project that doesn't contain any configurations. If your project contains configurations, those configurations aren't saved to your repository. You can validate and deploy draft configurations only after they are merged to the branch in your repository that manages your CD pipelines. You must also sync the updates from your repository into your project by updating configurations before you can validate and deploy those configurations. You can automate this update by using the [`project.config.update`](/apidocs/projects#update-config) API method (as described in this tutorial) or by using the [`ibmcloud project config-update`](/docs/secure-enterprise?topic=secure-enterprise-projects-cli#project-cli-config-update-command) CLI command.
+You can validate and deploy draft configurations only after they are merged to the branch in your repository that manages your CD pipelines. You must also sync the updates from your repository into your project by updating configurations before you can validate and deploy those configurations. You can automate this update by using the [`project.config.update`](/apidocs/projects#update-config) API method (as described in this tutorial) or by using the [`ibmcloud project config-update`](/docs/secure-enterprise?topic=secure-enterprise-projects-cli#project-cli-config-update-command) CLI command.
 {: important}
 
 ## Before you begin

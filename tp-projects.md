@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2023, 2024
+  years: 2023, 2025
 
-lastupdated: "2024-06-04"
+lastupdated: "2025-02-10"
 
 keywords: trusted profile, projects trusted profile, authorization, project auth, project security
 
@@ -55,10 +55,10 @@ Complete the following steps:
 
 1. Find the project CRN. The CRN is used to authorize deployments to a target acccount.
    - To find the project CRN while you're [editing a project configuration](/docs/secure-enterprise?topic=secure-enterprise-config-project#how-to-config), click the tooltip icon on the `trusted_profile_id` field and copy the CRN.
-   - Otherwise, go to **Menu** ![Menu icon](../icons/icon_hamburger.svg "Menu") > **Projects** and clicking the relevant project. Click **Manage** > **Details** and copy the CRN.
+   - Otherwise, go to **Menu** ![Menu icon](../icons/icon_hamburger.svg "Menu") > **Projects** and click the relevant project. Click **Manage** > **Details** and copy the CRN.
 1. Confirm that you are in the target account to which the project deploys.
 2. In the {{site.data.keyword.cloud}} console, click **Manage** > **Access (IAM)**, and select **Trusted profiles**.
-3. Click **Create profile**.
+3. Click **Create**.
 4. Describe your profile by providing a name and a description, then click **Continue**.
 
    In the description, provide a list of actions available for this trusted profile.
@@ -83,6 +83,7 @@ Complete the following steps:
       You can choose from a couple of approaches to grant the service ID access to authorize deployments in your account. See [Granting wide-ranging access](/docs/secure-enterprise?topic=secure-enterprise-tp-project#serviceid-access-wide) or [Granting specific access](/docs/secure-enterprise?topic=secure-enterprise-tp-project#serviceid-access-specific) for more information.
 
    1. Click **Add**.
+1. Click **Create**. 
 
 ### Granting wide-ranging access
 {: #serviceid-access-wide}
@@ -98,9 +99,9 @@ It's secure and convenient to give the trusted profile a wide range of access be
    1. Select the Manager service role and the Administrator platform role.
    1. Click **Add**.
 1. For the second policy, select **All Account Management services** and click **Next**.
-   1. Select the Administrator role.
+   1. Select the Administrator role and click **Next**.
    1. Click **Add**.
-1. Click Create.
+1. Click **Create**. 
 
 ### Granting specific access based on the deployable architecture
 {: #serviceid-access-specific}
@@ -119,7 +120,7 @@ View the catalog page for specific access roles that are required for a given de
 
    For more information about assigning access, see [Creating the service ID](/docs/secure-enterprise?topic=secure-enterprise-tp-project#serviceid-auto-tp).
 
-1. Click Create.
+1. Click **Create**.
 
 ### Granting specific access to existing resources
 {: #serviceid-access-existing-resources}
