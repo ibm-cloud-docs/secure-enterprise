@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2023, 2024
+  years: 2023, 2025
 
-lastupdated: "2024-06-04"
+lastupdated: "2025-02-17"
 
 keywords: deployable architecture, basic customization, VSI on VPC landing zone
 
@@ -28,7 +28,7 @@ This tutorial walks you through how to create a new deployable architecture from
 
 By starting with an {{site.data.keyword.cloud_notm}} deployable architecture, you don't need to worry about creating compliant infrastructure architecture from the ground up. You can get a jump-start by using an {{site.data.keyword.cloud_notm}} deployable architecture and configuring it to meet your specific needs.
 
-Imagine you are the infrastructure architect for the fictitious company _Example Corp_ and you have been given certain infrastructure requirements. You browse the {{site.data.keyword.cloud_notm}} catalog and discover that the VSI on VPC landing zone deployable architecture meets most of your requirements. However, you want to make the following changes to meet your business needs:
+Imagine you are the infrastructure architect for the fictitious company _Example Corp_ and you have been given certain infrastructure requirements. You browse the {{site.data.keyword.cloud_notm}} catalog and discover that the [VSI on VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-slz-vsi-ef663980-4c71-4fac-af4f-4a510a9bcf68-global){: external} deployable architecture meets most of your requirements. However, you want to make the following changes to meet your business needs:
 
 - Remove unwanted variables
 - Constrain {{site.data.keyword.cloud_notm}} regions to US deployment regions
