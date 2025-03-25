@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-12-13"
+lastupdated: "2025-03-25"
 
 keywords:
 
@@ -39,8 +39,8 @@ The following table provides the dependency listing of this service following a 
 |Dependencies|Dependency impacts|Customer provided|Control or data plane|Location of dependency|
 |:---|:---|:---|:---|:---|
 | IBM Cloud Classic DNS Servers | Availability, Change management | No | Both |  Same data center  |
-| IBM Cloud Classic Infrastructure Resource Management | Availability, Change management | No | Both |  [Global](https://cloud.ibm.com/docs/overview?topic=overview-zero-downtime#global-platform)  |
-| IBM Cloud Public IP Address Management | Availability, Change management | No | Both |  [Global](https://cloud.ibm.com/docs/overview?topic=overview-zero-downtime#global-platform)  |
+| IBM Cloud Classic Infrastructure Resource Management | Availability, Change management | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
+| IBM Cloud Public IP Address Management | Availability, Change management | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
 {: row-headers}
 {: caption="IBM Cloud Projects service dependency information - Critical dependencies" caption-side="top"}
 {: tab-title="Critical dependencies"}
