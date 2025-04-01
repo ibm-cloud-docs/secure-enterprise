@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2025
 
-lastupdated: "2025-02-17"
+lastupdated: "2025-04-01"
 
 keywords: deployable architecture, basic customization, VSI on VPC landing zone
 
@@ -54,7 +54,7 @@ This tutorial uses a fictitious scenario to help you learn and understand a few 
 {: #basic-custom-bundle}
 {: step}
 
-To begin, you need to download the deployable architecture files. THe files include a `main.tf` file that invokes the root Terraform module in VSI on VPC landing zone.
+To begin, you need to download the deployable architecture files. The files include a `main.tf` file that invokes the root Terraform module in VSI on VPC landing zone.
 
 1. In the {{site.data.keyword.cloud_notm}} console, click **Catalog**.
 1. Select **Deployable architectures** from the list of **Type** filters > **VSI on VPC landing zone**.
