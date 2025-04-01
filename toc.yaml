@@ -148,10 +148,10 @@ toc:
       - topicgroup:
           label: Observability
           topics:
-            - at-events.md
-            - event-notifications-events.md
-            - include: ../account/monitoring.md
-            - iam-monitor-ent-template.md
+          - at-events.md
+          - event-notifications-events.md
+          - include: ../account/monitoring.md
+          - iam-monitor-ent-template.md
   - navgroup:
       id: reference
       topics:
@@ -164,8 +164,8 @@ toc:
       - topicgroup:
           label: High availability and disaster recovery
           topics:
-            - zero_downtime.md
-            - ha-dr.md
+          - zero_downtime.md
+          - ha-dr.md
       - data-portability.md
       - topicgroup:
           label: API reference
