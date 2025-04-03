@@ -639,7 +639,7 @@ Section header for information about the deployable architecture variations. Fla
     `optional` [Experimental]{: tag-purple}
     :   Specifies whether the dependency is required or not required. The default value is `false`. To use this property, you must also set `dependency_version_2` to `true`.
     
-
+    
 
     `on_by_default` [Experimental]{: tag-purple}
     :   Specifies whether an optional dependency is selected for users when they add your deployable architecture to a project from a catalog. Users can deselect the architecture if they do not want it. The default value is `false`. To use this property, you must also set `dependency_version_2` and `optional` to `true`.
