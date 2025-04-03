@@ -660,8 +660,6 @@ Section header for information about the deployable architecture variations. Fla
         `reference_version` (optional) 
         :   Indicates the flow of references between the architecture that you’re onboarding and its dependency. The default value is `false`. The default behavior is for the architecture input (`version_input`) to reference either an input or output from the dependency (`dependency_input` or `dependency_output`). When this flag is set to `true`, the `dependency_input` references a value from the `version_input`.
 
-
-
 `ignore_auto_referencing` (optional) [Experimental]{: tag-purple}
 :   An array of strings that are the dependency’s inputs. When the architecture that you’re onboarding and the dependency have the same input name on both of their versions, and no references are set to the `dependency_input` by using `input_mapping`, the architecture’s `version_input` value is automatically used in the dependency’s `dependency_input`. You can override this behavior by adding the input’s name to this array. You can also add `“*”` and all automatic referencing is ignored. 
 
