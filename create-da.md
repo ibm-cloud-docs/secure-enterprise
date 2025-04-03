@@ -2,7 +2,7 @@
 
 copyright:
    years: 2024, 2025
-lastupdated: "2025-04-01"
+lastupdated: "2025-04-03"
 
 keywords:
 
@@ -48,7 +48,7 @@ Catalog manifest file
 Variations
 :   A deployable architecture can include variations of capability or complexity. For example, you might create a quick start variation with basic capabilities for a simple, low-cost deployment, and then you might have a standard variation with a more complex architecture that would be used in production. Each of these variations is itself a deployable architecture, which is onboarded and configured to appear together in a catalog. These variations are sourced in the same repo in different working directories and are defined in your `ibm_catalog.json` file. For more information, see [Creating a variation](#create-variation).
 
-## Specifying dependencies
+## Specifying dependencies 
 {: #fullstackvext}
 
 There are two `install_type` options that you can specify when creating your deployable architecture. One specifies that dependent deployable architectures that must be deployed first, and one specifies that it can be deployed without any prerequisites.
@@ -63,7 +63,6 @@ If your deployable architecture is compatible with other architectures, but does
 {: note}
 
 For more information and setting these values, see [Locally editing the catalog manifest](/docs/secure-enterprise?topic=secure-enterprise-manifest-values).
-
 
 ## Creating a deployable architecture
 {: #creating-da}
