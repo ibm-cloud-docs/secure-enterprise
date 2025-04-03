@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-02-04"
+lastupdated: "2025-04-03"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -497,8 +497,10 @@ Section header for information about the deployable architecture variations. Fla
     `service_name`
     :   The programmatic name of the service that users must have access to.
 
+
+
     `role_crns`
-    :   Section header to indicate a list of access roles. For example:
+    :   Section header to indicate a list of access roles.
 
     `resources`
     :   The resources for a permission.
@@ -510,7 +512,7 @@ Section header for information about the deployable architecture variations. Fla
         :   A description of the resource.
 
         `role_crns`
-        :   Section header to indicate a list of access roles. For example:
+        :   Section header to indicate a list of access roles.
 
 `architecture`
 :   High-level information about the deployable architecture version that includes a description, features, and a diagram. Multiple diagrams, with captions, can be provided.
@@ -635,10 +637,12 @@ Section header for information about the deployable architecture variations. Fla
     :   Specifies a default variation that is selected for your users when multiple variations are compatible with or requird to deploy your architecture. Your users can select a different variation if it's included in the `flavors` property. The value is the `name` of the variation. To use this property, you must also set `dependency_version_2` to `true`. If not set, then a default variation is not provided for your users. 
 
     `optional` [Experimental]{: tag-purple}
-    :   Specifies whether the dependency is required or not required. The default value is `false`. To use this property, you must also set `dependency_version_2` to `true`. 
+    :   Specifies whether the dependency is required or not required. The default value is `false`. To use this property, you must also set `dependency_version_2` to `true`.
+    
+
 
     `on_by_default` [Experimental]{: tag-purple}
-    :   Specifies whether an optional dependency is selected for users when they add your deployable architecture to a project from a catalog. Users can deselect the component if they do not want it. The default value is `false`. To use this property, you must also set `dependency_version_2` and `optional` to `true`. 
+    :   Specifies whether an optional dependency is selected for users when they add your deployable architecture to a project from a catalog. Users can deselect the architecture if they do not want it. The default value is `false`. To use this property, you must also set `dependency_version_2` and `optional` to `true`.
 
     `input_mapping` (optional) [Experimental]{: tag-purple}
     :   Section header that specifies the values that are referenced between the compatible architecture and the architecture that you're onboarding. To use this property, you must also set `dependency_version_2` to `true`. 
@@ -654,6 +658,8 @@ Section header for information about the deployable architecture variations. Fla
 
         `reference_version` (optional) 
         :   Indicates the flow of references between the architecture that you’re onboarding and its dependency. The default value is `false`. The default behavior is for the architecture input (`version_input`) to reference either an input or output from the dependency (`dependency_input` or `dependency_output`). When this flag is set to `true`, the `dependency_input` references a value from the `version_input`.
+
+
 
 `ignore_auto_referencing` (optional) [Experimental]{: tag-purple}
 :   An array of strings that are the dependency’s inputs. When the architecture that you’re onboarding and the dependency have the same input name on both of their versions, and no references are set to the `dependency_input` by using `input_mapping`, the architecture’s `version_input` value is automatically used in the dependency’s `dependency_input`. You can override this behavior by adding the input’s name to this array. You can also add `“*”` and all automatic referencing is ignored. 
