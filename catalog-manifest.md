@@ -615,6 +615,7 @@ Section header for information about the deployable architecture variations. Fla
 ```
 {: codeblock}
 
+
     `catalog_id` (optional)
     :   ID of the catalog that houses the product. If not specified, the {{site.data.keyword.cloud_notm}} catalog is the default.
 
