@@ -497,8 +497,6 @@ Section header for information about the deployable architecture variations. Fla
     `service_name`
     :   The programmatic name of the service that users must have access to.
 
-
-
     `role_crns`
     :   Section header to indicate a list of access roles.
 
@@ -585,37 +583,35 @@ Section header for information about the deployable architecture variations. Fla
 `dependencies` {: #optional-components}
 :   Section header for a list of products that are compatible with the deployable architecture. Dependencies can be required or optional. A dependency included here can't be added to the `swappable_dependencies` section as well. Information includes the programmatic name of the product and product versions. Optionally, you can include the catalog ID and a list of dependent variations.
 
-```json
-{
-   "name": "offering name",
-   "id": "offering ID",
-   "kind": "terraform",
-   "version": "SemVer version e.g. 3.1.2"
-   "flavors": [
-      "flavor name"
-   ],
-   "install_type": "fullstack or extension",
-   "catalog_id": "catalog ID"
-   "optional": true,
-   "input_mapping": [
-   {
-       "dependency_output": "kms_instance_crn",
-       "version_input": "existing_kms_instance_crn"
-   },
-   {
-       "version_input": "region",
-       "value": "us-south"
-   },
-   {
-       "version_input": "prefix"
-       "reference_version": true
-   }
-   ]
-}
-```
-{: codeblock}
-
-
+    ```json
+    {
+       "name": "offering name",
+       "id": "offering ID",
+       "kind": "terraform",
+       "version": "SemVer version e.g. 3.1.2"
+       "flavors": [
+          "flavor name"
+       ],
+       "install_type": "fullstack or extension",
+       "catalog_id": "catalog ID"
+       "optional": true,
+       "input_mapping": [
+       {
+           "dependency_output": "kms_instance_crn",
+           "version_input": "existing_kms_instance_crn"
+       },
+       {
+           "version_input": "region",
+           "value": "us-south"
+       },
+       {
+           "version_input": "prefix"
+           "reference_version": true
+       }
+       ]
+    }
+    ```
+    {: codeblock}
 
     `catalog_id` (optional)
     :   ID of the catalog that houses the product. If not specified, the {{site.data.keyword.cloud_notm}} catalog is the default.
@@ -640,8 +636,6 @@ Section header for information about the deployable architecture variations. Fla
 
     `optional` [Experimental]{: tag-purple}
     :   Specifies whether the dependency is required or not required. The default value is `false`. To use this property, you must also set `dependency_version_2` to `true`.
-    
-    
 
     `on_by_default` [Experimental]{: tag-purple}
     :   Specifies whether an optional dependency is selected for users when they add your deployable architecture to a project from a catalog. Users can deselect the architecture if they do not want it. The default value is `false`. To use this property, you must also set `dependency_version_2` and `optional` to `true`.
