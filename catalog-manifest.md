@@ -872,4 +872,4 @@ Section header for information about the deployable architecture variations. Fla
        "action": "The action that executes the script. Options include validate, deploy, or undeploy."
     }
     ```
-    {: codeblock}---
+    {: codeblock}
