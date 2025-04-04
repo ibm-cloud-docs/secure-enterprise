@@ -498,7 +498,7 @@ Section header for information about the deployable architecture variations. Fla
     :   The programmatic name of the service that users must have access to.
 
     `role_crns`
-    :   Section header to indicate a list of access roles. For example:
+    :   Section header to indicate a list of access roles. 
 
     `resources`
     :   The resources for a permission.
@@ -510,7 +510,7 @@ Section header for information about the deployable architecture variations. Fla
         :   A description of the resource.
 
         `role_crns`
-        :   Section header to indicate a list of access roles. For example:
+        :   Section header to indicate a list of access roles.
 
 `architecture`
 :   High-level information about the deployable architecture version that includes a description, features, and a diagram. Multiple diagrams, with captions, can be provided.
