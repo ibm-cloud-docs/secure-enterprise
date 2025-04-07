@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2024
+  years: 2024, 2025
 
-lastupdated: "2025-03-03"
+lastupdated: "2025-04-07"
 
 keywords: stack, configure stack, deployable architecture stack, stacked deployable architecture
 
@@ -13,6 +13,8 @@ subcollection: secure-enterprise
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
+
 
 
 # Stacking deployable architectures
@@ -255,4 +257,4 @@ Complete the following steps:
 
 Your stack is now a draft in the private catalog that is not yet published, but available to anyone who has Editor access to your private catalog.
 
-To finish onboarding your deployable architecture stack to your private catalog, [edit the catalog details](/docs/secure-enterprise?topic=secure-enterprise-onboard-da&interface=ui#edit-catalog-entry) and provide information like an architecture diagram and a category.
+To finish onboarding your deployable architecture stack to your private catalog, [edit the catalog details](/docs/secure-enterprise?topic=secure-enterprise-onboard-da&interface=ui#edit-catalog-entry) and provide information like an architecture diagram and a category. 
