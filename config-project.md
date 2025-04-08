@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2025
 
-lastupdated: "2025-01-27"
+lastupdated: "2025-04-08"
 
 keywords: manage project, rename project, move project, deploy project, merge request, merge changes, deploy configuration
 
@@ -23,7 +23,7 @@ After you add a deployable architecture to your project, you can edit the input 
 
 Configurations can be generic, but many projects use a configuration, or a group of configurations, to deploy resources to different environments. For example, a group of configurations can be used to deploy resources to development, test, and production environments and set up common services outside of the environments. When you deploy your configuration, {{site.data.keyword.bplong}} uses Terraform to apply the underlying plan. 
 
-Before you can deploy your architecture, the inputs, plan, compliance, and estimated cost for the deployable architecture must be validated. Any changes that are made to the configuration are validated to ensure that there aren't any issues or failures.
+Before you can deploy your architecture, the inputs, plan, compliance, and estimated cost for the deployable architecture must be validated. Any changes that are made to the configuration are validated to help ensure that there aren't any issues or failures.
 {: note}
 
 
@@ -58,6 +58,8 @@ You can reference an input or an output from a configuration that was deployed f
 You can add a relative reference to another input within the configuration that you're currently editing. The configuration does not need to be deployed to do so.
 {: remember}
 
+
+
 #### Referencing values in a stack
 {: #reference-values-stack}
 
@@ -68,6 +70,8 @@ If your configuration is part of a stacked deployable architecture, you can refe
 `ref:/configs/<stack_name>/members/<member_name>/inputs_or_outputs/<input_or_output_name>`
 
 If you want to make a relative reference, you can do so. A relative reference between configurations that are members of the same stack would be formatted as `ref:../<member_name>/inputs_or_outputs/<input_or_output_name>`. But, if you are referencing a value at the stack level, it would be formatted as `ref:../../inputs/<input_name>` within the member configuration. Currently, members can't reference outputs from the stack level.
+
+
 
 
 #### Referencing inputs from an environment
@@ -103,6 +107,7 @@ To create a customized configuration, complete the following steps:
     If you select **Select from {{site.data.keyword.compliance_short}}**, you must have an instance of the service and an attachment through {{site.data.keyword.compliance_short}} in the target account that you want to deploy to. For help with creating an attachment, see [Evaluating resource configuration with {{site.data.keyword.compliance_long}}](/docs/secure-enterprise?topic=secure-enterprise-security-compliance-scanning).
 
 1. From the **Required** panel, enter values for the required inputs for the deployable architecture configuration.
+
 1. Optional: You can add values by going to the **Optional** panel.
 1. Click **Save**.
 1. Click **Validate**. The modal that is displayed provides more details about your in-progress validation.
@@ -162,3 +167,35 @@ For more information about the command parameters, see [**`ibmcloud project conf
    {: codeblock}
 
    For more information about the command parameters, see [**`ibmcloud project config-approve`**](/docs/cli?topic=cli-projects-cli#project-cli-config-approve-command).
+
+## Configuring an architecture by using the API
+{: #how-to-config-api}
+{: api}
+
+You can programmatically add a configuration to a project by calling the [Projects API](/apidocs/projects#create-config){: external} as shown in the following sample request. The example adds a configuration with the name `My new configuration` to a project:
+
+```bash
+curl -X POST --location --header "Authorization: Bearer {iam_token}" \
+  --header "Accept: application/json" \
+  --header "Content-Type: application/json" \
+  --data '{ "definition": { "name": "env-stage", "description": "Stage environment configuration.", "locator_id": "1082e7d2-5e2f-0a11-a3bc-f88a8e1931fc.018edf04-e772-4ca2-9785-03e8e03bef72-global", "inputs": { "account_id": "account_id", "resource_group": "stage", "access_tags": [ "env:stage" ], "logdna_name": "LogDNA_stage_service", "sysdig_name": "SysDig_stage_service" }, "settings": { "IBMCLOUD_TOOLCHAIN_ENDPOINT": "https://api.us-south.devops.dev.cloud.ibm.com" } } }' \
+  "{base_url}/v1/projects/{project_id}/configs"
+```
+{: curl}
+{: codeblock}
+
+## Approving configuration changes by using the API
+{: #approve-changes-api}
+{: api}
+
+You can programmatically approve configuration edits and merge them to the main configuration by calling the [Projects API](/apidocs/projects#approve){: external} as shown in the following sample request. The example approves configuration edits and merges them to the configuration:
+
+```bash
+curl -X POST --location --header "Authorization: Bearer {iam_token}" \
+  --header "Accept: application/json" \
+  --header "Content-Type: application/json" \
+  --data '{ "comment": "Approving the changes" }' \
+  "{base_url}/v1/projects/{project_id}/configs/{id}/approve"
+```
+{: curl}
+{: codeblock}

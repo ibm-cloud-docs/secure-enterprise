@@ -32,17 +32,16 @@ Resources are created in the project account for the user. You must have permiss
 
 For more information about access and permissions, see [Assigning users access to projects](/docs/secure-enterprise?topic=secure-enterprise-access-project).
 
+## Adding users to a project
+{: #add-users-project}
+
+Project access is controlled by {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). You add users to a project by granting the Reader role or higher on the project instance. For more information on assigning access to projects, see [Assigning users access to projects](/docs/secure-enterprise?topic=secure-enterprise-access-project).
+
 ## Creating a project by using the console
 {: #create-project-ui}
 {: ui}
 
 You can create a project by going to the **Navigation menu** icon ![Navigation Menu icon](../icons/icon_hamburger.svg "Menu") and selecting **[Projects](/projects/)** or from a deployable architecture in the [catalog](/catalog/). Projects can also be created by using the [Project API](https://{DomainName}/apidocs/projects).
-
-
-## Adding users to a project
-{: #add-users-project}
-
-Project access is controlled by {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). You add users to a project by granting the Reader role or higher on the project instance. For more information on assigning access to projects, see [Assigning users access to projects](/docs/secure-enterprise?topic=secure-enterprise-access-project).
 
 ## Adding a deployable architecture to a project by using the console
 {: #add-deployment-project}
