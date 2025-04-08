@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2024
+  years: 2024, 2025
 
-lastupdated: "2024-06-04"
+lastupdated: "2025-04-08"
 
 keywords: manage project, deploy project, merge request, merge changes, deploy configuration, deploy architecture
 
@@ -19,6 +19,9 @@ subcollection: secure-enterprise
 {: #deploy-project}
 
 After your deployment updates are validated and approved, you can deploy your architecture to your target account. You can deploy to any account that has authorized your project for deployments. For more information, see [Using an API key with Secrets Manager to authorize a project to deploy an architecture](/docs/secure-enterprise?topic=secure-enterprise-authorize-project).
+
+You can edit your project settings to automatically approve and deploy changes that are successfully validated. To do so, open your project and go to **Manage** > **Settings** and toggle **Auto-deploy** on. With this setting enabled, if you have any architectures that are stacked together in your project, they are validated, approved, and deployed according to their dependencies. 
+{: tip}
 
 ## Deploying your architecture by using the console
 {: #deploy-config-copy}
@@ -90,5 +93,3 @@ You can also run the following `ibmcloud resource search` command to retrieve al
 ibmcloud resource search "service_tags:\"schematics::project_id:PROJECT_ID\""
 ```
 {: codeblock}
-
-
