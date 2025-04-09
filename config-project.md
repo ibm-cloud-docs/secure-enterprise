@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2025
 
-lastupdated: "2025-04-08"
+lastupdated: "2025-04-09"
 
 keywords: manage project, rename project, move project, deploy project, merge request, merge changes, deploy configuration
 
@@ -114,7 +114,7 @@ To create a customized configuration, complete the following steps:
 
    If the validation fails, you can [troubleshoot the failure](/docs/secure-enterprise?topic=secure-enterprise-troubleshooting-for-projects#ts-na-failures). Or, an administrator on the {{site.data.keyword.cloud_notm}} Projects service can review the results through the {{site.data.keyword.bpshort}} service and [override the failure and approve](/docs/secure-enterprise?topic=secure-enterprise-approve-failed-validation) the configuration to deploy anyway. However, ensure that the pipeline failed due to the Code Risk Analyzer scan and not because of a validation or plan failure. It is not recommended to override a failure that is flagged due to a validation or plan failure as the configuration might not deploy successfully. For more information about security and compliance in projects, see [Achieving continuous compliance as an enterprise](/docs/secure-enterprise?topic=secure-enterprise-continuous-compliance).
 
-If you're configuring a deployable architecture stack, make sure to validate each architecture in the stack according to their dependencies.
+If you're configuring deployable architectures that are stacked together, make sure to validate each architecture according to their dependencies. Alternatively, you can edit your project's settings to automatically deploy configuration changes that are validated successfully. If you do so, each architecture is validated, approved, and deployed automatically according to their dependencies. For more information, go to [Deploying an architecture](/docs/secure-enterprise?topic=secure-enterprise-deploy-project&interface=ui). 
 {: important}
 
 ## Approving configuration changes by using the console
