@@ -2,7 +2,7 @@
 
 copyright:
    years: 2024, 2025
-lastupdated: "2025-04-03"
+lastupdated: "2025-04-09"
 
 keywords:
 
@@ -20,7 +20,7 @@ After going through the steps to [plan and design your architecture](/docs/secur
 
 To create a deployable architecture, you must define the required files, create a release in GitHub, and then onboard it to a private catalog so that you can share it with others inside or outside of your organization.
 
-You can choose to build your own deployable architecture with Terraform following these instructions, or you can choose to [download the code from an existing architecture](/docs/secure-enterprise?topic=secure-enterprise-basic-custom&interface=ui#basic-custom-bundle) to modify it to fit your needs and create a new deployable architecture with your changes. If you are looking to create a deployable architecture stack, which is made up of a group of deployable architectures, see [Stacking deployable architectures](/docs/secure-enterprise?topic=secure-enterprise-config-stack).
+You can choose to build your own deployable architecture with Terraform following these instructions, or you can choose to [download the code from an existing architecture](/docs/secure-enterprise?topic=secure-enterprise-basic-custom&interface=ui#basic-custom-bundle) to modify it to fit your needs and create a new deployable architecture with your changes. You can also [stack deployable architectures together in a project](/docs/secure-enterprise?topic=secure-enterprise-config-stack) if those architectures are already available to you in a catalog.
 {: note}
 
 ## Learn about the structure of a deployable architecture
