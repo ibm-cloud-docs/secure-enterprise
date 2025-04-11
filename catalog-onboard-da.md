@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-11-29"
+  years: 2022, 2025
+lastupdated: "2025-03-27"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -113,7 +113,7 @@ After you add your deployable architecture to a private catalog, you're able to 
 
 1. Go to the **Manage > Catalogs > Private catalogs** page of the console.
 2. Select the private catalog where you added your product. The catalog details page opens.
-3. Select the product that previously onboarded.
+3. Select the product that you previously onboarded.
 4. On the **Versions** tab, select the version of your product that you want to provide information for.
 5. Use the following information as a guide to configure your deployable architecture details.
 
@@ -151,7 +151,6 @@ For more information, including examples, see [Creating scripts for a deployable
 
 When you make a deployable architecture available to other users in the cloud, you must provide the following information:
 
-* Any prerequisites or dependencies that a user might need to know before attempting to work with your deployable architecture. For example, whether this deployable architecture depends on another being installed first.
 * An architecture diagram that details how the components in your deployable architecture work together.
 * Any highlights that can help users to differentiate between which version or variation of your architecture might be best suited to their needs.
 

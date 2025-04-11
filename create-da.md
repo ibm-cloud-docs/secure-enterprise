@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2025
-lastupdated: "2025-01-06"
+   years: 2024, 2025
+lastupdated: "2025-04-09"
 
 keywords:
 
@@ -20,7 +20,7 @@ After going through the steps to [plan and design your architecture](/docs/secur
 
 To create a deployable architecture, you must define the required files, create a release in GitHub, and then onboard it to a private catalog so that you can share it with others inside or outside of your organization.
 
-You can choose to build your own deployable architecture with Terraform following these instructions, or you can choose to [download the code from an existing architecture](/docs/secure-enterprise?topic=secure-enterprise-customize-from-catalog) to modify it to fit your needs and create a new deployable architecture with your changes. If you are looking to create a deployable architecture stack, which is made up of a group of deployable architectures, see [Stacking deployable architectures](/docs/secure-enterprise?topic=secure-enterprise-config-stack).
+You can choose to build your own deployable architecture with Terraform following these instructions, or you can choose to [download the code from an existing architecture](/docs/secure-enterprise?topic=secure-enterprise-basic-custom&interface=ui#basic-custom-bundle) to modify it to fit your needs and create a new deployable architecture with your changes. You can also [stack deployable architectures together in a project](/docs/secure-enterprise?topic=secure-enterprise-config-stack) if those architectures are already available to you in a catalog.
 {: note}
 
 ## Learn about the structure of a deployable architecture
@@ -48,7 +48,7 @@ Catalog manifest file
 Variations
 :   A deployable architecture can include variations of capability or complexity. For example, you might create a quick start variation with basic capabilities for a simple, low-cost deployment, and then you might have a standard variation with a more complex architecture that would be used in production. Each of these variations is itself a deployable architecture, which is onboarded and configured to appear together in a catalog. These variations are sourced in the same repo in different working directories and are defined in your `ibm_catalog.json` file. For more information, see [Creating a variation](#create-variation).
 
-## Specifying dependencies
+## Specifying dependencies 
 {: #fullstackvext}
 
 There are two `install_type` options that you can specify when creating your deployable architecture. One specifies that dependent deployable architectures that must be deployed first, and one specifies that it can be deployed without any prerequisites.
@@ -63,7 +63,6 @@ If your deployable architecture is compatible with other architectures, but does
 {: note}
 
 For more information and setting these values, see [Locally editing the catalog manifest](/docs/secure-enterprise?topic=secure-enterprise-manifest-values).
-
 
 ## Creating a deployable architecture
 {: #creating-da}

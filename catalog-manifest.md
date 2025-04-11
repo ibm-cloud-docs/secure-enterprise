@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-02-04"
+lastupdated: "2025-04-04"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -498,7 +498,7 @@ Section header for information about the deployable architecture variations. Fla
     :   The programmatic name of the service that users must have access to.
 
     `role_crns`
-    :   Section header to indicate a list of access roles. For example:
+    :   Section header to indicate a list of access roles. 
 
     `resources`
     :   The resources for a permission.
@@ -510,7 +510,7 @@ Section header for information about the deployable architecture variations. Fla
         :   A description of the resource.
 
         `role_crns`
-        :   Section header to indicate a list of access roles. For example:
+        :   Section header to indicate a list of access roles.
 
 `architecture`
 :   High-level information about the deployable architecture version that includes a description, features, and a diagram. Multiple diagrams, with captions, can be provided.
@@ -834,7 +834,8 @@ Section header for information about the deployable architecture variations. Fla
     ```
     {: codeblock}
 
-
+`minimum_compatible_version` (optional)
+:   A semver value that indicates the earliest version that is compatible with the current version. If no earlier versions are compatible with the current version, specify the current version value in this field.  By default, the current version is compatible with all earlier versions.
 
 `terraform_version`
 :   The Hashicorp Terraform runtime version that is needed to validate and install the version. Setting this value in the manifest overrides what is specified in the source code.

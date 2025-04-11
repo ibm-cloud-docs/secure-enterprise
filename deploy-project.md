@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2024
+  years: 2024, 2025
 
-lastupdated: "2024-06-04"
+lastupdated: "2025-04-09"
 
 keywords: manage project, deploy project, merge request, merge changes, deploy configuration, deploy architecture
 
@@ -19,6 +19,9 @@ subcollection: secure-enterprise
 {: #deploy-project}
 
 After your deployment updates are validated and approved, you can deploy your architecture to your target account. You can deploy to any account that has authorized your project for deployments. For more information, see [Using an API key with Secrets Manager to authorize a project to deploy an architecture](/docs/secure-enterprise?topic=secure-enterprise-authorize-project).
+
+You can edit your project settings to automatically approve and deploy changes that are successfully validated. To do so, open your project and go to **Manage** > **Settings** and toggle **Auto-deploy** on. With this setting enabled, if any deployable architectures are stacked together in your project, after the first architecture is successfully validated, the remaining deployable architectures are validated, approved, and deployed sequentially according to their dependencies. If no dependencies exist between the architectures, they are deployed in parallel with one another. 
+{: tip}
 
 ## Deploying your architecture by using the console
 {: #deploy-config-copy}
@@ -91,4 +94,16 @@ ibmcloud resource search "service_tags:\"schematics::project_id:PROJECT_ID\""
 ```
 {: codeblock}
 
+## Deploying your architecture by using the API
+{: #deploy-config-api-copy}
+{: api}
 
+After your edits are approved, you can programmatically deploy your architecture by calling the [Projects API](/apidocs/projects#deploy-config){: external} as shown in the following sample request. The example deploys a deployment with the ID `0df9-5602447qf3c7-8cd7-1rge0328-4c88`:
+
+```bash
+curl -X POST --location --header "Authorization: Bearer {iam_token}"
+  --header "Accept: application/json"
+  "{base_url}/v1/projects/{project_id}/configs/0df9-5602447qf3c7-8cd7-1rge0328-4c88/deploy"
+```
+{: curl}
+{: codeblock}

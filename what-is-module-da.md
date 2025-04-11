@@ -4,7 +4,7 @@ copyright:
 
   years: 2022, 2025
 
-lastupdated: "2025-01-27"
+lastupdated: "2025-04-09"
 
 keywords: deployable architecture, deployment architecture, da, module, infrastructure as code, what is, stack, variation
 
@@ -26,6 +26,7 @@ For example, think about an architect who is building an apartment complex. Thes
 {: #what-is-module}
 
 A module is a stand-alone unit of automation code that can be reused by developers and shared as part of a larger system. Similar to Node.js or Python packages, modules are a convenience to developers who are managing related resources. While it is possible to use modules alone, they're more powerful when you combine them to build a deployable architecture. Modules that are created by {{site.data.keyword.cloud_notm}} are made available in the [{{site.data.keyword.IBM_notm}} Terraform modules public GitHub org](https://github.com/terraform-ibm-modules/){: external}. For example, the [{{site.data.keyword.redhat_openshift_full}} VPC cluster on {{site.data.keyword.cloud_notm}} module](https://github.com/terraform-ibm-modules/terraform-ibm-base-ocp-vpc){: external} installs and configures a Red Hat OpenShift cluster on {{site.data.keyword.cloud_notm}}.
+
 
 
 ## What is a deployable architecture?
