@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2024
-lastupdated: "2024-12-17"
+   years: 2024, 2025
+lastupdated: "2025-04-14"
 
 keywords:
 
@@ -15,7 +15,7 @@ subcollection: secure-enterprise
 # How do I decide what kind of component to create?
 {: #choose-plan-process}
 
-How do you decide whether you should be creating a module, a deployable architecture, or a deployable architecture stack? Let's compare the differences and evaluate the use cases in the following sections to help you decide.
+How do you decide whether you should create a module, a deployable architecture, or stack deployable architectures together? Let's compare the differences and evaluate the use cases in the following sections to help you decide.
 {: shortdesc}
 
 
@@ -24,25 +24,25 @@ How do you decide whether you should be creating a module, a deployable architec
 
 The following table provides a comparison and quick summary of the key differences between modules and types of deployable architectures.
 
-|    | Scope | Coupling | Deployable | Author |
+| Method | Scope | Coupling | Deployable | Author |
 |----|-------|----------|------------|--------|
-| Module | Narrow | Tight | No | Developer |
-| Deployable architecture | Medium to broad | Tight | Yes | Developer |
-| Deployable architecture stack | Broad | Loose | Yes | Anyone |
+| Create a module | Narrow | Tight | No | Developer |
+| Create a deployable architecture | Medium to broad | Tight | Yes | Developer |
+| Stack deployable architectures | Broad | Loose | Yes | Anyone |
 {: row-headers}
 {: caption="Comparison of concepts" caption-side="bottom"}
 
 
-The following table can help you decide whether to use a module, a deployable architecture, or a deployable architecture stack depending on your use case.
+The following table can help you decide whether to use a module, a deployable architecture, or stack deployable architectures together depending on your use case.
 
-| Purpose | Recommended component | Notes |
+| Purpose | Recommended method | Notes |
 |----|-------|----------|
-| Accelerate coding automation | Modules | Modules provide reusable, curated automation to get developers of deployable architectures coding faster. Modules are for developers, not consumers. |
-| Ensure that the cloud is secure and compliant | Deployable architecture | Deployable architectures enforce security and compliance for an architecture. If a deployable architecture is too small in scope, it cannot enforce compliance. For example, a deployable architecture that deploys only a virtual server instance can't ensure network security. |
-| Give users a choice with guardrails | Stacked deployable architecture | With stacked deployable architectures, you can swap deployable architectures or add on deployable architectures and give users more choices. Since deployable architectures enforce security and compliance, stacking helps ensure the overall solution remains compliant. Stacked deployable architectures are excellent for things like selecting which database to use. |
-| User-created solutions or architectures | Stacked deployable architectures | Stacked deployable architectures allow users to create and publish their own repeatable patterns that are still safe, as they are composed of secure and compliant deployable architectures. |
-| Decoupled architecture components | Stacked deployable architectures | Deployable architectures can be independently developed and versioned, but then combined into a stacked deployable architecture for deployment. |
-| Simplified user experience | Deployable architecture | Deployable architectures can provide a small or simple list of inputs to the user even for large or complex architectures. Deployable architectures are simple to understand and deploy. In comparison, stacking deployable architectures is a little more complex as the deployable architectures are exposed. |
+| Accelerate coding automation | Use modules | Modules provide reusable, curated automation to get developers of deployable architectures coding faster. Modules are for developers, not consumers. |
+| Ensure that the cloud is secure and compliant | Use a deployable architecture | Deployable architectures enforce security and compliance for an architecture. If a deployable architecture is too small in scope, it cannot enforce compliance. For example, a deployable architecture that deploys only a virtual server instance can't ensure network security. |
+| Give users a choice with guardrails | Stack deployable architectures together | By stacking deployable architectures, you can swap deployable architectures or add on deployable architectures and give users more choices. Since deployable architectures enforce security and compliance, stacking helps ensure the overall solution remains compliant. Stacking deployable architectures is an excellent approach for things like selecting which database to use. |
+| User-created solutions or architectures | Stack deployable architectures together | Stacking deployable architectures allow users to create and publish their own repeatable patterns that are still safe, as they are composed of secure and compliant deployable architectures. |
+| Decoupled architecture components | Stack deployable architectures together | Deployable architectures can be independently developed and versioned, but then stacked together for deployment. |
+| Simplified user experience | Use a deployable architecture | Deployable architectures can provide a small or simple list of inputs to the user even for large or complex architectures. Deployable architectures are simple to understand and deploy. In comparison, stacking deployable architectures is a little more complex as the deployable architectures are exposed. |
 {: caption="Help me choose the component to use" caption-side="bottom"}
 
 [{{site.data.keyword.cloud_notm}} projects](/docs/secure-enterprise?topic=secure-enterprise-understanding-projects) ensure that resources are deployed through deployable architectures from the catalog and operate within the security and compliance guardrails of the organization. They also ensure that these resources are kept up to date and do not drift.
@@ -54,7 +54,7 @@ Dependencies arise when resources that are provisioned by one deployable archite
 
 ![A visual representation of a deployable architecture with a dependency. Deployable architecture A outputs resources that are then used as inputs in deployable architecture B.](images/dependency-concept.svg "Deployable architecture dependencies."){: caption="Deployable architecture dependencies" caption-side="bottom"}
 
-One way to work with dependencies is to stack deployable architectures and add references between them in a project. For example, the [VSI on VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-slz-vsi-ef663980-4c71-4fac-af4f-4a510a9bcf68-global?catalog_query=aHR0cHM6Ly9jbG91ZC5pYm0uY29tL2NhdGFsb2c%2Fc2VhcmNoPXZwYyUyNTIwbGFuZGluZyUyNTIwem9uZSUyNTIwd2l0aCUyNTIwcm9rcyUyNTIwbGFiZWwlMjUzQWRlcGxveWFibGVfYXJjaGl0ZWN0dXJlI3NlYXJjaF9yZXN1bHRz&kind=terraform&format=terraform&version=db410822-02be-41fe-ab3e-fa5a6a02f3da-global#prerequisites){: external} deployable architecture includes a variation that extends the [{{site.data.keyword.redhat_openshift_notm}} Container Platform on VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-slz-ocp-95fccffc-ae3b-42df-b6d9-80be5914d852-global){: external} deployable architecture. Consider stacking these architectures together in a project. This approach works well if the prerequisite architecture isn't deployed yet. You also don't need to edit code to stack deployable architectures.
+One way to work with dependencies is to [stack deployable architectures and add references between them in a project](/docs/secure-enterprise?topic=secure-enterprise-config-stack&interface=ui). For example, the [VSI on VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-slz-vsi-ef663980-4c71-4fac-af4f-4a510a9bcf68-global?catalog_query=aHR0cHM6Ly9jbG91ZC5pYm0uY29tL2NhdGFsb2c%2Fc2VhcmNoPXZwYyUyNTIwbGFuZGluZyUyNTIwem9uZSUyNTIwd2l0aCUyNTIwcm9rcyUyNTIwbGFiZWwlMjUzQWRlcGxveWFibGVfYXJjaGl0ZWN0dXJlI3NlYXJjaF9yZXN1bHRz&kind=terraform&format=terraform&version=db410822-02be-41fe-ab3e-fa5a6a02f3da-global#prerequisites){: external} deployable architecture includes a variation that extends the [{{site.data.keyword.redhat_openshift_notm}} Container Platform on VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-slz-ocp-95fccffc-ae3b-42df-b6d9-80be5914d852-global){: external} deployable architecture. Consider stacking these architectures together in a project. This approach works well if the prerequisite architecture isn't deployed yet. You also don't need to edit code to stack deployable architectures.
 
 Many deployable architectures are stand-alone and aren't extensions of other architectures, but you can choose to extend some deployable architectures in the **Architecture** section of the catalog details page. Select an option from the **How do you want to build this architecture?** menu. 
 {: tip}
