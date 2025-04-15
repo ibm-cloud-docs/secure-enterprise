@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2022, 2024
-lastupdated: "2024-10-09"
+   years: 2022, 2025
+lastupdated: "2025-04-15"
 
 keywords: onboard, catalog management, private catalog, stack definition, software, automation, metadata
 
