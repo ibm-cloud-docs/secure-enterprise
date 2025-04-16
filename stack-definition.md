@@ -2,7 +2,7 @@
 
 copyright:
    years: 2022, 2025
-lastupdated: "2025-04-15"
+lastupdated: "2025-04-16"
 
 keywords: onboard, catalog management, private catalog, stack definition, software, automation, metadata
 
@@ -12,7 +12,7 @@ subcollection: secure-enterprise
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Locally editing the deployable architecture stack definition
+# Editing the deployable architecture stack definition locally
 {: #stack-definition}
 
 The stack definition file defines the member deployable architectures that are grouped in the deployable architecture stack. It specifies information about how those deployable architectures are supposed to relate to each other, like input references that connect architectures together within the stack. If you plan to share the stack with others through a private catalog, a stack definition is required to ensure that the stack can be deployed successfully. 
