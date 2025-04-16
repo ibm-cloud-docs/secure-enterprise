@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2025
 
-lastupdated: "2025-04-11"
+lastupdated: "2025-04-16"
 
 keywords: manage project, rename project, move project, deploy project, merge request, merge changes, deploy configuration
 
@@ -46,6 +46,8 @@ If you are using the API or CLI to configure a deployable architecture, or if yo
 You can find the name of an output to reference by opening a deployed configuration in your project and going to the **Outputs** tab.
 {: tip}
 
+
+
 #### Referencing values from a configuration
 {: #reference-values-config}
 
@@ -57,8 +59,6 @@ You can reference an input or an output from a configuration that was deployed f
 
 You can add a relative reference to another input within the configuration that you're currently editing. The configuration does not need to be deployed to do so.
 {: remember}
-
-
 
 #### Referencing values in a stack
 {: #reference-values-stack}
