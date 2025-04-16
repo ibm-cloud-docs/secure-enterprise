@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-10-09"
+  years: 2024, 2025
+lastupdated: "2025-04-16"
 
 keywords:
 
@@ -54,7 +54,7 @@ These resources are typically deployed together as a unit, require similar netwo
 ### Composability
 {: #composability}
 
-A fundamental principle of a deployable architecture is composability, which enables the creation of a broader [deployable architecture stack](/docs/secure-enterprise?topic=secure-enterprise-config-stack) by combining multiple deployable architectures. This modular approach allows for maximum flexibility and reusability of automation resources.
+A fundamental principle of a deployable architecture is composability, which enables the creation of a broader deployable architecture by stacking multiple deployable architectures together. This modular approach allows for maximum flexibility and reusability of automation resources.
 
 To achieve composability, a deployable architecture should be designed to:
 
@@ -67,9 +67,9 @@ To achieve composability, a deployable architecture should be designed to:
 
 Alternatively, this deployable architecture also allows creating a new {{site.data.keyword.secrets-manager_short}} instance, a new resource group, and other resources from scratch, providing a stand-alone solution.
 
-By embracing composability, a deployable architecture can be easily integrated into a more complex solution architecture, such as a [deployable architecture stack](/docs/secure-enterprise?topic=secure-enterprise-config-stack). For example, the [Retrieval Augmented Generation Pattern](https://cloud.ibm.com/catalog/7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3/architecture/Retrieval_Augmented_Generation_Pattern-5fdd0045-30fc-4013-a8bc-6db9d5447a52-global) demonstrates how multiple deployable architectures, including the {{site.data.keyword.secrets-manager_short}} deployable architecture, can be combined to build a complex solution. Deployable architectures that are designed with composability in mind provide the foundation for these more complex solutions.
+By embracing composability, a deployable architecture can be easily integrated into a more complex solution architecture by stacking it with other deployable architectures. For example, the [Retrieval Augmented Generation Pattern](https://cloud.ibm.com/catalog/7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3/architecture/Retrieval_Augmented_Generation_Pattern-5fdd0045-30fc-4013-a8bc-6db9d5447a52-global) demonstrates how multiple deployable architectures, including the {{site.data.keyword.secrets-manager_short}} deployable architecture, can be combined to build a complex solution. Deployable architectures that are designed with composability in mind provide the foundation for these complex solutions.
 
-In a deployable architecture stack, each member deployable architecture maintains its independent configuration state, allowing for individual deployment, update, or undeployment. This modular approach enables cost, compliance, support, and quality assurances to be derived from the included deployable architectures, while each stack remains uniquely versioned with its own descriptions and reference architecture.
+When deployable architectures are stacked together, each member deployable architecture maintains its independent configuration state, allowing for individual deployment, update, or undeployment. This modular approach enables cost, compliance, support, and quality assurances to be derived from the included deployable architectures, while the overall solution remains uniquely versioned with its own descriptions and reference architecture. 
 
 ### Consumability
 {: #consumability}
@@ -242,5 +242,5 @@ These tools and resources are designed to accelerate and facilitate the creation
 Now that you understand the best practices for building a deployable architecture, you can use the tools and resources and review the following {{site.data.keyword.cloud_notm}} documentation before developing your automation code. This helps ensure that you thoroughly planned and designed your solution to share in {{site.data.keyword.cloud_notm}}:
 
 * [Planning and researching for designing an architecture](/docs/secure-enterprise?topic=secure-enterprise-starting-da-process) to ensure that you're designing an architecture that is a viable reusable pattern that meets your business requirements.
-* [How do I decide what type of component to create?](/docs/secure-enterprise?topic=secure-enterprise-choose-plan-process) to make sure you understand the differences between a module, deployable architecture, and deployable architecture stack.
+* [How do I decide what type of component to create?](/docs/secure-enterprise?topic=secure-enterprise-choose-plan-process) to make sure you understand the differences between creating a module, creating a deployable architecture, and stacking deployable architectures together.
 * [How do I decide where to share my solution?](/docs/secure-enterprise?topic=secure-enterprise-publish-da-options) to ensure you're meeting the requirements depending on where you plan to share or publish your solution.
