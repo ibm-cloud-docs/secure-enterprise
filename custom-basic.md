@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2025
 
-lastupdated: "2025-04-01"
+lastupdated: "2025-04-18"
 
 keywords: deployable architecture, basic customization, VSI on VPC landing zone
 
@@ -57,7 +57,7 @@ This tutorial uses a fictitious scenario to help you learn and understand a few 
 To begin, you need to download the deployable architecture files. The files include a `main.tf` file that invokes the root Terraform module in VSI on VPC landing zone.
 
 1. In the {{site.data.keyword.cloud_notm}} console, click **Catalog**.
-1. Select **Deployable architectures** from the list of **Type** filters > **VSI on VPC landing zone**.
+1. Select **Deployable architectures** from the list, enter `VSI on VPC landing zone` into the search bar and select the architecture.
 1. Click **Review deployment options** from the summary panel.
 1. Select **Work with code** > **Download bundle** to download the bundle.
 1. Open the downloaded bundle on your local computer.
@@ -143,8 +143,8 @@ For more information on the manifest file and what it contains, see [Locally edi
 Now that you updated the configuration and created your own architecture, you must also update the name and the programmatic name. For the purposes of this tutorial, update the name to `Example Corps' architecture` and the programmatic name to `deploy-arch-example-corp`.
 
 1. Open the `ibm_catalog.json` file.
-1. Find the `label` field and update the name of your deployable architecture to `Example Corps' architecture`.
 1. Find the `name` field and update the programmatic name of your architecture to `deploy-arch-example-corp`.
+1. Find the `label` field and update the name of your deployable architecture to `Example Corps' architecture`.
 1. Find the `version` field and enter `0.0.1` to update the version number.
 1. Save the file.
 
@@ -199,7 +199,7 @@ Now, you want to make sure that users of your new configuration must specify an 
 
 Before you onboard your configured deployable architecture to a private catalog and make it available for use, test your configuration to ensure that the architecture runs as intended. To test your architecture with the Terraform command line, complete the following steps:
 
-1. Create or update a `.netrc` file that is needed to use Terraform modules from the {{site.data.keyword.cloud_notm}}. For more information, see [ibmcloud catalog utility netrc](/docs/cli?topic=cli-manage-catalogs-plugin#generate-netrc).
+1. Create or update a `.netrc` file that is needed to use Terraform modules from {{site.data.keyword.cloud_notm}}. For more information, see [ibmcloud catalog utility netrc](/docs/cli?topic=cli-manage-catalogs-plugin#generate-netrc).
 
    ```bash
    ibmcloud catalog utility netrc
