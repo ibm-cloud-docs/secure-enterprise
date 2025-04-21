@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2025
 
-lastupdated: "2025-04-18"
+lastupdated: "2025-04-21"
 
 keywords: deployable architecture, basic customization, VSI on VPC landing zone
 
@@ -161,7 +161,7 @@ Now, you want to make sure that users of your new configuration must specify an 
    - `prefix`
 1. To require users to specify an `existing_SSH_key`, change the required field to `true`.
 
-1. To restrict the regions to only US regions, you must add each region as an option for the region variable, for example:
+1. To restrict the regions to only US regions, you must add each region as an option for the region variable and delete the `custom_config` section as well, for example:
 
     ```terraform
     {
@@ -170,7 +170,6 @@ Now, you want to make sure that users of your new configuration must specify an 
         "default_value": "__NOT_SET__",
         "description": "Region where VPC is created. To find your VPC region, use `ibmcloud is regions` command to find available regions.",
         "required": true,
-        "custom_config": {},
         "options": [
             {
                 "displayname": "us-east",
