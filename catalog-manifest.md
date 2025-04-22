@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-16"
+lastupdated: "2025-04-22"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -18,7 +18,7 @@ subcollection: secure-enterprise
 The catalog manifest file specifies the information about your onboarded solution that you want to share with users through a catalog. You can provide licensing and compliance information, make specific settings, and provide descriptions about the intended purpose of your product.
 {: shortdesc}
 
-Prefer to use the console to edit your catalog details? You can make the selections by following the [provided wizard and then export the manifest file](/docs/secure-enterprise?topic=secure-enterprise-onboard-da) to add to your source repo. If you are [stacking deployable architectures](/docs/secure-enterprise?topic=secure-enterprise-config-stack&interface=ui), the catalog manifest is created for you when you add the stack to a private catalog from your project.
+Prefer to use the console to edit your catalog details? You can make the selections by following the [provided wizard and then export the manifest file](/docs/secure-enterprise?topic=secure-enterprise-onboard-da) to add to your source repo. If you are [stacking deployable architectures in a project](/docs/secure-enterprise?topic=secure-enterprise-config-stack&interface=ui), the catalog manifest is created for you when you add your architectures to a private catalog from your project.
 {: tip}
 
 ## Mapping catalog details to the manifest file
