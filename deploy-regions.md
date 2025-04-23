@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2023
+  years: 2023, 2025
 
-lastupdated: "2023-12-15"
+lastupdated: "2025-04-23"
 
 keywords: multiple regions, deploy, projects
 
@@ -144,6 +144,7 @@ Now that you created an environment, you can use it to configure the second depl
 1. From the **Define details** section, review the information and make sure the `landing zone dev` environment is selected.
 1. From the **Security** tab in the **Configure** section, review the information that was pulled in from the environment that you created.
 1. Select the **Required** tab to enter values for the `region` and `prefix` variables.
+    
     The value for `ssh_public_key` is pulled in from the environment that you created.
     {: note}
 
