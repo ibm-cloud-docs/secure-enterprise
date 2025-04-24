@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2025
 
-lastupdated: "2025-04-21"
+lastupdated: "2025-04-24"
 
 keywords: deployable architecture, basic customization, VSI on VPC landing zone
 
@@ -74,7 +74,7 @@ To begin, you need to download the deployable architecture files. The files incl
        - variables.tf
        - version.tf
 
-1. Rename the bundle `Example-corp-architecture` for findability and ease-of-use.
+1. Rename the bundle `Example-corp-infrastructure` for findability and ease-of-use.
 
 ## Editing your list of variables
 {: #basic-custom-remove}
@@ -140,11 +140,11 @@ For more information on the manifest file and what it contains, see [Locally edi
 {: #basic-custom-info}
 {: step}
 
-Now that you updated the configuration and created your own architecture, you must also update the name and the programmatic name. For the purposes of this tutorial, update the name to `Example Corps' architecture` and the programmatic name to `deploy-arch-example-corp`.
+Now that you updated the configuration and created your own architecture, you must also update the name and the programmatic name. For the purposes of this tutorial, update the name to `Example Corps' infrastructure` and the programmatic name to `deploy-arch-example-corp`.
 
 1. Open the `ibm_catalog.json` file.
 1. Find the `name` field and update the programmatic name of your architecture to `deploy-arch-example-corp`.
-1. Find the `label` field and update the name of your deployable architecture to `Example Corps' architecture`.
+1. Find the `label` field and update the name of your deployable architecture to `Example Corps' infrastructure`.
 1. Find the `version` field and enter `0.0.1` to update the version number.
 1. Save the file.
 
