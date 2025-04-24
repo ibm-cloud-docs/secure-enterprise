@@ -58,7 +58,7 @@ toc:
           - custom-basic.md
           - include: ../enterprise-management/custom-share.md
             navtitle: Sharing your deployable architecture
-      - deploy-regions.md 
+      - deploy-regions.md
       - git-tutorial.md
   - navgroup:
       id: howto
