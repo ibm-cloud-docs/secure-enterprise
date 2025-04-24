@@ -83,7 +83,6 @@ You successfully added the deployable architecture to a project and are ready to
 1. Enter `existing_ssh_key_name` in the **ssh_public_key** field to use an existing key.
 1. Select `us-south` as the region to deploy the resources.
 1. Enter `us-south` as the prefix to use for naming conventions.
-1. Keep the Optional values as-is.
 1. Click **Save**.
 1. Click **Validate**. The modal that is displayed provides more details about your in-progress validation.
 
