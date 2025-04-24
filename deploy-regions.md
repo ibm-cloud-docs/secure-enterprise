@@ -73,13 +73,13 @@ You successfully added the deployable architecture to a project and are ready to
 {: #configure-architecture}
 {: step}
 
-1. In the **Define details** section, review the information.
-1. From the **Security** tab in the **Configure** section, select **API key using {{site.data.keyword.secrets-manager_short}}** as the authentication method.
+1. In the **Details** section, review the information.
+1. From the **Security** section, select **API key using {{site.data.keyword.secrets-manager_short}}** as the authentication method.
 1. Click **Select from {{site.data.keyword.secrets-manager_short}}**.
 1. Choose the service instance, secret group, and secret that you previously created in the [before you begin](#regions-prereqs) steps.
 1. Click **Save**.
 1. During validation, a Code Risk Analyzer scan is run on your architecture. In the Security and compliance area, select **Architecture default** to use the default controls that the owner of the deployable architecture added when they onboarded it. For more information about using **Architecture default** controls, see [Configuring the architecture](/docs/secure-enterprise?topic=secure-enterprise-config-project#how-to-config).
-1. Select the **Required** tab to enter values for the required fields for the deployable architecture configuration.
+1. From the **Configure architecture** section, enter values for the required fields for the deployable architecture configuration.
 1. Enter `existing_ssh_key_name` in the **ssh_public_key** field to use an existing key.
 1. Select `us-south` as the region to deploy the resources.
 1. Enter `us-south` as the prefix to use for naming conventions.
@@ -141,8 +141,8 @@ Now that you created an environment, you can use it to configure the second depl
 {: #configure-second-architecture}
 {: step}
 
-1. From the **Define details** section, review the information and make sure the `Example Corp infrastructure dev` environment is selected.
-1. From the **Security** tab, review the information that was pulled in from the environment that you created.
+1. From the **Details** section, review the information and make sure the `Example Corp infrastructure dev` environment is selected.
+1. From the **Security** section, review the information that was pulled in from the environment that you created.
 1. From the **Configure architecture** section, enter values for the `region` and `prefix` input variables.
     
     The value for `ssh_public_key` is pulled in from the environment that you created.
