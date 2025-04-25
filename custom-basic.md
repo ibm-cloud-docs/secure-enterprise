@@ -159,7 +159,7 @@ Now, you want to make sure that users of your new configuration must specify an 
    - `ibmcloud_api_key`
    - `region`
    - `prefix`
-1. To require users to specify an `existing_SSH_key_name`, change the required field to `true`.
+1. To require users to specify an existing SSH key, change the required field to `true` for the `existing_SSH_key_name` variable.
 
 1. To restrict the regions to only US regions, you must add each region as an option for the region variable and delete the `custom_config` section as well, for example:
 

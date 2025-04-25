@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2025
 
-lastupdated: "2025-04-24"
+lastupdated: "2025-04-25"
 
 keywords: multiple regions, deploy, projects
 
@@ -37,17 +37,17 @@ This tutorial uses a fictitious scenario to help you learn and understand how to
 
 1. [Create a customized deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-basic-custom) called `Example Corps' infrastructure` and onboard it to a private catalog called `Example Corp catalog`. 
 
-1. Make sure you have the following access roles to create a project and permission to create the project tool resources within the account:
+1. Make sure that you have the following access roles to create a project and permission to create the project tool resources within the account:
     * The Editor role on the {{site.data.keyword.cloud_notm}} Projects service.
     * The Editor and Manager role on the {{site.data.keyword.bplong}} service
     * The Viewer role on the resource group for the project
 
     For more information about access and permissions, see [Assigning users access to projects](/docs/secure-enterprise?topic=secure-enterprise-access-project).
 
-1. Set up an authentication method. You can use an API key stored in {{site.data.keyword.secrets-manager_short}} or a trusted profile to authorize a deployment to your target account: 
+1. Set up an authentication method. You can use an API key that is stored in {{site.data.keyword.secrets-manager_short}} or a trusted profile to authorize a deployment to your target account: 
     1. [Create a {{site.data.keyword.secrets-manager_short}} service instance](/docs/secrets-manager?topic=secrets-manager-create-instance&interface=ui) in your {{site.data.keyword.cloud_notm}} account. To create a secret, you must have the Writer role or higher on the {{site.data.keyword.secrets-manager_short}} service. After you create your secret instance, make sure that you select **Other secret type** to add an arbitrary secret. For information about creating an arbitrary secret, see [Creating arbitrary secrets in the UI](/docs/secrets-manager?topic=secrets-manager-arbitrary-secrets&interface=ui). Your arbitrary secret must contain the API key. The API key must be created in the target account that you want to deploy to. For more information, go to [Using an API key with Secrets Manager to authorize a project to deploy an architecture](/docs/secure-enterprise?topic=secure-enterprise-authorize-project).
 
-    1. Create a trusted profile in the account you want to deploy to with the ability to create a service ID, create and delete API keys for the service ID, and deploy the architecture. For more information, go to [Using trusted profiles to authorize a project to deploy an architecture](/docs/secure-enterprise?topic=secure-enterprise-tp-project).
+    1. Create a trusted profile in the account that you want to deploy to. The trusted profile needs the ability to create a service ID, create and delete API keys for the service ID, and deploy the architecture. For more information, go to [Using trusted profiles to authorize a project to deploy an architecture](/docs/secure-enterprise?topic=secure-enterprise-tp-project).
 
 1. Create two SSH keys, one in the `us-south` region and one in the `us-east` region. For more information, go to [Getting started with SSH keys](/docs/vpc?topic=vpc-ssh-keys&interface=ui).
 
@@ -69,14 +69,14 @@ Create a project where you can configure and deploy Example Corps' infrastructur
 {: #env-create}
 {: step}
 
-Now that your project is created, you're ready to create an environment to share values across configurations for easier deployments. The properties that you add to an environment are automatically added to configurations that are using that environment. For more information, see the [benefits to using environments](/docs/secure-enterprise?topic=secure-enterprise-best-practices-projects#best-practice-env). In this tutorial, you add the authentication method that you previously set up in the [before you begin](#regions-prereqs) steps. 
+Now that your project is created, you're ready to create an environment to share values across configurations for easier deployments. The properties that you add to an environment are automatically added to configurations that are using that environment. For more information, see the [benefits to using environments](/docs/secure-enterprise?topic=secure-enterprise-best-practices-projects#best-practice-env). In this tutorial, you add the authentication method to the environment so it can be reused in your project. 
 
-1. In the **Example Corp infrastructure** project that you just created, select **Manage** > **Environments**.
+1. In the **Example Corp infrastructure** project, select **Manage** > **Environments**.
 1. Click **Create**.
 1. Name your environment `Example Corp infrastructure dev`.
 1. Click **Add** > **Add manually…**
 1. Select **Authentication** for the category. 
-1. Specify the authentication method that you set up in the [before you begin](#regions-prereqs) steps. You can use an API key stored in {{site.data.keyword.secrets-manager_short}} or a trusted profile.
+1. Specify the authentication method that you set up in the [before you begin](#regions-prereqs) steps. You can use an API key that is stored in {{site.data.keyword.secrets-manager_short}} or a trusted profile.
 1. Depending on which method you choose, either select the secret that contains your API key or provide the trusted profile ID. 
 1. Click **Save**. 
 
@@ -86,7 +86,7 @@ Now that your project is created, you're ready to create an environment to share
 
 Before you can configure Example Corps' infrastructure, you need to find the deployable architecture in `Example Corp catalog` and add it to the `Example Corp infrastructure` project.
 
-1. In the **Example Corp infrastructure** project that you just created, select **Configurations** > **Create**.
+1. In the **Example Corp infrastructure** project, select **Configurations** > **Create**.
 1. Use the menu to open the private catalog called `Example Corp catalog`. 
 1. Search for **Example Corps' infrastructure** and select the deployable architecture from the search results.
 1. Select **Add to project**.
@@ -101,11 +101,11 @@ You successfully added the deployable architecture to a project and are ready to
 {: step}
 
 1. In the **Details** section, review the information and make sure the `Example Corp infrastructure dev` environment is selected.
-1. From the **Security** section, confirm the correct authentication method is selected based on what you added to the environment.
+1. From the **Security** section, confirm that the correct authentication method is selected based on what you added to the environment.
 1. During validation, a Code Risk Analyzer scan is run on your architecture. In the Security and compliance controls area, select **Architecture default** to use the default controls that the owner of the deployable architecture added when they onboarded it. For more information about using **Architecture default** controls, see [Configuring the architecture](/docs/secure-enterprise?topic=secure-enterprise-config-project#how-to-config).
 1. From the **Configure architecture** section, enter values for the required input variables for the deployable architecture configuration:
     
-    1. Enter the name of an existing key in the `existing_ssh_key_name` input, for example, `existing-ssh-key-dallas`.
+    1. Enter the name of an existing key in the `existing_ssh_key_name` input, for example `existing-ssh-key-dallas`.
     1. Select **us-south** as the region to deploy the resources.
     1. Enter `us-south` as the prefix to use for naming conventions.
 
@@ -121,7 +121,7 @@ During the configuration and deployment process, monitor your [**Needs attention
 {: #regions-first-deploy}
 {: step}
 
-As an Editor on the {{site.data.keyword.cloud}} Projects service, you can approve the configuration changes and deploy the configuration. It can be beneficial to deploy your first configuration to make sure your changes work as expected. Then, if the deployment is successful, you can continue to create your second configuration.
+As an Editor on the {{site.data.keyword.cloud}} Projects service, you can approve the configuration changes and deploy the configuration. It can be beneficial to deploy your first configuration to make sure that your changes work as expected. Then, if the deployment is successful, you can continue to create your second configuration.
 
 You must address any outstanding **Needs attention** items on the **Overview** tab before you can approve and deploy your configurations.
 {: tip}
@@ -146,7 +146,7 @@ Now that you configured and deployed your architecture to one region, you can du
 1. From the **Security** section, review the information that was pulled in from the environment that you created.
 1. From the **Configure architecture** section, enter values for the required input variables for the deployable architecture configuration:
     
-    1. Enter the name of an existing key in the `existing_ssh_key_name` input, for example, `existing-ssh-key-dc`.
+    1. Enter the name of an existing key in the `existing_ssh_key_name` input, for example `existing-ssh-key-dc`.
     1. Select **us-east** as the region to deploy the resources.
     1. Enter `us-east` as the prefix to use for naming conventions.
     
