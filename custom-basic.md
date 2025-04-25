@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2025
 
-lastupdated: "2025-04-24"
+lastupdated: "2025-04-25"
 
 keywords: deployable architecture, basic customization, VSI on VPC landing zone
 
@@ -28,11 +28,11 @@ This tutorial walks you through how to create a new deployable architecture from
 
 By starting with an {{site.data.keyword.cloud_notm}} deployable architecture, you don't need to worry about creating compliant infrastructure architecture from the ground up. You can get a jump-start by using an {{site.data.keyword.cloud_notm}} deployable architecture and configuring it to meet your specific needs.
 
-Imagine you are the infrastructure architect for the fictitious company _Example Corp_ and you have been given certain infrastructure requirements. You browse the {{site.data.keyword.cloud_notm}} catalog and discover that the [VSI on VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-slz-vsi-ef663980-4c71-4fac-af4f-4a510a9bcf68-global){: external} deployable architecture meets most of your requirements. However, you want to make the following changes to meet your business needs:
+Imagine you are the infrastructure architect for the fictitious company _Example Corp_ and you were given certain infrastructure requirements. You browse the {{site.data.keyword.cloud_notm}} catalog and discover that the [VSI on VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-slz-vsi-ef663980-4c71-4fac-af4f-4a510a9bcf68-global){: external} deployable architecture meets most of your requirements. However, you want to make the following changes to meet your business needs:
 
 - Remove unwanted variables
 - Constrain {{site.data.keyword.cloud_notm}} regions to US deployment regions
-- Use an existing SSH key instead of a personal SSH key
+- Use an existing SSH key that was already created in the deployment region
 - Use a specific Virtual Server Instance profile called `example-profile`
 
 This tutorial uses a fictitious scenario to help you learn and understand a few of the configuration options for a deployable architecture. As you complete the tutorial, adapt each step to match your organization's needs.
@@ -65,14 +65,14 @@ To begin, you need to download the deployable architecture files. The files incl
 
     After successfully downloading and extracting the bundle, you'll see the following files and folders:
 
-       - automation folder
-       - ibm_catalog.json
-       - main.tf
-       - outputs.tf
-       - provider.tf
-       - README.md
-       - variables.tf
-       - version.tf
+       - `automation folder`
+       - `ibm_catalog.json`
+       - `main.tf`
+       - `outputs.tf`
+       - `provider.tf`
+       - `README.md`
+       - `variables.tf`
+       - `version.tf`
 
 1. Rename the bundle `Example-corp-infrastructure` for findability and ease-of-use.
 
@@ -101,7 +101,7 @@ When you researched VSI on VPC landing zone, you determined that you wanted to m
 Now that you updated the `variables.tf` file, make sure that the configuration information in the `main.tf` file is correct. Since you want to use an existing SSH key and a specific VSI profile, replace the `ssh_public_key` variable and add the `vsi_instance_profile` variable.
 
 1. Open the `main.tf` file.
-1. Replace `ssh_public_key      = var.ssh_public_key` with the following text to indicate that you want users to use an existing SSH key and not a public or personal SSH key.
+1. Replace `ssh_public_key      = var.ssh_public_key` with the following text to indicate that you want users to use an SSH key that was already created in the deployment region.
 
     ```terraform
    existing_ssh_key_name      = var.existing_ssh_key_name
@@ -132,7 +132,7 @@ Your architecture is now hardcoded to use the specific `example-profile` VSI pro
 {: #basic-custom-json}
 {: step}
 
-The `ibm_catalog.json` file is a manifest JSON file that is used to automatically import version information when you onboard to a private catalog. Because you changed the deployable architecture, you created a brand new architecture for your needs. Update the following information in the `ibm_catalog.json` file to reflect your changes.
+The `ibm_catalog.json` file is a manifest JSON file that is used to automatically import version information when you onboard to a private catalog. Because you changed the deployable architecture, you created a brand-new architecture for your needs. Update the following information in the `ibm_catalog.json` file to reflect your changes.
 
 For more information on the manifest file and what it contains, see [Locally editing the catalog manifest](/docs/secure-enterprise?topic=secure-enterprise-manifest-values&locale=en).
 
@@ -159,7 +159,7 @@ Now, you want to make sure that users of your new configuration must specify an 
    - `ibmcloud_api_key`
    - `region`
    - `prefix`
-1. To require users to specify an `existing_SSH_key`, change the required field to `true`.
+1. To require users to specify an `existing_SSH_key_name`, change the required field to `true`.
 
 1. To restrict the regions to only US regions, you must add each region as an option for the region variable and delete the `custom_config` section as well, for example:
 
@@ -196,7 +196,7 @@ Now, you want to make sure that users of your new configuration must specify an 
 {: #basic-custom-test}
 {: step}
 
-Before you onboard your configured deployable architecture to a private catalog and make it available for use, test your configuration to ensure that the architecture runs as intended. To test your architecture with the Terraform command line, complete the following steps:
+Before you onboard your configured deployable architecture to a private catalog and make it available for use, test your configuration to help ensure that the architecture runs as intended. To test your architecture with the Terraform command line, complete the following steps:
 
 1. Create or update a `.netrc` file that is needed to use Terraform modules from {{site.data.keyword.cloud_notm}}. For more information, see [ibmcloud catalog utility netrc](/docs/cli?topic=cli-manage-catalogs-plugin#generate-netrc).
 
