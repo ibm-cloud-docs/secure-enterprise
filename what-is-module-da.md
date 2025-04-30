@@ -4,7 +4,7 @@ copyright:
 
   years: 2022, 2025
 
-lastupdated: "2025-04-09"
+lastupdated: "2025-04-30"
 
 keywords: deployable architecture, deployment architecture, da, module, infrastructure as code, what is, stack, variation
 
@@ -29,35 +29,62 @@ A module is a stand-alone unit of automation code that can be reused by develope
 
 
 
+
+
+
 ## What is a deployable architecture?
 {: #what-is-da}
 
-A deployable architecture is cloud automation for deploying a common architectural pattern that combines one or more cloud resources. It is designed to provide simplified deployment by users, scalability, and modularity. A deployable architecture incorporates one or more modules. Deployable architectures are coded in Terraform, which you configure with input variables to achieve the behavior that you want. In the case of a deployable architecture stack, it incorporates one or more deployable architectures that are grouped without requiring Terraform code.
+A deployable architecture is cloud automation for deploying a common architectural pattern that combines one or more cloud resources. It is designed to provide simplified deployment by users, scalability, and modularity. A deployable architecture incorporates one or more modules. Deployable architectures are coded in Terraform, which you configure with input variables to achieve the behavior that you want. To create a more complex deployable architecture, you can stack deployable architectures together without editing Terraform code to do so. 
 
 ![A deployable architecture, which contains modules](images/deployable-architecture.png){: caption="Deployable architecture that contains modules" caption-side="bottom"}
 
-For example, [VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-slz-vpc){: external} is a deployable architecture that provisions several virtual private clouds in a hub-and-spoke networking pattern that is connected by a transit gateway. It includes a number of supporting services that are used for the monitoring and security of the workloads that run on the VPCs.
+An example deployable architecture is [Cloud automation for {{site.data.keyword.secrets-manager_short}}](https://cloud.ibm.com/catalog/7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3/architecture/deploy-arch-ibm-secrets-manager-6d6ebc76-7bbd-42f5-8bc7-78f4fabd59). This deployable architecture provisions an {{site.data.keyword.secrets-manager_full_notm}} instance as a modular solution. You can use this architecture to securely manage secrets with your {{site.data.keyword.cloud_notm}} account. Cloud automation for {{site.data.keyword.secrets-manager_short}} has a narrow scope. It only deploys a {{site.data.keyword.secrets-manager_short}} instance, though the deployable architecture can also optionally create an {{site.data.keyword.keymanagementservicelong_notm}} key ring and key to encrypt data if one does not exist. 
+
+Deployable architectures can be broader in scope, like [VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-slz-vpc){: external}. VPC landing zone provisions several virtual private clouds in a hub-and-spoke networking pattern that is connected by a transit gateway. It includes a number of supporting services that are used for the monitoring and security of the workloads that run on the VPCs.
 
 Deployable architectures that are built and maintained by experts at {{site.data.keyword.cloud_notm}} are made available to you in the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog#reference_architecture){: external}. If you choose to create your own version of those deployable architectures, or build one from scratch, you can onboard your deployable architecture to a private catalog and share your ready-to-deploy solution with your organization through the catalog.
+
+### What does it mean to stack deployable architectures? 
+{: #stacked}
+
+[Experimental]{: tag-purple}
+
+For a more complex use case, you can stack architectures together to form a complete, end-to-end solution for deploying a complex application or infrastructure. Unlike individual modules or deployable architectures, which provide specific functionality, stacking combines multiple deployable architectures to form a comprehensive solution that can be easily deployed and managed. Just as modules can be combined to create a deployable architecture, deployable architectures can be stacked to create a more extensive solution. Stacking includes linking the architectures together to create a complex deployable architecture. This linking is achieved by specifying references in each deployable architecture's inputs by using a reference notation. You do not need to be an expert in Terraform, or have any Terraform coding skills, to stack architectures together and deploy them.
+
+As an example, consider [Cloud automation for {{site.data.keyword.secrets-manager_short}}](https://cloud.ibm.com/catalog/7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3/architecture/deploy-arch-ibm-secrets-manager-6d6ebc76-7bbd-42f5-8bc7-78f4fabd5944-global?format=terraform&kind=terraform&version=v1.19.0#about){: external}. That deployable architecture includes the [{{site.data.keyword.secrets-manager_short}} module](https://github.com/terraform-ibm-modules/terraform-ibm-secrets-manager){: external}, which creates a {{site.data.keyword.secrets-manager_short}} instance. If you only require an instance of {{site.data.keyword.secrets-manager_short}}, that deployable architecture is a suitable choice. However, securely managing secrets is only one piece of maintaining security in the cloud. What about running compliance scans so you always know the posture of your resources? Or receiving notifications for critical events in your {{site.data.keyword.cloud_notm}} account? [{{site.data.keyword.cloud_notm}} Essential Security and Observability Services deployable architecture](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-core-security-svcs-0294f96e-7314-48d1-a710-c08a541b2119-global?catalog_query=aHR0cHM6Ly9jbG91ZC5pYm0uY29tL2NhdGFsb2cjaGlnaGxpZ2h0cw%3D%3D){: external} leverages the full range of security services from {{site.data.keyword.cloud_notm}}. It was created by stacking Cloud automation for {{site.data.keyword.secrets-manager_short}} along with deployable architectures that provision other {{site.data.keyword.cloud_notm}} services, like {{site.data.keyword.compliance_short}} and {{site.data.keyword.en_short}}. That deployable architecture provides a more comprehensive security solution that {{site.data.keyword.secrets-manager_short}} can't provide on its own.
+
+![Stacking deployable architectures](/images/da-structure.svg){: caption="Stacking deployable architectures to build an end-to-end solution" caption-side="bottom"}
+
+You can stack deployable architectures in an {{site.data.keyword.cloud_notm}} project and publish them together to a catalog without many extra validation steps. Or, you can stack architectures as you onboard a solution to a private catalog. From there, you can share it with others to save them the time of rebuilding it on their own.
+
+This complex solution derives much of its cost, compliance, support, and quality assurances from its included deployable architectures. However, that complex solution has a unique version, description, and architecture diagram. If an update is made to a deployable architecture that's stacked with others in a catalog, the entire solution must be updated by the onboarder to use the latest version of that component deployable architecture. Updating the entire solution to a new version helps ensure that the latest update to a single architecture functions correctly within the broader solution. 
+
+However, each deployable architecture has independent configuration states, allowing each one to be deployed, updated, or undeployed independently. For example, you already know that the {{site.data.keyword.cloud_notm}} Essential Security and Observability Services deployable architecture includes the Cloud automation for {{site.data.keyword.secrets-manager_short}} deployable architecture, among others. If Cloud automation for {{site.data.keyword.secrets-manager_short}} is updated, then {{site.data.keyword.cloud_notm}} Essential Security and Observability Services needs to be updated to use the latest version of {{site.data.keyword.secrets-manager_short}}. However, every architecture that's included in {{site.data.keyword.cloud_notm}} Essential Security and Observability Services doesn't need to be redeployed by the user consuming that solution. When the user updates their project to use the latest version, only {{site.data.keyword.secrets-manager_short}} needs to be redeployed.
+
+![Updating a deployable architecture within a broader solution](/images/da-component-stack.svg){: caption="Updating a deployable architecture within a broader solution" caption-side="bottom"}
+
+### What's included in a deployable architecture? 
+{: #whats-included}
 
 A deployable architecture might include variations, have dependencies, or be stacked together to create more complex solutions.
 
 Variations
 :  A variation is a type of deployable architecture that applies differing capabilities or complexity to an existing deployable architecture. For example, there might be a Quick start variation to your deployable architecture that has basic capabilities for simple, low-cost deployment to test internally. And, you might have a Standard variation that is a bit more complex that is ready for use in production.
 
-Dependencies
-:   A deployable architecture is considered dependent upon another architecture when it has inputs that require the outputs from the other architecture to properly deploy.
+Required architectures
+:  A deployable architecture can contain inputs that require the outputs from other deployable architectures to successfully deploy. This relationship between a deployable architecture and another architecture it requires is commonly referred to as a dependency. You can meet dependencies in two ways: by stacking deployable architectures or by onboarding a deployable architecture to a private catalog and extending it to include other architectures.
 
    ![A deployable architecture with a dependency on another deployable architecture](images/deployable-architecture-extension.png){: caption="Deployable architecture with a dependency on another deployable architecture" caption-side="bottom"}
 
-Stacks [Experimental]{: tag-purple}
-:   A deployable architecture stack links together multiple architectures to create an end-to-end solution. This linking is achieved by specifying references in the configuration of each architecture's inputs. You do not need to be an expert in Terraform, or have any Terraform coding skills, to create and deploy a stack.
+Optional architectures
+:   Deployable architectures are designed to be flexible, so you can easily stack architectures together to build a more complete solution. However, a generally useful deployable architecture may not include the specific options that you need to meet a complex use case. For example, which database goes with your Java application? Do you need event notifications, a message queue, or some other optional service that’s not included by default? Optional deployable architectures can be stacked along with required deployable architectures to solve this customization problem for users.
 
-:   Deployable architecture stacks are created with {{site.data.keyword.cloud_notm}} Projects and can be shared with others through a private catalog. A stacked deployable architecture has independent configuration states for each of the architectures in the stack. This allows each component deployable architecture to be individually deployed, updated, or undeployed independently. The deployable architecture stack derives much of its cost, compliance, support, and quality assurances from its included deployable architectures. However, each stack is uniquely versioned and has its own descriptions and architecture diagram. The following diagram shows how a deployable architecture stack can be made of multiple deployable architectures to create a single deployable architecture.
+Swappable architectures 
+:   Whether an architecture is required to satisfy a dependency, or it’s included as an optional extension of an architecture, users might require more flexibility. You might know your Java application works with an optional database - but which database do your users require? Specifying swappable architectures for users helps them customize the end-to-end solution to meet their specific needs. After you stack any optional or required architectures together, you can group architectures as swappable with one another. The consuming user can then select which required architecture they want to use to satisfy a dependency, or select an optional architecture if they want to extend their use case.
 
-   ![A deployable architecture stack](images/deployable-architecture-stack.png){: caption="Deployable architecture stack" caption-side="bottom"}
-
-:   For an example, see the [Retrieval Augmented Generation Pattern deployable architecture](https://cloud.ibm.com/catalog/7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3/architecture/Retrieval_Augmented_Generation_Pattern-5fdd0045-30fc-4013-a8bc-6db9d5447a52-global){: external}, which is assembled from separate deployable architectures. For more information, see [stacking deployable architectures](/docs/secure-enterprise?topic=secure-enterprise-config-stack).
+Optional and swappable architectures can be added as you [onboard a deployable architecture to a private catalog](/docs/secure-enterprise?topic=secure-enterprise-extend-da&interface=ui). Currently, [stacking deployable architectures in a project](/docs/secure-enterprise?topic=secure-enterprise-config-stack&interface=ui) does not support optional or swappable architectures.
+{: important}
 
 ## What are projects and how do they work with deployable architectures?
 {: #what-are-projects}
@@ -73,9 +100,9 @@ If you plan to create your own solution, the scope, coupling, whether it's deplo
 
 The following table provides a high-level overview of why you might want to create the different components.
 
-| Purpose | Recommended component | Why? |
+| Purpose | Recommended method | Why? |
 |:--------|:----------------------|:-----|
-| Creating a library of sharable automation components | Module | Modules provide reusable, curated automation to speed up the process for those who are creating and configuring deployable architectures. |
-| Ensuring that your organization's cloud environment is secure and compliant | Deployable architecture | Deployable architectures are packaged in a way that you can define a secure and compliant deployment once and ensure that all members of your organization are repeating the deployment in the same way. |
-| Architecting your own solutions | Deployable architecture stack | By combining architectures, you can create a more complex end-to-end solution for your organization. |
+| Creating a library of sharable automation components | Create a module | Modules provide reusable, curated automation to speed up the process for those who are creating and configuring deployable architectures. |
+| Ensuring that your organization's cloud environment is secure and compliant | Create a deployable architecture | Deployable architectures are packaged in a way that you can define a secure and compliant deployment once and ensure that all members of your organization are repeating the deployment in the same way. |
+| Architecting your own solutions | Stack deployable architectures together | By combining architectures, you can create a more complex end-to-end solution for your organization. |
 {: caption="Understanding for automated deployments use-cases" caption-side="top"}

@@ -4,7 +4,7 @@ copyright:
   years: 2022, 2025
 
 
-lastupdated: "2025-01-29"
+lastupdated: "2025-04-30"
 
 keywords: project access, project, project cost, project estimate, project users
 
@@ -60,3 +60,17 @@ During the validation process, the starting costs for the project are estimated.
 {: support}
 
 Any user that is a member of your account that is assigned access to the {{site.data.keyword.cloud_notm}} Projects service, {{site.data.keyword.bpshort}}, and the resource group for your project can access your project.
+
+## I added a deployable architecture to my project, why were multiple configurations created? 
+{: #da-stack-add}
+{: faq}
+{: support}
+
+Some deployable architectures are more complex than others and include multiple architectures that work together. When you add one of those architectures to your project, each architecture it includes is represented as a nested configuration. Ideally, required inputs that you need to configure should be included in the parent configuration, so you shouldn't need to edit each architecture configuration individually.
+
+## Can I reuse an existing configuration in a project? 
+{: #config-reuse}
+{: faq}
+{: support}
+
+Some deployable architectures support reusing configurations. These deployable architectures were created by stacking architectures together during the onboarding process. When you add one of those architectures to your project, and you have an existing configuration available in your project, you can choose to use that existing configuration with the new architecture. By doing so, you can reduce costs and reuse the same deployment for multiple architectures. 

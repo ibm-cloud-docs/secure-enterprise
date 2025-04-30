@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-04-16"
+lastupdated: "2025-04-30"
 
 keywords:
 
@@ -69,7 +69,7 @@ Alternatively, this deployable architecture also allows creating a new {{site.da
 
 By embracing composability, a deployable architecture can be easily integrated into a more complex solution architecture by stacking it with other deployable architectures. For example, the [Retrieval Augmented Generation Pattern](https://cloud.ibm.com/catalog/7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3/architecture/Retrieval_Augmented_Generation_Pattern-5fdd0045-30fc-4013-a8bc-6db9d5447a52-global) demonstrates how multiple deployable architectures, including the {{site.data.keyword.secrets-manager_short}} deployable architecture, can be combined to build a complex solution. Deployable architectures that are designed with composability in mind provide the foundation for these complex solutions.
 
-When deployable architectures are stacked together, each member deployable architecture maintains its independent configuration state, allowing for individual deployment, update, or undeployment. This modular approach enables cost, compliance, support, and quality assurances to be derived from the included deployable architectures, while the overall solution remains uniquely versioned with its own descriptions and reference architecture. 
+When deployable architectures are stacked together, each member deployable architecture maintains its independent configuration state, allowing for individual deployment, update, or undeployment. This modular approach enables cost, compliance, support, and quality assurances to be derived from the included deployable architectures, while the overall solution remains uniquely versioned with its own descriptions and reference architecture. For more information, go to [What does it mean to stack deployable architectures?](/docs/secure-enterprise?topic=secure-enterprise-understand-module-da#stacked)
 
 ### Consumability
 {: #consumability}
