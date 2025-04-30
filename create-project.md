@@ -65,8 +65,6 @@ You can also add a deployable architecture to a project directly from the catalo
 1. Enter the required details for the deployable architecture.
 1. Click **Add**.
 
-
-
 ### Customizing a deployable architecture in your project
 {: #customize-da-in-project}
 {: ui}
@@ -77,7 +75,7 @@ Depending on the deployable architecture, you might be able to customize it when
 * Swap out one architecture for another. For example, if multiple database options are provided, you can select the one you'd like to use.  
 * Select an existing configuration of an architecture in your project to reuse with the architecture that you're adding. By doing so, you can reduce costs and reuse the same deployment for multiple architectures. 
 
-After you make your selections and add the deployable architecture to your project, you can customize it further by selecting the **Options** icon ![Options icon](../icons/action-menu-icon.svg "Options") > **Customize architecture** from the Configurations tab. From there, you can add other compatible deployable architectures to further customize the solution. 
+After you make your selections and add the deployable architecture to your project, you can customize it further by selecting the **Options** icon ![Options icon](../icons/action-menu-icon.svg "Options") > **Customize architecture** from the Configurations tab. From there, you can add other compatible deployable architectures to further customize the solution.
 
 To back up the project information outside of the {{site.data.keyword.cloud_notm}} Projects service, you can export the project. For more information, go to [Project JSON](/docs/secure-enterprise?topic=secure-enterprise-json-project&interface=ui).
 {: tip}

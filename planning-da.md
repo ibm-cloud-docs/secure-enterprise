@@ -59,7 +59,7 @@ One way to work with dependencies is to [stack deployable architectures and add 
 Many deployable architectures are stand-alone and aren't extensions of other architectures, but you can choose to extend some deployable architectures in the **Architecture** section of the catalog details page. Select an option from the **How do you want to build this architecture?** menu. 
 {: tip}
 
-However, if you already deployed {{site.data.keyword.redhat_openshift_notm}} Container Platform and you need to deploy VSI, the resources that are required for VSI are already provisioned. You don't need to deploy the {{site.data.keyword.redhat_openshift_notm}} Container Platform architecture again. Since the VSI architecture is an extension of the {{site.data.keyword.redhat_openshift_notm}} Container Platform, you can deploy VSI and the architecture uses the resources from the {{site.data.keyword.redhat_openshift_notm}} Container Platform as needed.  
+However, if you already deployed {{site.data.keyword.redhat_openshift_notm}} Container Platform and you need to deploy VSI, the resources that are required for VSI are already provisioned. You don't need to deploy the {{site.data.keyword.redhat_openshift_notm}} Container Platform architecture again. Since the VSI architecture is an extension of the {{site.data.keyword.redhat_openshift_notm}} Container Platform, you can deploy VSI and the architecture uses the resources from the {{site.data.keyword.redhat_openshift_notm}} Container Platform as needed. 
 
 ### Optional and swappable deployable architectures
 {: #optional-swappable}
@@ -84,8 +84,6 @@ For more information, see [Extending a deployable architecture during onboarding
 
 Optional and swappable architectures can be added as you onboard a deployable architecture to a private catalog. Currently, stacking deployable architectures in a project does not support optional or swappable architectures.
 {: important}
-
-
 
 ## Terraform versus Ansible
 {: #terraform-ansible}

@@ -46,10 +46,6 @@ If you are using the API or CLI to configure a deployable architecture, or if yo
 You can find the name of an output to reference by opening a deployed configuration in your project and going to the **Outputs** tab.
 {: tip}
 
-
-
-
-
 #### Referencing values from a configuration
 {: #reference-values-config}
 
@@ -68,7 +64,7 @@ If you stacked configurations together in your project, you can reference output
 
 `ref:/configs/<stack_name>/members/<member_name>/inputs_or_outputs/<input_or_output_name>`
 
-If you want to make a relative reference, you can do so. A relative reference between configurations that are stacked together would be formatted as `ref:../<member_name>/inputs_or_outputs/<input_or_output_name>`. But, if you are referencing a value in the stack definition, it would be formatted as `ref:../../inputs/<input_name>` within the member configuration. Currently, members can't reference outputs from the stack definition. 
+If you want to make a relative reference, you can do so. A relative reference between configurations that are stacked together would be formatted as `ref:../<member_name>/inputs_or_outputs/<input_or_output_name>`. But, if you are referencing a value in the stack definition, it would be formatted as `ref:../../inputs/<input_name>` within the member configuration. Currently, members can't reference outputs from the stack definition.
 
 
 #### Referencing inputs from an environment
@@ -108,7 +104,7 @@ To create a customized configuration, complete the following steps:
     Depending on the deployable architecture, some inputs might be configured for you with references to other architectures or fixed values. These values were provided by the creator of the deployable architecture. Be careful if you edit these values, especially references, as the architecture might not successfully deploy with different values. Hover on the input and click **Reset** to revert the input to the fixed value the creator specified. You can't reset input references. Only inputs with fixed values can be reset to their original fixed value. 
     {: important} 
 
-1. Optional: Toggle **Advanced** to the on position to enter values for optional inputs. 
+1. Optional: Toggle **Advanced** to the on position to enter values for optional inputs.
 1. Click **Save**.
 1. Click **Validate**. The modal that is displayed provides more details about your in-progress validation.
 
