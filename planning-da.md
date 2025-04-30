@@ -2,7 +2,7 @@
 
 copyright:
    years: 2024, 2025
-lastupdated: "2025-04-14"
+lastupdated: "2025-04-30"
 
 keywords:
 
@@ -59,17 +59,33 @@ One way to work with dependencies is to [stack deployable architectures and add 
 Many deployable architectures are stand-alone and aren't extensions of other architectures, but you can choose to extend some deployable architectures in the **Architecture** section of the catalog details page. Select an option from the **How do you want to build this architecture?** menu. 
 {: tip}
 
-However, if you already deployed {{site.data.keyword.redhat_openshift_notm}} Container Platform and you need to deploy VSI, the resources that are required for VSI are already provisioned. You don't need to deploy the {{site.data.keyword.redhat_openshift_notm}} Container Platform architecture again. Since the VSI architecture is an extension of the {{site.data.keyword.redhat_openshift_notm}} Container Platform, you can deploy VSI and the architecture uses the resources from the {{site.data.keyword.redhat_openshift_notm}} Container Platform as needed. 
+However, if you already deployed {{site.data.keyword.redhat_openshift_notm}} Container Platform and you need to deploy VSI, the resources that are required for VSI are already provisioned. You don't need to deploy the {{site.data.keyword.redhat_openshift_notm}} Container Platform architecture again. Since the VSI architecture is an extension of the {{site.data.keyword.redhat_openshift_notm}} Container Platform, you can deploy VSI and the architecture uses the resources from the {{site.data.keyword.redhat_openshift_notm}} Container Platform as needed.  
 
-### Optional and swappable components 
+### Optional and swappable deployable architectures
 {: #optional-swappable}
 
 This is an experimental feature that is available for evaluation and testing purposes and might change without notice.
 {: experimental}
 
-Some architectures might work well with a deployable architecture that you're onboarding without being a required prerequisite for your product. If that's the case for the product that you're onboarding, you can specify other architectures as optional components, also known as [optional dependencies in the catalog manifest file](/docs/secure-enterprise?topic=secure-enterprise-manifest-values#optional-components). When a user adds your deployable architecture to a project from a catalog, they can customize it by adding the optional component if they want to. Any dependency, whether it's optional or required for your product, can be swappable with other architectures. Swappable components provide the same function, and the user can select the architecture that best meets their needs. 
+When you onboard a deployable architecture to a private catalog, you can extend it by stacking it with other architectures. By doing so, you can create a more customizable solution for your users. 
 
-For more information, see [Specifying dependencies](/docs/secure-enterprise?topic=secure-enterprise-create-da#fullstackvext). 
+Why stack during onboarding? 
+:   Stacking architectures during onboarding is similar to stacking architectures in a project. As you onboard an architecture, you can include dependencies by stacking required architectures along with it. However, unlike stacking architectures in a project, stacking architectures during onboarding includes the following capabilities: 
+    - You can add optional architectures that are tailored for different use cases. 
+    - You can add swappable architectures that users can choose between. 
+
+Optional architectures
+:   Maybe your architecture works well with another deployable architecture, but isn't needed to meet a dependency or satisfy compliance. You can add the deployable architecture as optional, and users can choose to include it when they add your deployable architecture to a project. For example, a monitoring architecture might be useful but not required. 
+
+Swappable architectures 
+:   Any architecture that you stack with your own during onboarding can be swappable with other architectures. Swappable architectures give users a choice between multiple options that provide the same functionality. For example, you can include two deployable architectures that create different databases, and the user can decide which database option they want to use with your architecture.
+
+For more information, see [Extending a deployable architecture during onboarding](/docs/secure-enterprise?topic=secure-enterprise-extend-da).
+
+Optional and swappable architectures can be added as you onboard a deployable architecture to a private catalog. Currently, stacking deployable architectures in a project does not support optional or swappable architectures.
+{: important}
+
+
 
 ## Terraform versus Ansible
 {: #terraform-ansible}

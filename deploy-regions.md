@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2023
+  years: 2023, 2025
 
-lastupdated: "2023-12-15"
+lastupdated: "2025-04-28"
 
 keywords: multiple regions, deploy, projects
 
@@ -22,6 +22,8 @@ completion-time: 20m
 {: #deploy-regions}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="20m"}
+
+
 
 This tutorial walks you through how to use [projects](#x2035151){: term} to deploy two slightly different configurations of the same deployable architecture to two different regions.
 {: shortdesc}

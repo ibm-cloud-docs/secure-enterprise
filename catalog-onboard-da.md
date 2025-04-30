@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-27"
+lastupdated: "2025-04-30"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -122,6 +122,9 @@ After you add your deployable architecture to a private catalog, you're able to 
 {: #configure-version-details}
 
 On the **Configure version** tab, you can review and update information about the specific version of your architecture. You configure deployment details, define the required IAM access, and detail change notices that you want your users to be aware of.
+
+If you want to extend your deployable architecture, you can do so by stacking it with other architectures. You can include dependencies that your architecture requires, along with optional architectures that help expand your solution for a particular use case. For more information, go to [Extending a deployable architecture during onboarding](/docs/secure-enterprise?topic=secure-enterprise-extend-da). 
+{: tip}
 
 If your deployable architecture requires a specific Terraform runtime version, you can override the default version. If you included `TF_VERSION` as an input variable within your source code repository, it should have automatically been updated when you created your catalog entry.
 

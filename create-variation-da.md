@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2024
-lastupdated: "2024-10-09"
+   years: 2024, 2025
+lastupdated: "2025-04-30"
 
 keywords:
 
@@ -59,24 +59,24 @@ To create another variation of the deployable architecture that you already crea
 
 You can repeat these steps if you have more variations to add. When you're done, you can create your Git release and start [onboarding to a private catalog](/docs/secure-enterprise?topic=secure-enterprise-onboard-da) to create a catalog tile that you can share with others.
 
-## Adding a deployable architecture stack as a variation 
+## Adding a variation made of multiple deployable architectures
 {: #add-stack-variation}
 
-You can add a deployable architecture stack as a variation in the catalog. If a quick start variation of a deployable architecture is simple and low-cost, a deployable architecture stack is typically more complex and creates more resources than that quick start variation. 
+If you [stacked architectures together in your project](/docs/secure-enterprise?topic=secure-enterprise-config-stack&interface=ui), you can add that solution as a variation in the catalog. If a quick start variation of a deployable architecture is simple and low-cost, a solution that was created by stacking is typically more complex and creates more resources than that quick start variation. 
 
-To add a deployable architecture stack as a variation, complete the following steps: 
+Complete the following steps:
 
-1. Create the deployable architecture stack in a project. For more information, see [Stacking deployable architectures](/docs/secure-enterprise?topic=secure-enterprise-config-stack&interface=ui). 
+1. Stack deployable architectures in a project. For more information, see [Stacking deployable architectures](/docs/secure-enterprise?topic=secure-enterprise-config-stack&interface=ui). 
    
-   Configure and deploy the stack to verify that it works as designed before adding the stack as a variation. 
+   Configure and deploy the architectures to verify that the overall solution works as designed before you add it as a variation. 
    {: important}
 
-1. Define the variables that users need to configure to deploy the stack. For more information, see [Defining stack variables](/docs/secure-enterprise?topic=secure-enterprise-config-stack&interface=ui#stack-define-variables).
-1. Create a [stack definition file](/docs/secure-enterprise?topic=secure-enterprise-stack-definition). The stack definition specifies how the deployable architectures within a stack relate to each other. The stack variables that you defined in the previous step are included in your stack definition file as well. 
+1. Define the variables that users need to configure to deploy successfully. For more information, see [Defining stack variables](/docs/secure-enterprise?topic=secure-enterprise-config-stack&interface=ui#stack-define-variables).
+1. Create a [stack definition file](/docs/secure-enterprise?topic=secure-enterprise-stack-definition). The stack definition specifies how the stacked deployable architectures relate to each other. The stack variables that you defined in the previous step are included in your stack definition file as well. 
 1. In your source code repo, create a working directory and add the `stack_definition.json` file to that directory. For more information, see [Creating your source repo](/docs/secure-enterprise?topic=secure-enterprise-create-da#source-repo-da).
 1. In your `ibm_catalog.json` manifest file, add the following code snippet into the `flavors` section:
 
-   For example, if your deployable architecture is called `Dinner` and you want to create a variation of that, you might call it `Steak and potatoes with broccoli` as shown in the following example.
+   For example, if your deployable architecture is called `Dinner` and you want to create a variation of that architecture, you might call it `Steak and potatoes with broccoli` as shown in the following example.
 
    ```json
    "flavors": [

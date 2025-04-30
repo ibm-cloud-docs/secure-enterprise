@@ -34,16 +34,16 @@
     "view_more": "/docs/overview?topic=overview-whatsnew",
     "tiles": [
       {
+        "date": "30 April 2025",
+        "title": "Experimental: Extend a deployable architecture as you onboard it to a private catalog"
+      },
+      {
         "date": "17 December 2024",
         "title": "Experimental: Customize a deployable architecture from the catalog"
       },
       {
         "date": "21 November 2024",
         "title": "Experimental: Connect your project to a Git repository"
-      },
-      {
-        "date": "03 October 2024",
-        "title": "Project widget updates"
       }
     ]
   }

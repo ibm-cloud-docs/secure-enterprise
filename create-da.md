@@ -2,7 +2,7 @@
 
 copyright:
    years: 2024, 2025
-lastupdated: "2025-04-11"
+lastupdated: "2025-04-30"
 
 keywords:
 
@@ -50,21 +50,17 @@ Catalog manifest file
 Variations
 :   A deployable architecture can include variations of capability or complexity. For example, you might create a quick start variation with basic capabilities for a simple, low-cost deployment, and then you might have a standard variation with a more complex architecture that would be used in production. Each of these variations is itself a deployable architecture, which is onboarded and configured to appear together in a catalog. These variations are sourced in the same repo in different working directories and are defined in your `ibm_catalog.json` file. For more information, see [Creating a variation](#create-variation).
 
-## Specifying dependencies 
+## Specifying dependencies and extending your architecture 
 {: #fullstackvext}
 
-There are two `install_type` options that you can specify when creating your deployable architecture. One specifies that dependent deployable architectures that must be deployed first, and one specifies that it can be deployed without any prerequisites.
+[Experimental]{: tag-purple}
 
-`fullstack`
-:   It is a full end-to-end solution that is always deployed as-is. The `fullstack` value is set in the `ibm_catalog.json` manifest file for `install_type` to specify that the deployable architecture does not have any dependencies (prerequisites).
+If your deployable architecture depends on another, you can include information about that dependency as you onboard your deployable architecture to a catalog. You can also include optional architectures to extend your own for different use cases. The result is a customizable solution for users because they can pick which architectures they want to include along with yours. For more information, go to [Extending a deployable architecture during onboarding](/docs/secure-enterprise?topic=secure-enterprise-extend-da).
 
-`extension`
-:   A deployable architecture that depends on another deployable architecture being deployed first. The prerequisite deployable architecture is the base on which the extension deployable architecture is built. This dependency, or prerequisite, must be met to deploy the extension. The `extension` value is set in the `ibm_catalog.json` manifest file for the `install_type`, and the `dependencies` array must be completed to specify the dependent deployable architecture in the manifest file.
+You can also provide information about other architectures you want to include with your own in the catalog manifest file for your deployable architecture before you onboard it. 
 
-If your deployable architecture is compatible with other architectures, but doesn't require them to deploy, you can include those architectures as optional components for your users. To include optional components, set `dependency_version_2` to `true` in the catalog manifest file. If you do so, the `install_type` option is ignored. Then, use the `dependencies` or `swappable_dependencies` array to specify required and optional components.
+Use the `dependencies` section in the catalog manifest file to create a customizable solution with optional and required architectures. Make sure `dependency_version_2` is set to `true` in the catalog manifest file. The preious way of working with dependencies in the catalog manifest file is still supported. With `dependency_version_2` set to `false`, you can set `install_type` to `extension` and provide information about the dependencies in the `dependencies` section. If you do so, each architecture in the list of dependencies is required to deploy your own. For more information and setting these values, see [Locally editing the catalog manifest](/docs/secure-enterprise?topic=secure-enterprise-manifest-values).
 {: note}
-
-For more information and setting these values, see [Locally editing the catalog manifest](/docs/secure-enterprise?topic=secure-enterprise-manifest-values).
 
 ## Creating a deployable architecture
 {: #creating-da}
