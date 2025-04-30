@@ -15,10 +15,6 @@ subcollection: secure-enterprise
 {{site.data.keyword.attribute-definition-list}}
 
 
-
-
-
-
 # Stacking deployable architectures in a project
 {: #config-stack}
 

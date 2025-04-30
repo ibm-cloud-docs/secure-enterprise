@@ -15,8 +15,6 @@ subcollection: secure-enterprise
 # Editing the deployable architecture stack definition locally
 {: #stack-definition}
 
-
-
 The stack definition file defines the member deployable architectures that are stacked together to form a more complex deployable architecture. It specifies information about how those deployable architectures are supposed to relate to each other, like input references that connect architectures together. If you plan to share this solution with others through a private catalog, a stack definition is required to help ensure that it can be deployed successfully. 
 {: shortdesc}
 
