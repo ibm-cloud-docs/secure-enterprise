@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2025
 
-lastupdated: "2025-04-28"
+lastupdated: "2025-05-06"
 
 keywords: deployable architecture, basic customization, VSI on VPC landing zone
 
@@ -18,7 +18,7 @@ completion-time: 10m
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Using {{site.data.keyword.cloud_notm}} deployable architectures to build a deployable architecture
+# Using {{site.data.keyword.cloud_notm}} deployable architectures to build your own infrastructure
 {: #basic-custom}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="10m"}
