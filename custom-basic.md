@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2025
 
-lastupdated: "2025-05-06"
+lastupdated: "2025-05-13"
 
 keywords: deployable architecture, basic customization, VSI on VPC landing zone
 
@@ -18,14 +18,14 @@ completion-time: 10m
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Using {{site.data.keyword.cloud_notm}} deployable architectures to build your own infrastructure
+
+
+
+
+# Using {{site.data.keyword.cloud_notm}} deployable architectures to build a deployable architecture
 {: #basic-custom}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="10m"}
-
-
-
-
 
 This tutorial walks you through how to create a new deployable architecture from an existing {{site.data.keyword.cloud}} deployable architecture to fit your business needs. By completing this tutorial, you learn how to download the Terraform files of a deployable architecture, update the variables, and then test the new deployable architecture.
 {: shortdesc}
