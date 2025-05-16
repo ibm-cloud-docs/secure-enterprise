@@ -4,9 +4,9 @@ copyright:
 
   years: 2023, 2025
 
-lastupdated: "2025-05-13"
+lastupdated: "2025-05-16"
 
-keywords: deployable architecture, basic customization, VSI on VPC landing zone
+keywords: deployable architecture, basic customization, Code Engine, AI, application, infrastructure
 
 subcollection: secure-enterprise
 
