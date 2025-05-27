@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2024-10-09"
+lastupdated: "2025-05-27"
 
 keywords: HA for IBM projects, DR for IBM projects, high availability for IBM projects, disaster recovery for IBM projects, failover for IBM projects, BC for IBM projects, DR for IBM projects, business continuity for IBM projects, disaster recovery for IBM projects
 
@@ -28,7 +28,7 @@ For more information about your responsibilities when using projects, see [Share
 
 {{site.data.keyword.cloud_notm}} has business continuity plans in place to provide for the recovery of services within hours if a disaster occurs. You are responsible for your data backup and associated recovery of your content.
 
-{{site.data.keyword.cloud_notm}} performs regular electronic backups of project data with Recovery Time Objective (RTO) and Recovery Point Objective (RPO) of hours as documented in the [{{site.data.keyword.cloud_notm}} Disaster Recovery Plan](/docs/overview?topic=overview-zero-downtime#disaster-recovery). Projects don't replicate data outside of a region, except for backup data. When possible, backup data is kept within the data centers of a country but data is always kept within a geography. European data does not leave the EU.
+{{site.data.keyword.cloud_notm}} performs regular electronic backups of project data with Recovery Time Objective (RTO) and Recovery Point Objective (RPO) of hours as documented in the [{{site.data.keyword.cloud_notm}} Disaster Recovery Plan](/docs/resiliency?topic=resiliency-ha-redundancy#disaster-recovery). Projects don't replicate data outside of a region, except for backup data. When possible, backup data is kept within the data centers of a country but data is always kept within a geography. European data does not leave the EU.
 
 | Disaster recovery objective | Target Value   |
 |---|---|

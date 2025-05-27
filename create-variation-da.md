@@ -2,7 +2,7 @@
 
 copyright:
    years: 2024, 2025
-lastupdated: "2025-04-30"
+lastupdated: "2025-05-27"
 
 keywords:
 
@@ -33,7 +33,7 @@ Here's an example of a deployable architecture with two variations in the catalo
 ![A deployable architecture with two variations](images/variation-example.png "Deployable architecture with two variations"){: caption="Deployable architecture with two variations" caption-side="bottom"}
 
 ## Adding a variation to an existing deployable architecture
-{: #add-variation}
+{: #add-variation-existing}
 
 To create another variation of the deployable architecture that you already created, complete the following steps:
 

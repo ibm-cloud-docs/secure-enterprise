@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2024
+  years: 2024, 2025
 
-lastupdated: "2024-10-08"
+lastupdated: "2025-05-27"
 
 keywords: vs code extension, extension, onboard, deployable architecture
 
@@ -18,7 +18,7 @@ subcollection: secure-enterprise
 You can [onboard your deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-onboard-da&interface=ui) by using the {{site.data.keyword.cloud_notm}} Deployable Architecture Builder Visual Studio Code extension. Using the extension autogenerates materials that are required and it can avoid or minimize issues where a separate configuration is made each time the user runs validation through the catalog. The extension helps you to easily onboard your deployable architecture to your private catalog and a project.
 
 ## Before you begin
-{: #onboard-before}
+{: #onboard-before-vs}
 
 Before you can onboard your deployable architecture, be sure that you complete the following prerequisites.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2024-07-02"
+lastupdated: "2025-05-27"
 
 keywords: catalog, catalogs, private catalogs, account catalogs, catalog visibility, module visibility, import module, module registry, terraform module
 
@@ -40,7 +40,7 @@ Before you can onboard your module, be sure that you complete the following prer
 
 To create the `.tgz` file that you need to onboard your module to a private catalog, you must create a release version of your source code. For help with creating a release, see [Managing releases in a repository](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository){: external}.
 
-If you're using a private source code repository, be sure that you have a [Git personal access token](https://github.ibm.com/settings/tokens/new){: external} or a secret that is stored in [{{site.data.keyword.secrets-manager_short}}](/docs/secrets-manager?topic=secrets-manager-getting-started#getting-started).
+If you're using a private source code repository, be sure that you have a [Git personal access token](https://github.com/settings/tokens/new){: external} or a secret that is stored in [{{site.data.keyword.secrets-manager_short}}](/docs/secrets-manager?topic=secrets-manager-getting-started#getting-started).
 
 
 
@@ -54,7 +54,7 @@ If you're using a private source code repository, be sure that you have a [Git p
 5. Select **Terraform** as your **Delivery method**.
 6. Select the type of repository where your source code is located.
 
-	If your source code is located in a private repository, you need to authenticate by using a [Git personal access token](https://github.ibm.com/settings/tokens/new){: external} or a secret from [{{site.data.keyword.secrets-manager_short}}](/docs/secrets-manager?topic=secrets-manager-getting-started#getting-started).
+	If your source code is located in a private repository, you need to authenticate by using a [Git personal access token](https://github.com/settings/tokens/new){: external} or a secret from [{{site.data.keyword.secrets-manager_short}}](/docs/secrets-manager?topic=secrets-manager-getting-started#getting-started).
 
 7. Add a link to your source code in the **Source URL** field. It should look similar to `https://github.com/terraform-ibm-modules/terraform-ibm-cos/archive/refs/tags/v7.0.5.tar.gz`.
 8. Select the **Example** that you want to use.
@@ -174,7 +174,7 @@ Ensure that you fully understand the costs that are associated with onboarding y
 ## Managing compliance
 {: #onboard-modules-compliance}
 
-When you onboard a module to a private catalog, you can specify compliance controls that your module meets when it is run. Compliance with regulatory controls is evaluated by {{site.data.keyword.compliance_long}}. For more information, see [Running an evaluation for {{site.data.keyword.cloud}}](/docs/security-compliance?topic=security-compliance-scan-resources).
+When you onboard a module to a private catalog, you can specify compliance controls that your module meets when it is run. Compliance with regulatory controls is evaluated by {{site.data.keyword.compliance_long}}. For more information, see [Targeting resources to evaluate](/docs/security-compliance?topic=security-compliance-scopes&interface=ui).
 
 1. Click **Add claims**.
 2. Select a profile. The profile is pulled from the {{site.data.keyword.compliance_short}} service. You can choose to select a predefined profile or go to {{site.data.keyword.compliance_short}} and create one of your own.

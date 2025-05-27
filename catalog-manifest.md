@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-30"
+lastupdated: "2025-05-27"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -922,7 +922,7 @@ A semver value that indicates the earliest version that is compatible with the c
 The Hashicorp Terraform runtime version that is needed to validate and install the version. Setting this value in the manifest overrides what is specified in the source code. 
 
 #### `outputs`
-{: #outputs}
+{: #outputs-cm}
 
 Section header for information about Terraform output values.
 

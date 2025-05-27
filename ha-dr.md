@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023, 2024
-lastupdated: "2024-10-09"
+  years: 2023, 2025
+lastupdated: "2025-05-27"
 
 keywords:
 
@@ -17,7 +17,7 @@ subcollection: secure-enterprise
 
 {{site.data.keyword.Bluemix}} projects is a general availability (GA) service that is offered in multiple regions: Dallas, Washington, Frankfurt, and London. Each location has three different data centers for redundancy. The data for each location is kept in the three data centers near that location. If all of the data centers in a location fail, the {{site.data.keyword.cloud_notm}} Projects service for that location becomes unavailable.
 
-See [ensure zero downtime](/docs/overview?topic=overview-zero-downtime#zero-downtime) to learn more about the disaster recovery standards. You can also find information about {{site.data.keyword.cloud_notm}} [Service Level Objectives](/docs/overview?topic=overview-slo).
+See [ensure zero downtime](/docs/resiliency?topic=resiliency-ha-redundancy#zero-downtime) to learn more about the disaster recovery standards. You can also find information about {{site.data.keyword.cloud_notm}} [Service Level Objectives](/docs/resiliency?topic=resiliency-slo).
 
 ## Responsibilities
 {: #ha-responsibilities}
@@ -41,7 +41,7 @@ Service level objectives (SLOs) describe the design points that the {{site.data.
 |  Availability % | 99.999% |
 {: caption="SLO for projects " caption-side="bottom"}
 
-The SLO is not a warranty and {{site.data.keyword.IBM_notm}} will not issue credits for failure to meet an objective. Refer to the SLAs for commitments and credits that are issued for failure to meet any committed SLAs. For a summary of all SLOs, see [{{site.data.keyword.cloud_notm}} service level objectives](/docs/overview?topic=overview-slo).
+The SLO is not a warranty and {{site.data.keyword.IBM_notm}} will not issue credits for failure to meet an objective. Refer to the SLAs for commitments and credits that are issued for failure to meet any committed SLAs. For a summary of all SLOs, see [{{site.data.keyword.cloud_notm}} service level objectives](/docs/resiliency?topic=resiliency-slo).
 
 
 ## Locations

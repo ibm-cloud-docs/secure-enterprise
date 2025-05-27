@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-04-30"
+lastupdated: "2025-05-27"
 
 keywords:
 
@@ -140,8 +140,8 @@ To ensure the deployable architecture is reliable and consistent, it is essentia
 Leverage linting and code formatting. Enforce consistent coding styles and formatting to make the code easy to read and maintain. Detect errors and warnings in the code to prevent issues during deployment. Consider going beyond just the Terraform code, but incorporate any tools relevant to all resources in your deployable architecture, such as Bash scripts, Python scripts, YAML and JSON files, and Golang.
 
 Examples:
-* [`terraform_fmt`](https://www.terraform.io/docs/cli/commands/fmt.html){: external} to format Terraform code.
-* [`go-fmt`](https://golang.org/cmd/go/#hdr-Run_'go_fmt'_on_package_sources){: external} to format Go code.
+* [`terraform_fmt`](https://developer.hashicorp.com/terraform/cli/commands/fmt){: external} to format Terraform code.
+* [`go-fmt`](https://pkg.go.dev/cmd/go#hdr-Run_'go_fmt'_on_package_sources){: external} to format Go code.
 * [`black`](https://black.readthedocs.io/en/stable/){: external} to format Python code.
 * [`isort`](https://pycqa.github.io/isort/){: external} to sort Python imports.
 * [`flake8`](https://flake8.pycqa.org/en/latest/){: external} to check Python code for errors and warnings.
@@ -154,7 +154,7 @@ Examples:
 Use static validation to check the deployable architecture's syntax and configuration to ensure it is correct and consistent. Validate the deployable architecture's configuration to prevent errors during deployment. Again, consider going beyond just the Terraform code, and incorporate any tools relevant to all resources in your deployable architecture, such as Bash scripts, Python scripts, YAML and JSON files, and Golang.
 
 Examples:
-* [`terraform_validate`](https://www.terraform.io/docs/cli/commands/validate.html){: external} to validate Terraform configuration.
+* [`terraform_validate`](https://developer.hashicorp.com/terraform/cli/commands/validate){: external} to validate Terraform configuration.
 * [`checkov`](https://www.checkov.io/){: external} to check for security and compliance issues in Terraform code.
 * [`tflint`](https://github.com/terraform-linters/tflint){: external} to check for errors and warnings.
 * [`detect-secrets`](https://github.com/ibm/detect-secrets){: external} to detect secrets in code.
