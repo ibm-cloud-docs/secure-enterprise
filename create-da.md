@@ -2,7 +2,7 @@
 
 copyright:
    years: 2024, 2025
-lastupdated: "2025-04-30"
+lastupdated: "2025-05-27"
 
 keywords:
 
@@ -48,7 +48,7 @@ Catalog manifest file
 :   Defines how the deployable architecture is exposed in the {{site.data.keyword.cloud_notm}} catalog. In addition to the general catalog details like the name, description, and features, it includes the variation definitions that point to the underlying Terraform configuration, compliance claims that are verified during onboarding to the catalog by using {{site.data.keyword.compliance_full}}, and necessary IAM permissions for running the deployable architecture. For more information, see [Locally editing the catalog manifest](/docs/secure-enterprise?topic=secure-enterprise-manifest-values&interface=ui#example-manifest).
 
 Variations
-:   A deployable architecture can include variations of capability or complexity. For example, you might create a quick start variation with basic capabilities for a simple, low-cost deployment, and then you might have a standard variation with a more complex architecture that would be used in production. Each of these variations is itself a deployable architecture, which is onboarded and configured to appear together in a catalog. These variations are sourced in the same repo in different working directories and are defined in your `ibm_catalog.json` file. For more information, see [Creating a variation](#create-variation).
+:   A deployable architecture can include variations of capability or complexity. For example, you might create a quick start variation with basic capabilities for a simple, low-cost deployment, and then you might have a standard variation with a more complex architecture that would be used in production. Each of these variations is itself a deployable architecture, which is onboarded and configured to appear together in a catalog. These variations are sourced in the same repo in different working directories and are defined in your `ibm_catalog.json` file. For more information, see [Creating a variation](/docs/secure-enterprise?topic=secure-enterprise-create-variation-da).
 
 ## Specifying dependencies and extending your architecture 
 {: #fullstackvext}

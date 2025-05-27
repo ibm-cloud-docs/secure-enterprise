@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2024
+  years: 2024, 2025
 
-lastupdated: "2024-10-09"
+lastupdated: "2025-05-27"
 
 keywords:
 
@@ -59,7 +59,7 @@ Before you onboard your deployable architecture to a catalog, verify compliance 
 
    You see a status bar that indicates that a scan is in progress. If you need to start a one-off scan, use the Overflow menu ![Overflow menu icon](../icons/action-menu-icon.svg "Overflow menu icon") to select **Start scan**.
 
-When the scan is complete, you can use the Overflow menu ![Overflow menu icon](../icons/action-menu-icon.svg "Overflow menu icon") to select **View scan results** to ensure that the scan on your deployable architecture resources passed the compliance checks as expected. For more information, see [Scanning your resources](/docs/security-compliance?topic=security-compliance-scan-resources) and [Viewing results](/docs/security-compliance?topic=security-compliance-results).
+When the scan is complete, you can use the Overflow menu ![Overflow menu icon](../icons/action-menu-icon.svg "Overflow menu icon") to select **View scan results** to ensure that the scan on your deployable architecture resources passed the compliance checks as expected. For more information, see [Targeting resources to evaluate](/docs/security-compliance?topic=security-compliance-scopes&interface=ui) and [Viewing results](/docs/security-compliance?topic=security-compliance-results).
 
 ## Updating the compliance information in the manifest
 {: #compliance-manifest}

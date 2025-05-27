@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2023, 2024
+  years: 2023, 2025
 
-lastupdated: "2024-10-09"
+lastupdated: "2025-05-27"
 
 keywords: target account, manage resources, enterprise architecture, administration account, resources, existing resources, organize resources
 
@@ -18,7 +18,7 @@ subcollection: secure-enterprise
 # Organizing existing resources by using a project
 {: #organize-resources}
 
-You can use a project to organize and track resources across accounts, which can help large enterprises [separate management accounts from workload accounts and applications](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-principles#mgmt-workload). Separating management accounts from workload accounts reduces the number of users who need access to your workload accounts, which makes those accounts more secure. For example, you can gather resources that are related to a particular workload across your development and production accounts into a single project in an administration account. By doing so, your resources remain deployed in their respective accounts, but you gain an at-a-glance view of those resources in your project.
+You can use a project to organize and track resources across accounts, which can help large enterprises [separate management accounts from workload accounts and applications](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-about#mgmt-workload). Separating management accounts from workload accounts reduces the number of users who need access to your workload accounts, which makes those accounts more secure. For example, you can gather resources that are related to a particular workload across your development and production accounts into a single project in an administration account. By doing so, your resources remain deployed in their respective accounts, but you gain an at-a-glance view of those resources in your project.
 {: shortdesc}
 
 This is an experimental feature that is available for evaluation and testing purposes and might change without notice.
@@ -26,7 +26,7 @@ This is an experimental feature that is available for evaluation and testing pur
 
 ![An enterprise account with an administration account and two business unit account groups A and B. Account group B contains an administration account and two other accounts, workload accounts A and B. The group B administration account includes a project with two configurations that contain resources from workload accounts A and B.](images/manage-resources.svg "An administration account that tracks resources from business unit accounts"){: caption="An administration account that tracks resources from business unit accounts" caption-side="bottom"}
 
-Within an enterprise account architecture, tracking resources in a project can help a user in a [business unit administration account](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-bu-admin-account) manage separate workload accounts and applications. The resources exist in different accounts, for example, workload account A, and workload account B. But by adding resources from workload account A and B to a project in the administration account, the resources are visible from the project in the administration account as well.
+Within an enterprise account architecture, tracking resources in a project can help a user in a [business unit administration account](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-about#bu-admin-account) manage separate workload accounts and applications. The resources exist in different accounts, for example, workload account A, and workload account B. But by adding resources from workload account A and B to a project in the administration account, the resources are visible from the project in the administration account as well.
 
 Within a project, you can further refine groups of resources by adding them to different configurations. Consider grouping the resources based on their function. For example, within the same project, you can add one configuration that contains the resources for your infrastructure on your development environment, and another configuration for the resources on your production environment.
 {: tip}

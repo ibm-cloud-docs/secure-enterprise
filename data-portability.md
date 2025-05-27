@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-15"
+lastupdated: "2025-05-27"
 
 keywords: projects, data portability
 
@@ -51,4 +51,4 @@ The exported data for a project is stored as a JSON file called `project.json`. 
 ## Data ownership
 {: #data-portability-ownership}
 
-All exported data is classified as customer content. Apply the full customer ownership and licensing rights, as stated in the [IBM Cloud Service Agreement](https://www.ibm.com/terms/?id=Z126-6304_WS){: external}.
+All exported data is classified as customer content. Apply the full customer ownership and licensing rights, as stated in the [{{site.data.keyword.cloud_notm}} Service Agreement](https://www.ibm.com/support/customer/csol/terms/?id=Z126-6304_WS&cc=us&lc=en){: external}.

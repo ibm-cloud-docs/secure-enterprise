@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023, 2024
-lastupdated: "2024-10-25"
+  years: 2023, 2025
+lastupdated: "2025-05-27"
 
 keywords: project events, needs attention, project attention, attention events
 
@@ -23,7 +23,7 @@ To send information to {{site.data.keyword.en_short}}, you must connect your pro
 ## How events are collected and sent by projects
 {: #event-notifications-how}
 
-When an event of interest takes place in your project instance, projects communicate with a connected {{site.data.keyword.en_short}} instance to forward a notification to a [supported destination](/docs/event-notifications?topic=event-notifications-supported-destinations). Events are generated based on actions that users take within the project. For example, if the validation of a configuration is successful, an event is generated to notify users of this action.
+When an event of interest takes place in your project instance, projects communicate with a connected {{site.data.keyword.en_short}} instance to forward a notification to a [supported destination](/docs/event-notifications?topic=event-notifications-en-destination). Events are generated based on actions that users take within the project. For example, if the validation of a configuration is successful, an event is generated to notify users of this action.
 
 ## Events for projects
 {: #event-notifications-list}
@@ -91,7 +91,7 @@ A successful response returns the CRN value of your connected {{site.data.keywor
 
 After you enable notifications for projects, create topics and subscriptions in {{site.data.keyword.en_short}} so that alerts can be forwarded and delivered to your selected destinations.
 
-For a complete list of supported destinations, see the [{{site.data.keyword.en_short}} documentation](/docs/event-notifications?topic=event-notifications-supported-destinations).
+For a complete list of supported destinations, see the [{{site.data.keyword.en_short}} documentation](/docs/event-notifications?topic=event-notifications-en-destination).
 {: tip}
 
 ### Email notifications

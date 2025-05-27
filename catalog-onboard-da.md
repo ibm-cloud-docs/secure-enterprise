@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-30"
+lastupdated: "2025-05-27"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -187,7 +187,7 @@ Ensure that you fully understand the costs that are associated with deploying yo
 ### Managing compliance
 {: #manage-compliance}
 
-When you make a deployable architecture available to others in your organization, you can specify the specific compliance controls that your architecture meets by using the default installation. Compliance with regulatory controls is evaluated by {{site.data.keyword.compliance_long}}. For more information, see [Running an evaluation for {{site.data.keyword.cloud}}](/docs/security-compliance?topic=security-compliance-scan-resources).
+When you make a deployable architecture available to others in your organization, you can specify the specific compliance controls that your architecture meets by using the default installation. Compliance with regulatory controls is evaluated by {{site.data.keyword.compliance_long}}. For more information, see [Targeting resources to evaluate](/docs/security-compliance?topic=security-compliance-scopes&interface=ui).
 
 1. Click **Add claims**.
 2. Select a profile. The profile is pulled from the {{site.data.keyword.compliance_short}} service. You can choose to select a predefined profile or go to {{site.data.keyword.compliance_short}} and create one of your own.
@@ -238,7 +238,7 @@ If you are working with a deployable architecture stack, there are additional fi
 ## Adding a variation
 {: #add-variation}
 
-You can add more variations that are a new version of your architecture that is designed to build upon the funtions of the base deployable architecture. If you [created multiple variations](/docs/secure-enterprise?topic=secure-enterprise-create-da#create-variation) in separate working directories in your source repo and specified them in the `flavors` array in your `ibm_catalog.json` manifest file, you must onboard each variation separately.
+You can add more variations that are a new version of your architecture that is designed to build upon the funtions of the base deployable architecture. If you [created multiple variations](/docs/secure-enterprise?topic=secure-enterprise-create-variation-da) in separate working directories in your source repo and specified them in the `flavors` array in your `ibm_catalog.json` manifest file, you must onboard each variation separately.
 
 At this point, you've already onboarded your first variation. Now, you can start back at [Adding a deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-onboard-da#add-catalog) to onboard your next variation. Here are a few tips for onboarding your next variation:
 
