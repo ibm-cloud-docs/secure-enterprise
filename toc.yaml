@@ -154,7 +154,6 @@ toc:
           topics:
           - at-events.md
           - event-notifications-events.md
-          - include: ../account/monitoring.md
           - include: ../enterprise-management/iam-monitor-ent-template.md
   - navgroup:
       id: reference
@@ -225,7 +224,7 @@ toc:
       - known-issues.md
       - topic: faqs-projects.md
         navtitle: FAQ
-      - faqs-enterprise.md
+      - include: ../enterprise-management/faqs-enterprise.md
       - topicgroup:
           label: Troubleshooting projects
           topics:
