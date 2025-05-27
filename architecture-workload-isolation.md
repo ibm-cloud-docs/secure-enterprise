@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-04-17"
+  years: 2023, 2025
+lastupdated: "2025-05-27"
 
 keywords:
 
@@ -19,7 +19,7 @@ Review the following sample architecture for projects and learn more about diffe
 {: shortdesc}
 
 ## Project architecture
-{: #architecture}
+{: #project-architecture}
 
 Projects are an {{site.data.keyword.Bluemix}} platform feature that's supported by a highly available multi-region infrastructure. The project UI and API services are managed microservices, which are deployed to a minimum of three multi-zone regions around the world. A single zone failure results in service instances in other zones that are in the same region taking over. A regional failure results in another region taking over. Project microservices use {{site.data.keyword.IBM_notm}} managed instances of {{site.data.keyword.contdelivery_short}} Toolchains in at least three regions to run multi-step validation, deployments, and destroy resource jobs.
 

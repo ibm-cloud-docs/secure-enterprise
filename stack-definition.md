@@ -2,7 +2,7 @@
 
 copyright:
    years: 2022, 2025
-lastupdated: "2025-04-30"
+lastupdated: "2025-05-27"
 
 keywords: onboard, catalog management, private catalog, stack definition, software, automation, metadata
 
@@ -166,7 +166,7 @@ The `inputs` value indicates an array of the input variables that are required f
 
 
 ### Stack outputs
-{: #value-stack-inputs}
+{: #value-stack-outputs}
 
 The `outputs` value indicates an array of the output variables that are created when the solution is deployed. The following values can be included at the `outputs` level.
 
@@ -193,7 +193,7 @@ The `outputs` value indicates an array of the output variables that are created 
 
 
 ### Member inputs
-{: #value-stack-inputs}
+{: #value-member-inputs}
 
 
 The `members` value indicates an array of the inputs and outputs for each stacked deployable architecture. The following values can be included at the `members` level.
