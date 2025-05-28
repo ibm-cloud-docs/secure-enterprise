@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2025
 
-lastupdated: "2025-04-28"
+lastupdated: "2025-05-28"
 
 keywords: multiple regions, deploy, projects
 
@@ -123,7 +123,7 @@ If you successfully deployed your first configuration, you can now use it to cre
 1. Click **Add > Save**.
 
 ## Add a second deployable architecture to a project
-{: #regions-project}
+{: #next-regions-project}
 {: step}
 
 Now that you created an environment, you can use it to configure the second deployable architecture.

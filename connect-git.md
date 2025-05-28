@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2025-02-07"
+lastupdated: "2025-05-28"
 
 keywords: Git, Git integration, Connect to Git, Github, Gitlab, GitHub enterprise, pipelines, toolchains, workflow
 
@@ -49,7 +49,7 @@ Connect your Git repository to your project. By doing so, configuration changes 
 1. From the **Repository type** menu, select the type of repository that you want to use to manage your configurations. Typically, this repository is the one you use to manage your pipelines and toolchains. You can select **GitHub**, **GitLab**, or **GitHub Enterprise**. 
 1. Enter the URL to the repository. 
 1. Optionally, specify a folder within the repository. Consider specifying a folder if you want to integrate your repository with multiple projects. Each project can have its own folder. 
-1. Hover or click the access token field, then click the **Secrets** icon ![Key icon](../icons/secret-key.svg "Secrets") to select the secret that contains your access token. 
+1. Hover or click the access token field, then click the **Secrets** icon ![Key icon](images/secret-key.svg "Secrets") to select the secret that contains your access token. 
 1. If your project already contains configurations, select **Copy existing configuration files to this repository** to save existing configurations to your repository. 
 1. Click **Save**. 
 
