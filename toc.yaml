@@ -154,7 +154,6 @@ toc:
           topics:
           - at-events.md
           - event-notifications-events.md
-          - include: ../enterprise-management/iam-monitor-ent-template.md
   - navgroup:
       id: reference
       topics:
