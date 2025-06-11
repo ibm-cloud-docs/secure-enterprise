@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2025-05-27"
+lastupdated: "2025-06-11"
 
 keywords: catalog, catalogs, private catalogs, account catalogs, catalog visibility, module visibility, import module, module registry, terraform module
 
@@ -213,4 +213,4 @@ To download a manifest through the UI, you can use the following steps.
 ## Next steps
 {: #onboard-modules-share-ui}
 
-Now that your module is added to a private catalog and the details are set, you're ready to share it with other members of your organization. For help with sharing, see [Sharing your product](/docs/secure-enterprise?topic=secure-enterprise-catalog-enterprise-share).
+Now that your module is added to a private catalog and the details are set, you're ready to share it with other members of your organization. For help with sharing, see [Sharing your product](/docs/secure-enterprise?topic=secure-enterprise-catalog-share&interface=ui).
