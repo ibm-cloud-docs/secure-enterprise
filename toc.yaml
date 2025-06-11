@@ -110,7 +110,7 @@ toc:
               - onboard-extend.md
               - topic: vs-code-extension-onboard.md
                 navtitle: Onboarding by using Visual Studio Code
-          - catalog-enterprise-share.md
+          - include: ../account/catalog-enterprise-share.md
       - topicgroup:
           label: Deploying architectures and managing resources with projects
           topics:
