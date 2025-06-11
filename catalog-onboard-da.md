@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-05-27"
+lastupdated: "2025-06-11"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -248,6 +248,6 @@ At this point, you've already onboarded your first variation. Now, you can start
 ## Next steps: Sharing and publishing
 {: #onboard-next}
 
-Now that your deployable architecture is added to a private catalog and the details are set, you're ready to share the product with other members of your organization. For help with sharing, see [Sharing your product](/docs/secure-enterprise?topic=secure-enterprise-catalog-enterprise-share).
+Now that your deployable architecture is added to a private catalog and the details are set, you're ready to share the product with other members of your organization. For help with sharing, see [Sharing your product](/docs/secure-enterprise?topic=secure-enterprise-catalog-share&interface=ui).
 
 If you want to publish your deployable architecture to the {{site.data.keyword.cloud_notm}} catalog, you can use Partner Center to get approval and publish for all users to take advantage of the solution that you built. For more information, see [Publishing your deployable architecture](/docs/sell?topic=sell-da-publish).

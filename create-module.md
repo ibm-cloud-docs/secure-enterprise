@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2024
-lastupdated: "2024-05-16"
+   years: 2024, 2025
+lastupdated: "2025-06-11"
 
 keywords:
 
@@ -34,5 +34,5 @@ The guidelines and requirements for creating a module are available in the {{sit
 
 Modules can be used to [create a deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-create-da). You have a couple of options for sharing your module with others in your organization or external users.
 
-* You can share with users in your account or other accounts by using a [private catalog](/docs/secure-enterprise?topic=secure-enterprise-catalog-enterprise-share&interface=ui), if you have a Git release.
+* You can share with users in your account or other accounts by using a [private catalog](/docs/secure-enterprise?topic=secure-enterprise-catalog-share&interface=ui), if you have a Git release.
 * You might also choose to contribute your modules to the `terraform-ibm-modules` public GitHub org. For more information, see [Contributing to the {{site.data.keyword.cloud_notm}} Terraform modules project](https://terraform-ibm-modules.github.io/documentation/#/contribute-module){: external}.

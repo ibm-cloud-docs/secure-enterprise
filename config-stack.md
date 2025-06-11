@@ -4,7 +4,7 @@ copyright:
 
   years: 2024, 2025
 
-lastupdated: "2025-04-30"
+lastupdated: "2025-06-11"
 
 keywords: stack, configure stack, deployable architecture stack, stacked deployable architecture
 
@@ -249,7 +249,7 @@ Complete the following steps:
 {: #onboard-stack-ui}
 {: ui}
 
-After you validate and deploy each of the deployable architectures that you stacked together, you can add them as a deployable architecture to a private catalog to easily share the solution with others in your organization. For more information, see [sharing a private catalog](/docs/secure-enterprise?topic=secure-enterprise-catalog-enterprise-share&interface=ui).
+After you validate and deploy each of the deployable architectures that you stacked together, you can add them as a deployable architecture to a private catalog to easily share the solution with others in your organization. For more information, see [sharing a private catalog](/docs/secure-enterprise?topic=secure-enterprise-catalog-share&interface=ui).
 
 Complete the following steps:
 
