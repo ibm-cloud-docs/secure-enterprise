@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-11"
+lastupdated: "2025-06-12"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -227,7 +227,7 @@ To download a manifest, you can use the following steps.
 ## Downloading your catalog configuration
 {: #export-catalog-config}
 
-If you are working with a deployable architecture stack, there are additional files that are generated in addition to your manifest file. If you have made updates to your catalog configuration by using the console, it is a best practices to download the files and add them to your source code repository so that your changes carry over into your next release.
+If you are onboarding [stacked deployable architectures from a project](/docs/secure-enterprise?topic=secure-enterprise-config-stack&interface=ui), there are additional files that are generated in addition to your manifest file. If you have made updates to your catalog configuration by using the console, it is a best practices to download the files and add them to your source code repository so that your changes carry over into your next release.
 
 1. Go to the **Manage** > **Catalogs** > **Private catalogs** page of the console.
 2. Select the product that was previously onboarded. A details page opens.
