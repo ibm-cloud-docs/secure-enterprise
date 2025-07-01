@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2025
 
-lastupdated: "2025-02-10"
+lastupdated: "2025-06-18"
 
 keywords: trusted profile, projects trusted profile, authorization, project auth, project security
 
@@ -16,6 +16,8 @@ subcollection: secure-enterprise
 
 # Using trusted profiles to authorize a project to deploy an architecture
 {: #tp-project}
+
+ 
 
 Some services cannot fully configure and deploy architectures by using trusted profiles. For more information, see [Known issues and limitations for projects](/docs/secure-enterprise?topic=secure-enterprise-known-issues#auth-known-issue).
 {: important}
