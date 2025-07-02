@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-12"
+lastupdated: "2025-07-01"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -221,7 +221,7 @@ To download a manifest, you can use the following steps.
 1. Go to the **Manage** > **Catalogs** > **Private catalogs** page of the console.
 2. Select the product that was previously onboarded. A details page opens.
 3. On the **Versions** tab, select the version that you want to generate a manifest for.
-4. From the **Actions** drop-down menu, select **Export as code**.
+4. From the **Actions** drop-down menu, select **Generate manifest**.
 5. Add the file into the root folder of your source code repository as `ibm_catalog.json`.
 
 ## Downloading your catalog configuration
@@ -232,7 +232,7 @@ If you are onboarding [stacked deployable architectures from a project](/docs/se
 1. Go to the **Manage** > **Catalogs** > **Private catalogs** page of the console.
 2. Select the product that was previously onboarded. A details page opens.
 3. On the **Versions** tab, select the version that you want to generate a manifest for.
-4. From the **Actions** drop-down menu, select **Export as code**.
+4. From the **Actions** drop-down menu, select **Generate manifest**.
 5. Add the files into the root folder of your source code repository.
 
 ## Adding a variation

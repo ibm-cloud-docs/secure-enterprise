@@ -2,7 +2,7 @@
 
 copyright:
    years: 2022, 2025
-lastupdated: "2025-05-27"
+lastupdated: "2025-07-01"
 
 keywords: onboard, catalog management, private catalog, stack definition, software, automation, metadata
 
@@ -48,7 +48,7 @@ To edit your stack definition locally, complete the following steps:
    Configure and deploy the architectures that are stacked together to verify that the solution works as designed before you add it to a private catalog. 
    {: important}
 
-1. After the deployable architecture is added to your private catalog, you are taken to the **Configure version** page in the catalog. From there, click the **Actions** menu > **Export as code**. 
+1. After the deployable architecture is added to your private catalog, you are taken to the **Configure version** page in the catalog. From there, click the **Actions** menu > **Generate manifest**. 
    
    You can also use the projects API [Get a stack definition](/apidocs/projects#get-stack-definition) method or the projects CLI [`ibmcloud project stack-definition`](/docs/cli?topic=cli-projects-cli#project-cli-stack-definition-command) command to export the stack definition. 
    {: tip}

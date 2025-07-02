@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2025-06-11"
+lastupdated: "2025-07-01"
 
 keywords: catalog, catalogs, private catalogs, account catalogs, catalog visibility, module visibility, import module, module registry, terraform module
 
@@ -205,7 +205,7 @@ To download a manifest through the UI, you can use the following steps.
 1. Go to the **Manage** > **Catalogs** > **Private catalogs** page of the console.
 2. Select the module that was previously onboarded. A details page opens.
 3. On the **Versions** tab, select the version that you want to generate a manifest for.
-4. From the **Actions** drop-down menu, select **Export as code**.
+4. From the **Actions** drop-down menu, select **Generate manifest**.
 5. Add the file into the root folder of your source code repository as `ibm_catalog.json`.
 
 
