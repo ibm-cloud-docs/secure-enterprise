@@ -143,7 +143,7 @@ Now that you configured and deployed your architecture to one region, you can du
 1. From the `Example Corp infrastructure` project, select the **Configurations** tab.
 1. Click the **Options** icon ![Options icon](../icons/action-menu-icon.svg "Options") for `example-corp-us-south` > **Duplicate**. `example-corp-us-south-copy-01` is added to your project. 
 1. Click the **Options** icon ![Options icon](../icons/action-menu-icon.svg "Options") for `example-corp-us-south-copy-01` > **Edit**. 
-1. From the **Details** section, change the name of the configuration to `example-corp-us-east`.
+1. From the **Details** section, click **Edit** and change the name of the configuration to `example-corp-us-east`.
 1. From the **Details** section, make sure the `Example Corp infrastructure dev` environment is selected. 
 1. From the **Security** section, review the information that was pulled in from the environment that you created.
 1. From the **Configure architecture** section, click **Edit** and enter values for the required input variables for the deployable architecture configuration:
@@ -151,9 +151,6 @@ Now that you configured and deployed your architecture to one region, you can du
     1. Enter `us-east` as the `prefix` to use for naming conventions.
     1. Select **Default** as the `existing_resource_group_name`. 
     1. Select **us-east** as the `region` to deploy the resources.
-
-    If you can't edit `existing_resource_group_name`, go back to the **Security** section and reenter your authentication method with either a trusted profile or API key that is stored in {{site.data.keyword.secrets-manager_short}}. Click **Done** then go back to the **Configure architecture** section and select **Default** for `existing_resource_group_name`. 
-    {: tip}
     
 1. Click **Save**.
 1. Click **Validate**. The modal that is displayed provides more details about your in-progress validation.
@@ -173,7 +170,8 @@ You must address any outstanding **Needs attention** items on the **Overview** t
 {: tip}
 
 1. From the `Example Corp infrastructure` project, select the **Configurations** tab.
-1. Click the **Options** icon ![Options icon](../icons/action-menu-icon.svg "Options") for `example-corp-us-east` > **View last validation**. 
+1. Click the **Options** icon ![Options icon](../icons/action-menu-icon.svg "Options") for `example-corp-us-east` > **Edit**. 
+1. Click **View details** to view the last validation and approve the changes. 
 1. Add a comment with more details about the approval, and click **Approve**.
 1. Click **Deploy** and wait for the deployment to finish.
 
