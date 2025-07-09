@@ -35,9 +35,9 @@ This tutorial uses a fictitious scenario to help you learn and understand how to
 
 1. [Set up your {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-account-getting-started).
 
-1. [Create a customized deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-basic-custom) called `Example Corps' infrastructure` and onboard it to a private catalog called `Example Corp catalog`. 
+1. [Create a customized deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-basic-custom) called `Example Corp's infrastructure` and onboard it to a private catalog called `Example Corp catalog`. 
 
-1. Understand that completing this tutorial might result in costs to your account. [Cloud automation for {{site.data.keyword.codeengineshort}}](https://cloud.ibm.com/catalog/7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3/architecture/deploy-arch-ibm-code-engine-413843d9-8962-48a5-8ab5-dfcf4429372c-global){: external} was customized to create `Example Corps' infrastructure`. For more information about associated costs for using {{site.data.keyword.codeengineshort}}, go to [Pricing for {{site.data.keyword.codeengineshort}}](/docs/codeengine?topic=codeengine-pricing).
+1. Understand that completing this tutorial might result in costs to your account. [Cloud automation for {{site.data.keyword.codeengineshort}}](https://cloud.ibm.com/catalog/7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3/architecture/deploy-arch-ibm-code-engine-413843d9-8962-48a5-8ab5-dfcf4429372c-global){: external} was customized to create `Example Corp's infrastructure`. For more information about associated costs for using {{site.data.keyword.codeengineshort}}, go to [Pricing for {{site.data.keyword.codeengineshort}}](/docs/codeengine?topic=codeengine-pricing).
 
 1. Make sure that you have the following access roles to create a project and permission to create the project tooling resources within the account:
     * The Editor role on the {{site.data.keyword.cloud_notm}} Projects service.
@@ -56,12 +56,12 @@ This tutorial uses a fictitious scenario to help you learn and understand how to
 {: #project-create}
 {: step}
 
-Create a project where you can configure and deploy Example Corps' infrastructure. 
+Create a project where you can configure and deploy Example Corp's infrastructure. 
 
 1. In the {{site.data.keyword.cloud_notm}} console, click the **Navigation menu** icon ![Navigation Menu icon](../icons/icon_hamburger.svg "Menu") > **[Projects](/projects/)**. 
 1. Click **Create**. 
 1. Name your project `Example Corp infrastructure`. 
-1. Add the following description to your project: `Project to manage the different configurations and deployments of Example Corps' infrastructure.`
+1. Add the following description to your project: `Project to manage the different configurations and deployments of Example Corp's infrastructure.`
 1. Select **Dallas** as the region where the project data is stored.
 1. Keep `Default` for the resource group.
 1. Click **Create**.
@@ -86,12 +86,12 @@ Now that your project is created, you're ready to create an environment to share
 {: #regions-project}
 {: step}
 
-Before you can configure `Example Corps' infrastructure`, you need to find the deployable architecture in `Example Corp catalog` and add it to the `Example Corp infrastructure` project.
+Before you can configure `Example Corp's infrastructure`, you need to find the deployable architecture in `Example Corp catalog` and add it to the `Example Corp infrastructure` project.
 
 1. In the **Example Corp infrastructure** project, select **Configurations** > **Create**.
 1. Use the catalog menu to open the private catalog called `Example Corp catalog`. 
 1. From the Type section, select **Private products** to filter the list of products. 
-1. Select **Example Corps' infrastructure** from the list of remaining products.
+1. Select **Example Corp's infrastructure** from the list of remaining products.
 1. Select **Add to project**.
 1. Change the configuration name to `example-corp-us-south` to indicate that you want to deploy the configuration in the US southern region.
 1. Select **Example Corp infrastructure dev** as the environment.
@@ -105,15 +105,12 @@ You successfully added the deployable architecture to a project and are ready to
 
 1. In the **Details** section, review the information and make sure the `Example Corp infrastructure dev` environment is selected.
 1. From the **Security** section, confirm that the correct authentication method is selected based on what you added to the environment.
-1. During validation, a Code Risk Analyzer scan is run on your architecture, which includes a compliance scan based on a set of controls. `Example Corps' infrastructure` doesn't include any applicable controls, but you can set up your own attachment through {{site.data.keyword.compliance_short}} if you want to. For more information, see [Configuring the architecture](/docs/secure-enterprise?topic=secure-enterprise-config-project#how-to-config). Select **Architecture default** if you don't want to use your own attachment from {{site.data.keyword.compliance_short}}. 
+1. During validation, a Code Risk Analyzer scan is run on your architecture, which includes a compliance scan based on a set of controls. `Example Corp's infrastructure` doesn't include any applicable controls, but you can set up your own attachment through {{site.data.keyword.compliance_short}} if you want to. For more information, see [Configuring the architecture](/docs/secure-enterprise?topic=secure-enterprise-config-project#how-to-config). Select **Architecture default** if you don't want to use your own attachment from {{site.data.keyword.compliance_short}}. 
 1. From the **Configure architecture** section, enter values for the required input variables for the deployable architecture configuration:
     
     1. Enter `us-south` as the `prefix` to use for naming conventions.
     1. Select **Default** as the `existing_resource_group_name`. 
     1. Select **us-south** as the `region` to deploy the resources.
-
-    If you can't edit `existing_resource_group_name`, go back to the **Security** section and reenter your authentication method with either a trusted profile or API key that is stored in {{site.data.keyword.secrets-manager_short}}. Click **Done** then go back to the **Configure architecture** section and select **Default** for `existing_resource_group_name`. 
-    {: tip}
 
 1. Click **Save**.
 1. Click **Validate**. The modal that is displayed provides more details about your in-progress validation.
