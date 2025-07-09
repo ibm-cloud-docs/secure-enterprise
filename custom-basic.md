@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2025
 
-lastupdated: "2025-07-01"
+lastupdated: "2025-07-09"
 
 keywords: deployable architecture, basic customization, Code Engine, AI, application, infrastructure
 
@@ -32,7 +32,7 @@ Imagine you are a cloud automation engineering professional for *Example Corp*, 
 
 - Remove unwanted variables.
 - Constrain {{site.data.keyword.cloud_notm}} regions to US deployment regions.
-- Update the deployable architecture to reference Example Corps' AI application. 
+- Update the deployable architecture to reference Example Corp's AI application. 
 
 This tutorial uses a fictitious scenario to help you learn and understand a few of the configuration options for a deployable architecture. It explains how to customize a deployable architecture to automate the deployment of a containerized application on {{site.data.keyword.codeenginefull_notm}}. The existing container image at `icr.io/codeengine/helloworld` is used as an example application. As you complete the tutorial, adapt each step to match your organization's needs.
 
@@ -147,12 +147,12 @@ For more information on the manifest file and what it contains, see [Locally edi
 Now that you updated the configuration and created your own architecture, you must also update the name and the programmatic name of the deployable architecture.
 
 1. Open the `ibm_catalog.json` file.
-1. Find the `label` field and update the name of your deployable architecture to `Example Corps' infrastructure`.
+1. Find the `label` field and update the name of your deployable architecture to `Example Corp's infrastructure`.
 1. Find the `name` field and update the programmatic name of your architecture to `deploy-arch-example-corp`.
 1. Find the `version` field and enter `0.0.1` to update the version number. If the field is missing, add it on a new line immediately following the `name` field, for example: 
 
     ```json
-			"label": "Example Corps' infrastructure",
+			"label": "Example Corp's infrastructure",
 			"name": "deploy-arch-example-corp",
 			"version": "0.0.1",
     ```
@@ -250,4 +250,4 @@ Before you onboard your configured deployable architecture to a private catalog 
 
 If your deployable architecture ran as expected, you successfully created your own deployable architecture from Cloud automation for {{site.data.keyword.codeengineshort}}. You are now ready to move your updated files to the GitHub repository that you created and [onboard your product to a private catalog](/docs/secure-enterprise?topic=secure-enterprise-onboard-da). 
 
-After you onboard `Example Corps' infrastructure` to a private catalog, you can [share it with your enterprise](/docs/secure-enterprise?topic=secure-enterprise-share-custom). If you're not ready to share your deployable architecture, or you're not a part of an enterprise, you can skip sharing it and continue on to the next tutorial, [deploying `Example Corps' infrastructure` by using a project](/docs/secure-enterprise?topic=secure-enterprise-share-custom). 
+After you onboard `Example Corp's infrastructure` to a private catalog, you can [share it with your enterprise](/docs/secure-enterprise?topic=secure-enterprise-share-custom). If you're not ready to share your deployable architecture, or you're not a part of an enterprise, you can skip sharing it and continue on to the next tutorial, [deploying `Example Corp's infrastructure` by using a project](/docs/secure-enterprise?topic=secure-enterprise-deploy-regions). 
