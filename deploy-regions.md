@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2025
 
-lastupdated: "2025-07-01"
+lastupdated: "2025-07-09"
 
 keywords: multiple regions, deploy, projects, code engine
 
@@ -39,7 +39,7 @@ This tutorial uses a fictitious scenario to help you learn and understand how to
 
 1. Understand that completing this tutorial might result in costs to your account. [Cloud automation for {{site.data.keyword.codeengineshort}}](https://cloud.ibm.com/catalog/7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3/architecture/deploy-arch-ibm-code-engine-413843d9-8962-48a5-8ab5-dfcf4429372c-global){: external} was customized to create `Example Corps' infrastructure`. For more information about associated costs for using {{site.data.keyword.codeengineshort}}, go to [Pricing for {{site.data.keyword.codeengineshort}}](/docs/codeengine?topic=codeengine-pricing).
 
-1. Make sure that you have the following access roles to create a project and permission to create the project tool resources within the account:
+1. Make sure that you have the following access roles to create a project and permission to create the project tooling resources within the account:
     * The Editor role on the {{site.data.keyword.cloud_notm}} Projects service.
     * The Editor and Manager role on the {{site.data.keyword.bplong}} service
     * The Viewer role on the resource group for the project
@@ -184,4 +184,3 @@ You must address any outstanding **Needs attention** items on the **Overview** t
 {: #regions-next}
 
 After the deployment successfully completes, your application is deployed in two separate regions. The two slightly different configurations are based on the same deployable architecture. To find the applications, go to the {{site.data.keyword.cloud_notm}} console, click the **Navigation menu** icon ![Navigation Menu icon](../icons/icon_hamburger.svg "Menu") > **Containers** > **[Severless Projects](/containers/serverless/projects)**. 
-

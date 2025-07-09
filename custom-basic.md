@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2025
 
-lastupdated: "2025-07-01"
+lastupdated: "2025-07-09"
 
 keywords: deployable architecture, basic customization, Code Engine, AI, application, infrastructure
 
@@ -250,4 +250,4 @@ Before you onboard your configured deployable architecture to a private catalog 
 
 If your deployable architecture ran as expected, you successfully created your own deployable architecture from Cloud automation for {{site.data.keyword.codeengineshort}}. You are now ready to move your updated files to the GitHub repository that you created and [onboard your product to a private catalog](/docs/secure-enterprise?topic=secure-enterprise-onboard-da). 
 
-After you onboard `Example Corps' infrastructure` to a private catalog, you can [share it with your enterprise](/docs/secure-enterprise?topic=secure-enterprise-share-custom). If you're not ready to share your deployable architecture, or you're not a part of an enterprise, you can skip sharing it and continue on to the next tutorial, [deploying `Example Corps' infrastructure` by using a project](/docs/secure-enterprise?topic=secure-enterprise-share-custom). 
+After you onboard `Example Corps' infrastructure` to a private catalog, you can [share it with your enterprise](/docs/secure-enterprise?topic=secure-enterprise-share-custom). If you're not ready to share your deployable architecture, or you're not a part of an enterprise, you can skip sharing it and continue on to the next tutorial, [deploying `Example Corps' infrastructure` by using a project](/docs/secure-enterprise?topic=secure-enterprise-deploy-regions). 
