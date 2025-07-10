@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2025
 
-lastupdated: "2025-07-09"
+lastupdated: "2025-07-10"
 
 keywords: multiple regions, deploy, projects, code engine
 
@@ -178,4 +178,6 @@ You must address any outstanding **Needs attention** items on the **Overview** t
 ## Next steps
 {: #regions-next}
 
-After the deployment successfully completes, your application is deployed in two separate regions. The two slightly different configurations are based on the same deployable architecture. To find the applications, go to the {{site.data.keyword.cloud_notm}} console, click the **Navigation menu** icon ![Navigation Menu icon](../icons/icon_hamburger.svg "Menu") > **Containers** > **[Severless Projects](/containers/serverless/projects)**. 
+After the deployment successfully completes, your application is deployed in two separate regions. The two slightly different configurations are based on the same deployable architecture. To find the applications, go to the {{site.data.keyword.cloud_notm}} console, click the **Navigation menu** icon ![Navigation Menu icon](../icons/icon_hamburger.svg "Menu") > **Containers** > **[Severless Projects](/containers/serverless/projects)**.
+
+Check out the next tutorial on [Adding customizable options to `Example Corp's infrastructure`](/docs/secure-enterprise?topic=secure-enterprise-custom-extend).

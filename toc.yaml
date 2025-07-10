@@ -58,7 +58,13 @@ toc:
           - custom-basic.md
           - include: ../enterprise-management/custom-share.md
             navtitle: Sharing your deployable architecture
-      - deploy-regions.md
+          - custom-extend.md
+      - topicgroup: 
+          label: Deploying and undeploying architectures
+          topics:
+          - deploy-regions.md
+          - deploy-update.md
+          - undeploy.md
       - git-tutorial.md
   - navgroup:
       id: howto
