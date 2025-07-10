@@ -2,11 +2,11 @@
 
 copyright:
 
-  years: 2023, 2025
+  years: 2025
 
 lastupdated: "2025-07-10"
 
-keywords: deployable architecture, customization, VSI on VPC landing zone, extend, stack, deployable architecture stack
+keywords: deployable architecture, customization, Elasticsearch, Postgresql, Code Engine, extend, stack, deployable architecture stack
 
 subcollection: secure-enterprise
 
@@ -142,7 +142,7 @@ Now that you defined variables for Cloud automation for {{site.data.keyword.data
 
 1. In the Define variables window, use the architecture menu to switch from **Cloud automation for {{site.data.keyword.databases-for-elasticsearch}}** to **Cloud automation for {{site.data.keyword.databases-for-postgresql}}**.
 1. Click **Required inputs** and remove the key encryption requirement by setting the default value for `existing_kms_instance_crn` to `__NULL__`. 
-1. The three other required inputs in this architecture can all reference inputs that are already available in Example Corp's infrastructure. Complete the following steps to add references to these inputs: 
+1. The three other required inputs in this architecture can all reference inputs that are already available in `Example Corp's infrastructure`. Complete the following steps to add references to these inputs: 
     1. Select the **Reference a variable** icon ![Reference a variable icon](../icons/link.svg "Reference a variable") for `resource_group_name`, then select **existing_resource_group_name** from the **Variable name** menu. Click **Add**, and the `resource_group_name` input within Cloud automation for {{site.data.keyword.databases-for-postgresql}} will reference the `existing_resource_group_name` value from Example Corp's infrastructure that your user provides.
     1. Select the **Reference a variable** icon ![Reference a variable icon](../icons/link.svg "Reference a variable") for `prefix` and select **prefix** from the **Variable name** menu and click **Add**. 
     1. Select the **Reference a variable** icon ![Reference a variable icon](../icons/link.svg "Reference a variable") for `region` and select **region** from the **Variable name** menu and click **Add**. 
