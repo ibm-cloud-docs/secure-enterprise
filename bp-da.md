@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-05-27"
+lastupdated: "2025-07-11"
 
 keywords:
 
@@ -22,6 +22,59 @@ This guide outlines best practices for building well-designed and maintainable d
 
 These best practices apply to creating deployable architectures with Terraform. For more information, see [Creating a deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-create-da).
 {: note}
+
+## Watch and learn 
+{: #best-practice-video}
+
+Prefer to see it in action? Check out the following video to learn more about deployable architecures on {{site.data.keyword.cloud_notm}}. 
+
+![Deployable architectures on {{site.data.keyword.cloud_notm}}](https://www.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/27941801/partner_id/1773841?iframeembed=true&entry_id=1_d38ptusd){: video output="iframe" data-script="none" id="mediacenterplayer" frameborder="0" width="560" height="315" allowfullscreen webkitallowfullscreen mozAllowFullScreen}
+
+### Video transcript
+{: #video-transcript-bp}
+{: notoc}
+
+A deployable architecture is an architecture pattern with automation for deploying infrastructure and software on the cloud. It enables organizations to drive consistency in the way infrastructure and software are deployed and configured. It enforces an opinionated architecture and security which reduces overall support and increases reliability in the long run.
+
+This pattern is brought to life with automation that instantiates the deployable architecture. {{site.data.keyword.cloud_notm}} automation is driven with Terraform for Infrastructure-as-a-service automation, and Ansible for software configuration.
+
+Understanding costs is crucial — you can estimate cost before you deploy, and track changes in spending as you update or customize the architecture. And remember - you’re never charged for anything until you deploy.
+
+Security and organizational policies are critical for enterprise deployments. That’s why deployable architectures are vetted and pre-scanned to adhere to a set of policy requirements, which can help your organization remain secure. Standardized deployments simplify evidence gathering for audits as well.
+
+Deployable architectures provide info on how to get support as well as the permission that's needed to deploy the architecture.
+
+Lastly, you can share deployable architectures from a private catalog with other accounts in your organization. Furthermore, the catalog can restrict users to specific versions of a deployable architecture. This ensures consistency and standardization for everyone.
+
+Architecture patterns are created by domain-specific experts. Cross-domain architectures are built by linking architectures together to create a more complex deployable architecture.
+
+You can create your own deployable architectures — or save time by customizing {{site.data.keyword.cloud_notm}}’s ready-made architectures from the {{site.data.keyword.cloud_notm}} catalog or Community registry.
+
+a deployable architecture is defined by a manifest as code, that describes the architecture, the location of the code, permissions, and costs, support, description, icon, and other details. It's defined with JSON and is located at the root of the repo.
+
+You can enter or modify a deployable architecture in the console and export the manifest. You can create a deployable architecture for the first time from a release git snapshot. Use the release .tgz url as your source.
+
+Then, edit the catalog entry details for your deployable architecture, like the icon and name. You can add dependencies and any optional architectures that work well with your own, but aren’t required.
+
+You can also manage compliance claims for the deployable architecture. These claims are verified when you validate the deployable architecture in the catalog before you publish it.
+
+Finally, after you onboard a version of your deployable architecture, you can export the catalog manifest file and save it to your source repository. Using the console is typically the best approach for onboarding a net-new deployable architecture, as you can easily export the catalog manifest and edit it later if you need to. That way, you don’t need to create the catalog manifest file from scratch.
+
+In the {{site.data.keyword.cloud_notm}} catalog, open the **Deployable architectures** tab to find architectures that are supported by {{site.data.keyword.ibm_notm}}.
+
+Deployable architectures in our Community registry might change frequently or be discontinued with short notice, but they're still a good starting point for you to use and customize.
+
+Consider the VPC landing zone deployable architecture, which is available in the {{site.data.keyword.cloud_notm}} catalog. It’s a generally useful deployable architecture, as you need a VPC if you intend to run a workload in the cloud.
+
+VPC landing zone is designed to be compliant with the {{site.data.keyword.framework-fs_full}} profile. It separates the management workloads from worker workloads, uses key management to encrypt cloud object storage, and uses private endpoints for communications. You can use it as is, or customize it to meet your landing zone needs.
+
+For a more complex deployable architecture, consider {{site.data.keyword.cloud_notm}} Essential Security and Observability services. That deployable architecture was made by linking multiple architectures together from the {{site.data.keyword.cloud_notm}} catalog. With it, you can leverage the full range of security services from {{site.data.keyword.cloud_notm}}. It’s customizable, so you can choose to include only the services that you need, and leave out the ones you don’t.
+
+Now that you know where to find deployable architectures, how do you deploy and maintain them across accounts? You use an {{site.data.keyword.cloud_notm}} project.
+
+In the project, you configure the input variables for the deployable architecture. You can monitor cost, drift in your resources, compliance scans, and upgrade to the latest version of a deployable architecture when it’s available in the catalog. A project is typically located in a hub account, and deploys resources across various spoke accounts, also known as target accounts.
+
+Check out our docs to learn more about running secure workloads in {{site.data.keyword.cloud_notm}}. Or, dive right in to the {{site.data.keyword.cloud_notm}} catalog to discover what deployable architectures could work for your business.
 
 ## Design principles
 {: #design-principles}
