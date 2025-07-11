@@ -65,6 +65,7 @@ toc:
           - deploy-regions.md
           - deploy-update.md
           - undeploy.md
+          - deploy-with-security.md
       - git-tutorial.md
   - navgroup:
       id: howto
