@@ -60,7 +60,7 @@ You can also manage compliance claims for the deployable architecture. These cla
 
 Finally, after you onboard a version of your deployable architecture, you can export the catalog manifest file and save it to your source repository. Using the console is typically the best approach for onboarding a net-new deployable architecture, as you can easily export the catalog manifest and edit it later if you need to. That way, you don’t need to create the catalog manifest file from scratch.
 
-In the {{site.data.keyword.cloud_notm}} catalog, open the **Deployable architectures** tab to find architectures that are supported by {{site.data.keyword.ibm_notm}}.
+In the {{site.data.keyword.cloud_notm}} catalog, open the **Deployable architectures** tab to find architectures that are supported by {{site.data.keyword.IBM_notm}}.
 
 Deployable architectures in our Community registry might change frequently or be discontinued with short notice, but they're still a good starting point for you to use and customize.
 
