@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2025
 
-lastupdated: "2025-05-27"
+lastupdated: "2025-07-11"
 
 keywords: target account, manage resources, enterprise architecture, administration account, resources, existing resources, organize resources
 
@@ -36,7 +36,7 @@ Within a project, you can further refine groups of resources by adding them to d
 
 Prefer to see it in action? Check out the following video to learn how to organize existing resources in your project by using the console.
 
-![Organizing existing resources in a project](https://www.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/27941801/partner_id/1773841?iframeembed=true&entry_id=1_51s9ohdz){: video output="iframe" data-script="none" id="mediacenterplayer" frameborder="0" width="560" height="315" allowfullscreen webkitallowfullscreen mozAllowFullScreen}
+![Organizing existing resources in a project](https://www.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/27941801/partner_id/1773841?iframeembed=true&entry_id=1_51s9ohdz){: video output="iframe" data-script="#video-transcript-resources" id="mediacenterplayer" frameborder="0" width="560" height="315" allowfullscreen webkitallowfullscreen mozAllowFullScreen}
 
 ### Video transcript
 {: #video-transcript-resources}
