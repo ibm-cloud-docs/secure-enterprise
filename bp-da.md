@@ -26,7 +26,7 @@ These best practices apply to creating deployable architectures with Terraform. 
 ## Watch and learn 
 {: #best-practice-video}
 
-Prefer to see it in action? Check out the following video to learn more about deployable architecures on {{site.data.keyword.cloud_notm}}. 
+Prefer to see it in action? Check out the following video to learn more about deployable architecures. 
 
 ![Deployable architectures on {{site.data.keyword.cloud_notm}}](https://www.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/27941801/partner_id/1773841?iframeembed=true&entry_id=1_d38ptusd){: video output="iframe" data-script="#video-transcript-bp" id="mediacenterplayer" frameborder="0" width="560" height="315" allowfullscreen webkitallowfullscreen mozAllowFullScreen}
 
