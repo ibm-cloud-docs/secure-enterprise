@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2024
+  years: 2024, 2025
 
-lastupdated: "2025-02-07"
+lastupdated: "2025-07-15"
 
 keywords: Git, Git integration, Connect to Git, Github, Gitlab, GitHub enterprise, pipelines, toolchains, workflow
 
@@ -50,8 +50,8 @@ You can validate and deploy draft configurations only after they are merged to t
 
 Create secrets and variables in the GitHub repository that you connected to your project. These secrets and variables are used in the GitHub workflow. Add the following secrets and variables:  
 
-1. To authenticate with your project, you must include an {{site.data.keyword.cloud_notm}} API key in your GitHub workflow. To keep the API key secure, complete the steps to [create a secret for a repository](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository){: external} to save the API key as a secret in GitHub. For the purposes of this tutorial, name the secret `IBM_CLOUD_API_KEY`. 
-1. Next, complete the steps to [create configuration variables](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/store-information-in-variables#creating-configuration-variables-for-a-repository){: external} for your GitHub repository. Save the following variables: 
+1. To authenticate with your project, you must include an {{site.data.keyword.cloud_notm}} API key in your GitHub workflow. To keep the API key secure, complete the steps to [create a secret for a repository](https://docs.github.com/en/actions/how-tos/security-for-github-actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository){: external} to save the API key as a secret in GitHub. For the purposes of this tutorial, name the secret `IBM_CLOUD_API_KEY`. 
+1. Next, complete the steps to [create configuration variables](https://docs.github.com/en/actions/how-tos/writing-workflows/choosing-what-your-workflow-does/store-information-in-variables#creating-configuration-variables-for-a-repository){: external} for your GitHub repository. Save the following variables: 
 
    | Variable name  | Value | Description |
    |------------------|-------|-------|
@@ -64,7 +64,7 @@ Create secrets and variables in the GitHub repository that you connected to your
 {: #github-workflow-create}
 {: step}
 
-Complete the steps to [write a workflow](https://docs.github.com/en/enterprise-cloud@latest/actions/writing-workflows/quickstart){: external} in the GitHub repository that you connected to your project. 
+Complete the steps to [write a workflow](https://docs.github.com/en/enterprise-cloud@latest/actions/get-started/quickstart){: external} in the GitHub repository that you connected to your project. 
 
 Get started with an [example workflow file](#example-workflow) that you can modify as needed in GitHub. 
 {: tip}
