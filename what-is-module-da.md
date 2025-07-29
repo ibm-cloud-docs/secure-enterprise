@@ -4,7 +4,7 @@ copyright:
 
   years: 2022, 2025
 
-lastupdated: "2025-04-30"
+lastupdated: "2025-07-29"
 
 keywords: deployable architecture, deployment architecture, da, module, infrastructure as code, what is, stack, variation
 
@@ -32,7 +32,7 @@ A module is a stand-alone unit of automation code that can be reused by develope
 
 A deployable architecture is cloud automation for deploying a common architectural pattern that combines one or more cloud resources. It is designed to provide simplified deployment by users, scalability, and modularity. A deployable architecture incorporates one or more modules. Deployable architectures are coded in Terraform, which you configure with input variables to achieve the behavior that you want. To create a more complex deployable architecture, you can stack deployable architectures together without editing Terraform code to do so. 
 
-![A deployable architecture, which contains modules](images/deployable-architecture.png){: caption="Deployable architecture that contains modules" caption-side="bottom"}
+![A deployable architecture, which contains modules](images/da.svg){: caption="Deployable architecture that contains modules" caption-side="bottom"}
 
 An example deployable architecture is [Cloud automation for {{site.data.keyword.secrets-manager_short}}](https://cloud.ibm.com/catalog/7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3/architecture/deploy-arch-ibm-secrets-manager-6d6ebc76-7bbd-42f5-8bc7-78f4fabd59). This deployable architecture provisions an {{site.data.keyword.secrets-manager_full_notm}} instance as a modular solution. You can use this architecture to securely manage secrets with your {{site.data.keyword.cloud_notm}} account. Cloud automation for {{site.data.keyword.secrets-manager_short}} has a narrow scope. It only deploys a {{site.data.keyword.secrets-manager_short}} instance, though the deployable architecture can also optionally create an {{site.data.keyword.keymanagementservicelong_notm}} key ring and key to encrypt data if one does not exist. 
 
