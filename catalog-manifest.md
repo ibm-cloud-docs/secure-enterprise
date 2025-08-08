@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-05-27"
+lastupdated: "2025-08-08"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -691,19 +691,19 @@ The following values can be included within the `dependencies` section:
 `flavors` (optional)
 :   List of variations that the architecture is compatible with.
 
-`default_flavor` (optional) [Experimental]{: tag-purple}
+`default_flavor` (optional) 
 :   Specifies a default variation that is selected for your users when multiple variations are compatible with or requird to deploy your architecture. Your users can select a different variation if it's included in the `flavors` property. The value is the `name` of the variation. To use this property, you must also set `dependency_version_2` to `true`. If not set, then a default variation is not provided for your users. 
 
-`optional` [Experimental]{: tag-purple}
+`optional` 
 :   Specifies whether the dependency is required or not required. The default value is `false`. To use this property, you must also set `dependency_version_2` to `true`. 
 
-`description` (optional) [Experimental]{: tag-purple}
+`description` (optional) 
 :   Provide a description for an optional architecture that's compatible with your own, so users can understand how the architecture works within the broader solution and why they might want to include it. To use this property, you must also set `dependency_version_2` to `true`.
 
-`on_by_default` [Experimental]{: tag-purple}
+`on_by_default` 
 :   Specifies whether an optional dependency is selected for users when they add your deployable architecture to a project from a catalog. Users can deselect the architecture if they do not want it. The default value is `false`. To use this property, you must also set `dependency_version_2` and `optional` to `true`. 
 
-`input_mapping` (optional) [Experimental]{: tag-purple}
+`input_mapping` (optional) 
 :   Section header that specifies the values that are referenced between the compatible architecture and the architecture that you're onboarding. To use this property, you must also set `dependency_version_2` to `true`. 
 
     `dependency_output` or `dependency_input` (optional)
@@ -718,12 +718,12 @@ The following values can be included within the `dependencies` section:
     `reference_version` (optional) 
     :   Indicates the flow of references between the architecture that you’re onboarding and its dependency. The default value is `false`. The default behavior is for the architecture input (`version_input`) to reference either an input or output from the dependency (`dependency_input` or `dependency_output`). When this flag is set to `true`, the `dependency_input` references a value from the `version_input`.
 
-#### `dependency_version_2` (optional) [Experimental]{: tag-purple}
+#### `dependency_version_2` (optional) 
 {: #dependency_version_2}
 
 Peer to the `dependencies` section, `dependency_version_2` Specifies that the updated dependency handling is used with this deployable architecture. If you are using the `optional` property or the `input_mapping` sections within the `dependencies` section, set this value to `true`. If not, set it to `false`. If this property is set to `true`, all dependencies that have the `optional` property set to `false` are required to deploy the architecture that you're onboarding. 
 
-#### `swappable_dependencies` (optional) [Experimental]{: tag-purple}
+#### `swappable_dependencies` (optional) 
 {: #swappable}
 
 Section header for a list of products that are compatible with the deployable architecture. Unlike the `dependencies` array, the products in this section are swappable. The user can pick which product they want to use to meet the dependency. Swappable dependencies can be required or optional. A dependency included here can't be added to the `dependencies` array as well. Information includes the programmatic name of the product and product versions. Optionally, you can include the catalog ID and a list of dependent variations. To use this property, you must also set `dependency_version_2` to `true`. 

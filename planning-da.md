@@ -2,7 +2,7 @@
 
 copyright:
    years: 2024, 2025
-lastupdated: "2025-04-30"
+lastupdated: "2025-08-08"
 
 keywords:
 
@@ -63,9 +63,6 @@ However, if you already deployed {{site.data.keyword.redhat_openshift_notm}} Con
 
 ### Optional and swappable deployable architectures
 {: #optional-swappable}
-
-This is an experimental feature that is available for evaluation and testing purposes and might change without notice.
-{: experimental}
 
 When you onboard a deployable architecture to a private catalog, you can extend it by stacking it with other architectures. By doing so, you can create a more customizable solution for your users. 
 
