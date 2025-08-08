@@ -2,7 +2,7 @@
 
 copyright:
    years: 2024, 2025
-lastupdated: "2025-05-27"
+lastupdated: "2025-08-08"
 
 keywords:
 
@@ -52,8 +52,6 @@ Variations
 
 ## Specifying dependencies and extending your architecture 
 {: #fullstackvext}
-
-[Experimental]{: tag-purple}
 
 If your deployable architecture depends on another, you can include information about that dependency as you onboard your deployable architecture to a catalog. You can also include optional architectures to extend your own for different use cases. The result is a customizable solution for users because they can pick which architectures they want to include along with yours. For more information, go to [Extending a deployable architecture during onboarding](/docs/secure-enterprise?topic=secure-enterprise-extend-da).
 

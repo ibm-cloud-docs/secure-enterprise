@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-04-30"
+lastupdated: "2025-08-08"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata, deployable architecture, stacking deployable architecture, extending, stack
 
@@ -14,9 +14,6 @@ subcollection: secure-enterprise
 
 # Extending a deployable architecture during onboarding
 {: #extend-da}
-
-This is an experimental feature that is available for evaluation and testing purposes and might change without notice.
-{: experimental}
 
 As you onboard a deployable architecture to a private catalog, you can choose to extend it by stacking it with other architectures. When you add those other architectures, you specify whether they are required to deploy your architecture as intended, or if they can be used optionally to extend the use case. When you finish onboarding, the result is a robust end-to-end solution that is made of multiple deployable architectures that work together.  
 {: shortdesc}

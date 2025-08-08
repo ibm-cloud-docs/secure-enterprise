@@ -4,7 +4,7 @@ copyright:
 
   years: 2022, 2025
 
-lastupdated: "2025-07-29"
+lastupdated: "2025-08-08"
 
 keywords: deployable architecture, deployment architecture, da, module, infrastructure as code, what is, stack, variation
 
@@ -42,8 +42,6 @@ Deployable architectures that are built and maintained by experts at {{site.data
 
 ### What does it mean to stack deployable architectures? 
 {: #stacked}
-
-[Experimental]{: tag-purple}
 
 For a more complex use case, you can stack architectures together to form a complete, end-to-end solution for deploying a complex application or infrastructure. Unlike individual modules or deployable architectures, which provide specific functionality, stacking combines multiple deployable architectures to form a comprehensive solution that can be easily deployed and managed. Just as modules can be combined to create a deployable architecture, deployable architectures can be stacked to create a more extensive solution. Stacking includes linking the architectures together to create a complex deployable architecture. This linking is achieved by specifying references in each deployable architecture's inputs by using a reference notation. You do not need to be an expert in Terraform, or have any Terraform coding skills, to stack architectures together and deploy them.
 
