@@ -4,7 +4,7 @@ copyright:
 
   years: 2025
 
-lastupdated: "2025-07-10"
+lastupdated: "2025-08-19"
 
 keywords: deployable architecture, customization, Elasticsearch, Postgresql, Code Engine, extend, stack, deployable architecture stack
 
@@ -187,7 +187,7 @@ Before you can [share `Example Corp's infrastructure` with your enterprise](/doc
 1. [Configure the architecture](/docs/secure-enterprise?topic=secure-enterprise-config-project&interface=ui#how-to-config) by completing the following steps: 
     1. In the **Details** section, review the information and click **Next**. 
     1. In the **Security** section, provide an authentication method to deploy to your target account and click **Next**. Use a trusted profile or store an API key in {{site.data.keyword.secrets-manager_short}}. 
-    1. In the **Configure architecture** section, enter `test-south` as the value for the `prefix` input variable. 
+    1. In the **Inputs** section, enter `test-south` as the value for the `prefix` input variable. 
     1. Select **Default** for the `existing_resource_group_name` input variable. 
     1. Select **us-south** for the `region` input variable. 
     1. Click **Save** to save the configuration of `Example Corp's infrastructure`. 
