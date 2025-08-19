@@ -4,7 +4,7 @@ copyright:
 
   years: 2025
 
-lastupdated: "2025-07-11"
+lastupdated: "2025-08-19"
 
 keywords: deploy, customized application, security services, observability services, project, Code Engine, AI, application
 
@@ -93,7 +93,7 @@ Before you can validate and deploy the security and observability services, conn
 
 1. Go to the **Configurations** tab in the `Example Corp infrastructure` project.
 1. Click the **Options** icon ![Options icon](../icons/action-menu-icon.svg "Options") for the `security-services` configuration > **Edit**.
-1. In the **Configure architecture** section, update the region value by clicking **Add a reference**. This step connects architectures together, so your customized architecture can be connected with {{site.data.keyword.cloud_notm}} Essential Security and Observability Services.
+1. In the **Inputs** section, update the region value by clicking **Add a reference**. This step connects architectures together, so your customized architecture can be connected with {{site.data.keyword.cloud_notm}} Essential Security and Observability Services.
 1. Select **Configurations** as the source and select the `example-corp-us-south` configuration.
 1. Select **Inputs** as the category and select **region** as the property value.
 1. Click **OK**.

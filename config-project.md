@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2025
 
-lastupdated: "2025-05-27"
+lastupdated: "2025-08-19"
 
 keywords: manage project, rename project, move project, deploy project, merge request, merge changes, deploy configuration
 
@@ -99,7 +99,7 @@ To create a customized configuration, complete the following steps:
 
     If you select **Select from {{site.data.keyword.compliance_short}}**, you must have an instance of the service and an attachment through {{site.data.keyword.compliance_short}} in the target account that you want to deploy to. For help with creating an attachment, see [Evaluating resource configuration with {{site.data.keyword.compliance_long}}](/docs/secure-enterprise?topic=secure-enterprise-security-compliance-scanning).
 
-1. From the **Configure architecture** panel, enter values for the required inputs for the deployable architecture configuration. 
+1. From the **Inputs** panel, enter values for the required inputs for the deployable architecture configuration. 
     
     Depending on the deployable architecture, some inputs might be configured for you with references to other architectures or fixed values. These values were provided by the creator of the deployable architecture. Be careful if you edit these values, especially references, as the architecture might not successfully deploy with different values. Hover on the input and click **Reset** to revert the input to the fixed value the creator specified. You can't reset input references. Only inputs with fixed values can be reset to their original fixed value. 
     {: important} 
