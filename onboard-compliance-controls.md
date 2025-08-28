@@ -4,7 +4,7 @@ copyright:
 
   years: 2024, 2025
 
-lastupdated: "2025-05-27"
+lastupdated: "2025-08-28"
 
 keywords:
 
@@ -41,7 +41,7 @@ Before you onboard your deployable architecture to a catalog, verify compliance 
    {: tip}
 
 1. In the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg "Menu") > **Security and Compliance** > **Profiles**.
-1. Select the profile name that represents the controls that are most relevant to your solution. For example, the **{{site.data.keyword.cloud_notm}} Framework for Financial Services** profile is a set of controls that are built specifically for and with the financial services industry. For a list of profiles, see [Available predefined profiles](https://cloud.ibm.com/docs/security-compliance?topic=security-compliance-predefined-profiles).
+1. Select the profile name that represents the controls that are most relevant to your solution. For example, the **{{site.data.keyword.cloud_notm}} Framework for Financial Services** profile is a set of controls that are built specifically for and with the financial services industry. For a list of profiles, see [Available predefined profiles](/docs/security-compliance?topic=security-compliance-predefined-profiles).
 1. Select the profile from the list, and copy the profile name that displays at the beginning of the page and the version number. Save this information locally because you need these values for updating the `ibm_cloud.json` manifest file.
 
    ![Profile name and version in {{site.data.keyword.compliance_short}}](images/scc-profile-name.png){: caption="Profile name and version" caption-side="bottom"}
