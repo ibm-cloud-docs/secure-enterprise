@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-08"
+lastupdated: "2025-08-28"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -110,6 +110,7 @@ The following code snippet can be used as a template.
             {
                "label": "Display name",
                "name": "Programatic name",
+               "index": 1,
                "install_type": "Install type",
                "working_directory": "Directory path",
                "usage_template": "template",
@@ -363,6 +364,11 @@ Variation display name.
 {: #flavor-name}
 
 Variation programmatic name.
+
+#### `index`
+{: #flavor-index}
+
+The order that the variations are listed in the catalog listing. 
 
 #### `working_directory`
 {: #working-dir}
@@ -814,7 +820,14 @@ Section header within the `flavors` section that specifies the configuration of 
       "associations": "The list of parameters associated with the configuration.",
       "options_url": "The URL where the options for your custom type can be pulled by using dynamic data from objects in the catalog."
    },
-   "configuration_group": "The name of the assocated configuration group."
+   "configuration_group": "The name of the assocated configuration group.",
+   "value_constraints": [
+	{
+           "type": "regex",
+           "value": "^.{12,30}$",
+           "description": "The specified value must be between 12 and 30 characters."
+	}
+   ]
 }
 ```
 {: codeblock}
@@ -897,6 +910,18 @@ The following values can be included in the `configuration` section:
 
 `configuration_group`
 :   The name of an associated configuration group.
+
+`value_constraints`
+:   Section header used to indidicate that one or more value constraints are defined, where a value constraint has the following format:
+
+    `type`
+    :   The type of the constraint. Only `regex` is supported at this time.
+
+    `value`
+    :   A JavaScript regular expression.
+
+    `description`
+    :   A message to display if the provided value does not match the specified regular expression.
 
 #### `schematics_env_values`
 {: #schematics_env_values}
