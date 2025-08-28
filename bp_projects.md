@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2022, 2023
+  years: 2022, 2025
 
 
-lastupdated: "2024-10-09"
+lastupdated: "2025-08-20"
 
 
 keywords: best practice projects, manage projects, project, environment
@@ -47,7 +47,7 @@ You can deploy an architecture in your own account or in another account by usin
 ### Using {{site.data.keyword.secrets-manager_full}}
 {: #best-practice-secrets}
 
-When deploying Infrastructure as Code (IaC), there are often secrets that are required to configure the infrastructure, like API keys, SSH keys, and SSL certificates. In these cases, it's recommended to store these secrets within a [{{site.data.keyword.secrets-manager_short}}](https://cloud.ibm.com/catalog/services/secrets-manager#about) instance. Storing secrets directly in the configuration of a project is not recommended as they are exposed to any user with access to the project. Projects directly support referencing API keys that are stored in {{site.data.keyword.secrets-manager_short}} as an input to a deployable architecture.
+When deploying Infrastructure as Code (IaC), there are often secrets that are required to configure the infrastructure, like API keys, SSH keys, and SSL certificates. In these cases, it's recommended to store these secrets within a [{{site.data.keyword.secrets-manager_short}}](https://cloud.ibm.com/catalog/services/secrets-manager#about) instance. Projects directly support referencing API keys that are stored in {{site.data.keyword.secrets-manager_short}} as an input to a deployable architecture.
 
 Create a [{{site.data.keyword.secrets-manager_short}} service instance](/docs/secrets-manager?topic=secrets-manager-create-instance&interface=ui) in your primary project account that you can use for all projects within that account before you create your project.
 {: important}
