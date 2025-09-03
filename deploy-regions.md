@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2025
 
-lastupdated: "2025-08-19"
+lastupdated: "2025-09-03"
 
 keywords: multiple regions, deploy, projects, code engine
 
@@ -92,7 +92,7 @@ Before you can configure `Example Corp's infrastructure`, you need to find the d
 1. Use the catalog menu to open the private catalog called `Example Corp catalog`. 
 1. From the Type section, select **Private products** to filter the list of products. 
 1. Select **Example Corp's infrastructure** from the list of remaining products.
-1. Select **Add to project**.
+1. Select **Configure and deploy**.
 1. Change the configuration name to `example-corp-us-south` to indicate that you want to deploy the configuration in the US southern region.
 1. Select **Example Corp infrastructure dev** as the environment.
 1. Click **Add**.

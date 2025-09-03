@@ -4,7 +4,7 @@ copyright:
 
   years: 2025
 
-lastupdated: "2025-08-19"
+lastupdated: "2025-09-03"
 
 keywords: deployable architecture, customization, Elasticsearch, Postgresql, Code Engine, extend, stack, deployable architecture stack
 
@@ -180,7 +180,7 @@ Before you can [share `Example Corp's infrastructure` with your enterprise](/doc
 1. Go to the [{{site.data.keyword.cloud_notm}} catalog](/catalog) and open the `Example Corp catalog` private catalog. 
 1. Select **Example Corp's infrastructure** to open its catalog listing. 
 1. Make sure **0.0.2** is selected as the product version. 
-1. Click **Add to project**. 
+1. Click **Configure and deploy**. 
 1. Name the new project `Testing Example Corp infrastructure`. 
 1. Change the name of the configuration to `Example Corp infrastructure with Elasticsearch` and click **Next**. 
 1. Make sure that **Cloud automation for {{site.data.keyword.databases-for-elasticsearch}}** is selected and click **Add to project**. 
@@ -214,7 +214,7 @@ Complete the same steps to verify that `Example Corp's infrastructure` works wit
 1. On the Configurations tab in the `Testing Example Corp infrastructure` project, click **Create** and open the `Example Corp catalog` private catalog.
 1. Select **Example Corp's infrastructure** to open its catalog listing. 
 1. Make sure **0.0.2** is selected as the product version. 
-1. Click **Add to project**. 
+1. Click **Configure and deploy**. 
 1. Make sure that **Testing Example Corp infrastructure** is selected as the project. 
 1. Change the name of the configuration to `Example Corp infrastructure with {{site.data.keyword.postgresql}}` and click **Next**. 
 1. Select **Cloud automation for {{site.data.keyword.databases-for-postgresql}}** to include it and click **Add to project**. 

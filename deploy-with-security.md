@@ -4,7 +4,7 @@ copyright:
 
   years: 2025
 
-lastupdated: "2025-08-19"
+lastupdated: "2025-09-03"
 
 keywords: deploy, customized application, security services, observability services, project, Code Engine, AI, application
 
@@ -54,7 +54,7 @@ To secure your application and enable monitoring capabilities, add the {{site.da
 1. Select the `Example Corp infrastructure` project that contains your previously created customized deployable architecture and click **Configurations**.
 1. Click **Create**. This step takes you to the {{site.data.keyword.cloud_notm}} catalog.
 1. Find the **{{site.data.keyword.cloud_notm}} Essential Security and Observability Services** deployable architecture in the catalog and select it.
-1. Click **Add to project**.
+1. Click **Configure and deploy**.
 1. Name your configuration `security-services`.
 1. Click **Add** to add the deployable architecture to your `Example Corp infrastructure` project.
 
