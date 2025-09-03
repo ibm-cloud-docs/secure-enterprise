@@ -4,7 +4,7 @@ copyright:
 
   years: 2022, 2025
 
-lastupdated: "2025-04-30"
+lastupdated: "2025-09-03"
 
 keywords: add project, create project, set project
 
@@ -54,13 +54,13 @@ To add a deployable architecture to your project from the project dashboard, com
 1. From the project dashboard, select the Configurations tab.
 1. Click **Create**.
 1. Select a deployable architecture from the catalog.
-1. Click **Add to project**.
+1. Click **Configure and deploy**.
 
 You can also add a deployable architecture to a project directly from the catalog:
 
 1. Go to the [{{site.data.keyword.cloud_notm}} catalog](/catalog).
 1. Select the deployable architecture.
-1. Click **Add to project**.
+1. Click **Configure and deploy**.
 1. You can create a new project or add to an existing project.
 1. Enter the required details for the deployable architecture.
 1. Click **Add**.
