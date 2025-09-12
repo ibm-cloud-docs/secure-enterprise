@@ -4,7 +4,7 @@ copyright:
   years: 2023, 2025
 
 
-lastupdated: "2025-08-20"
+lastupdated: "2025-09-12"
 
 
 keywords: authorizing a project, add project to account, project secrets, project API key, authenticate, authentication for a project, target account
@@ -18,10 +18,13 @@ subcollection: secure-enterprise
 # Using an API key with {{site.data.keyword.secrets-manager_short}} to authorize a project to deploy an architecture
 {: #authorize-project}
 
-When you configure your deployable architecture, you are required to select an authentication method. You can paste in an API key or store it as a secret to authorize a project to deploy in an account.
+When you configure your deployable architecture, you are required to select an authentication method. The authentication method identifies the target account where resources are deployed and authorizes the deployment. You can create an API key directly in the project, or store an API key as a secret to authorize a project to deploy in an account.
 {: shortdesc}
 
 A secret is a piece of sensitive information, for example an API key, password, or any type of credential that you might use to access a confidential system. You can use a secret in {{site.data.keyword.secrets-manager_full}} as a way to manage API keys dynamically and store them securely in your own dedicated instance.
+
+Deploying a proof of concept for testing purposes? You can create an API key as you edit a configuration in your project. Doing so authorizes the project to deploy to the currently selected account.
+{: tip}
 
 ## Before you begin
 {: #gs-prereqs}

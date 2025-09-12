@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2025
 
-lastupdated: "2025-08-19"
+lastupdated: "2025-09-12"
 
 keywords: manage project, rename project, move project, deploy project, merge request, merge changes, deploy configuration
 
@@ -82,8 +82,8 @@ To create a customized configuration, complete the following steps:
 
 1. From the **Security** panel, select the authentication method that you want to use to deploy your architecture.
 
-   Add an API key by using {{site.data.keyword.secrets-manager_full}}. This authorizes the project to deploy to a target account and is required to deploy your architecture. For more information, see [Using an API key with Secrets Manager to authorize a project to deploy an architecture](/docs/secure-enterprise?topic=secure-enterprise-authorize-project).
-   {: note}
+   Deploying a proof of concept for testing purposes? You can create an API key as you edit a configuration in your project. Doing so authorizes the project to deploy to the currently selected account. Otherwise, you can add an API key by using {{site.data.keyword.secrets-manager_full}}. This authorizes the project to deploy to a target account and is required to deploy your architecture. For more information, see [Using an API key with Secrets Manager to authorize a project to deploy an architecture](/docs/secure-enterprise?topic=secure-enterprise-authorize-project).
+   {: tip}
    {: #cra-validate-failure}
 
 1. During validation, a Code Risk Analyzer scan is run on your architecture. Select the controls that you want to use during validation. You can use the **Architecture default** controls, or the **Select from {{site.data.keyword.compliance_short}}** option if you have an attachment set up in your target account.

@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2025
 
-lastupdated: "2025-09-03"
+lastupdated: "2025-09-12"
 
 keywords: multiple regions, deploy, projects, code engine
 
@@ -47,10 +47,10 @@ This tutorial uses a fictitious scenario to help you learn and understand how to
 
     For more information about access and permissions, see [Assigning users access to projects](/docs/secure-enterprise?topic=secure-enterprise-access-project).
 
-1. Set up an authentication method. You can use an API key that is stored in {{site.data.keyword.secrets-manager_short}} or a trusted profile to authorize a deployment to your target account: 
-    * [Create a {{site.data.keyword.secrets-manager_short}} service instance](/docs/secrets-manager?topic=secrets-manager-create-instance&interface=ui) in your {{site.data.keyword.cloud_notm}} account. To create a secret, you must have the Writer role or higher on the {{site.data.keyword.secrets-manager_short}} service. After you create your secret instance, make sure that you select **Other secret type** to add an arbitrary secret. For information about creating an arbitrary secret, see [Creating arbitrary secrets in the UI](/docs/secrets-manager?topic=secrets-manager-arbitrary-secrets&interface=ui). Your arbitrary secret must contain the API key. The API key must be created in the target account that you want to deploy to. For more information, go to [Using an API key with Secrets Manager to authorize a project to deploy an architecture](/docs/secure-enterprise?topic=secure-enterprise-authorize-project).
-
-    * Create a trusted profile in the account that you want to deploy to. The trusted profile needs the ability to create a service ID, create and delete API keys for the service ID, and deploy the architecture. For more information, go to [Using trusted profiles to authorize a project to deploy an architecture](/docs/secure-enterprise?topic=secure-enterprise-tp-project).
+1. Set up an authentication method. You can [use an API key that is stored in {{site.data.keyword.secrets-manager_short}}](/docs/secure-enterprise?topic=secure-enterprise-authorize-project) or a [trusted profile](/docs/secure-enterprise?topic=secure-enterprise-tp-project) to authorize a deployment to your target account. 
+    
+    Deploying a proof of concept for testing purposes? You can create an API key later on, as you edit a configuration in your project. Doing so authorizes the project to deploy to the currently selected account.
+    {: tip}
 
 ## Create a project 
 {: #project-create}
@@ -77,7 +77,7 @@ Now that your project is created, you're ready to create an environment to share
 1. Name your environment `Example Corp infrastructure dev`.
 1. Click **Add** > **Add manually...**
 1. Select **Authentication** for the category. 
-1. Specify the authentication method that you set up in the [before you begin](#regions-prereqs) steps. You can use an API key that is stored in {{site.data.keyword.secrets-manager_short}} or a trusted profile.
+1. Specify the authentication method that you set up in the [before you begin](#regions-prereqs) steps. You can use an API key or a trusted profile.
 1. Depending on which method you choose, either select the secret that contains your API key or provide the trusted profile ID. 
 1. Click **Add** to add the authentication method to the environment. 
 1. Click **Save** to save the environment. 
