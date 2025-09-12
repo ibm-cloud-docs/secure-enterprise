@@ -4,7 +4,7 @@ copyright:
 
   years: 2025
 
-lastupdated: "2025-09-03"
+lastupdated: "2025-09-12"
 
 keywords: deployable architecture, customization, Elasticsearch, Postgresql, Code Engine, extend, stack, deployable architecture stack
 
@@ -48,10 +48,10 @@ This tutorial uses a fictitious scenario to help you understand how to create a 
 
       For more information, go to [Assigning access to account management services](/docs/account?topic=account-account-services) and [Managing access to resources](/docs/account?topic=account-assign-access-resources).
 1. [Create a customized deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-basic-custom) called `Example Corp's infrastructure` and onboard it to a private catalog called `Example Corp catalog`. This architecture is the one you will be extending as you complete this tutorial. 
-1. Set up an authentication method. You can use an API key that is stored in {{site.data.keyword.secrets-manager_short}} or a trusted profile to authorize a deployment to your target account: 
-    * [Create a {{site.data.keyword.secrets-manager_short}} service instance](/docs/secrets-manager?topic=secrets-manager-create-instance&interface=ui) in your {{site.data.keyword.cloud_notm}} account. To create a secret, you must have the Writer role or higher on the {{site.data.keyword.secrets-manager_short}} service. After you create your secret instance, make sure that you select **Other secret type** to add an arbitrary secret. For information about creating an arbitrary secret, see [Creating arbitrary secrets in the UI](/docs/secrets-manager?topic=secrets-manager-arbitrary-secrets&interface=ui). Your arbitrary secret must contain the API key. The API key must be created in the target account that you want to deploy to. For more information, go to [Using an API key with Secrets Manager to authorize a project to deploy an architecture](/docs/secure-enterprise?topic=secure-enterprise-authorize-project).
-
-    * Create a trusted profile in the account that you want to deploy to. The trusted profile needs the ability to create a service ID, create and delete API keys for the service ID, and deploy the architecture. For more information, go to [Using trusted profiles to authorize a project to deploy an architecture](/docs/secure-enterprise?topic=secure-enterprise-tp-project).
+1. Set up an authentication method. You can [use an API key that is stored in {{site.data.keyword.secrets-manager_short}}](/docs/secure-enterprise?topic=secure-enterprise-authorize-project) or a [trusted profile](/docs/secure-enterprise?topic=secure-enterprise-tp-project) to authorize a deployment to your target account. 
+    
+    Deploying a proof of concept for testing purposes? You can create an API key later on, as you edit a configuration in your project. Doing so authorizes the project to deploy to the currently selected account.
+    {: tip}
 
 ## Creating a version of a deployable architecture
 {: #create-version}
@@ -186,7 +186,7 @@ Before you can [share `Example Corp's infrastructure` with your enterprise](/doc
 1. Make sure that **Cloud automation for {{site.data.keyword.databases-for-elasticsearch}}** is selected and click **Add to project**. 
 1. [Configure the architecture](/docs/secure-enterprise?topic=secure-enterprise-config-project&interface=ui#how-to-config) by completing the following steps: 
     1. In the **Details** section, review the information and click **Next**. 
-    1. In the **Security** section, provide an authentication method to deploy to your target account and click **Next**. Use a trusted profile or store an API key in {{site.data.keyword.secrets-manager_short}}. 
+    1. In the **Security** section, provide an authentication method to deploy to your target account and click **Next**. Use a trusted profile or an API key. 
     1. In the **Inputs** section, enter `test-south` as the value for the `prefix` input variable. 
     1. Select **Default** for the `existing_resource_group_name` input variable. 
     1. Select **us-south** for the `region` input variable. 

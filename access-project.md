@@ -4,7 +4,7 @@ copyright:
 
   years: 2022, 2025
 
-lastupdated: "2025-01-10"
+lastupdated: "2025-09-12"
 
 keywords: project access, iam projects, assigning project access, assign access, access project
 
@@ -20,7 +20,7 @@ subcollection: secure-enterprise
 Projects are controlled by {{site.data.keyword.cloud}} Identity and Access Management (IAM). As an administrator on a project, you can grant users access to view and edit projects, approve changes, and deploy or destroy configuration resources. Projects also requires authorization with other {{site.data.keyword.cloud_notm}} services in order for users to validate and deploy configurations.
 {: shortdesc}
 
-Assigning users access to projects is different than authorizing a project to deploy into an account. To authorize a project to deploy, you can use either a [trusted profile](/docs/secure-enterprise?topic=secure-enterprise-tp-project&interface=ui) or an [API key in {{site.data.keyword.secrets-manager_full_notm}}](/docs/secure-enterprise?topic=secure-enterprise-authorize-project&interface=ui).
+Assigning users access to projects is different than authorizing a project to deploy into an account. To authorize a project to deploy, you can use either a [trusted profile](/docs/secure-enterprise?topic=secure-enterprise-tp-project&interface=ui) or an [API key](/docs/secure-enterprise?topic=secure-enterprise-authorize-project&interface=ui).
 {: tip}
 
 ## Actions and roles for the {{site.data.keyword.cloud_notm}} Projects service
