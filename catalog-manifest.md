@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-28"
+lastupdated: "2025-09-17"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -846,7 +846,7 @@ The following values can be included in the `configuration` section:
     * `int` requires an integer input from users.
     * `number` requires a numeric value. The `number` type can represent both whole numbers and fractional values like `4.56`.
     * `password` requires a string input from users. The string is redacted in the console and logs.
-    * `string` requires a sequence of Unicode characters representing text.
+    * `string` requires a sequence of Unicode characters representing text. 
     * `object` requires a Terraform object input from users. For more information, see [`map`](https://developer.hashicorp.com/terraform/language/expressions/types#map){: external}.
 
     Predefined types require manual input from users.
@@ -860,11 +860,10 @@ The following values can be included in the `configuration` section:
     * `vpc ssh key` requires users to select a VPC SSH key for authentication to a virtual machine.
     * `cluster` requires users to select a {{site.data.keyword.containershort}} or {{site.data.keyword.redhat_openshift_notm}} cluster. The output is the cluster ID.
     * `power iaas` requires users to select a {{site.data.keyword.powerSys_notm}} instance.
-    * `resource group` requires users to select a resource group. The output is the resource ID or name.
+    * `resource group` requires users to select a resource group. The output is the resource group's ID or name .
     * `multi-line secure value` requires users to input text that can be split into multiple lines, which is redacted in the console and logs. For example, if a long key is required, the value is hidden in workspaces.
     * `schematics workspace` requires users to select a specific workspace form a dropdown list. This list is dynamically filtered based on dependencies defined in the deployable architecture. For example, if your deployable architecture, `example-da-1`, depends on another deployable architecture, `example-da-2`, the input dropdown list for `example-da-1` shows only workspaces associated with `example-da-2`. Users then select the appropriate instance of `example-da-2`'s workspace when setting up `example-da-1`.
-    * `json editor` gives users a space to specify larger JSON inputs or plain text files.
-    * `Platform resource` requires users to select an instance resource from a dropdown list for the type of resource that you specify. The resource type can be VPC Subnet, VPC Image, or VPC Floating IPs. You can specify the ID or name as the values that users can choose from and allow a single or multiple selections. The output is the name or ID that your template requires.
+    * `json editor` gives users a space to specify larger JSON inputs or plain text files. 
 
 `default_value`
 :   The value that is to be set as the default.
@@ -939,7 +938,7 @@ Within the `flavors` section, `schematics_env_values` specifies a list of the va
 #### `minimum_compatible_version` (optional)
 {: #minimum_compatible_version}
 
-A semver value that indicates the earliest version that is compatible with the current version. If no earlier versions are compatible with the current version, specify the current version value in this field.  By default, the current version is compatible with all earlier versions.
+A semver value that indicates the earliest version that is compatible with the current version. If no earlier versions are compatible with the current version, specify the current version value in this field.  By default, the current version is compatible with all earlier versions. 
 
 #### `terraform_version`
 {: #terraform_version}
