@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-09-17"
+lastupdated: "2025-09-18"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -363,7 +363,7 @@ Variation display name.
 #### `name`
 {: #flavor-name}
 
-Variation programmatic name.
+Variation programmatic name. 
 
 #### `index`
 {: #flavor-index}
