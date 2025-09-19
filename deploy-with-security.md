@@ -4,7 +4,7 @@ copyright:
 
   years: 2025
 
-lastupdated: "2025-09-03"
+lastupdated: "2025-09-19"
 
 keywords: deploy, customized application, security services, observability services, project, Code Engine, AI, application
 
@@ -23,10 +23,10 @@ completion-time: 40m
 {: toc-content-type="tutorial"}
 {: toc-completion-time="40m"}
 
-This tutorial walks you through deploying a customized application to {{site.data.keyword.cloud}} by using deployable architectures that include security and observability services. You’ll learn how to integrate the {{site.data.keyword.cloud_notm}} Essential Security and Observability Services deployable architecture into a project that also includes a {{site.data.keyword.codeengineshort}}-based application that you previously created. By completing this tutorial, you’ll have a fully deployed and secured application with observability features that help you monitor and manage it effectively.
+This tutorial walks you through deploying a customized application to {{site.data.keyword.cloud}} by using deployable architectures that include security and observability services. You’ll learn how to integrate the Cloud foundation for security and observability deployable architecture into a project that also includes a {{site.data.keyword.codeengineshort}}-based application that you previously created. By completing this tutorial, you’ll have a fully deployed and secured application with observability features that help you monitor and manage it effectively.
 {: shortdesc}
 
-Imagine you’re an account owner at an enterprise, responsible for deploying secure and observable cloud applications. You already customized the {{site.data.keyword.codeengineshort}} deployable architecture to meet your business needs. Now, you’re ready to extend your deployment by adding {{site.data.keyword.cloud_notm}} Essential Security and Observability Services.
+Imagine you’re an account owner at an enterprise, responsible for deploying secure and observable cloud applications. You already customized the {{site.data.keyword.codeengineshort}} deployable architecture to meet your business needs. Now, you’re ready to extend your deployment by adding Cloud foundation for security and observability.
 
 This tutorial uses a fictitious scenario to help you understand how to integrate and deploy security and observability services alongside your application. As you complete the tutorial, adapt each step to match your own organization’s needs.
 
@@ -48,12 +48,12 @@ Before you can start adding security and observability services to your customiz
 {: #add-observability-security-services}
 {: step}
 
-To secure your application and enable monitoring capabilities, add the {{site.data.keyword.cloud_notm}} Essential Security and Observability Services deployable architecture to your existing project.
+To secure your application and enable monitoring capabilities, add the Cloud foundation for security and observability deployable architecture to your existing project.
 
 1. In the {{site.data.keyword.cloud_notm}} console, click the **Navigation menu** icon ![Navigation Menu icon](../icons/icon_hamburger.svg "Menu") > **[Projects](/projects/)**. 
 1. Select the `Example Corp infrastructure` project that contains your previously created customized deployable architecture and click **Configurations**.
 1. Click **Create**. This step takes you to the {{site.data.keyword.cloud_notm}} catalog.
-1. Find the **{{site.data.keyword.cloud_notm}} Essential Security and Observability Services** deployable architecture in the catalog and select it.
+1. Find the **Cloud foundation for security and observability** deployable architecture in the catalog and select it.
 1. Click **Configure and deploy**.
 1. Name your configuration `security-services`.
 1. Click **Add** to add the deployable architecture to your `Example Corp infrastructure` project.
@@ -62,7 +62,7 @@ To secure your application and enable monitoring capabilities, add the {{site.da
 {: #configure-observability-security}
 {: step}
 
-After adding the {{site.data.keyword.cloud_notm}} Essential Security and Observability Services to your project, configure it to match your deployment requirements.
+After adding Cloud foundation for security and observability to your project, configure it to match your deployment requirements.
 
 1. In the **Details** section, review the configuration details.
 1. From the **Security** section, select **API key using {{site.data.keyword.secrets-manager_short}}** as the authentication method. Confirm that this is the correct authentication method selected based on what you [added to the environment](/docs/secure-enterprise?topic=secure-enterprise-deploy-regions#env-create).
@@ -89,11 +89,11 @@ After adding the {{site.data.keyword.cloud_notm}} Essential Security and Observa
 {: #connect-customized-da-services}
 {: step}
 
-Before you can validate and deploy the security and observability services, connect your customized deployable architecture to the {{site.data.keyword.cloud_notm}} Essential Security and Observability Services. This connection helps ensure that both architectures are deployed together in the same region and can share configuration values, such as the region setting.
+Before you can validate and deploy the security and observability services, connect your customized deployable architecture to Cloud foundation for security and observability. This connection helps ensure that both architectures are deployed together in the same region and can share configuration values, such as the region setting.
 
 1. Go to the **Configurations** tab in the `Example Corp infrastructure` project.
 1. Click the **Options** icon ![Options icon](../icons/action-menu-icon.svg "Options") for the `security-services` configuration > **Edit**.
-1. In the **Inputs** section, update the region value by clicking **Add a reference**. This step connects architectures together, so your customized architecture can be connected with {{site.data.keyword.cloud_notm}} Essential Security and Observability Services.
+1. In the **Inputs** section, update the region value by clicking **Add a reference**. This step connects architectures together, so your customized architecture can be connected with Cloud foundation for security and observability.
 1. Select **Configurations** as the source and select the `example-corp-us-south` configuration.
 1. Select **Inputs** as the category and select **region** as the property value.
 1. Click **OK**.
@@ -119,4 +119,4 @@ After successful validation, deploy the configurations of your architectures. Si
 1. Click the **Options** icon ![Options icon](../icons/action-menu-icon.svg "Options") for the `example-corp-us-south` customized deployable architecture > **Deploy**.
 1. Click the **Options** icon ![Options icon](../icons/action-menu-icon.svg "Options") for the services included in the `security-services` architecture > **Deploy**.
 
-After deployment is complete, the customized application is connected with the {{site.data.keyword.cloud_notm}} Essential Security and Observability Services, all deployed in the same region.
+After deployment is complete, the customized application is connected with Cloud foundation for security and observability, all deployed in the same region.
