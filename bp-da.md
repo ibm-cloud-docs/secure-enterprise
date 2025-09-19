@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-07-11"
+lastupdated: "2025-09-19"
 
 keywords:
 
@@ -68,7 +68,7 @@ Consider the VPC landing zone deployable architecture, which is available in the
 
 VPC landing zone is designed to be compliant with the {{site.data.keyword.framework-fs_full}} profile. It separates the management workloads from worker workloads, uses key management to encrypt cloud object storage, and uses private endpoints for communications. You can use it as is, or customize it to meet your landing zone needs.
 
-For a more complex deployable architecture, consider {{site.data.keyword.cloud_notm}} Essential Security and Observability services. That deployable architecture was made by linking multiple architectures together from the {{site.data.keyword.cloud_notm}} catalog. With it, you can leverage the full range of security services from {{site.data.keyword.cloud_notm}}. It’s customizable, so you can choose to include only the services that you need, and leave out the ones you don’t.
+For a more complex deployable architecture, consider Cloud foundation for security and observability. That deployable architecture was made by linking multiple architectures together from the {{site.data.keyword.cloud_notm}} catalog. With it, you can leverage the full range of security services from {{site.data.keyword.cloud_notm}}. It’s customizable, so you can choose to include only the services that you need, and leave out the ones you don’t.
 
 Now that you know where to find deployable architectures, how do you deploy and maintain them across accounts? You use an {{site.data.keyword.cloud_notm}} project.
 
