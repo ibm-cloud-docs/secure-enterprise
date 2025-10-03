@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2024-11-01"
+  years: 2023, 2025
+lastupdated: "2025-10-03"
 
 keywords: question about projects, project, create project, creating a project
 
@@ -19,13 +19,11 @@ content-type: troubleshoot
 {: troubleshoot}
 {: support}
 
-You try to create a project from the Projects page in the console, but you encounter an error.
+You try to create a project from the **Projects** page in the console, but the **Create** button is disabled.
 {: shortdesc}
 
-When you click **Create** from the Projects page in the console, you encounter this error:
+The **Create** button on the **Projects** page is disabled. 
 {: tsSymptoms}
-
->Additional access required
 
 You don't have the required level of access to create a project.
 {: tsCauses}
