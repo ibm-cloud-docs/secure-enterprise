@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2023, 2024
+  years: 2023, 2025
 
-lastupdated: "2024-04-18"
+lastupdated: "2025-10-03"
 
 keywords: move schematics workspace, migrate schematics workspace, deployable architecture
 
@@ -53,8 +53,8 @@ Step 2: Use the Project CLI to modify the workspace so that it is managed as a d
 {: #move-prereqs}
 
 * Make sure that the [{{site.data.keyword.bplong}} workspace](/docs/schematics?topic=schematics-sch-create-wks&interface=ui) is created and the resources are provisioned in your account. The project and the workspace must be in the same account.
-* Set a [GIT_TOKEN](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens){: external} environment variable to authenticate your Git source repository. For example, run `export GIT_TOKEN="enter your GIT TOKEN"`.
-* Set access to your account in either of the following ways:
+* Set a [GIT_TOKEN](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens){: external} environment variable to authenticate with your Git source repository. For example, run `export GIT_TOKEN="enter your GIT TOKEN"`. The token needs permission to complete [these Git-related tasks](#git-tasks) as you move deployed resources to your project. 
+* Set up an authentication method to connect the project together with the catalog. You can use one of the following methods: 
    * Set the `IC_API_KEY` environment variable to access your {{site.data.keyword.cloud_notm}} account. For example, run `IC_API_KEY="Your API key"`.
    * Use your `trusted-profile-id` details to access your {{site.data.keyword.cloud_notm}} account. For more information, see [Finding the trusted profile ID](/docs/secure-enterprise?topic=secure-enterprise-tp-project#find-tp-id). For example, a trusted profile ID might look similar to `Profile-1bd5eala-000-4a6666-00000`.
 * Make sure that the [Project](/docs/cli?topic=cli-projects-cli) and [Catalogs management](/docs/secure-enterprise?topic=secure-enterprise-manage-catalogs-plugin) CLI plug-ins are up to date. Run the `ibmcloud plugin list` command to view the current version of the CLI plug-ins.
@@ -70,7 +70,7 @@ Skip this section if you already have a deployable architecture in your {{site.d
 If you deployed software by using a {{site.data.keyword.bpshort}} workspace or through a private catalog, you can move the deployed resources to a project by using the [ibmcloud catalog utility create-product-from-workspace](/docs/cli?topic=cli-manage-catalogs-plugin#publish-utility-create) command.
 
 The command does the following Git-related tasks:
-- Clones the deployable architecture repo.
+- Clones the deployable architecture repo. {: #git-tasks}
 - Pushes the `ibm_catalog.json` manifest file to a new branch.
 - Creates a placeholder architecture diagram (`architecture-diagram-placeholder.drawio.svg`).
 - Creates a Git release in the repo.
@@ -134,7 +134,7 @@ Complete the following steps to add a project configuration and move the {{site.
    ```
    {: pre}
 
-   The value for `--project-id` is from the project that you created for deployment-production by using the Projects UI earlier. The value for `--definition-locator-id` is the same as the version locator from the previous section.
+   The value for `--project-id` is the ID of the project that you created for your production deployment in the [before you begin](#move-prereqs) step. The value for `--definition-locator-id` is the same as the version locator from the previous section.
    {: tip}
 
    See the following example of `project config-create` command options.
