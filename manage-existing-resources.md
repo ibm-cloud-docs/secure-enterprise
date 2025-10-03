@@ -4,9 +4,9 @@ copyright:
 
   years: 2023, 2025
 
-lastupdated: "2025-07-11"
+lastupdated: "2025-10-03"
 
-keywords: target account, manage resources, enterprise architecture, administration account, resources, existing resources, organize resources
+keywords: target account, manage resources, enterprise architecture, administration account, resources, existing resources, organize resources, asset, assets, project
 
 subcollection: secure-enterprise
 
