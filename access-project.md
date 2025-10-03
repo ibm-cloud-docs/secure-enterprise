@@ -4,7 +4,7 @@ copyright:
 
   years: 2022, 2025
 
-lastupdated: "2025-09-12"
+lastupdated: "2025-10-03"
 
 keywords: project access, iam projects, assigning project access, assign access, access project
 
@@ -17,7 +17,7 @@ subcollection: secure-enterprise
 # Assigning access to projects
 {: #access-project}
 
-Projects are controlled by {{site.data.keyword.cloud}} Identity and Access Management (IAM). As an administrator on a project, you can grant users access to view and edit projects, approve changes, and deploy or destroy configuration resources. Projects also requires authorization with other {{site.data.keyword.cloud_notm}} services in order for users to validate and deploy configurations.
+Projects are controlled by {{site.data.keyword.cloud}} Identity and Access Management (IAM). As an administrator on a project, you can grant users access to view and edit projects, approve changes, and deploy or destroy configuration resources. Projects also require authorization with other {{site.data.keyword.cloud_notm}} services in order for users to validate and deploy configurations.
 {: shortdesc}
 
 Assigning users access to projects is different than authorizing a project to deploy into an account. To authorize a project to deploy, you can use either a [trusted profile](/docs/secure-enterprise?topic=secure-enterprise-tp-project&interface=ui) or an [API key](/docs/secure-enterprise?topic=secure-enterprise-authorize-project&interface=ui).
@@ -26,7 +26,7 @@ Assigning users access to projects is different than authorizing a project to de
 ## Actions and roles for the {{site.data.keyword.cloud_notm}} Projects service
 {: #service-access-projects}
 
-The following table includes the actions that users can take when they are assigned a specific role on the {{site.data.keyword.cloud_notm}} Projects service. Review the following information to make sure that you are assigning the correct level of access to your users.
+The following table includes the actions that users can take when they are assigned to a specific role on the {{site.data.keyword.cloud_notm}} Projects service. Review the following information to make sure that you are assigning the correct level of access to your users.
 
 | Role | Definition |Project permissions |
 |-------------|---------------------|---------------------|
@@ -54,15 +54,15 @@ To assign access to the {{site.data.keyword.cloud_notm}} Projects service, compl
 1. Click **Add** to add your policy configuration to your access summary.
 1. Click **Assign**.
 
-It's a best practice to [assign access to an access group](/docs/enterprise-management?topic=enterprise-management-access-enterprises) and then add users to the access group, instead of assigning access to users one by one. However, you can assign access to a single user by going to **Manage** > **Access (IAM)** > **Users** and selecting the user you want to assign access to. For more information, go to [Setting up access groups](/docs/account?topic=account-groups&interface=ui). 
+It's a best practice to [assign access to an access group](/docs/enterprise-management?topic=enterprise-management-access-enterprises) and then add users to the access group, instead of assigning access to users one by one. That way, you can quickly find which users have access to projects by viewing the access that is assigned to the access group. However, you can assign access to a single user by going to **Manage** > **Access (IAM)** > **Users** and selecting the user that you want to assign access to. For more information, go to [Setting up access groups](/docs/account?topic=account-groups&interface=ui). 
 {: tip}
 
 ## Granting access between the Projects service and other {{site.data.keyword.cloud_notm}} services
 {: #user-create-role}
 
-Before a project can validate or deploy configurations, the Projects service must be authorized in your account to communicate with other {{site.data.keyword.cloud_notm}} services. The following table lists the required authorizations. This authorization is only required once.
+Before a project can validate or deploy configurations, the Projects service must be authorized in your account to communicate with other {{site.data.keyword.cloud_notm}} services. The following table lists the required authorizations. This authorization is only required one time.
 
-An IAM administrator or a user with the required roles on those services can automatically grant authorizations by creating a project in your account, or they can [create the service to service authorizations manually](/docs/account?topic=account-serviceauth&interface=ui). 
+An IAM administrator or a user with the required roles on those services can automatically grant authorizations by creating a project in your account. Or, they can [create the service to service authorizations manually](/docs/account?topic=account-serviceauth&interface=ui). 
 {: tip}
 
 | Role | Source | Target | Source account |
