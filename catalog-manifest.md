@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-09-18"
+lastupdated: "2025-10-10"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -364,6 +364,11 @@ Variation display name.
 {: #flavor-name}
 
 Variation programmatic name. 
+
+#### `short_description`
+{: #flavor-shortdesc}
+
+A short description for this version of the variation.
 
 #### `index`
 {: #flavor-index}
@@ -846,7 +851,15 @@ The following values can be included in the `configuration` section:
     * `int` requires an integer input from users.
     * `number` requires a numeric value. The `number` type can represent both whole numbers and fractional values like `4.56`.
     * `password` requires a string input from users. The string is redacted in the console and logs.
-    * `string` requires a sequence of Unicode characters representing text. 
+    * `string` requires a sequence of Unicode characters representing text. You can optionally include a random string to add as a suffix, which helps avoid naming collisions for strings that are used as prefixes or as base names. You can also specify the length of this random string. The generated string is lower case, a-z, no special characters and preceeded with a dash, for example, `myString-wx`. If a default value is also given, then the suffix is added. If no default value is given, then the value is the suffix without the dash character. For example,
+
+    ```json
+    "random_string": {
+    	"length": 2
+    }
+    ```
+    {: codeblock}
+
     * `object` requires a Terraform object input from users. For more information, see [`map`](https://developer.hashicorp.com/terraform/language/expressions/types#map){: external}.
 
     Predefined types require manual input from users.
@@ -860,10 +873,12 @@ The following values can be included in the `configuration` section:
     * `vpc ssh key` requires users to select a VPC SSH key for authentication to a virtual machine.
     * `cluster` requires users to select a {{site.data.keyword.containershort}} or {{site.data.keyword.redhat_openshift_notm}} cluster. The output is the cluster ID.
     * `power iaas` requires users to select a {{site.data.keyword.powerSys_notm}} instance.
-    * `resource group` requires users to select a resource group. The output is the resource group's ID or name .
+    * `resource group` requires users to select a resource group. The output is the resource group's ID, name, or CRN.
     * `multi-line secure value` requires users to input text that can be split into multiple lines, which is redacted in the console and logs. For example, if a long key is required, the value is hidden in workspaces.
     * `schematics workspace` requires users to select a specific workspace form a dropdown list. This list is dynamically filtered based on dependencies defined in the deployable architecture. For example, if your deployable architecture, `example-da-1`, depends on another deployable architecture, `example-da-2`, the input dropdown list for `example-da-1` shows only workspaces associated with `example-da-2`. Users then select the appropriate instance of `example-da-2`'s workspace when setting up `example-da-1`.
-    * `json editor` gives users a space to specify larger JSON inputs or plain text files. 
+    * `json editor` gives users a space to specify larger JSON inputs or plain text files.
+    * `code editor` gives users a choice of JSON or HCL formatted inputs which is useful for Terraform-based inputs.
+    * `Platform resource` requires users to select an instance resource from a list for the type of resource that you specify. The resource type can be `VPC Subnet`, `VPC Image`, `VPC Floating IPs`, `Cloud Logs`, `Sysdig`, `Cloud Object Storage`, `Key Management Service`, or `Secrets Manager`. You can specify the ID, name, or CRN as the values that users can choose from and allow single or multiple selections. The output is the name or ID that your Terraform code requires. 
 
 `default_value`
 :   The value that is to be set as the default.
@@ -938,7 +953,12 @@ Within the `flavors` section, `schematics_env_values` specifies a list of the va
 #### `minimum_compatible_version` (optional)
 {: #minimum_compatible_version}
 
-A semver value that indicates the earliest version that is compatible with the current version. If no earlier versions are compatible with the current version, specify the current version value in this field.  By default, the current version is compatible with all earlier versions. 
+A semver value that indicates the earliest version that is compatible with the current version. If no earlier versions are compatible with the current version, specify the current version value in this field.  By default, the current version is compatible with all earlier versions.
+
+#### `ignore_readme`
+{: #ignore_readme}
+
+If set to `true`, the readme file is not used when you onboard this version, and the `long_description` field is empty. If the `long_description` field is empty, a link to the readme file does not appear in the **Related Links** menu in the catalog listing for the version.
 
 #### `terraform_version`
 {: #terraform_version}

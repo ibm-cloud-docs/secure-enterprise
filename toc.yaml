@@ -1,4 +1,3 @@
----
 toc:
   properties:
     subcollection: secure-enterprise
@@ -20,19 +19,19 @@ toc:
       - topicgroup:
           label: Learn about access management
           topics:
-            - include: ../account/iam-whatis.md
-            - include: ../account/iam-identities.md
-            - include: ../account/iam-access-concepts.md
-            - include: ../account/iam-policies-overview.md
-            - include: ../account/iam-roles-overview.md
-            - include: ../account/iam-mappings.md
-            - include: ../account/context-restrictions-what-is.md
+          - include: ../account/iam-whatis.md
+          - include: ../account/iam-identities.md
+          - include: ../account/iam-access-concepts.md
+          - include: ../account/iam-policies-overview.md
+          - include: ../account/iam-roles-overview.md
+          - include: ../account/iam-mappings.md
+          - include: ../account/context-restrictions-what-is.md
       - topicgroup:
           label: Learn about deploying compliant workloads
           topics:
-            - compliance-continuous.md
-            - index.md
-            - secure-software-supply-chain.md
+          - compliance-continuous.md
+          - index.md
+          - secure-software-supply-chain.md
       - topicgroup:
           label: Best practices
           topics:
@@ -43,11 +42,11 @@ toc:
       id: plan
       topics:
       - topicgroup:
-              label: Planning and designing an architecture
-              topics:
-              - planning-architecture.md
-              - planning-da.md
-              - da-publish.md
+          label: Planning and designing an architecture
+          topics:
+          - planning-architecture.md
+          - planning-da.md
+          - da-publish.md
       - security-setup.md
   - navgroup:
       id: tutorial
@@ -59,7 +58,7 @@ toc:
           - include: ../enterprise-management/custom-share.md
             navtitle: Sharing your deployable architecture
           - custom-extend.md
-      - topicgroup: 
+      - topicgroup:
           label: Deploying and undeploying architectures
           topics:
           - deploy-regions.md
@@ -96,7 +95,7 @@ toc:
               - manual-customize.md
               - config-stack.md
           - topicgroup:
-              label: Editing deployable architectures locally 
+              label: Editing deployable architectures locally
               topics:
               - catalog-manifest.md
               - stack-definition.md
@@ -226,7 +225,7 @@ toc:
   - navgroup:
       id: help
       topics:
-      - get-help.md 
+      - get-help.md
       - known-issues.md
       - topic: faqs-projects.md
         navtitle: FAQ
