@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-10"
+lastupdated: "2025-10-31"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -878,7 +878,7 @@ The following values can be included in the `configuration` section:
     * `schematics workspace` requires users to select a specific workspace form a dropdown list. This list is dynamically filtered based on dependencies defined in the deployable architecture. For example, if your deployable architecture, `example-da-1`, depends on another deployable architecture, `example-da-2`, the input dropdown list for `example-da-1` shows only workspaces associated with `example-da-2`. Users then select the appropriate instance of `example-da-2`'s workspace when setting up `example-da-1`.
     * `json editor` gives users a space to specify larger JSON inputs or plain text files.
     * `code editor` gives users a choice of JSON or HCL formatted inputs which is useful for Terraform-based inputs.
-    * `Platform resource` requires users to select an instance resource from a list for the type of resource that you specify. The resource type can be `VPC Subnet`, `VPC Image`, `VPC Floating IPs`, `Cloud Logs`, `Sysdig`, `Cloud Object Storage`, `Key Management Service`, or `Secrets Manager`. You can specify the ID, name, or CRN as the values that users can choose from and allow single or multiple selections. The output is the name or ID that your Terraform code requires. 
+    * `Platform resource` requires users to select an instance resource from a list for the type of resource that you specify. The resource type can be `VPC Subnet`, `VPC Image`, `VPC Floating IPs`, `Cloud Logs`, `Sysdig`, `Cloud Object Storage`, `Key Protect`, or `Secrets Manager`. You can specify the ID, name, or CRN as the values that users can choose from and allow single or multiple selections. The output is the name or ID that your Terraform code requires.
 
 `default_value`
 :   The value that is to be set as the default.
