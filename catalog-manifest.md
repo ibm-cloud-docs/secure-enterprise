@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-10"
+lastupdated: "2025-11-06"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -878,7 +878,10 @@ The following values can be included in the `configuration` section:
     * `schematics workspace` requires users to select a specific workspace form a dropdown list. This list is dynamically filtered based on dependencies defined in the deployable architecture. For example, if your deployable architecture, `example-da-1`, depends on another deployable architecture, `example-da-2`, the input dropdown list for `example-da-1` shows only workspaces associated with `example-da-2`. Users then select the appropriate instance of `example-da-2`'s workspace when setting up `example-da-1`.
     * `json editor` gives users a space to specify larger JSON inputs or plain text files.
     * `code editor` gives users a choice of JSON or HCL formatted inputs which is useful for Terraform-based inputs.
-    * `Platform resource` requires users to select an instance resource from a list for the type of resource that you specify. The resource type can be `VPC Subnet`, `VPC Image`, `VPC Floating IPs`, `Cloud Logs`, `Sysdig`, `Cloud Object Storage`, `Key Management Service`, or `Secrets Manager`. You can specify the ID, name, or CRN as the values that users can choose from and allow single or multiple selections. The output is the name or ID that your Terraform code requires. 
+    * `Platform resource` requires users to select an instance resource from a list for the type of resource that you specify. The resource type can be `VPC Subnet`, `VPC Image`, `VPC Floating IPs`, `Cloud Logs`, `Sysdig`, `Cloud Object Storage`, `Key Protect`, or `Secrets Manager`. You can specify the ID, name, or CRN as the values that users can choose from and allow single or multiple selections. The output is the name or ID that your Terraform code requires.
+    * `secret_group` requires users to select a secret group by name from a specific {{site.data.keyword.secrets-manager_short}} instance. The output is the secret group's ID or name. To list groups from a specific {{site.data.keyword.secrets-manager_short}} instance, this type must be associated with the `platform resource` custom type, with resource type `Secrets Manager`, and with a `crn` value type output.
+    * `secret` requires users to select a secret by name from a specific {{site.data.keyword.secrets-manager_short}} instance. The output is the secret's ID, name, or CRN. To list secrets from a specific {{site.data.keyword.secrets-manager_short}} instance, this type must be associated with at least the `platform resource` custom type, with resource type `Secrets Manager`, and with a `crn` value type output. You can optionally associate it with the `secret_group` type as well with a `id` value type output to list secrets from a specific secret group in that {{site.data.keyword.secrets-manager_short}} instance.
+    * `kms_key` requires users to select a key from a specific {{site.data.keyword.keymanagementserviceshort}} instance. The output is the key's ID, name, or CRN. To list keys from a specific {{site.data.keyword.keymanagementserviceshort}} instance, this type must be associated with the `platform resource` custom type, with resource type `Key Protect`, and with a `crn` value type output.
 
 `default_value`
 :   The value that is to be set as the default.
