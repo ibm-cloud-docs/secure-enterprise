@@ -4,7 +4,7 @@ copyright:
   years: 2022, 2025
 
 
-lastupdated: "2025-09-12"
+lastupdated: "2025-11-13"
 
 
 keywords: best practice projects, manage projects, project, environment
@@ -59,7 +59,7 @@ Typically a single {{site.data.keyword.secrets-manager_short}} instance is used 
 ## Controlling deployments by using environments
 {: #best-practice-env}
 
-Within a project, you can group related configurations together by using an environment. An environment can also contain properties such as input values, authentication details, and {{site.data.keyword.compliance_short}} attachments. These properties are automatically added to a configuration when you select an environment, which helps ensure accurate deployments to your target account. When you edit a configuration, you can select an environment for the configuration to use in the **Define details** section.
+Within a project, you can group related configurations together by using an environment. An environment can also contain properties such as input values and authentication details. These properties are automatically added to a configuration when you select an environment, which helps ensure accurate deployments to your target account. When you edit a configuration, you can select an environment for the configuration to use in the **Define details** section.
 
 ### Benefits to using environments
 {: #benefits-env}
