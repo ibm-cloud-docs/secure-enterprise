@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2025
-lastupdated: "2025-05-27"
+lastupdated: "2025-11-17"
 
 keywords:
 
@@ -18,44 +18,6 @@ subcollection: secure-enterprise
 
 With continuous security and compliance at the core of {{site.data.keyword.cloud}}'s platform, you can find compliant-by-default infrastructure for hosting your regulated workloads in the cloud. From deployable architectures for secure infrastructure and DevSecOps pipelines to continuous validation through {{site.data.keyword.compliance_short}}, you can be sure that your organization is secure and compliant through every stage of development.
 {: shortdesc}
-
-![Security and compliance for regulated workloads on {{site.data.keyword.cloud_notm}}](https://cdnapisec.kaltura.com/html5/html5lib/v2.101/mwEmbedFrame.php/p/1773841/uiconf_id/27941801/entry_id/1_oh70qmd5?wid=_1773841&iframeembed=true&entry_id=1_oh70qmd5){: video output="iframe" data-script="#regulatedworkload-video-transcript" id="mediacenter-player" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen}
-
-## Video transcript
-{: #regulatedworkload-video-transcript}
-{: notoc}
-
-Hi, I’m Chris Mitchell, an STSM and Architect for IBM Cloud.
-
-Today’s enterprises are challenged to manage risk and compliance, contain costs, and unlock innovation.
-
-Here at IBM Cloud, we understand the complexity and challenges in optimizing for security and compliance, reducing lead time for deploying new systems, and successfully running secure and compliant infrastructure.
-
-IBM Cloud is the first secure and compliant-by-default cloud for regulated industries. It is specifically designed to reduce risk and has been architected to be the hub for enterprise IT security and compliance.
-
-With the integration of security and compliance through our catalog of deployable architectures and other tools, you can streamline the process of defining compliance profiles, implementing secure infrastructure, and assessing the compliance of your enterprise workloads.
-
-To define your goals for assessing your workloads, you can use one of IBM Cloud’s predefined compliance profiles, like IBM Cloud Framework for Financial Services, or you can create your own custom profile in the IBM Cloud Security and Compliance Center.
-
-Then, depending on your defined compliance standards and infrastructure needs, you can take advantage of automated well-documented architecture patterns available in the catalog that are based on the IBM Cloud Framework for Financial Services.
-
-The IBM Cloud Framework for Financial Services reference architectures are based on a set of best practices for cloud infrastructure and software as a service.
-
-When you provision infrastructure using these deployable architectures, you meet the defined controls and stay within the constraints of the IBM Cloud Framework for Financial Services profile. This can help take the guesswork out of creating secure and compliant patterns for infrastructure in your enterprise.
-
-Each deployable architecture can be deployed and configured by using an IBM Cloud project. Projects support a simplified process for deploying repeatable infrastructure patterns with integrated compliance checks.
-
-With projects, you can review changes to infrastructure costs and review compliance checks based on your configuration of the architecture prior to deployment, which helps build in transparency and trust along your journey.
-
-Finally, when you’re ready to assess the compliance of your deployed cloud resources against your defined standards, you can use the Security and Compliance Center to evaluate resources in your accounts.
-
-Whether it’s a one-time evaluation or recurring scans, you can prepare for audits by having a clear view of the security and compliance posture of your enterprise.
-
-And, to ensure continuous compliance of your cloud resources, you can set up notifications to get alerted when an issue is found so your team can stay on top of remediating any issues.
-
-With the architectures and security tools available through IBM Cloud, you can define your compliance goals from the start, deploy secure solutions with automation, and stay compliant, all while managing your resources at scale.
-
-To learn more about achieving continuous compliance as an enterprise, visit the documentation. https://cloud.ibm.com/docs/secure-enterprise
 
 ## Reviewing available controls
 {: #review-controls}
