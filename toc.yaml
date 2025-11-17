@@ -37,7 +37,7 @@ toc:
           topics:
           - bp_projects.md
           - bp-da.md
-          - include: ../security-compliance/best-practices.md
+          - include: ../workload-protection/cspm-best-practices.md
   - navgroup:
       id: plan
       topics:
@@ -47,7 +47,8 @@ toc:
           - planning-architecture.md
           - planning-da.md
           - da-publish.md
-      - security-setup.md
+      - include: ../workload-protection/getting-started.md
+        navtitle: Preparing your account to scan for security and compliance
   - navgroup:
       id: tutorial
       topics:
@@ -150,11 +151,7 @@ toc:
               - attention-items.md
               - delete-project.md
           - project-spend.md
-      - topicgroup:
-          label: Ensuring continuous compliance
-          topics:
-          - compliance-enterprise.md
-          - continuous-app-compliance.md
+      - continuous-app-compliance.md
       - topicgroup:
           label: Observability
           topics:

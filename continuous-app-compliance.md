@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023, 2024
-lastupdated: "2024-02-23"
+  years: 2023, 2025
+lastupdated: "2025-11-17"
 
 keywords:
 
@@ -45,7 +45,7 @@ The CC pipeline scans existing deployed artifacts and their source repositories 
 ## Managing issues and collecting evidence to be audit-ready
 {: #tracking-compliance-issues}
 
-After scanning and running checks on artifacts and source repositories, the pipeline creates a new incident issue or updates the existing incident issues in the incident repository. Finally, using these issues and the results, the pipeline collects evidence and summarizes the evidence. The evidence is reported to the {{site.data.keyword.compliance_long}}, and included in an automated change rquest document.
+After scanning and running checks on artifacts and source repositories, the pipeline creates a new incident issue or updates the existing incident issues in the incident repository. Finally, using these issues and the results, the pipeline collects evidence and summarizes the evidence.
 
 Two types of issues are reported from your CI and CC pipelines: incident issues and nonincident issues. Incident issues can arise due to vulnerabilities or CVEs found inside the code or the deployed artifacts, and nonincident issues do not arise from vulnerabilities, but rather represent a deviation from the compliance posture, for example, unit test failures and branch protection check failures. For more information about managing issues, see [Processing incident and nonincident issues](/docs/devsecops?topic=devsecops-issue-processing) and [Managing incident issues](/docs/devsecops?topic=devsecops-incident-issues)
 
