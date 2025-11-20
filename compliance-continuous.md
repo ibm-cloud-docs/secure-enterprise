@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2025
-lastupdated: "2025-11-17"
+lastupdated: "2025-11-20"
 
 keywords:
 
@@ -16,7 +16,7 @@ subcollection: secure-enterprise
 # Achieving continuous compliance as an enterprise
 {: #continuous-compliance}
 
-With continuous security and compliance at the core of {{site.data.keyword.cloud}}'s platform, you can find compliant-by-default infrastructure for hosting your regulated workloads in the cloud. From deployable architectures for secure infrastructure and DevSecOps pipelines to continuous validation through {{site.data.keyword.compliance_short}}, you can be sure that your organization is secure and compliant through every stage of development.
+ With continuous security and compliance at the core of {{site.data.keyword.cloud}}'s platform, you can find compliant-by-default infrastructure for hosting your regulated workloads in the cloud. From deployable architectures for secure infrastructure and DevSecOps pipelines to continuous validation through {{site.data.keyword.compliance_short}}, you can be sure that your organization is secure and compliant through every stage of development.
 {: shortdesc}
 
 ## Reviewing available controls
@@ -51,4 +51,4 @@ After you deploy resources that you know are compliant, you can ensure that you 
 
 Second, you can ensure that you're deploying your code by using DevSecOps pipelines. When you use the continuous compliance toolchain, scans are reexecuted against your current production code artifacts. This continuous scanning helps to ensure that any code that is deployed in to production is checked for the latest known vulnerabilities allowing for regular revalidation of deployed code and remediation of any new issues that are discovered since the last scan.
 
-Staying compliant and audit-ready is of the utmost importance. {{site.data.keyword.compliance_short}} allows you to define the controls you need to meet by using pre-defined or custom profiles, attach the profiles to a group of resources, or scope, and [perform regularly scheduled evaluations](/docs/security-compliance?topic=security-compliance-scopes&interface=ui). As evaluations are completed, the results are displayed in a dashboard so you can get an overarching view of your current compliance posture against the controls that are important for your use case and download compliance reports. Your security and compliance managers can also choose to set up notifications to get alerted when an issue is found so that it can be remediated quickly. In addition, {{site.data.keyword.compliance_short}} can collect evidence from your DevSecOps pipeline runs on your application code so that it can show a complete view of your compliance on {{site.data.keyword.cloud_notm}}.
+Staying compliant and audit-ready is of the utmost importance. {{site.data.keyword.compliance_short}} allows you to define the controls you need to meet by using pre-defined or custom profiles, attach the profiles to a group of resources, or scope, and [perform regularly scheduled evaluations](/docs/security-compliance?topic=security-compliance-scopes&interface=ui). As evaluations are completed, the results are displayed in a dashboard so you can get an overarching view of your current compliance posture against the controls that are important for your use case and download compliance reports. Your security and compliance managers can also choose to set up notifications to get alerted when an issue is found so that it can be remediated quickly. In addition, {{site.data.keyword.compliance_short}} can collect evidence from your DevSecOps pipeline runs on your application code so that it can show a complete view of your compliance on {{site.data.keyword.cloud_notm}}. 

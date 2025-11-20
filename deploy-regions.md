@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2025
 
-lastupdated: "2025-09-12"
+lastupdated: "2025-11-20"
 
 keywords: multiple regions, deploy, projects, code engine
 
@@ -105,7 +105,7 @@ You successfully added the deployable architecture to a project and are ready to
 
 1. In the **Details** section, review the information and make sure the `Example Corp infrastructure dev` environment is selected.
 1. From the **Security** section, confirm that the correct authentication method is selected based on what you added to the environment.
-1. During validation, a Code Risk Analyzer scan is run on your architecture, which includes a compliance scan based on a set of controls. `Example Corp's infrastructure` doesn't include any applicable controls, but you can set up your own attachment through {{site.data.keyword.compliance_short}} if you want to. For more information, see [Configuring the architecture](/docs/secure-enterprise?topic=secure-enterprise-config-project#how-to-config). Select **Architecture default** if you don't want to use your own attachment from {{site.data.keyword.compliance_short}}. 
+1. During validation, a Code Risk Analyzer scan is run on your architecture, which includes a compliance scan based on a set of requirements. `Example Corp's infrastructure` doesn't include any applicable requirements, but you can set up your own policy with requirements through {{site.data.keyword.sysdigsecure_short}} if you want to. For more information, see [Configuring the architecture](/docs/secure-enterprise?topic=secure-enterprise-config-project#how-to-config). Select **Architecture default** if you don't want to use policies from {{site.data.keyword.sysdigsecure_short}}. 
 1. From the **Inputs** section, enter values for the required input variables for the deployable architecture configuration:
     
     1. Enter `us-south` as the `prefix` to use for naming conventions.

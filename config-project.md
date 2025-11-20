@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2025
 
-lastupdated: "2025-09-12"
+lastupdated: "2025-11-20"
 
 keywords: manage project, rename project, move project, deploy project, merge request, merge changes, deploy configuration
 
@@ -72,7 +72,7 @@ If you want to make a relative reference, you can do so. A relative reference be
 
 Since environments are created within a project, and not within a configuration, you don't need to include `/configs/<configname>` if you want to reference a parameter in an environment. But you must include the name of the environment after the `environments` reference type. Then, specify `inputs` and provide the name of the input that you want to reference: `ref:./environments/<environment_name>/inputs/<name>`. You can't add a reference to an authentication parameter or a compliance profile from an environment.
 
-For example, the following reference points to an input parameter that is named `cluster_id` within the `Production` environment: `ref:./environments/Production/inputs/cluster_id`.
+For example, the following reference points to an input parameter that is named `cluster_id` within the `Production` environment: `ref:./environments/Production/inputs/cluster_id`. 
 
 ## Configuring an architecture by using the console
 {: #how-to-config}
@@ -104,7 +104,7 @@ To create a customized configuration, complete the following steps:
     Depending on the deployable architecture, some inputs might be configured for you with references to other architectures or fixed values. These values were provided by the creator of the deployable architecture. Be careful if you edit these values, especially references, as the architecture might not successfully deploy with different values. Hover on the input and click **Reset** to revert the input to the fixed value the creator specified. You can't reset input references. Only inputs with fixed values can be reset to their original fixed value. 
     {: important} 
 
-1. Optional: Toggle **Advanced** to the on position to enter values for optional inputs.
+1. Optional: Toggle **Optional inputs** to the on position to enter values for optional inputs.
 1. Click **Save**.
 1. Click **Validate**. The modal that is displayed provides more details about your in-progress validation.
 
@@ -112,6 +112,10 @@ To create a customized configuration, complete the following steps:
 
 If you're configuring deployable architectures that are stacked together, make sure to validate each architecture in order according to their dependencies. Alternatively, you can edit your project's settings to automatically deploy configuration changes that are validated successfully. If you do so, each architecture is validated, approved, and deployed automatically according to their dependencies. For more information, go to [Deploying an architecture](/docs/secure-enterprise?topic=secure-enterprise-deploy-project&interface=ui). 
 {: important}
+
+
+
+
 
 ## Approving configuration changes by using the console
 {: #approve-changes}
