@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-01"
+lastupdated: "2025-11-19"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -17,6 +17,10 @@ subcollection: secure-enterprise
 
 When you're ready to share your deployable architecture with other members of your organization, you can add it to a private catalog. Additionally, you can use the onboarding flow to validate your architecture.
 {: shortdesc}
+
+Onboarding your deployable architecture to a private catalog involves adding your source code to the catalog, then editing the details of your deployable architecture, followed by validating it. Then, you review the cost estimate and compliance information for your deployable architecture. When you're done, you can share the deployable architecture or publish it publicly in the {{site.data.keyword.cloud_notm}}.
+
+![Onboarding a deployable architecture to a private catalog](images/deployable-architecture-flow-01.svg "Onboarding a deployable architecture to a private catalog"){: caption="High-level process for onboarding a deployable architecture to a private catalog" caption-side="bottom"}
 
 ## Before you begin
 {: #onboard-before}
