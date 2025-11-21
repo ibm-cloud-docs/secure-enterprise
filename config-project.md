@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2025
 
-lastupdated: "2025-11-20"
+lastupdated: "2025-11-21"
 
 keywords: manage project, rename project, move project, deploy project, merge request, merge changes, deploy configuration
 
@@ -97,7 +97,7 @@ To create a customized configuration, complete the following steps:
     To view the list of added controls, go to the [{{site.data.keyword.cloud}} catalog](/catalog){: external} and select the deployable architecture that you're configuring. The Security & compliance tab lists all of the controls that were added to the deployable architecture.
     {: tip}
 
-    If you select **Select from {{site.data.keyword.compliance_short}}**, you must have an instance of the service and an attachment through {{site.data.keyword.compliance_short}} in the target account that you want to deploy to. For help with creating an attachment, see [Evaluating resource configuration with {{site.data.keyword.compliance_long}}](/docs/secure-enterprise?topic=secure-enterprise-security-compliance-scanning).
+    If you select **Select from {{site.data.keyword.compliance_short}}**, you must have an instance of the service and an attachment through {{site.data.keyword.compliance_short}} in the target account that you want to deploy to.
 
 1. From the **Inputs** panel, enter values for the required inputs for the deployable architecture configuration. 
     
