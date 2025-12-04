@@ -4,7 +4,7 @@ copyright:
 
   years: 2022, 2025
 
-lastupdated: "2025-09-03"
+lastupdated: "2025-12-04"
 
 keywords: add project, create project, set project
 
@@ -60,10 +60,8 @@ You can also add a deployable architecture to a project directly from the catalo
 
 1. Go to the [{{site.data.keyword.cloud_notm}} catalog](/catalog).
 1. Select the deployable architecture.
+1. From the catalog listing, you can create a new project or add to an existing one. 
 1. Click **Configure and deploy**.
-1. You can create a new project or add to an existing project.
-1. Enter the required details for the deployable architecture.
-1. Click **Add**.
 
 ### Customizing a deployable architecture in your project
 {: #customize-da-in-project}

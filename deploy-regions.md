@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2025
 
-lastupdated: "2025-11-20"
+lastupdated: "2025-12-04"
 
 keywords: multiple regions, deploy, projects, code engine
 
@@ -88,14 +88,14 @@ Now that your project is created, you're ready to create an environment to share
 
 Before you can configure `Example Corp's infrastructure`, you need to find the deployable architecture in `Example Corp catalog` and add it to the `Example Corp infrastructure` project.
 
-1. In the **Example Corp infrastructure** project, select **Configurations** > **Create**.
+1. In the **Example Corp infrastructure** project, click **Configurations** > **Create**.
 1. Use the catalog menu to open the private catalog called `Example Corp catalog`. 
 1. From the Type section, select **Private products** to filter the list of products. 
 1. Select **Example Corp's infrastructure** from the list of remaining products.
-1. Select **Configure and deploy**.
-1. Change the configuration name to `example-corp-us-south` to indicate that you want to deploy the configuration in the US southern region.
-1. Select **Example Corp infrastructure dev** as the environment.
-1. Click **Add**.
+1. Make sure that **Example Corp infrastructure** is selected as the project. 
+1. Click the **Project settings** icon ![Project settings icon](../icons/settings.svg "Settings") and change the name of the configuration to `example-corp-us-south`.
+1. Select **Example Corp infrastructure dev** as the environment and click **Save**.
+1. Click **Configure and deploy**.
 
 You successfully added the deployable architecture to a project and are ready to define the configuration.
 

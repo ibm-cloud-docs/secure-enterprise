@@ -4,7 +4,7 @@ copyright:
 
   years: 2025
 
-lastupdated: "2025-09-12"
+lastupdated: "2025-12-04"
 
 keywords: deployable architecture, customization, Elasticsearch, Postgresql, Code Engine, extend, stack, deployable architecture stack
 
@@ -179,11 +179,11 @@ Before you can [share `Example Corp's infrastructure` with your enterprise](/doc
 
 1. Go to the [{{site.data.keyword.cloud_notm}} catalog](/catalog) and open the `Example Corp catalog` private catalog. 
 1. Select **Example Corp's infrastructure** to open its catalog listing. 
-1. Make sure **0.0.2** is selected as the product version. 
+1. Make sure **0.0.2** is selected as the version. 
+1. Click **Create project**, name the new project `Testing Example Corp infrastructure`, and click **Create**. 
+1. Click the **Project settings** icon ![Project settings icon](../icons/settings.svg "Settings"), change the name of the configuration to `Example Corp infrastructure with Elasticsearch`, and click **Save**.
+1. In the Deployable architecture overview section, click **Customize**, make sure that **Cloud automation for {{site.data.keyword.databases-for-elasticsearch}}** is selected, and click **Save**. 
 1. Click **Configure and deploy**. 
-1. Name the new project `Testing Example Corp infrastructure`. 
-1. Change the name of the configuration to `Example Corp infrastructure with Elasticsearch` and click **Next**. 
-1. Make sure that **Cloud automation for {{site.data.keyword.databases-for-elasticsearch}}** is selected and click **Add to project**. 
 1. [Configure the architecture](/docs/secure-enterprise?topic=secure-enterprise-config-project&interface=ui#how-to-config) by completing the following steps: 
     1. In the **Details** section, review the information and click **Next**. 
     1. In the **Security** section, provide an authentication method to deploy to your target account and click **Next**. Use a trusted profile or an API key. 
@@ -213,11 +213,11 @@ Complete the same steps to verify that `Example Corp's infrastructure` works wit
 
 1. On the Configurations tab in the `Testing Example Corp infrastructure` project, click **Create** and open the `Example Corp catalog` private catalog.
 1. Select **Example Corp's infrastructure** to open its catalog listing. 
-1. Make sure **0.0.2** is selected as the product version. 
-1. Click **Configure and deploy**. 
+1. Make sure **0.0.2** is selected as the version. 
 1. Make sure that **Testing Example Corp infrastructure** is selected as the project. 
-1. Change the name of the configuration to `Example Corp infrastructure with {{site.data.keyword.postgresql}}` and click **Next**. 
-1. Select **Cloud automation for {{site.data.keyword.databases-for-postgresql}}** to include it and click **Add to project**. 
+1. Click the **Project settings** icon ![Project settings icon](../icons/settings.svg "Settings"), change the name of the configuration to `Example Corp infrastructure with {{site.data.keyword.postgresql}}`, and click **Save**.
+1. In the Deployable architecture overview section, click **Customize**, make sure that **Cloud automation for {{site.data.keyword.databases-for-postgresql}}** is selected, and click **Save**. 
+1. Click **Configure and deploy**. 
 1. Configure the architecture. Then, validate, approve, and deploy it to verify that `Example Corp's infrastructure` works with {{site.data.keyword.postgresql}} as intended. 
     
     As you configure the architecture, select **us-east** for the `region` input variable to confirm that the architecture can be deployed to both the US south and US east regions. Enter `test-east` as the prefix to indicate which region the resources are deployed to. 
