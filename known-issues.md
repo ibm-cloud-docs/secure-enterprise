@@ -4,7 +4,7 @@ copyright:
 
   years: 2022, 2025
 
-lastupdated: "2025-01-29"
+lastupdated: "2025-12-05"
 
 keywords: known issues, known limitations
 
@@ -39,11 +39,6 @@ Configurations can be added, deleted, and renamed. Moving a configuration betwee
 {: #cost-estimate-known-issue}
 
 Cost estimation is available for deployable architectures in the {{site.data.keyword.cloud_notm}} catalog. Depending on the deployable architecture, a starting cost is estimated based on the available data. This estimated amount is subject to change as the architecture is customized within a project, and it does not include all resources, usage, licenses, fees, discounts, or taxes. For more information, see [Estimating architecture costs in a project](/docs/secure-enterprise?topic=secure-enterprise-cost-estimate-project).
-
-## API, SDK, and Terraform
-{: #api-sdk-tf-known-issue}
-
-The projects API, SDK, and Terraform functionalities are beta for this release. Beta products are made solely available for evaluation and testing purposes. There are no warranties, SLAs, or support provided and beta products are not intended for production use.
 
 {{../account/known-issues.md#policy-version-limit}}
 
