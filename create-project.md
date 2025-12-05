@@ -4,7 +4,7 @@ copyright:
 
   years: 2022, 2025
 
-lastupdated: "2025-12-04"
+lastupdated: "2025-12-05"
 
 keywords: add project, create project, set project
 
@@ -72,6 +72,8 @@ Depending on the deployable architecture, you might be able to customize it when
 * Add optional deployable architectures to expand the solution for a particular use case. 
 * Swap out one architecture for another. For example, if multiple database options are provided, you can select the one you'd like to use.  
 * Select an existing configuration of an architecture in your project to reuse with the architecture that you're adding. By doing so, you can reduce costs and reuse the same deployment for multiple architectures. 
+
+In the Extend this architecture section of the catalog listing, click **Customize** to refine your architecture before you configure and deploy it. If **Customize** isn't available on the catalog listing for the deployable architecture, you can still configure the architecture and [customize it by stacking other deployable architectures with it in your project](/docs/secure-enterprise?topic=secure-enterprise-config-stack&interface=ui).  
 
 After you make your selections and add the deployable architecture to your project, you can customize it further by selecting the **Options** icon ![Options icon](../icons/action-menu-icon.svg "Options") > **Customize architecture** from the Configurations tab. From there, you can add other compatible deployable architectures to further customize the solution.
 
