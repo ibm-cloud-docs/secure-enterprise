@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-11-19"
+lastupdated: "2025-12-08"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -188,6 +188,8 @@ If the version fails validation because of a CRA scan, an administrator for the 
 
 Ensure that you fully understand the costs that are associated with deploying your architecture. The version must be validated before you can generate an estimated cost.
 
+
+
 ### Managing compliance
 {: #manage-compliance}
 
@@ -209,6 +211,10 @@ When you make a deployable architecture available to others in your organization
 6. In the **Manage compliance** tab of the catalog UI, click **Add scan**.
 7. Select an **Instance**, **Profile**, and the specific scan that you want to add.
 8. Click **Add**
+
+
+
+
 
 ### Reviewing requirements
 {: #review-requirements}
