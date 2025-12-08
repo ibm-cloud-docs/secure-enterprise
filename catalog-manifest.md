@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-11-06"
+lastupdated: "2025-12-08"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -38,11 +38,13 @@ Let's look at where the permissions and architecture diagram details are specifi
 
 ![Deployable architecture permissions and architecture text mapping to the source file](images/da-arch-iam-details-mapping.png "Deployable architecture permissions and architecture text mapping to the source file"){: caption="Deployable architecture permissions and architecture text mapping to the source file" caption-side="bottom"}
 
-And, if your architecture meets a specific level of compliance that is verified with a scan by using the {{site.data.keyword.compliance_short}}, you can add a compliance claim per variation. You define how your architecture meets a certain level of compliance in the `ibm_catalog.json` file by specifying the {{site.data.keyword.compliance_short}} profile. You must also run a scan on the resources that your architecture creates before onboarding to {{site.data.keyword.cloud_notm}}. For more information, see [Managing compliance information for your deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-format-controls).
+ And, if your architecture meets a specific level of compliance that is verified with a scan by using the {{site.data.keyword.compliance_short}}, you can add a compliance claim per variation. You define how your architecture meets a certain level of compliance in the `ibm_catalog.json` file by specifying the {{site.data.keyword.compliance_short}} profile. You must also run a scan on the resources that your architecture creates before onboarding to {{site.data.keyword.cloud_notm}}. For more information, see [Managing compliance information for your deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-format-controls).
 
 See in the following example how the compliance information that is defined in the manifest file is displayed to users.
 
 ![Deployable architecture compliance](images/da-compliance-mapping.png "Deployable architecture compliance"){: caption="Deployable architecture compliance" caption-side="bottom"}
+
+
 
 ## Editing your manifest
 {: #edit-manifest}
@@ -434,6 +436,8 @@ The following values can be included within the `licenses` section:
 `description`
 :   A description of the license.
 
+
+
 #### `compliance`
 {: #compliance}
 
@@ -494,6 +498,10 @@ The following values can be included at the `compliance` level:
 
 If you have included controls in your readme and your catalog manifest file, the manifest file takes precedence. It is best practice to make sure the controls that are listed in your catalog manifest file match the controls in your readme file.
 {: note}
+
+
+
+
 
 #### `change_notices` (optional)
 {: #change_notices}

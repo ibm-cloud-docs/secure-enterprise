@@ -4,7 +4,7 @@ copyright:
 
   years: 2025
 
-lastupdated: "2025-09-19"
+lastupdated: "2025-12-04"
 
 keywords: deploy, customized application, security services, observability services, project, Code Engine, AI, application
 
@@ -54,9 +54,9 @@ To secure your application and enable monitoring capabilities, add the Cloud fou
 1. Select the `Example Corp infrastructure` project that contains your previously created customized deployable architecture and click **Configurations**.
 1. Click **Create**. This step takes you to the {{site.data.keyword.cloud_notm}} catalog.
 1. Find the **Cloud foundation for security and observability** deployable architecture in the catalog and select it.
-1. Click **Configure and deploy**.
-1. Name your configuration `security-services`.
-1. Click **Add** to add the deployable architecture to your `Example Corp infrastructure` project.
+1. Make sure that **Example Corp infrastructure** is selected as the project. 
+1. Click the **Project settings** icon ![Project settings icon](../icons/settings.svg "Settings") and change the name of the configuration to `security-services`.
+1. Click **Configure and deploy** to add the deployable architecture to your `Example Corp infrastructure` project.
 
 ## Configure the observability and security services deployable architecture
 {: #configure-observability-security}
@@ -75,7 +75,7 @@ After adding Cloud foundation for security and observability to your project, co
 1. You don't need to set the region value as that is set in the [Connect the customized application to the security and observability services](#connect-customized-da-services) step.
 1. Turn on the **Advanced** configuration option if you need to fine-tune your configuration.
 1. Click **Done** and then click **Save**.
-1. Click **View stack configurations**. This step takes you to your configurations where you can find the `security-services` stack, which contains the following services that are ready to be validated:
+1. Click **View stack configurations**. This step takes you to your configurations where you can find the `security-services` configuration, which contains the following services that are ready to be validated:
 
     * Key management
     * {{site.data.keyword.cos_short}}

@@ -4,7 +4,7 @@ copyright:
 
   years: 2024, 2025
 
-lastupdated: "2025-11-21"
+lastupdated: "2025-12-02"
 
 keywords:
 
@@ -17,7 +17,7 @@ subcollection: secure-enterprise
 # Managing compliance information for your deployable architecture
 {: #format-controls}
 
-By using the `ibm_cloud.json` manifest file, you can include claims that your deployable architecture meets specific compliance requirements. After you onboard and publish your deployable architecture to the catalog, users can view which controls or {{site.data.keyword.compliance_short}} predefined profiles your product adheres to. You verify the compliance information before you onboard your deployable architecture.
+ By using the `ibm_cloud.json` manifest file, you can include claims that your deployable architecture meets specific compliance requirements. After you onboard and publish your deployable architecture to the catalog, users can view which controls or {{site.data.keyword.compliance_short}} predefined profiles your product adheres to. You verify the compliance information before you onboard your deployable architecture.
 {: shortdesc}
 
 Here's an example from the VSI on VPC landing zone's catalog page where the Standard variation meets the {{site.data.keyword.framework-fs_full}} v1.6.0 profile:
@@ -104,4 +104,4 @@ Now that your scan results are added, you can complete onboarding and choose to 
 ## Cleaning up your resources
 {: #clean-up}
 
-To add compliance claims to your deployable architecture, you had to create the resources in your account and a {{site.data.keyword.compliance_short}} instance. To reduce future costs, you can delete all of the resources that you created during this process that you no longer need. You can keep your {{site.data.keyword.compliance_short}} instance, but set your attachment scan schedule to `None` until you're ready to rerun a scan.
+To add compliance claims to your deployable architecture, you had to create the resources in your account and a {{site.data.keyword.compliance_short}} instance. To reduce future costs, you can delete all of the resources that you created during this process that you no longer need. You can keep your {{site.data.keyword.compliance_short}} instance, but set your attachment scan schedule to `None` until you're ready to rerun a scan. 
