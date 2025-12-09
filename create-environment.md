@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2023
+  years: 2023, 2025
 
-lastupdated: "2024-07-02"
+lastupdated: "2025-12-09"
 
 keywords: environment, add environment, deployment environment, production environment
 
@@ -40,7 +40,7 @@ To create an environment from your project, complete the following steps:
 1. Click **Create**.
 1. Provide a name for your environment, then click **Add** to add properties.
 
-There are three categories of properties that you can add to an environment: authentication, compliance, and input. You can add these properties manually, or add multiple properties at once from a configuration in your project.
+There are three categories of properties that you can add to an environment: authentication, compliance, and input. You can add these properties manually, or add multiple properties at once from a configuration in your project. 
 
 ### Adding properties manually
 {: #add-prop-manually}
@@ -67,7 +67,9 @@ To add a property manually, complete the following steps:
    {: remember}
 
 1. Provide the details for the property and click **Add**.
-1. Click **Save**.
+1. Click **Save**. 
+
+
 
 ### Adding properties from a configuration
 {: #add-from-config}
