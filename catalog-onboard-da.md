@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-08"
+lastupdated: "2025-12-09"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -33,8 +33,8 @@ Before you can onboard your deployable architecture, be sure that you complete t
    * Editor role on the Catalog Management service
    * Viewer role on all resource groups in your account
    * SecretsReader role on the {{site.data.keyword.secrets-manager_short}} service if you plan to store your secure values in an instance of {{site.data.keyword.secrets-manager_short}}
-   * Reader role on the {{site.data.keyword.compliance_short}} service
-   * Other roles that are required for specific resources in your customized deployable architecture.
+   * Reader role on the  {{site.data.keyword.compliance_short}}   service
+   * Other roles that are required for specific resources in your customized deployable architecture
 * Create a private catalog.
 * Ensure that you have the source code for your deployable architecture stored in a GitHub or GitLab repository. For help with getting your source code into a repository, see [Setting up your source code repository](/docs/sell?topic=sell-source-repo-setup).
 

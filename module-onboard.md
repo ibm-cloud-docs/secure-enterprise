@@ -29,7 +29,7 @@ Before you can onboard your module, be sure that you complete the following prer
    * Editor role on the Catalog Management service
    * Viewer role on all resource groups in your account
    * SecretsReader role on the {{site.data.keyword.secrets-manager_short}} service if you plan to store your secure values in an instance of {{site.data.keyword.secrets-manager_short}}
-   * Reader role on the {{site.data.keyword.compliance_short}} service 
+   * Reader role on the  {{site.data.keyword.compliance_short}}   service
    * Other roles that are required for specific resources in your customized module.
 * Create a private catalog.
 * Ensure that you have the source code for your module stored in a GitHub or GitLab repository. For help with getting your source code into a repository, see [Setting up your source code repository](/docs/sell?topic=sell-source-repo-setup).
