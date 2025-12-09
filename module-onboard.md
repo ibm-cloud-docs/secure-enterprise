@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2025-07-01"
+lastupdated: "2025-12-09"
 
 keywords: catalog, catalogs, private catalogs, account catalogs, catalog visibility, module visibility, import module, module registry, terraform module
 
@@ -29,7 +29,7 @@ Before you can onboard your module, be sure that you complete the following prer
    * Editor role on the Catalog Management service
    * Viewer role on all resource groups in your account
    * SecretsReader role on the {{site.data.keyword.secrets-manager_short}} service if you plan to store your secure values in an instance of {{site.data.keyword.secrets-manager_short}}
-   * Reader role on the {{site.data.keyword.compliance_short}} service
+   * Reader role on the {{site.data.keyword.compliance_short}} service 
    * Other roles that are required for specific resources in your customized module.
 * Create a private catalog.
 * Ensure that you have the source code for your module stored in a GitHub or GitLab repository. For help with getting your source code into a repository, see [Setting up your source code repository](/docs/sell?topic=sell-source-repo-setup).
@@ -171,6 +171,7 @@ The validation process tests your Terraform template by running it from the {{si
 Ensure that you fully understand the costs that are associated with onboarding your module. The version must be validated before you can generate an estimated cost.
 
 
+
 ## Managing compliance
 {: #onboard-modules-compliance}
 
@@ -187,7 +188,9 @@ When you onboard a module to a private catalog, you can specify compliance contr
 	3. Run a scan and wait for the results to be available.
 6. In the **Manage compliance** tab of the catalog UI, click **Add scan**.
 7. Select an **Instance**, **Profile**, and the specific scan that you want to add.
-8. Click **Add**
+8. Click **Add** 
+
+
 
 ### Reviewing requirements
 {: #onboard-modules-review-reqs-ui}
