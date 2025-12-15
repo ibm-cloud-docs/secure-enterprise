@@ -233,6 +233,7 @@ toc:
           - ts-project-access.md
           - ts-projects-create.md
           - ts-project-delete.md
+          - ts-project-wp.md
           - ts-projects-deploy.md
           - ts-failure-validate.md
           - ts-needs-attention.md

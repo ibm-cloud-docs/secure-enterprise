@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2025-07-01"
+lastupdated: "2025-12-15"
 
 keywords: catalog, catalogs, private catalogs, account catalogs, catalog visibility, module visibility, import module, module registry, terraform module
 
@@ -29,7 +29,7 @@ Before you can onboard your module, be sure that you complete the following prer
    * Editor role on the Catalog Management service
    * Viewer role on all resource groups in your account
    * SecretsReader role on the {{site.data.keyword.secrets-manager_short}} service if you plan to store your secure values in an instance of {{site.data.keyword.secrets-manager_short}}
-   * Reader role on the {{site.data.keyword.compliance_short}} service
+   * Reader role on the {{site.data.keyword.sysdigsecure_short}} service
    * Other roles that are required for specific resources in your customized module.
 * Create a private catalog.
 * Ensure that you have the source code for your module stored in a GitHub or GitLab repository. For help with getting your source code into a repository, see [Setting up your source code repository](/docs/sell?topic=sell-source-repo-setup).
@@ -170,24 +170,18 @@ The validation process tests your Terraform template by running it from the {{si
 
 Ensure that you fully understand the costs that are associated with onboarding your module. The version must be validated before you can generate an estimated cost.
 
-
 ## Managing compliance
 {: #onboard-modules-compliance}
 
-When you onboard a module to a private catalog, you can specify compliance controls that your module meets when it is run. Compliance with regulatory controls is evaluated by {{site.data.keyword.compliance_long}}. For more information, see [Targeting resources to evaluate](/docs/security-compliance?topic=security-compliance-scopes&interface=ui).
+When you onboard a module to a private catalog, you can specify the specific compliance controls that your module meets when it is run. Compliance with regulatory controls is evaluated by {{site.data.keyword.sysdigsecure_full}}.
 
-1. Click **Add claims**.
-2. Select a profile. The profile is pulled from the {{site.data.keyword.compliance_short}} service. You can choose to select a predefined profile or go to {{site.data.keyword.compliance_short}} and create one of your own.
-3. Specify whether your module meets all of the controls in the profile or whether it can satisfy the control requirements for a subset of the controls.
-4. If your module can meet only a subset of the controls, then you must select the controls that can be satisfied and add them as claims.
-5. Use {{site.data.keyword.compliance_short}} to confirm the claims that you've identified.
-
-	1. In the {{site.data.keyword.cloud_notm}} console, click the **menu** icon ![Menu icon](../icons/icon_hamburger.svg) > **Security and Compliance** to access {{site.data.keyword.compliance_short}}.
-	2. Create an attachment between the profile that you selected and a scope that contains the resources that are created during your validation deployment.
-	3. Run a scan and wait for the results to be available.
-6. In the **Manage compliance** tab of the catalog UI, click **Add scan**.
-7. Select an **Instance**, **Profile**, and the specific scan that you want to add.
-8. Click **Add**
+1. Click **Add controls**.
+2. Select your {{site.data.keyword.sysdigsecure_short}} instance and policy. You can choose to select a predefined policy or go to {{site.data.keyword.sysdigsecure_short}} and create one of your own.
+3. Specify whether your module meets all of the controls in the policy or whether it can satisfy the requirements for a subset of the controls.
+4. If your module can meet only a subset of the controls, then you must select the controls that can be satisfied and add them.
+5. Use {{site.data.keyword.sysdigsecure_short}} to confirm compliance with the controls that you identified. {{site.data.keyword.sysdigsecure_short}} uses an inventory to track compliance. The inventory results are updated daily. Deploy the resources that your module creates, and wait for the inventory results to be updated. For more information, go to [inventory](/docs/workload-protection?topic=workload-protection-inventory)
+6. In the **Manage compliance** tab of the catalog UI, click **Add results**.
+7. Select an **Instance** and click **Apply** to apply the latest inventory results.
 
 ### Reviewing requirements
 {: #onboard-modules-review-reqs-ui}

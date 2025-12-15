@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2025
 
-lastupdated: "2025-11-21"
+lastupdated: "2025-12-15"
 
 keywords: manage project, rename project, move project, deploy project, merge request, merge changes, deploy configuration
 
@@ -72,7 +72,7 @@ If you want to make a relative reference, you can do so. A relative reference be
 
 Since environments are created within a project, and not within a configuration, you don't need to include `/configs/<configname>` if you want to reference a parameter in an environment. But you must include the name of the environment after the `environments` reference type. Then, specify `inputs` and provide the name of the input that you want to reference: `ref:./environments/<environment_name>/inputs/<name>`. You can't add a reference to an authentication parameter or a compliance profile from an environment.
 
-For example, the following reference points to an input parameter that is named `cluster_id` within the `Production` environment: `ref:./environments/Production/inputs/cluster_id`. 
+For example, the following reference points to an input parameter that is named `cluster_id` within the `Production` environment: `ref:./environments/Production/inputs/cluster_id`.
 
 ## Configuring an architecture by using the console
 {: #how-to-config}
@@ -86,18 +86,18 @@ To create a customized configuration, complete the following steps:
    {: tip}
    {: #cra-validate-failure}
 
-1. During validation, a Code Risk Analyzer scan is run on your architecture. Select the controls that you want to use during validation. You can use the **Architecture default** controls, or the **Select from {{site.data.keyword.compliance_short}}** option if you have an attachment set up in your target account.
+1. During validation, a Code Risk Analyzer scan is run on your architecture. Select the policies that you want to use during validation. You can use the **Architecture default**, or the **Select from {{site.data.keyword.sysdigsecure_short}}** option if you have an instance of {{site.data.keyword.sysdigsecure_short}} set up in your target account.
 
     If you select **Architecture default**:
-    * The scan uses the default controls that the owner of the deployable architecture added when they onboarded it.
-    * Controls that the architecture owner added that are also included in the [supported set of {{site.data.keyword.compliance_short}} rules](/docs/ContinuousDelivery?topic=ContinuousDelivery-cra-cli-plugin#terraform-scc-rules) are checked.
-    * Any extra controls that the architecture owner added that are not included in the list of supported rules are not checked when you validate your configuration.
-    * If the owner of the deployable architecture didn't add compliance controls to their product, the full set of {{site.data.keyword.compliance_short}} rules is used.
+    * The scan uses the default policy that the owner of the deployable architecture added when they onboarded it.
+    * Policies that the architecture owner added include requirements. Requirements that are also included in the [supported set of rules](/docs/ContinuousDelivery?topic=ContinuousDelivery-cra-cli-plugin#terraform-scc-rules) are checked.
+    * Any extra requirements that the architecture owner added that are not included in the list of supported rules are not checked when you validate your configuration.
+    * If the owner of the deployable architecture didn't add policies to their product, the full set of rules is used.
 
-    To view the list of added controls, go to the [{{site.data.keyword.cloud}} catalog](/catalog){: external} and select the deployable architecture that you're configuring. The Security & compliance tab lists all of the controls that were added to the deployable architecture.
+    To view the list of added requirements, go to the [{{site.data.keyword.cloud}} catalog](/catalog){: external} and select the deployable architecture that you're configuring. The Security & compliance tab lists all of the requirements that were added to the deployable architecture.
     {: tip}
 
-    If you select **Select from {{site.data.keyword.compliance_short}}**, you must have an instance of the service and an attachment through {{site.data.keyword.compliance_short}} in the target account that you want to deploy to.
+    If you select **Select from {{site.data.keyword.sysdigsecure_short}}**, you must have an instance of the service in the target account that you want to deploy to. 
 
 1. From the **Inputs** panel, enter values for the required inputs for the deployable architecture configuration. 
     
@@ -112,10 +112,6 @@ To create a customized configuration, complete the following steps:
 
 If you're configuring deployable architectures that are stacked together, make sure to validate each architecture in order according to their dependencies. Alternatively, you can edit your project's settings to automatically deploy configuration changes that are validated successfully. If you do so, each architecture is validated, approved, and deployed automatically according to their dependencies. For more information, go to [Deploying an architecture](/docs/secure-enterprise?topic=secure-enterprise-deploy-project&interface=ui). 
 {: important}
-
-
-
-
 
 ## Approving configuration changes by using the console
 {: #approve-changes}

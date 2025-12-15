@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2023
+  years: 2023, 2025
 
-lastupdated: "2024-07-02"
+lastupdated: "2025-12-15"
 
 keywords: environment, add environment, deployment environment, production environment
 
@@ -46,12 +46,12 @@ There are three categories of properties that you can add to an environment: aut
 {: #add-prop-manually}
 {: ui}
 
-If you add properties manually, consider adding the authentication method first. The authentication method for your target account is required to authorize a deployment to that target account. The authentication method is also used if you want to pull in a {{site.data.keyword.compliance_short}} attachment from your target account. You can add only one authentication property to an environment, and you can only add a compliance property to an environment if you have a {{site.data.keyword.compliance_short}} attachment in your target account that you want to use. You can't add a compliance property that uses the [default controls from the deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-config-project&interface=ui#cra-validate-failure), as those default controls vary from architecture to architecture.
+If you add properties manually, consider adding the authentication method first. The authentication method for your target account is required to authorize a deployment to that target account. The authentication method is also used if you want to pull in a {{site.data.keyword.sysdigsecure_short}} policy from your target account. You can add only one authentication property to an environment, and you can only add a compliance property to an environment if you have a {{site.data.keyword.sysdigsecure_short}} instance, zone, and policy in your target account that you want to use. Your instance of {{site.data.keyword.sysdigsecure_short}} [must also be enabled for CSPM](/docs/secure-enterprise?topic=secure-enterprise-troubleshoot-project-wp&interface=ui). You can't add a compliance property that uses the [default controls from the deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-config-project&interface=ui#cra-validate-failure), as those default controls vary from architecture to architecture.
 
-You must provide an authentication property in your environment first with valid authentication details if you want to add a compliance property and specify an attachment from {{site.data.keyword.compliance_short}}. You can [use an API key with {{site.data.keyword.secrets-manager_short}}](/docs/secure-enterprise?topic=secure-enterprise-authorize-project&interface=cli) or you can [use a trusted profile](/docs/secure-enterprise?topic=secure-enterprise-tp-project&interface=cli) to authenticate with the target account that contains your {{site.data.keyword.compliance_short}} attachment.
+You must provide an authentication property in your environment first with valid authentication details if you want to add a compliance property and specify a policy from {{site.data.keyword.sysdigsecure_short}}. You can [use an API key with {{site.data.keyword.secrets-manager_short}}](/docs/secure-enterprise?topic=secure-enterprise-authorize-project&interface=cli) or you can [use a trusted profile](/docs/secure-enterprise?topic=secure-enterprise-tp-project&interface=cli) to authenticate with the target account that contains your {{site.data.keyword.sysdigsecure_short}} attachment.
 {: important}
 
-Authentication and compliance information is used in all configurations, so if you add an authentication property or a compliance property with a {{site.data.keyword.compliance_short}} attachment to your environment, it is automatically added to any configuration that's using the environment.
+Authentication and compliance information is used in all configurations, so if you add an authentication property or a compliance property to your environment, it is automatically added to any configuration that's using the environment.
 
 Input values can also be added as properties to your environment. When you add an input to an environment, the name of your input in the environment must match the name of the input in the configurations that are using the environment. If the names do not match, the value from the environment is not used in the configuration. For example, if you add an input to your environment and name it `resource_group`, but a configuration that is using that environment has an input that is named `resourcegroup` the value from the environment is not used in that configuration.
 
@@ -104,7 +104,7 @@ ibmcloud project environment-create \
 ```
 {: codeblock}
 
-Similarly, the following command creates an environment that is named `development` and has one input property that defines the resource group. A [trusted profile](/docs/secure-enterprise?topic=secure-enterprise-tp-project&interface=cli) is also provided as an authentication property, along with an attachment from {{site.data.keyword.compliance_short}} for the compliance property that is located in the `us-south` region:
+Similarly, the following command creates an environment that is named `development` and has one input property that defines the resource group. A [trusted profile](/docs/secure-enterprise?topic=secure-enterprise-tp-project&interface=cli) is also provided as an authentication property:
 
 ```sh
 ibmcloud project environment-create \

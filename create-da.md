@@ -2,7 +2,7 @@
 
 copyright:
    years: 2024, 2025
-lastupdated: "2025-08-08"
+lastupdated: "2025-12-15"
 
 keywords:
 
@@ -45,7 +45,7 @@ Documentation
 :   An architecture diagram and readme file need to be included in your source repo.
 
 Catalog manifest file
-:   Defines how the deployable architecture is exposed in the {{site.data.keyword.cloud_notm}} catalog. In addition to the general catalog details like the name, description, and features, it includes the variation definitions that point to the underlying Terraform configuration, compliance claims that are verified during onboarding to the catalog by using {{site.data.keyword.compliance_full}}, and necessary IAM permissions for running the deployable architecture. For more information, see [Locally editing the catalog manifest](/docs/secure-enterprise?topic=secure-enterprise-manifest-values&interface=ui#example-manifest).
+:   Defines how the deployable architecture is exposed in the {{site.data.keyword.cloud_notm}} catalog. In addition to the general catalog details like the name, description, and features, it includes the variation definitions that point to the underlying Terraform configuration, compliance claims that are verified during onboarding to the catalog by using {{site.data.keyword.sysdigsecure_full}}, and necessary IAM permissions for running the deployable architecture. For more information, see [Locally editing the catalog manifest](/docs/secure-enterprise?topic=secure-enterprise-manifest-values&interface=ui#example-manifest).
 
 Variations
 :   A deployable architecture can include variations of capability or complexity. For example, you might create a quick start variation with basic capabilities for a simple, low-cost deployment, and then you might have a standard variation with a more complex architecture that would be used in production. Each of these variations is itself a deployable architecture, which is onboarded and configured to appear together in a catalog. These variations are sourced in the same repo in different working directories and are defined in your `ibm_catalog.json` file. For more information, see [Creating a variation](/docs/secure-enterprise?topic=secure-enterprise-create-variation-da).
@@ -151,7 +151,7 @@ See examples:
 ### Creating a catalog manifest file
 {: #create-manifest}
 
-The catalog manifest is a file in the root of your repository that is called the `ibm_catalog.json`. This file defines the required metadata for creating a tile in a catalog, for example the name, description, features, variation definitions that point to the underlying Terraform configuration, compliance claims that will be verified during onboarding by using {{site.data.keyword.compliance_short}}, and necessary IAM permissions for deploying the architecture. It also defines the configurations that you want to be selected by default when a user attempts to deploy your architecture from the catalog. For more information, see [mapping catalog details to the manifest file](/docs/secure-enterprise?topic=secure-enterprise-manifest-values&interface=ui#mapping-manifest).
+The catalog manifest is a file in the root of your repository that is called the `ibm_catalog.json`. This file defines the required metadata for creating a tile in a catalog, for example the name, description, features, variation definitions that point to the underlying Terraform configuration, compliance claims that will be verified during onboarding by using {{site.data.keyword.sysdigsecure_short}}, and necessary IAM permissions for deploying the architecture. It also defines the configurations that you want to be selected by default when a user attempts to deploy your architecture from the catalog. For more information, see [mapping catalog details to the manifest file](/docs/secure-enterprise?topic=secure-enterprise-manifest-values&interface=ui#mapping-manifest).
 
 Check out the [example from the sample repo](https://github.com/terraform-ibm-modules/sample-deployable-architectures/blob/main/ibm_catalog.json){: external} that shows a fullstack and extension type variation.
 {: tip}
