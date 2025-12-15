@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-08"
+lastupdated: "2025-12-15"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -38,13 +38,11 @@ Let's look at where the permissions and architecture diagram details are specifi
 
 ![Deployable architecture permissions and architecture text mapping to the source file](images/da-arch-iam-details-mapping.png "Deployable architecture permissions and architecture text mapping to the source file"){: caption="Deployable architecture permissions and architecture text mapping to the source file" caption-side="bottom"}
 
- And, if your architecture meets a specific level of compliance that is verified with a scan by using the {{site.data.keyword.compliance_short}}, you can add a compliance claim per variation. You define how your architecture meets a certain level of compliance in the `ibm_catalog.json` file by specifying the {{site.data.keyword.compliance_short}} profile. You must also run a scan on the resources that your architecture creates before onboarding to {{site.data.keyword.cloud_notm}}. For more information, see [Managing compliance information for your deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-format-controls).
+And, if your architecture meets a specific level of compliance that is verified with inventory results by using {{site.data.keyword.sysdigsecure_short}}, you can claim that compliance per variation. You define how your architecture meets a certain level of compliance in the `ibm_catalog.json` file by specifying the {{site.data.keyword.sysdigsecure_short}} policy. You must also deploy the resources that your architecture creates, as {{site.data.keyword.sysdigsecure_short}} uses those deployed resources to verify compliance. For more information, see [Managing compliance information for your deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-format-controls).
 
 See in the following example how the compliance information that is defined in the manifest file is displayed to users.
 
 ![Deployable architecture compliance](images/da-compliance-mapping.png "Deployable architecture compliance"){: caption="Deployable architecture compliance" caption-side="bottom"}
-
-
 
 ## Editing your manifest
 {: #edit-manifest}
@@ -436,16 +434,14 @@ The following values can be included within the `licenses` section:
 `description`
 :   A description of the license.
 
-
-
 #### `compliance`
 {: #compliance}
 
-Section header within the `flavors` section that indicates which compliance controls that the architecture satisfies with the default installation settings. The evaluation and validation of the claims made is completed by {{site.data.keyword.compliance_full}}.
+Section header within the `flavors` section that indicates which compliance controls that the architecture satisfies with the default installation settings. The evaluation and validation of the claims made is completed by {{site.data.keyword.sysdigsecure_short}}.
 
 ```json
 "compliance": {
-   "authority": "scc-v3",
+   "authority": "scc-wp-v1",
    "profiles": [
       {
             "profile_name": "",
@@ -456,34 +452,34 @@ Section header within the `flavors` section that indicates which compliance cont
 ```
 {: codeblock}
 
-You can list multiple profiles in your catalog manifest JSON file, but only the first profile is added to your compliance information in a private catalog.
+You can list multiple policies in your catalog manifest JSON file, but only the first policy is added to your compliance information in a private catalog.
 {: important}
 
 The following values can be included at the `compliance` level:
 
 `authority`
-:   {{site.data.keyword.compliance_long}} v3 is the only authority accepted. This is programmatically written as `scc-v3`.
+:   {{site.data.keyword.sysdigsecure_short}} v1 is the only authority accepted. This is programmatically written as `scc-wp-v1`.
 
 `profiles`
-:   Section header that indicates the profile that contains the controls that are being claimed. You can view predefined profiles in {{site.data.keyword.compliance_short}}.
+:   Section header that indicates the policy that contains the controls that are being claimed. You can view [predefined policies in {{site.data.keyword.sysdigsecure_short}}](/docs/workload-protection?topic=workload-protection-about&interface=ui#about-available-policies).
 
     `profile_name`
-    :   The name of the profile. For example, `NIST`. You can find the profile name in {{site.data.keyword.compliance_short}}.
+    :   The name of the policy. For example, `NIST`. You can find the policy name in {{site.data.keyword.sysdigsecure_short}}.
 
     `profile_version`
-    :   The version of the profile. For example, `1.0.0`. You can find the profile name in {{site.data.keyword.compliance_short}}.
+    :   The version of the policy. For example, `1.0.0`. You can find the policy name in {{site.data.keyword.sysdigsecure_short}}.
 
 `controls`
-:   Section header that indicates that the variation has claimed controls. The catalog manifest accepts an array of controls that you can claim on your variation by specifying a control's `profile_name`, `profile_version`, and `control_name`. You can view predefined profiles in {{site.data.keyword.compliance_short}}.
+:   Section header that indicates that the variation has claimed controls. The catalog manifest accepts an array of controls that you can claim on your variation by specifying a control's `profile_name`, `profile_version`, and `control_name`. You can view predefined policies in {{site.data.keyword.sysdigsecure_short}}.
 
     `profile`
-    :    Section header that indicates that you are adding controls from a specific profile.
+    :    Section header that indicates that you are adding controls from a specific policy.
 
         `name`
-        :   The profile name of the claimed control. For example, `NIST`. You can find the profile name in {{site.data.keyword.compliance_short}}.
+        :   The policy name of the claimed control. For example, `NIST`. You can find the policy name in {{site.data.keyword.sysdigsecure_short}}.
 
         `version`
-        :   The version of the profile. For example, `1.0.0`. You can find the profile name in {{site.data.keyword.compliance_short}}.
+        :   The version of the policy. For example, `1.0.0`. You can find the policy name in {{site.data.keyword.sysdigsecure_short}}.
 
     `names`
     :   Section header to indicate a list of claimed controls. For example:
@@ -498,10 +494,6 @@ The following values can be included at the `compliance` level:
 
 If you have included controls in your readme and your catalog manifest file, the manifest file takes precedence. It is best practice to make sure the controls that are listed in your catalog manifest file match the controls in your readme file.
 {: note}
-
-
-
-
 
 #### `change_notices` (optional)
 {: #change_notices}

@@ -4,7 +4,7 @@ copyright:
 
   years: 2024, 2025
 
-lastupdated: "2025-12-09"
+lastupdated: "2025-12-15"
 
 keywords: vs code extension, extension, onboard, deployable architecture
 
@@ -29,7 +29,7 @@ Before you can onboard your deployable architecture, be sure that you complete t
    * Editor role on the Catalog Management service
    * Viewer role on all resource groups in your account
    * SecretsReader role on the {{site.data.keyword.secrets-manager_short}} service if you plan to store your secure values in an instance of {{site.data.keyword.secrets-manager_short}}
-   * Reader role on the  {{site.data.keyword.compliance_short}}   service
+   * Reader role on the {{site.data.keyword.sysdigsecure_short}} service
    * Other roles that are required for specific resources in your customized deployable architecture.
 * Ensure that you have the source code for your deployable architecture stored in a GitHub. For help with getting your source code into a repository, see [Setting up your source code repository](/docs/sell?topic=sell-source-repo-setup).
 * A Terraform module in a public or private GitHub repository that is cloned to a local folder. For experimentation, you can make a fork of this [sample Terraform module](https://github.com/l2fprod/simple-da). If your repository is private, you need a personal access token with `repo` and `read:user` permissions.
