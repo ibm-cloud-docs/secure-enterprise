@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024, 2025
-lastupdated: "2025-09-19"
+  years: 2024, 2026
+lastupdated: "2026-01-07"
 
 keywords:
 
@@ -74,7 +74,7 @@ Now that you know where to find deployable architectures, how do you deploy and 
 
 In the project, you configure the input variables for the deployable architecture. You can monitor cost, drift in your resources, compliance scans, and upgrade to the latest version of a deployable architecture when it’s available in the catalog. A project is typically located in a hub account, and deploys resources across various spoke accounts, also known as target accounts.
 
-Check out our docs to learn more about running secure workloads in {{site.data.keyword.cloud_notm}}. Or, dive right in to the {{site.data.keyword.cloud_notm}} catalog to discover what deployable architectures could work for your business.
+Check out our docs to learn more about running secure workloads in {{site.data.keyword.cloud_notm}}. Or, dive in to the {{site.data.keyword.cloud_notm}} catalog to discover what deployable architectures could work for your business.
 
 ## Design principles
 {: #design-principles}
@@ -88,7 +88,7 @@ In the [planning and researching phase](/docs/secure-enterprise?topic=secure-ent
 
 A well-defined scope for the deployable architecture is crucial, as it should be comprehensive enough to include all necessary resources, yet focused enough to avoid unnecessary complexity.
 
-A best practice is to include infrastructure resources that are typically deployed together as a unit, require similar access rights and permissions, and have the same lifecycle. For example, let's consider the [VPC landing zone deployable architecture](/docs/secure-infrastructure-vpc?topic=secure-infrastructure-vpc-overview#overview-vpc). This deployable architecture has a well-defined scope that includes the following infrastructure resources:
+A best practice is to include infrastructure resources that are typically deployed together as a unit, require similar access and permissions, and have the same lifecycle. For example, let's consider the [VPC landing zone deployable architecture](/docs/secure-infrastructure-vpc?topic=secure-infrastructure-vpc-overview#overview-vpc). This deployable architecture has a well-defined scope that includes the following infrastructure resources:
 
 | Resource      | Description     |
 |---------------|-----------------|
@@ -98,7 +98,7 @@ A best practice is to include infrastructure resources that are typically deploy
 | Monitoring and logging  | Integrates Flow Logs for observability and auditing of the VPC traffic |
 {: caption="Resources in the VPC landingn zone DA" caption-side="top"}
 
-These resources are typically deployed together as a unit, require similar network administrative rights and permissions, and have the same lifecycle, meaning that they:
+These resources are typically deployed together as a unit, require similar network administrative permissions, and have the same lifecycle, meaning that they:
 
 * Are created together, such as when a new VPC is provisioned with its associated subnets, public gateways, and security groups.
 * Are updated together, such as when a change is made to the VPC's network configuration, which requires updates to the subnets, public gateways, and security groups.
@@ -160,7 +160,7 @@ In contrast, the standard version of the [{{site.data.keyword.redhat_openshift_n
 Make it easier for users to configure the deployable architecture's input variables by using the following best practices:
 
 Expose only commonly modified arguments
-:   Expose only the variables that most users will need to change, avoiding deployable architectures with a large number of input variables that would overwhelm users. For advanced users, consider providing a single JSON input field for further customization. As an example, the VPC Landing zone deployable architecture surfaces a single field that is named `override_json_string` that gives full control to advanced users on the deployed topology. For more information, see [the VPC Landing zone deployment guide](/docs/secure-infrastructure-vpc?topic=secure-infrastructure-vpc-override-kms).
+:   Expose only the variables that most users will need to change, avoiding deployable architectures with a high number of input variables that would overwhelm users. For advanced users, consider providing a single JSON input field for further customization. As an example, the VPC Landing zone deployable architecture surfaces a single field that is named `override_json_string` that gives full control to advanced users on the deployed topology. For more information, see [the VPC Landing zone deployment guide](/docs/secure-infrastructure-vpc?topic=secure-infrastructure-vpc-override-kms).
 
 Use clear and descriptive naming for existing resources
 :   When referring to existing resources, use names that clearly indicate what they refer to, such as `existing_cluster_name` instead of `cluster_name`, to avoid ambiguity.

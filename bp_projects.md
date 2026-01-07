@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2022, 2025
+  years: 2022, 2026
 
 
-lastupdated: "2025-11-13"
+lastupdated: "2026-01-07"
 
 
 keywords: best practice projects, manage projects, project, environment
@@ -116,7 +116,7 @@ Needs attention items are best used to monitor validation, approvals, failures, 
 ## Adding tags to projects
 {: #project-tags}
 
-You can apply tags to organize, track, and manage your projects. It can be useful to add tags to related projects, or even an extra tag to projects that are temporary, such as infrastructure used for a customer demo or a prototype that's no longer needed. This allows temporary projects to be easily located and managed.
+You can apply tags to organize, track, and manage your projects. It can be useful to add tags to related projects, or even a tag to identify temporary projects, such as infrastructure used for a customer demo or a prototype that's no longer needed. This allows temporary projects to be easily located and managed.
 
 Tags are not case-sensitive, and the maximum length of a tag is 128 characters. The permitted characters are A-Z, 0-9, spaces, underscore, hyphen, period, and colon.
 
