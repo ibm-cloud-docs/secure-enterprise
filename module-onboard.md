@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2025-12-15"
+  years: 2023, 2026
+lastupdated: "2026-01-07"
 
 keywords: catalog, catalogs, private catalogs, account catalogs, catalog visibility, module visibility, import module, module registry, terraform module
 
@@ -58,7 +58,7 @@ If you're using a private source code repository, be sure that you have a [Git p
 
 7. Add a link to your source code in the **Source URL** field. It should look similar to `https://github.com/terraform-ibm-modules/terraform-ibm-cos/archive/refs/tags/v7.0.5.tar.gz`.
 8. Select the **Example** that you want to use.
-9. Enter the software version in the format of major version, minor version, and revision. For example, `1.0.0`. Typically, this version matches the version number of your release snapshot.
+9. Enter the software version in the format of major version, minor version, and revision. For example, `1.0.0`. Typically, this version matches the version number of your release.
 10. Select the category that you want your module to be grouped with in the catalog.
 11. Click **Add product**. An overview page is displayed.
 
@@ -79,7 +79,7 @@ To add additional examples to your module, you can add a new version.
 ## Editing your catalog entry
 {: #onboard-modules-tile-ui}
 
-After you successfully add your module to a private catalog, you can specify the information that users sees when they attempt to use your module. The information includes descriptions of the module, links to documentation, and keywords that ensure that your module is easily findable.
+After you successfully add your module to a private catalog, you can specify the information that users see when they attempt to use your module. The information includes descriptions of the module, links to documentation, and keywords that ensure that your module is easily findable.
 
 1. Go to the **Manage** > **Catalogs** > **Private catalogs** page of the console.
 2. Select the private catalog that you added your module to. The catalog details page opens.
@@ -146,27 +146,23 @@ When you make a module is made available to other users in the cloud, you must p
 
 ### Adding license agreements
 {: #onboard-modules-add-license-ui}
-{: ui}
 
 If users are required to accept any license agreements beyond the {{site.data.keyword.cloud_notm}} Services Agreement, provide the URL to each agreement.
 
 
 ### Editing your readme file
 {: #onboard-modules-readme-edit-ui}
-{: ui}
 
 Document the instructions for running your module in the readme file.
 
 
 ### Validating the version
 {: #onboard-modules-validate-ui}
-{: ui}
 
 The validation process tests your Terraform template by running it from the {{site.data.keyword.bpshort}} service that you configure. A successful validation ensures that users can use your module with your default input variables. You must validate your module before you can share it. To monitor the progress of the validation process, click **View logs** from the **Actions** menu. The Schematics workspace is opened.
 
 ### Reviewing cost
 {: #onboard-modules-cost-ui}
-{: ui}
 
 Ensure that you fully understand the costs that are associated with onboarding your module. The version must be validated before you can generate an estimated cost.
 
