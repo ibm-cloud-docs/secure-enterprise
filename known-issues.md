@@ -28,7 +28,7 @@ To review the default IAM limits for your enterprise, see [Enterprise limits](/d
 
 To work in a project, users must have access to the {{site.data.keyword.cloud_notm}} Projects service, the resource group for the project, and {{site.data.keyword.bplong}}. For more information about access, see [Assigning users access to projects](/docs/secure-enterprise?topic=secure-enterprise-access-project).
 
-Authorizing projects to deploy to a target account is managed by passing an API key into the deployable architecture. [Projects can be directly authorized by using a trusted profile](/docs/secure-enterprise?topic=secure-enterprise-tp-project), but some services such as {{site.data.keyword.containerlong_notm}} don't support trusted profiles. [API keys continue to be supported](/docs/secure-enterprise?topic=secure-enterprise-authorize-project), but a trusted profile is the preferred method for authorizing deployment to target accounts.
+Authorizing projects to deploy to a target account is managed by passing an API key into the deployable architecture. [Projects can be directly authorized by using a trusted profile](/docs/secure-enterprise?topic=secure-enterprise-tp-project), but some services such as {{site.data.keyword.containerlong_notm}} and GitLab don't support trusted profiles. [API keys continue to be supported](/docs/secure-enterprise?topic=secure-enterprise-authorize-project), but a trusted profile is the preferred method for authorizing deployment to target accounts.
 
 ## Configuration management
 {: #configuration-known-issue}
