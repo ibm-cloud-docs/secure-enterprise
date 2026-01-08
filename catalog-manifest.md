@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2025
-lastupdated: "2025-12-15"
+  years: 2022, 2026
+lastupdated: "2026-01-08"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -943,12 +943,50 @@ The following values can be included in the `configuration` section:
 #### `schematics_env_values`
 {: #schematics_env_values}
 
-Within the `flavors` section, `schematics_env_values` specifies a list of the values and variables that need to be passed to the {{site.data.keyword.bpshort}} service to be used as environment variables during the execution of the Terraform. This might be a secure value, a setting of the Terraform logging or something else. You can choose to specify a string or create a reference to {{site.data.keyword.secrets-manager_short}}. If both are specified, then the {{site.data.keyword.secrets-manager_short}} reference is used.
+Within the `flavors` section, `schematics_env_values` specifies a list of the values and variable names that need to be passed to the {{site.data.keyword.bpshort}} service to be used as environment variables during the execution of the Terraform. This might be a secure value, a setting of the Terraform logging or something else. You can choose to specify a string or create a reference to {{site.data.keyword.secrets-manager_short}}. If both are specified, then the {{site.data.keyword.secrets-manager_short}} reference is used. The basic format is as follows:
 
 ```json
 {
-   "value": "Environment variables and their values",
-   "sm_ref": "Specification of an instance of Secrets Manager and a key"
+   "value": "A JSON string of an array of environment variables and their values",
+   "sm_ref": "Reference to a secret in Secrets Manager"
+}
+```
+The following values can be included in the `schematics_env_values` section:
+
+`value`
+:   A JSON string that includes an array of environment variables and their values.
+
+    `name`
+    :   Specifies the name of the environment variable.
+
+    `value`
+    :   Specifies the value of the environment variable.
+
+    `secure`
+    :   Specifies whether or not to display the environment variable value in clear text in the execution log. Possible values are `true` or `false`.
+
+    `hidden`
+    :   Specifies whether or not to include this variable in the execution log. Possible values are `true` or `false`.
+
+`sm_ref`
+:   A reference to a {{site.data.keyword.secrets-manager_short}} instance that contains your environment variables that are saved as a secret. The secret must be a JSON string that includes an array of environment variables and their values.
+
+The following example JSON string includes two variables, `TF_LOG` and `TF_IGNORE`, and their values that are added as environment variables during the Terraform execution:
+
+```json
+"schematics_env_values": {
+    "value": "[{\"name\": \"TF_LOG\",\"value\": \"TRACE\",\"secure\": true,\"hidden\": true},{\"name\": \"TF_IGNORE\",\"value\": \"TRACE\",\"secure\": false,\"hidden\": false}]"
+}
+```
+
+Use escape characters for the quotation marks within the list. 
+{: tip}
+
+The following example uses a reference to a secret in {{site.data.keyword.secrets-manager_short}}:  
+
+```json
+"schematics_env_values": {
+    "sm_ref": "cmsm_v1:{\"name\": \"envVarSecret\",\"id\":\"1234567890\",\"service_id\":\"crn:v1:bluemix:public:secrets-manager:eu-gb:a/1234567890:1234567890::\",\"service_name\":\"My SM instance\",\"group_id\":\"1234567890\",\"group_name\":\"My SM group\",\"resource_group_id\":\"1234567890\",\"region\":\"eu-gb\",\"type\":\"arbitrary\"}"
 }
 ```
 {: codeblock}
