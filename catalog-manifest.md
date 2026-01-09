@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-01-08"
+lastupdated: "2026-01-09"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -473,7 +473,7 @@ The following values can be included at the `compliance` level:
 :   Section header that indicates that the variation has claimed controls. The catalog manifest accepts an array of controls that you can claim on your variation by specifying a control's `profile_name`, `profile_version`, and `control_name`. You can view predefined policies in {{site.data.keyword.sysdigsecure_short}}.
 
     `profile`
-    :    Section header that indicates that you are adding controls from a specific policy.
+        :   Section header that indicates that you are adding controls from a specific policy.
 
         `name`
         :   The policy name of the claimed control. For example, `NIST`. You can find the policy name in {{site.data.keyword.sysdigsecure_short}}.
