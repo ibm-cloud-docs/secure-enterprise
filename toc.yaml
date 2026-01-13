@@ -138,6 +138,7 @@ toc:
               - cost-estimate.md
               - override-failed-validations.md
               - deploy-project.md
+              - schematics-env-vars.md
               - drift-detection.md
           - topicgroup:
               label: Managing existing resources

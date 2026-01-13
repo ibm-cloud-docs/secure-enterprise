@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2024, 2025
+  years: 2024, 2026
 
-lastupdated: "2025-08-08"
+lastupdated: "2026-01-13"
 
 keywords: Git, Git integration, Connect to Git, Github, Gitlab, GitHub enterprise, pipelines, toolchains, workflow
 
@@ -98,7 +98,7 @@ You can customize the workflow with any number of jobs that you require. However
 1. Include the following code in the workflow so your repository can connect to your project, where `IBM_CLOUD_API_KEY` is the name of the secret you added to GitHub: 
 
    ```sh
-     IAM_TOKEN=$(curl -X POST "https://iam.test.cloud.ibm.com/identity/token" \
+     IAM_TOKEN=$(curl -X POST "https://iam.cloud.ibm.com/identity/token" \
            -H "Content-Type: application/x-www-form-urlencoded" \
             -H "Accept: application/json" \
             -d "grant_type=urn:ibm:params:oauth:grant-type:apikey&apikey=${{ secrets.IBM_CLOUD_API_KEY }}" | jq -r .access_token)
