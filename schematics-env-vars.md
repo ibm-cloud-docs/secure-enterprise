@@ -4,7 +4,7 @@ copyright:
 
   years: 2026
 
-lastupdated: "2026-01-13"
+lastupdated: "2026-01-15"
 
 keywords: schematics, environment variables, terraform logs
 
@@ -37,21 +37,21 @@ Complete these steps if you use {{site.data.keyword.cloud_notm}} projects to dep
    ```bash
    ibmcloud login
    ```
-   {: codeblock}
+   {: pre}
 
 1. Set the environment variable by running the `ibmcloud project config-update` command, specifying the project ID, configuration ID, and a name and value for the environment variable:
 
    ```bash
-   ibmcloud project config-update --project-id <PROJECT_ID> --id <CONFIG_ID> --definition-settings "{\"<ENV_NAME>\":\"<ENV_VALUE>\"}"
+   ibmcloud project config-update --project-id PROJECT_ID --id CONFIG_ID --definition-settings "{\"ENV_NAME\":\"ENV_VALUE\"}"
    ```
-   {: codeblock}
+   {: pre}
 
    The following example adds the `TF_LOG` environment variable to enable Terraform logs: 
 
    ```bash
-   ibmcloud project config-update --project-id <PROJECT_ID> --id <CONFIG_ID> --definition-settings "{\"TF_LOG\":\"debug\"}"
+   ibmcloud project config-update --project-id PROJECT_ID --id CONFIG_ID --definition-settings "{\"TF_LOG\":\"debug\"}"
    ```
-   {: codeblock}
+   {: pre}
 
    For a full list of command options, go to [`ibmcloud project config-update`](/docs/cli?topic=cli-projects-cli#project-cli-config-update-command). 
 
