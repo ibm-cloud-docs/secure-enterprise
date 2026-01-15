@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2023, 2025
+  years: 2023, 2026
 
-lastupdated: "2025-12-15"
+lastupdated: "2026-01-15"
 
 keywords: manage project, rename project, move project, deploy project, merge request, merge changes, deploy configuration
 
@@ -86,11 +86,11 @@ To create a customized configuration, complete the following steps:
    {: tip}
    {: #cra-validate-failure}
 
-1. During validation, a Code Risk Analyzer scan is run on your architecture. Select the policies that you want to use during validation. You can use the **Architecture default**, or the **Select from {{site.data.keyword.sysdigsecure_short}}** option if you have an instance of {{site.data.keyword.sysdigsecure_short}} set up in your target account.
+1. During validation, a [Code Risk Analyzer scan](/docs/ContinuousDelivery?topic=ContinuousDelivery-cra-cli-plugin) runs on your architecture. Select the policies that you want to use during validation. You can use the **Architecture default**, or the **Select from {{site.data.keyword.sysdigsecure_short}}** option if you have an instance of {{site.data.keyword.sysdigsecure_short}} set up in your target account.
 
     If you select **Architecture default**:
     * The scan uses the default policy that the owner of the deployable architecture added when they onboarded it.
-    * Policies that the architecture owner added include requirements. Requirements that are also included in the [supported set of rules](/docs/ContinuousDelivery?topic=ContinuousDelivery-cra-cli-plugin#terraform-scc-rules) are checked.
+    * Policies that the architecture owner added include requirements. Requirements that are also included in the supported set of rules are checked.
     * Any extra requirements that the architecture owner added that are not included in the list of supported rules are not checked when you validate your configuration.
     * If the owner of the deployable architecture didn't add policies to their product, the full set of rules is used.
 
