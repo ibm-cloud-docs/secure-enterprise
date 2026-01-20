@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-01-19"
+lastupdated: "2026-01-20"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -472,25 +472,25 @@ The following values can be included at the `compliance` level:
 `controls`
 :   Section header that indicates that the variation has claimed controls. The catalog manifest accepts an array of controls that you can claim on your variation by specifying a control's `profile_name`, `profile_version`, and `control_name`. You can view predefined policies in {{site.data.keyword.sysdigsecure_short}}.
 
-   `profile`
-   :   Section header that indicates that you are adding controls from a specific policy.
+    `profile`
+        :   Section header that indicates that you are adding controls from a specific policy.
 
-   `name`
-   :   The policy name of the claimed control. For example, `NIST`. You can find the policy name in {{site.data.keyword.sysdigsecure_short}}.
+        `name`
+        :   The policy name of the claimed control. For example, `NIST`. You can find the policy name in {{site.data.keyword.sysdigsecure_short}}.
 
-   `version`
-   :   The version of the policy. For example, `1.0.0`. You can find the policy name in {{site.data.keyword.sysdigsecure_short}}.
+        `version`
+        :   The version of the policy. For example, `1.0.0`. You can find the policy name in {{site.data.keyword.sysdigsecure_short}}.
 
-   `names`
-   :   Section header to indicate a list of claimed controls. For example:
+    `names`
+    :   Section header to indicate a list of claimed controls. For example:
 
-   ```text
-   "names": [
-      "CM-7(b)",
-      "AC-2(a)"
-   ]
-   ```
-   {: codeblock}
+    ```text
+    "names": [
+       "CM-7(b)",
+       "AC-2(a)"
+    ]
+    ```
+    {: codeblock}
 
 If you have included controls in your readme and your catalog manifest file, the manifest file takes precedence. It is best practice to make sure the controls that are listed in your catalog manifest file match the controls in your readme file.
 {: note}
