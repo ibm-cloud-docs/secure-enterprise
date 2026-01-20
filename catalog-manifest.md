@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-01-09"
+lastupdated: "2026-01-20"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
