@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-01-20"
+lastupdated: "2026-01-28"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -476,10 +476,10 @@ The following values can be included at the `compliance` level:
         :   Section header that indicates that you are adding controls from a specific policy.
 
         `name`
-        :   The policy name of the claimed control. For example, `NIST`. You can find the policy name in {{site.data.keyword.sysdigsecure_short}}.
+        :   The policy name of the claimed control. For example, `NIST`. You can find the policy name in Workload Protection.
 
         `version`
-        :   The version of the policy. For example, `1.0.0`. You can find the policy name in {{site.data.keyword.sysdigsecure_short}}.
+        :   The version of the policy. For example, `1.0.0`. You can find the policy name in Workload Protection.
 
     `names`
     :   Section header to indicate a list of claimed controls. For example:
