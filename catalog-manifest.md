@@ -241,6 +241,8 @@ The following code snippet can be used as a template.
 ```
 {: codeblock}
 
+
+
 ## Available values
 {: #available-values}
 
@@ -434,8 +436,6 @@ The following values can be included within the `licenses` section:
 `description`
 :   A description of the license.
 
-
-
 #### `compliance`
 {: #compliance}
 
@@ -497,10 +497,6 @@ The following values can be included at the `compliance` level:
 If you have included controls in your readme and your catalog manifest file, the manifest file takes precedence. It is best practice to make sure the controls that are listed in your catalog manifest file match the controls in your readme file.
 {: note}
 
-
-
-
-
 #### `change_notices` (optional)
 {: #change_notices}
 
@@ -529,8 +525,6 @@ A list of the three types of changes that you might want to alert your users to 
 }
 ```
 {: codeblock}
-
-
 
 #### `iam_permissions` (optional)
 {: #iam_permissions}
@@ -579,12 +573,6 @@ The following values can be included within the `iam_permissions` section:
 
     `role_crns`
     :   Section header to indicate a list of access roles.
-
-
-
-
-
-
 
 #### `architecture`
 {: #architecture}
@@ -657,12 +645,6 @@ The following values can be included in the `architecture` section:
 
     `description`
     :   Information about architecture diagram as a whole, including the outline of the system and the relationships, constraints, and boundaries between components of the deployable architecture.
-
-
-
-
-
-
 
 #### `dependencies`
 {: #optional-components}
@@ -749,10 +731,6 @@ The following values can be included within the `dependencies` section:
     `reference_version` (optional)
     :   Indicates the flow of references between the architecture that you're onboarding and its dependency. The default value is `false`. The default behavior is for the architecture input (`version_input`) to reference either an input or output from the dependency (`dependency_input` or `dependency_output`). When this flag is set to `true`, the `dependency_input` references a value from the `version_input`.
 
-
-
-
-
 #### `dependency_version_2` (optional)
 {: #dependency_version_2}
 
@@ -820,8 +798,6 @@ The following values can be included within the `swappable_dependencies` section
 {: #release_notes_url}
 
 URL to the architecture's release notes.
-
-
 
 #### `configuration`
 {: #configuration}
@@ -966,12 +942,6 @@ The following values can be included in the `configuration` section:
     `description`
     :   A message to display if the provided value does not match the specified regular expression.
 
-
-
-
-
-
-
 #### `schematics_env_values`
 {: #schematics_env_values}
 
@@ -1022,10 +992,6 @@ The following example uses a reference to a secret in {{site.data.keyword.secret
 }
 ```
 {: codeblock}
-
-
-
-
 
 #### `minimum_compatible_version` (optional)
 {: #minimum_compatible_version}
