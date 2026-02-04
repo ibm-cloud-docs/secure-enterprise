@@ -435,7 +435,7 @@ The following values can be included within the `licenses` section:
 :   A description of the license.
 
 #### `compliance`
-{: #compliance-restructured}
+{: #compliance}
 
 Section header within the `flavors` section that indicates which compliance controls the architecture satisfies with the default installation settings. The evaluation and validation of the claims made is completed by {{site.data.keyword.sysdigsecure_short}}.
 
@@ -526,7 +526,7 @@ A list of the three types of changes that you might want to alert your users to 
 {: codeblock}
 
 #### `iam_permissions` (optional)
-{: #iam_permissions-restructured}
+{: #iam_permissions}
 
 Section header for a list of all IAM permissions that are required for a user to work with your deployable architecture version. IAM permission information includes the programmatic name of the service that is required and a list of CRNs for roles that are needed. If you build your catalog manifest file from the UI, the CRNs are already included.
 
@@ -557,7 +557,7 @@ The following values can be included in the `iam_permissions` section:
 :   Provide more information for users about this role or why it's included. For example, `This role is only required if you are using {{site.data.keyword.keymanagementservicelong_notm}} for encryption.`
 
 `iam_permissions[].role_crns[]`
-:   Array of access role CRNs required for the service.
+:   Section header to indicate a list of access roles.
 
 `iam_permissions[].resources[]`
 :   Array of resources for a permission.
@@ -569,10 +569,10 @@ The following values can be included in the `iam_permissions` section:
 :   A description of the resource.
 
 `iam_permissions[].resources[].role_crns[]`
-:   Array of access role CRNs required for the resource.
+:   Section header to incidate a list of access roles.
 
 #### `architecture`
-{: #architecture-restructured}
+{: #architecture}
 
 Section header within the `flavors` section that specifies high-level information about the deployable architecture version that includes a description, features, and a diagram. Multiple diagrams, with captions, can be provided.
 
@@ -644,7 +644,7 @@ The following values can be included in the `architecture` section:
 :   Information about architecture diagram as a whole, including the outline of the system and the relationships, constraints, and boundaries between components of the deployable architecture.
 
 #### `dependencies`
-{: #dependencies-restructured}
+{: #dependencies}
 
 Section header within the `flavors` section for a list of products that are compatible with the deployable architecture. Dependencies can be required or optional. A dependency included here can't be added to the `swappable_dependencies` section as well. Information includes the programmatic name of the product and product versions. Optionally, you can include the catalog ID and a list of dependent variations.
 
@@ -786,7 +786,7 @@ The following values can be included within the `swappable_dependencies` section
 :   The `name` of one of the dependencies in the group that is selected for users by default.
 
 `swappable_dependencies[].dependencies`
-:   Array of dependencies that are swappable within this group. The values within this array are the same as those values documented in the [`dependencies`](#dependencies-restructured) section.
+:   Array of dependencies that are swappable within this group. The values within this array are the same as those values documented in the [`dependencies`](#dependencies) section.
 
 
 #### `release_notes_url`
@@ -795,7 +795,7 @@ The following values can be included within the `swappable_dependencies` section
 URL to the architecture's release notes.
 
 #### `configuration`
-{: #configuration-restructured}
+{: #configuration}
 
 Section header within the `flavors` section that specifies the configuration of deployment variables for specific variation. Catalog data types are used to extend native types and facilitate for a better user experience when you're working in the {{site.data.keyword.cloud_notm}} console. If you are running your code on a local machine or another environment, the variables are not used. An example might be a catalog type of `password` that is used to extend the capabilities of a Terraform variable defined with a type of `string` so that it is treated as sensitive in the UI.
 
@@ -931,7 +931,7 @@ The following values can be included in the `configuration` section:
 :   A message to display if the provided value does not match the specified regular expression.
 
 #### `schematics_env_values`
-{: #schematics_env_values-restructured}
+{: #schematics_env_values}
 
 Within the `flavors` section, `schematics_env_values` specifies a list of the values and variable names that need to be passed to the {{site.data.keyword.bpshort}} service to be used as environment variables during the execution of the Terraform. This might be a secure value, a setting of the Terraform logging or something else. You can choose to specify a string or create a reference to {{site.data.keyword.secrets-manager_short}}. If both are specified, then the {{site.data.keyword.secrets-manager_short}} reference is used.
 
