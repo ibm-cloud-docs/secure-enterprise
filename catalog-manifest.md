@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-01-28"
+lastupdated: "2026-02-04"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -316,10 +316,10 @@ Support information in markdown format that can include support contacts, suppor
 
 Section header within `products` for details that highlight the processes, abilities, and results of the product. These product-level features are listed on your catalog entry page with your product description. For example, features might include CPU requirements, security features, or more. Each entry is defined as an array as shown in the example manifest in the previous section. The following values can be included in the `features` section:
 
-`title`
+`features[].title`
 :   The name of the feature.
 
-`description`
+`features[].description`
 :   A concise description of the feature.
 
 ### Modules
@@ -332,22 +332,22 @@ The `module_info` value indicates information about other products that the depl
 
 Section header for information about a singular product that is compatible with the deployable architecture. The following values can be included in the `works_with` section: 
 
-`catalog_id` (optional)
+`works_with[].catalog_id` (optional)
 :   ID of the catalog that houses the product. If not specified, the {{site.data.keyword.cloud_notm}} catalog is the default.
 
-`id` (optional)
+`works_with[].id` (optional)
 :   ID of the product. The ID is not required if the `name` value is set.
 
-`name` (optional)
+`works_with[].name` (optional)
 :   Programmatic name of the product that works with the deployable architecture.
 
-`kind`
+`works_with[].kind`
 :   The format of the module that works with your deployable architecture. Most often this is `terraform`.
 
-`version`
+`works_with[].version`
 :   Version or range of product versions that work with the deployable architecture in SemVer format.
 
-`flavors` (optional)
+`works_with[].flavors[]` (optional)
 :   The programmatic names of the compatible variations. Variations are onboarded individually to a catalog and are given a version number. An example variation name might be `standard` or `advanced`.
 
 ### Flavors
@@ -419,78 +419,79 @@ Section header within the `flavors` section that provides information about the 
 
 The following values can be included within the `licenses` section:
 
-`id`
+`licenses[].id`
 :   The license ID.
 
-`name`
+`licenses[].name`
 :   The name of the license.
 
-`type`
+`licenses[].type`
 :   The type of license. For example, Apache.
 
-`url`
+`licenses[].url`
 :   A URL to where the user can access the license agreement.
 
-`description`
+`licenses[].description`
 :   A description of the license.
 
 #### `compliance`
 {: #compliance}
 
-Section header within the `flavors` section that indicates which compliance controls that the architecture satisfies with the default installation settings. The evaluation and validation of the claims made is completed by {{site.data.keyword.sysdigsecure_short}}.
+Section header within the `flavors` section that indicates which compliance controls the architecture satisfies with the default installation settings. The evaluation and validation of the claims made is completed by {{site.data.keyword.sysdigsecure_short}}.
+
+The following example shows the JSON structure for the `compliance` section:
 
 ```json
-"compliance": {
-   "authority": "scc-wp-v1",
-   "profiles": [
-      {
-            "profile_name": "",
-            "profile_version": ""
-      }
-   ]
-}
+"flavors": [{
+  "compliance": {
+    "authority": "scc-wp-v1",
+    "profiles": [{
+      "profile_name": "",
+      "profile_version": ""
+    }],
+    "controls": [{
+      "profile": {
+        "name": "",
+        "version": ""
+      },
+      "names": []
+    }]
+  }
+}]
 ```
 {: codeblock}
 
 You can list multiple policies in your catalog manifest JSON file, but only the first policy is added to your compliance information in a private catalog.
 {: important}
 
-The following values can be included at the `compliance` level:
+The following values can be included in the `compliance` section:
 
-`authority`
+`compliance.authority`
 :   {{site.data.keyword.sysdigsecure_short}} v1 is the only authority accepted. This is programmatically written as `scc-wp-v1`.
 
-`profiles`
-:   Section header that indicates the policy that contains the controls that are being claimed. You can view [predefined policies in {{site.data.keyword.sysdigsecure_short}}](/docs/workload-protection?topic=workload-protection-about&interface=ui#about-available-policies).
+`compliance.profiles[]`
+:   Array of policies that contain the controls being claimed. You can view [predefined policies in {{site.data.keyword.sysdigsecure_short}}](/docs/workload-protection?topic=workload-protection-about&interface=ui#about-available-policies).
 
-    `profile_name`
-    :   The name of the policy. For example, `NIST`. You can find the policy name in {{site.data.keyword.sysdigsecure_short}}.
+`compliance.profiles[].profile_name`
+:   The name of the policy. For example, `NIST`. You can find the policy name in {{site.data.keyword.sysdigsecure_short}}.
 
-    `profile_version`
-    :   The version of the policy. For example, `1.0.0`. You can find the policy name in {{site.data.keyword.sysdigsecure_short}}.
+`compliance.profiles[].profile_version`
+:   The version of the policy. For example, `1.0.0`. You can find the policy version in {{site.data.keyword.sysdigsecure_short}}.
 
-`controls`
-:   Section header that indicates that the variation has claimed controls. The catalog manifest accepts an array of controls that you can claim on your variation by specifying a control's `profile_name`, `profile_version`, and `control_name`. You can view predefined policies in {{site.data.keyword.sysdigsecure_short}}.
+`compliance.controls[]`
+:   Array of controls claimed on this variation. The catalog manifest accepts an array of controls that you can claim by specifying a control's profile name, profile version, and control name.
 
-    `profile`
-        :   Section header that indicates that you are adding controls from a specific policy.
+`compliance.controls[].profile`
+:   Object that indicates you are adding controls from a specific policy.
 
-        `name`
-        :   The policy name of the claimed control. For example, `NIST`. You can find the policy name in Workload Protection.
+`compliance.controls[].profile.name`
+:   The policy name of the claimed control. For example, `NIST`. You can find the policy name in {{site.data.keyword.sysdigsecure_short}}.
 
-        `version`
-        :   The version of the policy. For example, `1.0.0`. You can find the policy name in Workload Protection.
+`compliance.controls[].profile.version`
+:   The version of the policy. For example, `1.0.0`. You can find the policy version in {{site.data.keyword.sysdigsecure_short}}.
 
-    `names`
-    :   Section header to indicate a list of claimed controls. For example:
-
-    ```text
-    "names": [
-       "CM-7(b)",
-       "AC-2(a)"
-    ]
-    ```
-    {: codeblock}
+`compliance.controls[].names[]`
+:   Array of claimed control names. For example: `["CM-7(b)", "AC-2(a)"]`.
 
 If you have included controls in your readme and your catalog manifest file, the manifest file takes precedence. It is best practice to make sure the controls that are listed in your catalog manifest file match the controls in your readme file.
 {: note}
@@ -529,207 +530,199 @@ A list of the three types of changes that you might want to alert your users to 
 
 Section header for a list of all IAM permissions that are required for a user to work with your deployable architecture version. IAM permission information includes the programmatic name of the service that is required and a list of CRNs for roles that are needed. If you build your catalog manifest file from the UI, the CRNs are already included.
 
+The following example shows the JSON structure for the `iam_permissions` section:
 
 ```json
-{
-   "service_name": "IAM defined service name",
-   "role_crns" [
-      ""
-   ],
-   "resources": [
-      {
-         "name": "",
-         "description": "",
-         "role_crns: [
-            ""
-         ]
-      }
-   ]
-}
+"flavors": [{
+  "iam_permissions": [{
+    "service_name": "IAM defined service name",
+    "notes": "Optional notes about this permission",
+    "role_crns": ["crn:v1:..."],
+    "resources": [{
+      "name": "resource name",
+      "description": "resource description",
+      "role_crns": ["crn:v1:..."]
+    }]
+  }]
+}]
 ```
 {: codeblock}
 
-The following values can be included within the `iam_permissions` section:
+The following values can be included in the `iam_permissions` section:
 
-`service_name`
+`iam_permissions[].service_name`
 :   The programmatic name of the service that users must have access to.
 
-`notes` (optonal)
-:   Provide more information for users about this role or why it's included. For example, `This role is only required if you are using {{site.data.keyword.keymanagementservicelong_notm}} for encryption.
+`iam_permissions[].notes` (optional)
+:   Provide more information for users about this role or why it's included. For example, `This role is only required if you are using {{site.data.keyword.keymanagementservicelong_notm}} for encryption.`
 
-`role_crns`
-:   Section header to indicate a list of access roles. 
+`iam_permissions[].role_crns[]`
+:   Section header to indicate a list of access roles.
 
-`resources`
-:   The resources for a permission.
+`iam_permissions[].resources[]`
+:   Array of resources for a permission.
 
-    `name`
-    :   The name of the resource.
+`iam_permissions[].resources[].name`
+:   The name of the resource.
 
-    `description`
-    :   A description of the resource.
+`iam_permissions[].resources[].description`
+:   A description of the resource.
 
-    `role_crns`
-    :   Section header to indicate a list of access roles. 
+`iam_permissions[].resources[].role_crns[]`
+:   Section header to incidate a list of access roles.
 
 #### `architecture`
 {: #architecture}
 
 Section header within the `flavors` section that specifies high-level information about the deployable architecture version that includes a description, features, and a diagram. Multiple diagrams, with captions, can be provided.
 
+The following example shows the JSON structure for the `architecture` section:
+
 ```json
-"architecture" {
-   "descriptions": "",
-   "features": [
-      {
-         "title": "",
-         "description": ""
-      }
-   ],
-   "diagrams": [
-      {
-         "diagram" {
-            "caption": "",
-            "url": "",
-            "type": "image/svg+xml"
-         },
-         "description": ""
-      }
-   ]
-}
+"flavors": [{
+  "architecture": {
+    "features": [{
+      "title": "",
+      "description": ""
+    }],
+    "diagrams": [{
+      "diagram": {
+        "caption": "",
+        "url": "",
+        "type": "image/svg+xml",
+        "thumbnail_url": ""
+      },
+      "description": ""
+    }]
+  }
+}]
 ```
 {: codeblock}
 
 The following values can be included in the `architecture` section:
 
-`features`
-:   Information that highlights the processes, abilities, and results of the version, or if applicable, architecture variation. When onboarding by using the console, these details are called highlights. These details appear on the variation selection box within your catalog entry. If your product has multiple architecture variations, users can compare the variation-level features to decide which variation suits their needs.
+`architecture.features[]`
+:   Array of information that highlights the processes, abilities, and results of the version, or if applicable, architecture variation. When onboarding by using the console, these details are called highlights. These details appear on the variation selection box within your catalog entry. If your product has multiple architecture variations, users can compare the variation-level features to decide which variation suits their needs.
 
-    `title`
-    :   Name of the feature.
+`architecture.features[].title`
+:   Name of the feature.
 
-    `description`
-    :   A description of the feature.
+`architecture.features[].description`
+:   A description of the feature.
 
-`diagrams`
-:   Information about the architecture diagram that includes the diagram caption, the URL to embed the SVG of the diagram, the diagram metadata such as element ID and element description, and the description of the reference architecture.
+`architecture.diagrams[]`
+:   Array of architecture diagrams that includes the diagram caption, the URL to embed the SVG of the diagram, the diagram metadata such as element ID and element description, and the description of the reference architecture.
 
-    `diagram`
-    :   Section marker for information about a singular architecture diagram.
+`architecture.diagrams[].diagram`
+:   Object containing information about a singular architecture diagram.
 
-        `url`
-        :   The URL to the diagram's SVG. You can also embed an SVG.
+`architecture.diagrams[].diagram.url`
+:   The URL to the diagram's SVG. You can also embed an SVG.
 
-        `api_url`
-        :   The catalog management API URL to the diagram.
+`architecture.diagrams[].diagram.api_url`
+:   The catalog management API URL to the diagram.
 
-        `url_proxy`
-        :   Section header for information about a proxied image.
+`architecture.diagrams[].diagram.url_proxy`
+:   Object containing information about a proxied image.
 
-            `url`
-            :   The URL to the proxied image.
+`architecture.diagrams[].diagram.url_proxy.url`
+:   The URL to the proxied image.
 
-            `sha`
-            :   The `sha` identifier of the image.
+`architecture.diagrams[].diagram.url_proxy.sha`
+:   The `sha` identifier of the image.
 
-        `caption`
-        :   A short label for the architecture diagram.
+`architecture.diagrams[].diagram.caption`
+:   A short label for the architecture diagram.
 
-        `type`
-        :   The type of media.
+`architecture.diagrams[].diagram.type`
+:   The type of media.
 
-        `thumbnail_url`
-        :   A link to a thumbnail for the diagram.
+`architecture.diagrams[].diagram.thumbnail_url`
+:   A link to a thumbnail for the diagram.
 
-    `description`
-    :   Information about architecture diagram as a whole, including the outline of the system and the relationships, constraints, and boundaries between components of the deployable architecture.
+`architecture.diagrams[].description`
+:   Information about architecture diagram as a whole, including the outline of the system and the relationships, constraints, and boundaries between components of the deployable architecture.
 
 #### `dependencies`
-{: #optional-components}
+{: #dependencies}
 
 Section header within the `flavors` section for a list of products that are compatible with the deployable architecture. Dependencies can be required or optional. A dependency included here can't be added to the `swappable_dependencies` section as well. Information includes the programmatic name of the product and product versions. Optionally, you can include the catalog ID and a list of dependent variations.
 
+The following example shows the JSON structure for the `dependencies` section:
+
 ```json
-{
-   "name": "offering name",
-   "id": "offering ID",
-   "kind": "terraform",
-   "version": "SemVer version e.g. 3.1.2"
-   "flavors": [
-      "flavor name"
-   ],
-   "install_type": "fullstack or extension",
-   "catalog_id": "catalog ID"
-   "optional": true,
-   "input_mapping": [
-   {
-       "dependency_output": "kms_instance_crn",
-       "version_input": "existing_kms_instance_crn"
-   },
-   {
-       "version_input": "region",
-       "value": "us-south"
-   },
-   {
-       "version_input": "prefix"
-       "reference_version": true
-   }
-   ]
-}
+"flavors": [{
+  "dependencies": [{
+    "catalog_id": "catalog ID",
+    "id": "offering ID",
+    "name": "offering name",
+    "kind": "terraform",
+    "version": "SemVer version e.g. 3.1.2",
+    "flavors": ["flavor name"],
+    "install_type": "fullstack or extension",
+    "optional": true,
+    "description": "Description of optional dependency",
+    "on_by_default": false,
+    "input_mapping": [{
+      "dependency_output": "kms_instance_crn",
+      "version_input": "existing_kms_instance_crn"
+    }]
+  }]
+}]
 ```
 {: codeblock}
 
 You can provide information about required architectures that meet a dependency and optional architectures that work with your own as you onboard your deployable architecture to a catalog. For more information, go to [Extending a deployable architecture during onboarding](/docs/secure-enterprise?topic=secure-enterprise-extend-da).
 {: tip}
 
-The following values can be included within the `dependencies` section:
+The following values can be included in the `dependencies` section:
 
-`catalog_id` (optional)
+`dependencies[].catalog_id` (optional)
 :   ID of the catalog that houses the product. If not specified, the {{site.data.keyword.cloud_notm}} catalog is the default.
 
-`id` (optional)
+`dependencies[].id` (optional)
 :   The product ID. The ID is not required if the `name` value is set.
 
-`name` (optional)
+`dependencies[].name` (optional)
 :   Programmatic name of the product.
 
-`kind`
+`dependencies[].kind`
 :   The format kind of the dependency. Use `stack` for a deployable architecture made of grouped deployable architectures where a stack config file is present. Use `terraform` for deployable architectures made solely of one or more modules.
 
-`version`
+`dependencies[].version`
 :   A version or range of versions to include as dependencies in SemVer format.
 
-`flavors` (optional)
-:   List of variations that the architecture is compatible with.
+`dependencies[].flavors[]` (optional)
+:   Array of variation names that the architecture is compatible with.
 
-`default_flavor` (optional) 
-:   Specifies a default variation that is selected for your users when multiple variations are compatible with or requird to deploy your architecture. Your users can select a different variation if it's included in the `flavors` property. The value is the `name` of the variation. To use this property, you must also set `dependency_version_2` to `true`. If not set, then a default variation is not provided for your users. 
+`dependencies[].default_flavor` (optional)
+:   Specifies a default variation that is selected for your users when multiple variations are compatible with or required to deploy your architecture. Your users can select a different variation if it's included in the `flavors` property. The value is the `name` of the variation. To use this property, you must also set `dependency_version_2` to `true`. If not set, then a default variation is not provided for your users.
 
-`optional` 
-:   Specifies whether the dependency is required or not required. The default value is `false`. To use this property, you must also set `dependency_version_2` to `true`. 
+`dependencies[].optional`
+:   Specifies whether the dependency is required or not required. The default value is `false`. To use this property, you must also set `dependency_version_2` to `true`.
 
-`description` (optional) 
+`dependencies[].description` (optional)
 :   Provide a description for an optional architecture that's compatible with your own, so users can understand how the architecture works within the broader solution and why they might want to include it. To use this property, you must also set `dependency_version_2` to `true`.
 
-`on_by_default` 
-:   Specifies whether an optional dependency is selected for users when they add your deployable architecture to a project from a catalog. Users can deselect the architecture if they do not want it. The default value is `false`. To use this property, you must also set `dependency_version_2` and `optional` to `true`. 
+`dependencies[].on_by_default`
+:   Specifies whether an optional dependency is selected for users when they add your deployable architecture to a project from a catalog. Users can deselect the architecture if they do not want it. The default value is `false`. To use this property, you must also set `dependency_version_2` and `optional` to `true`.
 
-`input_mapping` (optional) 
-:   Section header that specifies the values that are referenced between the compatible architecture and the architecture that you're onboarding. To use this property, you must also set `dependency_version_2` to `true`. 
+`dependencies[].input_mapping[]` (optional)
+:   Array that specifies the values that are referenced between the compatible architecture and the architecture that you're onboarding. To use this property, you must also set `dependency_version_2` to `true`.
 
-    `dependency_output` or `dependency_input` (optional)
-    :   Specifies the variable from the dependency that the architecture that you're onboarding references. The value is the name of the variable from the dependency. Only one of these two properties should be provided. If `reference_version` is set to `true`, then this variable references the `version_input` variable from the architecture that you’re onboarding.
+`dependencies[].input_mapping[].dependency_output` or `dependencies[].input_mapping[].dependency_input` (optional)
+:   Specifies the variable from the dependency that the architecture that you're onboarding references. The value is the name of the variable from the dependency. Only one of these two properties should be provided. If `reference_version` is set to `true`, then this variable references the `version_input` variable from the architecture that you're onboarding.
 
-    `version_input` (optional)
-    :   Specifies the name of the input variable in the architecture that you're onboarding that references the `dependency_output` or `dependency_input` value. If `reference_version` is set to `true`, then the `dependency_input` variable references the `version_input` variable from the architecture that you’re onboarding. 
+`dependencies[].input_mapping[].version_input` (optional)
+:   Specifies the name of the input variable in the architecture that you're onboarding that references the `dependency_output` or `dependency_input` value. If `reference_version` is set to `true`, then the `dependency_input` variable references the `version_input` variable from the architecture that you're onboarding.
 
-    `value` (optional)
-    :   Specifies the preset value for an input from the architecture that you’re onboarding (`version_input`) or its dependency (`dependency_input`). The value that is specified here is only used if a `version_input` or `dependency_input` is provided, and `dependency_output` is not provided. If `version_input` is provided, then when the architecture and its dependency are added to a project by a user, the architecture’s `version_input` is preset to the value specified here. If `dependency_input` is provided, then when the architecture and its dependency are added to a project by a user, the dependency’s `dependency_input` is preset to the value specified here.
+`dependencies[].input_mapping[].value` (optional)
+:   Specifies the preset value for an input from the architecture that you're onboarding (`version_input`) or its dependency (`dependency_input`). The value that is specified here is only used if a `version_input` or `dependency_input` is provided, and `dependency_output` is not provided. If `version_input` is provided, then when the architecture and its dependency are added to a project by a user, the architecture's `version_input` is preset to the value specified here. If `dependency_input` is provided, then when the architecture and its dependency are added to a project by a user, the dependency's `dependency_input` is preset to the value specified here.
 
-    `reference_version` (optional) 
-    :   Indicates the flow of references between the architecture that you’re onboarding and its dependency. The default value is `false`. The default behavior is for the architecture input (`version_input`) to reference either an input or output from the dependency (`dependency_input` or `dependency_output`). When this flag is set to `true`, the `dependency_input` references a value from the `version_input`.
+`dependencies[].input_mapping[].reference_version` (optional)
+:   Indicates the flow of references between the architecture that you're onboarding and its dependency. The default value is `false`. The default behavior is for the architecture input (`version_input`) to reference either an input or output from the dependency (`dependency_input` or `dependency_output`). When this flag is set to `true`, the `dependency_input` references a value from the `version_input`.
 
-#### `dependency_version_2` (optional) 
+#### `dependency_version_2` (optional)
 {: #dependency_version_2}
 
 Peer to the `dependencies` section, `dependency_version_2` Specifies that the updated dependency handling is used with this deployable architecture. If you are using the `optional` property or the `input_mapping` sections within the `dependencies` section, set this value to `true`. If not, set it to `false`. If this property is set to `true`, all dependencies that have the `optional` property set to `false` are required to deploy the architecture that you're onboarding. 
@@ -746,9 +739,9 @@ Section header for a list of products that are compatible with the deployable ar
   "default_dependency": "the name of the dependency that is selected by default", 
   "dependencies": [
     {
-      	"name": "offering name"
-      	"id": "offering ID"
-      	"kind": "terraform"
+      	"name": "offering name",
+      	"id": "offering ID",
+      	"kind": "terraform",
       	"version": "SemVer version e.g. 3.1.2",
       	"flavors": [
            "flavor name"
@@ -763,9 +756,9 @@ Section header for a list of products that are compatible with the deployable ar
         ]
     },
     {
-      	"name": "offering name"
-      	"id": "offering ID"
-      	"kind": "terraform"
+      	"name": "offering name",
+      	"id": "offering ID",
+      	"kind": "terraform",
       	"version": "SemVer version e.g. 3.1.2",
       	"flavors": [
            "flavor name"
@@ -786,11 +779,15 @@ Section header for a list of products that are compatible with the deployable ar
 
 The following values can be included within the `swappable_dependencies` section:
 
-`name` (optional)
-:   Used when the architecture is onboarded to a catalog to help you identify the specific group of `swappable_dependencies`. 
+`swappable_dependencies[].name` (optional)
+:   Used when the architecture is onboarded to a catalog to help you identify the specific group of `swappable_dependencies`.
 
-`default_dependency` (optional)
+`swappable_dependencies[].default_dependency` (optional)
 :   The `name` of one of the dependencies in the group that is selected for users by default.
+
+`swappable_dependencies[].dependencies`
+:   Array of dependencies that are swappable within this group. The values within this array are the same as those values documented in the [`dependencies`](#dependencies) section.
+
 
 #### `release_notes_url`
 {: #release_notes_url}
@@ -802,48 +799,41 @@ URL to the architecture's release notes.
 
 Section header within the `flavors` section that specifies the configuration of deployment variables for specific variation. Catalog data types are used to extend native types and facilitate for a better user experience when you're working in the {{site.data.keyword.cloud_notm}} console. If you are running your code on a local machine or another environment, the variables are not used. An example might be a catalog type of `password` that is used to extend the capabilities of a Terraform variable defined with a type of `string` so that it is treated as sensitive in the UI.
 
+The following example shows the JSON structure for the configuration section:
+
 ```json
-{
-   "key": "The configuration key. This value should match the name of a deployment variable.",
-   "type": "The data type of the variable. This must be a valid catalog management type.",
-   "default_value": "The default value set by the person who onboarded the deployable architecture",
-   "value_constraint": "string",
-   "description": "The description of the variable that is shown in the catalog to those who use your deployable architecture.",
-   "display_name": "The display name for the configuration type.",
-   "required": boolean,
-   "options": [
-      "Selectable option 1",
-      "Selectable option 2"
-   ],
-   "hidden": boolean,
-   "custom_config": {
-      "type": "The ID of the widget type.",
-      "grouping": "Where the configuration type is rendered.",
-      "original_grouping": "The original groupiing type for the configuration.",
-      "grouping_index": "The order in which the configuration item shows in a particular grouping.",
-      "config_constraints": "Map of constraint parameters that are passed to the custom widget.",
-      "associations": "The list of parameters associated with the configuration.",
-      "options_url": "The URL where the options for your custom type can be pulled by using dynamic data from objects in the catalog."
-   },
-   "configuration_group": "The name of the assocated configuration group.",
-   "value_constraints": [
-	{
-           "type": "regex",
-           "value": "^.{12,30}$",
-           "description": "The specified value must be between 12 and 30 characters."
-	}
-   ]
-}
+"flavors": [{
+  "configuration": [{
+    "key": "deployment_variable_name",
+    "type": "string",
+    "default_value": "default value",
+    "description": "Description shown to users",
+    "display_name": "Display Name",
+    "required": true,
+    "hidden": false,
+    "options": ["option1", "option2"],
+    "custom_config": {
+      "type": "widget_id",
+      "grouping": "Target",
+      "grouping_index": 1
+    },
+    "value_constraints": [{
+      "type": "regex",
+      "value": "^.{12,30}$",
+      "description": "Must be between 12 and 30 characters"
+    }]
+  }]
+}]
 ```
 {: codeblock}
 
 The following values can be included in the `configuration` section:
 
-`key`
+`configuration[].key`
 :   The configuration key. The value should match the name of a deployment variable.
 
-`type`
-:   The type of input that a customer can define or select. The data type must be supported by the Catalog Management service. Native Terraform types map to some of the supported types. For example, the Terraform type `map` equates to `object`. The Terraform type `list` equates to `array`. A Terraform type `string` with a sensitive attribute equates to `password`. Customers that consume your deployable architecture must provide values for the input type that you define in the catalog manifest.
+`configuration[].type`
+:   The type of input that a customer can define or select. The data type must be supported by the Catalog Management service. Native Terraform types map to some of the supported types. For example, the Terraform type `map` equates to `object`. The Terraform type `list` equates to `array`. A Terraform type `string` with a sensitive attribute equates to `password`. Customers that consume your deployable architecture must provide values for the input type that you define in the catalog manifest. 
 
     Supported predefined types:
     * `boolean` requires a `true` or `false` string input from users.
@@ -883,92 +873,98 @@ The following values can be included in the `configuration` section:
     * `secret` requires users to select a secret by name from a specific {{site.data.keyword.secrets-manager_short}} instance. The output is the secret's ID, name, or CRN. To list secrets from a specific {{site.data.keyword.secrets-manager_short}} instance, this type must be associated with at least the `platform resource` custom type, with resource type `Secrets Manager`, and with a `crn` value type output. You can optionally associate it with the `secret_group` type as well with a `id` value type output to list secrets from a specific secret group in that {{site.data.keyword.secrets-manager_short}} instance.
     * `kms_key` requires users to select a key from a specific {{site.data.keyword.keymanagementserviceshort}} instance. The output is the key's ID, name, or CRN. To list keys from a specific {{site.data.keyword.keymanagementserviceshort}} instance, this type must be associated with the `platform resource` custom type, with resource type `Key Protect`, and with a `crn` value type output.
 
-`default_value`
+`configuration[].default_value`
 :   The value that is to be set as the default.
 
-`virtual` (optional)
-:   Flag that specifies whether an input should be passed to {{site.data.keyword.bpshort}} service. If set to `true`, the input is not passed to {{site.data.keyword.bpshort}}. Set this flag to `true` for any inputs within your deployable architecture that are referenced in compatible architectures but not used in the deployable architecture that you're onboarding. Add references in `input_mapping` within the [`dependencies`](#optional-components) or [`swappable_dependencies`](#swappable) section of the catalog manifest. 
+`configuration[].virtual` (optional)
+:   Flag that specifies whether an input should be passed to {{site.data.keyword.bpshort}} service. If set to `true`, the input is not passed to {{site.data.keyword.bpshort}}. Set this flag to `true` for any inputs within your deployable architecture that are referenced in compatible architectures but not used in the deployable architecture that you're onboarding. Add references in `input_mapping` within the [`dependencies`](#optional-components) or [`swappable_dependencies`](#swappable) section of the catalog manifest.
 
-`description`
+`configuration[].description`
 :   A description of the variable that you want to display in the UI for users of your deployable architecture.
 
-`display_name`
+`configuration[].display_name`
 :   The name that is displayed for the configuration type.
 
-`required`
+`configuration[].required`
 :   A boolean that indicates if users are required to specify the parameter during installation.
 
-`hidden`
+`configuration[].hidden`
 :   A boolean that indicates if the parameter should be hidden from users during installation.
 
-`options`
-:   An array of options that users can choose from for a parameter.
+`configuration[].options[]`
+:   Array of options that users can choose from for a parameter.
 
-`custom_config`
-:   Section header use to indicate that a custom configuration can be used.
+`configuration[].custom_config`
+:   Object to indicate that a custom configuration can be used.
 
-    `type`
-    :   The ID of the widget type used for configuration
+`configuration[].custom_config.type`
+:   The ID of the widget type used for configuration.
 
-    `grouping`
-    :   Where the configuration type should appear in the catalog. Valid values are `Target`, `Resource`, and `Deployment`.
+`configuration[].custom_config.grouping`
+:   Where the configuration type should appear in the catalog. Valid values are `Target`, `Resource`, and `Deployment`.
 
-    `original_grouping`
-    :   Where the configuration type originally appeared. Valid values are `Target`, `Resource`, and `Deployment`.
+`configuration[].custom_config.original_grouping`
+:   Where the configuration type originally appeared. Valid values are `Target`, `Resource`, and `Deployment`.
 
-    `grouping_index`
-    :   The order of this configuration item when there are mulitple.
+`configuration[].custom_config.grouping_index`
+:   The order of this configuration item when there are multiple.
 
-    `config_constraints`
-    :   Map of constraint parameters that are given to the custom widget.
+`configuration[].custom_config.config_constraints`
+:   Map of constraint parameters that are given to the custom widget.
 
-    `associations`
-    :   Section header for parameters that are associated with the configuration.
+`configuration[].custom_config.associations`
+:   Object for parameters that are associated with the configuration.
 
-`configuration_group`
+`configuration[].configuration_group`
 :   The name of an associated configuration group.
 
-`value_constraints`
-:   Section header used to indidicate that one or more value constraints are defined, where a value constraint has the following format:
+`configuration[].value_constraints[]`
+:   Array of value constraints, where each constraint defines validation rules.
 
-    `type`
-    :   The type of the constraint. Only `regex` is supported at this time.
+`configuration[].value_constraints[].type`
+:   The type of the constraint. Only `regex` is supported at this time.
 
-    `value`
-    :   A JavaScript regular expression.
+`configuration[].value_constraints[].value`
+:   A JavaScript regular expression.
 
-    `description`
-    :   A message to display if the provided value does not match the specified regular expression.
+`configuration[].value_constraints[].description`
+:   A message to display if the provided value does not match the specified regular expression.
 
 #### `schematics_env_values`
 {: #schematics_env_values}
 
-Within the `flavors` section, `schematics_env_values` specifies a list of the values and variable names that need to be passed to the {{site.data.keyword.bpshort}} service to be used as environment variables during the execution of the Terraform. This might be a secure value, a setting of the Terraform logging or something else. You can choose to specify a string or create a reference to {{site.data.keyword.secrets-manager_short}}. If both are specified, then the {{site.data.keyword.secrets-manager_short}} reference is used. The basic format is as follows:
+Within the `flavors` section, `schematics_env_values` specifies a list of the values and variable names that need to be passed to the {{site.data.keyword.bpshort}} service to be used as environment variables during the execution of the Terraform. This might be a secure value, a setting of the Terraform logging or something else. You can choose to specify a string or create a reference to {{site.data.keyword.secrets-manager_short}}. If both are specified, then the {{site.data.keyword.secrets-manager_short}} reference is used.
+
+The following example shows the JSON structure for the schematics_env_values section:
 
 ```json
-{
-   "value": "A JSON string of an array of environment variables and their values",
-   "sm_ref": "Reference to a secret in Secrets Manager"
-}
+"flavors": [{
+  "schematics_env_values": {
+    "value": "[{\"name\": \"TF_LOG\",\"value\": \"TRACE\",\"secure\": true,\"hidden\": true}]",
+    "sm_ref": "cmsm_v1:{...}"
+  }
+}]
 ```
+{: codeblock}
+
 The following values can be included in the `schematics_env_values` section:
 
-`value`
+`schematics_env_values.value`
 :   A JSON string that includes an array of environment variables and their values.
 
-    `name`
-    :   Specifies the name of the environment variable.
+`schematics_env_values.value[].name`
+:   Specifies the name of the environment variable.
 
-    `value`
-    :   Specifies the value of the environment variable.
+`schematics_env_values.value[].value`
+:   Specifies the value of the environment variable.
 
-    `secure`
-    :   Specifies whether or not to display the environment variable value in clear text in the execution log. Possible values are `true` or `false`.
+`schematics_env_values.value[].secure`
+:   Specifies whether or not to display the environment variable value in clear text in the execution log. Possible values are `true` or `false`.
 
-    `hidden`
-    :   Specifies whether or not to include this variable in the execution log. Possible values are `true` or `false`.
+`schematics_env_values.value[].hidden`
+:   Specifies whether or not to include this variable in the execution log. Possible values are `true` or `false`.
 
-`sm_ref`
+`schematics_env_values.sm_ref`
 :   A reference to a {{site.data.keyword.secrets-manager_short}} instance that contains your environment variables that are saved as a secret. The secret must be a JSON string that includes an array of environment variables and their values.
 
 The following example JSON string includes two variables, `TF_LOG` and `TF_IGNORE`, and their values that are added as environment variables during the Terraform execution:
@@ -978,11 +974,12 @@ The following example JSON string includes two variables, `TF_LOG` and `TF_IGNOR
     "value": "[{\"name\": \"TF_LOG\",\"value\": \"TRACE\",\"secure\": true,\"hidden\": true},{\"name\": \"TF_IGNORE\",\"value\": \"TRACE\",\"secure\": false,\"hidden\": false}]"
 }
 ```
+{: codeblock}
 
-Use escape characters for the quotation marks within the list. 
+Use escape characters for the quotation marks within the list.
 {: tip}
 
-The following example uses a reference to a secret in {{site.data.keyword.secrets-manager_short}}:  
+The following example uses a reference to a secret in {{site.data.keyword.secrets-manager_short}}:
 
 ```json
 "schematics_env_values": {
@@ -1021,10 +1018,10 @@ Section header for information about Terraform output values.
 
 The following values can be included in the `outputs` section: 
 
-`key`
+`outputs[].key`
 :   Specifies the output value.
 
-`description`
+`outputs[].description`
 :   A short summary of the output value.
 
 #### `install_type`
@@ -1041,8 +1038,8 @@ A list of scripts contained within the same repository that can be run by a proj
 {
    "short_description": "description for the script",
    "type": "type of script. i.e. ansible",
-   "path": "the path to the script in the repo. Must begin with scripts/..."
-   "stage": "pre or post"
+   "path": "the path to the script in the repo. Must begin with scripts/...",
+   "stage": "pre or post",
    "action": "The action that executes the script. Options include validate, deploy, or undeploy."
 }
 ```
