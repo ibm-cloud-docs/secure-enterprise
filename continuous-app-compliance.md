@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023, 2025
-lastupdated: "2025-11-17"
+  years: 2023, 2026
+lastupdated: "2026-02-05"
 
 keywords:
 
@@ -37,7 +37,7 @@ For more information about configuring the deployable architecture to fit your n
 ## Ensuring continuous compliance with the CC pipeline
 {: #cc-pipeline}
 
-The [CI](/docs/devsecops?topic=devsecops-cd-devsecops-ci-pipeline)/[CD](/docs/devsecops?topic=devsecops-cd-devsecops-cd-pipeline) pipelines ensure that the application code that your team develops is secure and free of vulnerabilities before code is pushed to production. Once your code reaches production, you can use the CC pipeline to continuously scan your production code for new vulnerabilities. The [CC pipeline](/docs/devsecops?topic=devsecops-devsecops-cc-pipeline) can be triggered manually or periodically by using triggers.
+The [CI](/docs/devsecops?topic=devsecops-cd-devsecops-ci-pipeline)/[CD](/docs/devsecops?topic=devsecops-cd-devsecops-cd-pipeline-overview) pipelines ensure that the application code that your team develops is secure and free of vulnerabilities before code is pushed to production. Once your code reaches production, you can use the CC pipeline to continuously scan your production code for new vulnerabilities. The [CC pipeline](/docs/devsecops?topic=devsecops-devsecops-cc-pipeline) can be triggered manually or periodically by using triggers.
 
 The CC pipeline scans existing deployed artifacts and their source repositories independent of your deployment schedule. It runs the static scans and dynamic scans on the Application Source Code, detect secrets in Git repos, Bill Of Materials (BOM) check, CIS check, and Vulnerability Advisor scan.
 
