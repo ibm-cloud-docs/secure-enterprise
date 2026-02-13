@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2024
-lastupdated: "2024-05-17"
+  years: 2024, 2026
+lastupdated: "2026-02-13"
 
 keywords: creating an architecture, planning for a deployable architecture
 
@@ -39,7 +39,7 @@ You can explore existing modules and deployable architectures in the following l
 
 The second part of the research phase is to understand the business requirements and use cases that the solution will be built to address and how you can build a viable, reusable pattern. Many of the existing architectures are based on customer use cases for digital transformation, application modernization, and more. Knowing which use cases you're meeting will help determine which technologies you choose to build your architecture.
 
-Use the [Well-Architected Framework](https://www.ibm.com/architectures/well-architected){: external} and the Architecture Design Framework to plan and design the required components for the architecture. Follow the steps for [Designing a cloud solution by using the Architecture Design Framework](/docs/architecture-framework?topic=architecture-framework-create-solution). The decisions that you make during this process for the requirements and components that will be used to build your architecture pattern will be the design for your development team to build the pattern.
+Use the [Well-Architected Framework](https://www.ibm.com/think/architectures/well-architected){: external} and the Architecture Design Framework to plan and design the required components for the architecture. Follow the steps for [Designing a cloud solution by using the Architecture Design Framework](/docs/architecture-framework?topic=architecture-framework-create-solution). The decisions that you make during this process for the requirements and components that will be used to build your architecture pattern will be the design for your development team to build the pattern.
 
 ## Designing the architecture
 {: #design-architecture}

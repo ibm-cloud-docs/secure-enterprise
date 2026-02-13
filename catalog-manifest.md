@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-02-04"
+lastupdated: "2026-02-13"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -877,7 +877,7 @@ The following values can be included in the `configuration` section:
 :   The value that is to be set as the default.
 
 `configuration[].virtual` (optional)
-:   Flag that specifies whether an input should be passed to {{site.data.keyword.bpshort}} service. If set to `true`, the input is not passed to {{site.data.keyword.bpshort}}. Set this flag to `true` for any inputs within your deployable architecture that are referenced in compatible architectures but not used in the deployable architecture that you're onboarding. Add references in `input_mapping` within the [`dependencies`](#optional-components) or [`swappable_dependencies`](#swappable) section of the catalog manifest.
+:   Flag that specifies whether an input should be passed to {{site.data.keyword.bpshort}} service. If set to `true`, the input is not passed to {{site.data.keyword.bpshort}}. Set this flag to `true` for any inputs within your deployable architecture that are referenced in compatible architectures but not used in the deployable architecture that you're onboarding. Add references in `input_mapping` within the [`dependencies`](#dependencies) or [`swappable_dependencies`](#swappable) section of the catalog manifest.
 
 `configuration[].description`
 :   A description of the variable that you want to display in the UI for users of your deployable architecture.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-01-07"
+lastupdated: "2026-02-13"
 
 keywords:
 
@@ -81,7 +81,7 @@ Check out our docs to learn more about running secure workloads in {{site.data.k
 
 Scope, composability, and consumability are the three main design principles that you need to consider when you are creating a deployable architecture.
 
-In the [planning and researching phase](/docs/secure-enterprise?topic=secure-enterprise-starting-da-process), you should evaluate the current ecosystem of offerings and evaluate the business use case and requirements. Use the [Well-Architected Framework](https://www.ibm.com/architectures/well-architected){: external} and the [Architecture Design Framework](/docs/architecture-framework?topic=architecture-framework-intro) to plan and design the required components for the architecture.
+In the [planning and researching phase](/docs/secure-enterprise?topic=secure-enterprise-starting-da-process), you should evaluate the current ecosystem of offerings and evaluate the business use case and requirements. Use the [Well-Architected Framework](https://www.ibm.com/think/architectures/well-architected){: external} and the [Architecture Design Framework](/docs/architecture-framework?topic=architecture-framework-intro) to plan and design the required components for the architecture.
 
 ### Scope
 {: #scope}
