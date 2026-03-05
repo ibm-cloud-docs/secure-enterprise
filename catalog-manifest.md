@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-02-13"
+lastupdated: "2026-03-05"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -260,6 +260,11 @@ The product display name. This value must match the display name that you provid
 {: #name}
 
 The programmatic name of the product.
+
+#### `hidden`
+{: #hidden}
+
+A boolean value that controls product visibility. When set to `true`, the product is hidden from the catalog and search results but remains available through its direct URL.
 
 #### `version`
 {: #version}
