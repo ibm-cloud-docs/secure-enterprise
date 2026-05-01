@@ -4,7 +4,7 @@ copyright:
 
   years: 2022, 2026
 
-lastupdated: "2026-01-07"
+lastupdated: "2026-05-01"
 
 keywords: known issues, known limitations
 
@@ -20,7 +20,7 @@ subcollection: secure-enterprise
 Known issues and limitations include configuration management, user access to projects, and identity and access management (IAM) limits.
 {: shortdesc}
 
-To review the default IAM limits for your enterprise, see [Enterprise limits](/docs/enterprise-management?topic=enterprise-management-what-is-enterprise#enterprise-limit). To review the default limits for an account, see [{{site.data.keyword.cloud_notm}} IAM limits](/docs/account?topic=account-cloudaccess#iam_limits).
+To review the default IAM limits for your enterprise, see [Enterprise limits](/docs/enterprise-management?topic=enterprise-management-what-is-enterprise#enterprise-limit). To review the default limits for an account, see [{{site.data.keyword.cloud_notm}} IAM limits](/docs/iam?topic=iam-cloudaccess#iam_limits).
 {: note}
 
 ## Authorization

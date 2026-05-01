@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2023, 2025
+  years: 2023, 2026
 
-lastupdated: "2025-07-11"
+lastupdated: "2026-05-01"
 
 keywords: trusted profile, projects trusted profile, authorization, project auth, project security
 
@@ -20,7 +20,7 @@ subcollection: secure-enterprise
 Some services can't fully configure and deploy architectures by using trusted profiles. For more information, see [Known issues and limitations for projects](/docs/secure-enterprise?topic=secure-enterprise-known-issues#auth-known-issue).
 {: important}
 
-When you configure your deployable architecture, you are required to select an authentication method. A project can apply a [trusted profile](/docs/account?topic=account-create-trusted-profile), which grants the project access to deploy an architecture in the account where the trusted profile exists. This way, you can securely deploy an architecture without the need for key rotation.
+When you configure your deployable architecture, you are required to select an authentication method. A project can apply a [trusted profile](/docs/iam?topic=iam-create-trusted-profile&interface=ui), which grants the project access to deploy an architecture in the account where the trusted profile exists. This way, you can securely deploy an architecture without the need for key rotation.
 {: shortdesc}
 
 The project uses the trusted profile to create a service ID with the same permissions as the trusted profile and a fresh API key for that service ID to authorize each deployment. Because the temporary API key exists only for the lifetime of the operation, this improves security because it's harder to misuse. The trusted profile needs access to create a service ID and create and delete API keys for the service ID, as well as access to deploy the deployable architecture.
@@ -39,14 +39,14 @@ Make sure that you create the trusted profile in the account where you want to d
 
 - Account owner
 - Administrator role on all account management services
-- Administrator role on the IAM Identity Service. For more information, see [IAM Identity service](/docs/account?topic=account-account-services#identity-service-account-management).
+- Administrator role on the IAM Identity Service. For more information, see [IAM Identity service](/docs/iam?topic=iam-account-services#identity-service-account-management).
 
 All users have access to create a service ID in an account to which they are a member.
 
 ## Creating an access group for the trusted profile
 {: #create-ag-tp}
 
-With access groups, you can streamline the access assignment process so that you can manage fewer policies in an account, which in turn increases performance. Your trusted profile inherits the access policies that you assigned to the access group. For more information, go to [Access groups](/docs/account?topic=account-access-management-overview&interface=ui#access-groups-iam).
+With access groups, you can streamline the access assignment process so that you can manage fewer policies in an account, which in turn increases performance. Your trusted profile inherits the access policies that you assigned to the access group. For more information, go to [Access groups](/docs/iam?topic=iam-access-management-overview#access-groups-iam).
 
 If you don't already have one, create an access group for your trusted profile that can do the following:
 - Create a service ID
@@ -65,7 +65,7 @@ If you don't already have one, create an access group for your trusted profile t
    1. Select the Service ID Creator role, the User API key creator role, and the Administrator role and click **Next**.
    1. Click **Add**.
 
-   This enables the project to generate a unique, temporary API key for each deployment, avoiding the need to manually rotate API keys. For more information, see [Required access for managing service ID API keys](/docs/account?topic=account-serviceidapikeys&interface=ui#required-access-serviceid-keys)
+   This enables the project to generate a unique, temporary API key for each deployment, avoiding the need to manually rotate API keys. For more information, see [Required access for managing service ID API keys](/docs/iam?topic=iam-serviceidapikeys&interface=ui#required-access-serviceid-keys)
    
 1. Create a policy that grants access to manage access groups. This policy is needed to assign a temporary service ID to the same access group as the trusted profile: 
    1. Select the **IAM Access Groups Service** and click **Next**. 

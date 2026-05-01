@@ -19,13 +19,12 @@ toc:
       - topicgroup:
           label: Learn about access management
           topics:
-          - include: ../account/iam-whatis.md
-          - include: ../account/iam-identities.md
-          - include: ../account/iam-access-concepts.md
-          - include: ../account/iam-policies-overview.md
-          - include: ../account/iam-roles-overview.md
-          - include: ../account/iam-mappings.md
-          - include: ../account/context-restrictions-what-is.md
+          - include: ../iam/iam-identities.md
+          - include: ../iam/iam-access-concepts.md
+          - include: ../iam/iam-policies-overview.md
+          - include: ../iam/iam-roles-overview.md
+          - include: ../iam/iam-mappings.md
+          - include: ../iam/context-restrictions-what-is.md
       - topicgroup:
           label: Learn about deploying compliant workloads
           topics:
@@ -81,9 +80,9 @@ toc:
           - topicgroup:
               label: Controlling context-based restrictions
               topics:
-              - include: ../account/context-restrictions-create.md
-              - include: ../account/context-restrictions-manage.md
-              - include: ../account/iam-cbr.md
+              - include: ../iam/context-restrictions-create.md
+              - include: ../iam/context-restrictions-manage.md
+              - include: ../iam/iam-cbr.md
       - topicgroup:
           label: Creating automated solutions
           topics:
