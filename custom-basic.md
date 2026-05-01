@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2023, 2025
+  years: 2023, 2026
 
-lastupdated: "2025-07-09"
+lastupdated: "2026-05-01"
 
 keywords: deployable architecture, basic customization, Code Engine, AI, application, infrastructure
 
@@ -49,7 +49,7 @@ This tutorial uses a fictitious scenario to help you learn and understand a few 
       * Manager service access role for {{site.data.keyword.bpshort}}.
       * Other roles that are required for specific resources in your deployable architecture. Cloud automation for {{site.data.keyword.codeengineshort}} requires the Writer service access role that is scoped to all resources for the {{site.data.keyword.codeengineshort}} service. 
 
-      For more information, go to [Assigning access to account management services](/docs/account?topic=account-account-services) and [Managing access to resources](/docs/account?topic=account-assign-access-resources).
+      For more information, go to [Assigning access to account management services](/docs/iam?topic=iam-account-services&interface=ui) and [Managing access to resources](/docs/iam?topic=iam-assign-access-resources&interface=ui).
 
 ## Downloading the deployable architecture files
 {: #basic-custom-bundle}

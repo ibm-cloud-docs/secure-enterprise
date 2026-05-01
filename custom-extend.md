@@ -4,7 +4,7 @@ copyright:
 
   years: 2025
 
-lastupdated: "2025-12-04"
+lastupdated: "2026-05-01"
 
 keywords: deployable architecture, customization, Elasticsearch, Postgresql, Code Engine, extend, stack, deployable architecture stack
 
@@ -46,7 +46,7 @@ This tutorial uses a fictitious scenario to help you understand how to create a 
       * Manager service access role for {{site.data.keyword.bpshort}}.
       * Other roles that are required for specific resources in your deployable architecture. Cloud automation for {{site.data.keyword.codeengineshort}} requires the Writer service access role that is scoped to all resources for the {{site.data.keyword.codeengineshort}} service. 
 
-      For more information, go to [Assigning access to account management services](/docs/account?topic=account-account-services) and [Managing access to resources](/docs/account?topic=account-assign-access-resources).
+      For more information, go to [Assigning access to account management services](/docs/iam?topic=iam-account-services&interface=ui) and [Managing access to resources](/docs/iam?topic=iam-assign-access-resources&interface=ui).
 1. [Create a customized deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-basic-custom) called `Example Corp's infrastructure` and onboard it to a private catalog called `Example Corp catalog`. This architecture is the one you will be extending as you complete this tutorial. 
 1. Set up an authentication method. You can [use an API key that is stored in {{site.data.keyword.secrets-manager_short}}](/docs/secure-enterprise?topic=secure-enterprise-authorize-project) or a [trusted profile](/docs/secure-enterprise?topic=secure-enterprise-tp-project) to authorize a deployment to your target account. 
     

@@ -4,7 +4,7 @@ copyright:
 
   years: 2022, 2026
 
-lastupdated: "2026-01-07"
+lastupdated: "2026-05-01"
 
 keywords: project access, iam projects, assigning project access, assign access, access project
 
@@ -54,7 +54,7 @@ To assign access to the {{site.data.keyword.cloud_notm}} Projects service, compl
 1. Click **Add** to add your policy configuration to your access summary.
 1. Click **Assign**.
 
-It's a best practice to [assign access to an access group](/docs/enterprise-management?topic=enterprise-management-access-enterprises) and then add users to the access group, instead of assigning access to users one by one. That way, you can quickly find which users have access to projects by viewing the access that is assigned to the access group. However, you can assign access to a single user by going to **Manage** > **Access (IAM)** > **Users** and selecting the user that you want to assign access to. For more information, go to [Setting up access groups](/docs/account?topic=account-groups&interface=ui). 
+It's a best practice to [assign access to an access group](/docs/enterprise-management?topic=enterprise-management-access-enterprises) and then add users to the access group, instead of assigning access to users one by one. That way, you can quickly find which users have access to projects by viewing the access that is assigned to the access group. However, you can assign access to a single user by going to **Manage** > **Access (IAM)** > **Users** and selecting the user that you want to assign access to. For more information, go to [Setting up access groups](/docs/iam?topic=iam-groups&interface=ui). 
 {: tip}
 
 ## Granting access between the Projects service and other {{site.data.keyword.cloud_notm}} services
@@ -62,7 +62,7 @@ It's a best practice to [assign access to an access group](/docs/enterprise-mana
 
 Before a project can validate or deploy configurations, the Projects service must be authorized in your account to communicate with other {{site.data.keyword.cloud_notm}} services. The following table lists the required authorizations. This authorization is only required one time.
 
-An IAM administrator or a user with the required roles on those services can automatically grant authorizations by creating a project in your account. Or, they can [create the service to service authorizations manually](/docs/account?topic=account-serviceauth&interface=ui). 
+An IAM administrator or a user with the required roles on those services can automatically grant authorizations by creating a project in your account. Or, they can [create the service to service authorizations manually](/docs/iam?topic=iam-serviceauth&interface=ui). 
 {: tip}
 
 | Role | Source | Target | Source account |

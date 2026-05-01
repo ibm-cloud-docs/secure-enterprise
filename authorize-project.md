@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2023, 2025
+  years: 2023, 2026
 
 
-lastupdated: "2025-09-12"
+lastupdated: "2026-05-01"
 
 
 keywords: authorizing a project, add project to account, project secrets, project API key, authenticate, authentication for a project, target account
@@ -41,7 +41,7 @@ Deploying a proof of concept for testing purposes? You can create an API key as 
    * The Administrator role for All Identity and Access enabled services.
    * The Administrator role for All Account Management services.
 
-   Alternatively, you can [create an API key that is associated with a service ID](/docs/account?topic=account-serviceidapikeys&interface=ui#serviceidapikeys). Service ID API keys inherit all access that is assigned to the specific service ID. So, you can scope the access for the service ID to the minimum that is required for the deployable architecture that you're configuring. This approach is similar to using a trusted profile with specific access based on the deployable architecture. For more information on finding the required access roles for any given deployable architecture, see [granting specific access based on the deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-tp-project#serviceid-access-specific).
+   Alternatively, you can [create an API key that is associated with a service ID](/docs/iam?topic=iam-serviceidapikeys&interface=ui#serviceidapikeys). Service ID API keys inherit all access that is assigned to the specific service ID. So, you can scope the access for the service ID to the minimum that is required for the deployable architecture that you're configuring. This approach is similar to using a trusted profile with specific access based on the deployable architecture. For more information on finding the required access roles for any given deployable architecture, see [granting specific access based on the deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-tp-project#serviceid-access-specific).
 
 1. Complete the required steps to [create a project and add a deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-setup-project). You authorize the project to deploy with an API key or existing secret when you configure your deployable architecture.
 
