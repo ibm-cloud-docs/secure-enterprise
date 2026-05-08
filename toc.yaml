@@ -187,7 +187,7 @@ toc:
           - link:
               label: IAM Policy Management
               href: https://{DomainName}/apidocs/iam-policy-management
-          - include: ../account/iam-policies-change-log.md
+          - include: ../iam/iam-policies-change-log.md
           - link:
               label: Projects
               href: https://{DomainName}/apidocs/projects
