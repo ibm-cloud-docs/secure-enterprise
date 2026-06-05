@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2024, 2025
+  years: 2024, 2026
 
-lastupdated: "2025-06-11"
+lastupdated: "2026-06-05"
 
 keywords: stack, configure stack, deployable architecture stack, stacked deployable architecture
 
@@ -55,8 +55,9 @@ For example, the following command creates a deployable architecture that is nam
 
 ```sh
 ibmcloud project config-create \
---project-id 0e13c360-45c4-4b68-a53f-bb8f6ac04161 \
---definition '{"name": "StackDev", "members": [{"name": "custom-apache", "config_id": "caff3a49-0bf4-40c4-b348-47e5da6e2274"}, {"name": "test-slz", "config_id": "fc7fa3d1-33db-4c40-9570-7604348ab3c4"} ]}' --output json
+  --project-id 0e13c360-45c4-4b68-a53f-bb8f6ac04161 \
+  --definition '{"name": "StackDev", "members": [{"name": "custom-apache", "config_id": "caff3a49-0bf4-40c4-b348-47e5da6e2274"}, {"name": "test-slz", "config_id": "fc7fa3d1-33db-4c40-9570-7604348ab3c4"}]}' \
+  --output json
 ```
 
 For more information about the command parameters, see [**`ibmcloud project config-create`**](/docs/secure-enterprise?topic=secure-enterprise-projects-cli#project-cli-config-create-command).
