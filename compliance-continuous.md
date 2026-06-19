@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023, 2025
-lastupdated: "2025-12-15"
+  years: 2023, 2026
+lastupdated: "2026-06-19"
 
 keywords:
 
@@ -22,7 +22,7 @@ With continuous security and compliance at the core of {{site.data.keyword.cloud
 ## Reviewing available policies
 {: #review-controls}
 
-As a regulated business, there are specific standards that apply to your industry that you need to prove compliance to. In {{site.data.keyword.sysdigsecure_short}}, you can view the [pre-defined policies](/docs/workload-protection?topic=workload-protection-about#about-available-policies) that are offered by {{site.data.keyword.IBM}} that can meet your requirements. For example, if you are a financial institution, you might want to use the {{site.data.keyword.cloud_notm}} for Financial Services library. If you don't see the set of policies that you are looking for, you can always create a custom policy.
+As a regulated business, there are specific standards that apply to your industry that you need to prove compliance to. In {{site.data.keyword.sysdigsecure_short}}, you can view the [pre-defined policies](/docs/workload-protection?topic=workload-protection-posture-policies-services) that are offered by {{site.data.keyword.IBM}} that can meet your requirements. For example, if you are a financial institution, you might want to use the {{site.data.keyword.cloud_notm}} for Financial Services library. If you don't see the set of policies that you are looking for, you can always create a custom policy.
 
 During your investigation phase, you might also want to review the available infrastructure [deployable architectures](/catalog#referencearchitecture) in the catalog. {{site.data.keyword.cloud_notm}} has created automation for the deployment of common architectural patterns that combine one or more cloud resources and designed for easy scalability and modularity. You can review the components of the architecture and the level of compliance each deployable architecture meets by reviewing the details directly in the catalog detail pages, and you can customize these architectures to meet your exact needs.
 
@@ -45,7 +45,7 @@ After your infrastructure is deployed and your [DevSecOps toolchains](/docs/devs
 ## Staying compliant
 {: #stay-compliant}
 
-After you deploy resources that you know are compliant, you can ensure that you remain compliant in two ways. First, by validating your resource configurations with {{site.data.keyword.sysdigsecure_short}}. {{site.data.keyword.sysdigsecure_short}} scans your configurations of the resources in your [zones](/docs/workload-protection?topic=workload-protection-posture-zones) once daily to ensure that there hasn't been a drift in compliance. For more information, go to [Analyzing compliance postures from detection to remediation](/docs/workload-protection?topic=workload-protection-compliance).
+After you deploy resources that you know are compliant, you can ensure that you remain compliant in two ways. First, by validating your resource configurations with {{site.data.keyword.sysdigsecure_short}}. {{site.data.keyword.sysdigsecure_short}} scans your configurations of the resources in your [zones](/docs/workload-protection?topic=workload-protection-compliance#compliance-concepts) once daily to ensure that there hasn't been a drift in compliance. For more information, go to [Analyzing compliance postures from detection to remediation](/docs/workload-protection?topic=workload-protection-compliance).
 
 Second, you can ensure that you're deploying your code by using DevSecOps pipelines. When you use the continuous compliance toolchain, scans are reexecuted against your current production code artifacts. This continuous scanning helps to ensure that any code that is deployed in to production is checked for the latest known vulnerabilities allowing for regular revalidation of deployed code and remediation of any new issues that are discovered since the last scan.
 

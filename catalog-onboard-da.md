@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2025
-lastupdated: "2025-12-15"
+  years: 2022, 2026
+lastupdated: "2026-06-19"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -127,7 +127,7 @@ After you add your deployable architecture to a private catalog, you're able to 
 
 On the **Configure version** tab, you can review and update information about the specific version of your architecture. You configure deployment details, define the required IAM access, and detail change notices that you want your users to be aware of.
 
-If you want to extend your deployable architecture, you can do so by stacking it with other architectures. You can include dependencies that your architecture requires, along with optional architectures that help expand your solution for a particular use case. For more information, go to [Extending a deployable architecture during onboarding](/docs/secure-enterprise?topic=secure-enterprise-extend-da). 
+If you want to extend your deployable architecture, you can do so by stacking it with other architectures. You can include dependencies that your architecture requires, along with optional architectures that help expand your solution for a particular use case. For more information, go to [Extending a deployable architecture during onboarding](/docs/secure-enterprise?topic=secure-enterprise-extend-da).
 {: tip}
 
 If your deployable architecture requires a specific Terraform runtime version, you can override the default version. If you included `TF_VERSION` as an input variable within your source code repository, it should have automatically been updated when you created your catalog entry.
@@ -197,7 +197,7 @@ When you make a deployable architecture available to others in your organization
 2. Select your {{site.data.keyword.sysdigsecure_short}} instance and policy. You can choose to select a predefined policy or go to {{site.data.keyword.sysdigsecure_short}} and create one of your own.
 3. Specify whether your deployable architecture meets all of the controls in the policy or whether it can satisfy the requirements for a subset of the controls.
 4. If your architecture can meet only a subset of the controls, then you must select the controls that can be satisfied and add them.
-5. Use {{site.data.keyword.sysdigsecure_short}} to confirm compliance with the controls that you identified. {{site.data.keyword.sysdigsecure_short}} uses an inventory to track compliance. The inventory results are updated daily. Deploy the resources that your architecture creates, and wait for the inventory results to be updated. For more information, go to [inventory](/docs/workload-protection?topic=workload-protection-inventory)
+5. Use {{site.data.keyword.sysdigsecure_short}} to confirm compliance with the controls that you identified. {{site.data.keyword.sysdigsecure_short}} uses an inventory to track compliance. The inventory results are updated daily. Deploy the resources that your architecture creates, and wait for the inventory results to be updated. For more information, go to [review and prioritize remediation](/docs/workload-protection?topic=workload-protection-bp#bp-cspm-remediation).
 6. In the **Manage compliance** tab of the catalog UI, click **Add results**.
 7. Select an **Instance** and click **Apply** to apply the latest inventory results.
 

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2024, 2025
+  years: 2024, 2026
 
-lastupdated: "2025-12-15"
+lastupdated: "2026-06-19"
 
 keywords:
 
@@ -33,11 +33,11 @@ The process to claim compliance for your deployable architecture includes steps 
 ## Setting up {{site.data.keyword.sysdigsecure_short}}
 {: #profile}
 
-Set up an instance of {{site.data.keyword.sysdigsecure_short}} and implement Cloud Security Posture Management (CSPM) for your {{site.data.keyword.cloud_notm}} account: 
+Set up an instance of {{site.data.keyword.sysdigsecure_short}} and implement Cloud Security Posture Management (CSPM) for your {{site.data.keyword.cloud_notm}} account:
 
-1. [Provision an instance of {{site.data.keyword.sysdigsecure_short}}](/docs/workload-protection?topic=workload-protection-provision&interface=ui) from the catalog if you haven't done so already.
-1. Complete the steps to [integrate with either an existing {{site.data.keyword.sysdigsecure_short}} instance or a new instance](/docs/workload-protection?topic=workload-protection-cspm-implement&interface=ui). 
-1. {{site.data.keyword.sysdigsecure_short}} provides [default policies to verify compliance](/docs/workload-protection?topic=workload-protection-about&interface=ui#about-available-policies), or you can [create your own custom policies](/docs/workload-protection?topic=workload-protection-cspm-best-practices&interface=ui#cspm-best-practices-manage-policies). 
+1. [Provision an instance of {{site.data.keyword.sysdigsecure_short}}](/docs/workload-protection?topic=workload-protection-getting-started#setup) from the catalog if you haven't done so already.
+1. Complete the steps to [integrate with either an existing {{site.data.keyword.sysdigsecure_short}} instance or a new instance](/docs/workload-protection?topic=workload-protection-cspm-implement&interface=ui).
+1. {{site.data.keyword.sysdigsecure_short}} provides [default policies to verify compliance](/docs/workload-protection?topic=workload-protection-posture-policies-services), or you can [create your own custom policies](/docs/workload-protection?topic=workload-protection-bp#bp-cspm-frameworks).
 
 ## Updating the compliance information in the manifest
 {: #compliance-manifest}
@@ -49,7 +49,7 @@ After you identify the {{site.data.keyword.sysdigsecure_short}} policy you'd lik
 1. Find or add the `flavors.compliance` field for the variation (flavor) that you want to update.
 1. Set `authority` to `scc-wp-v1`.
 1. Find or add a `profiles[]` array:
-   1. Set `profile_name` to the [policy display name in {{site.data.keyword.sysdigsecure_short}}](/docs/workload-protection?topic=workload-protection-posture-policies&interface=ui#access-posture-controls). 
+   1. Set `profile_name` to the [policy display name in {{site.data.keyword.sysdigsecure_short}}](https://docs.sysdig.com/en/sysdig-secure/manage_posture_policies/#review-a-policy){: external}.
    1. Set `profile_version` to the version of the policy in {{site.data.keyword.sysdigsecure_short}}.
 
    For example:
@@ -71,12 +71,12 @@ After you identify the {{site.data.keyword.sysdigsecure_short}} policy you'd lik
 
 When you [onboard your deployable architecture in the console](/docs/secure-enterprise?topic=secure-enterprise-onboard-da&interface=ui#manage-compliance), you can add the inventory from {{site.data.keyword.sysdigsecure_short}} so that users can see the claimed compliance when they evaluate your product in the catalog.
 
-In {{site.data.keyword.sysdigsecure_short}}, your inventory is updated once every day. You must deploy your resources and wait for the inventory to be updated before you add the inventory to your catalog listing. For more information, go to [Inventory](/docs/workload-protection?topic=workload-protection-inventory)
+In {{site.data.keyword.sysdigsecure_short}}, your inventory is updated once every day. You must deploy your resources and wait for the inventory to be updated before you add the inventory to your catalog listing. For more information, go to [review and prioritize remediation](/docs/workload-protection?topic=workload-protection-bp#bp-cspm-remediation).
 {: important}
 
 1. On the Manage compliance page, click **Add inventory**.
 1. Select the {{site.data.keyword.sysdigsecure_short}} instance that you provisioned in the previous step.
-1. Click **Apply**. 
+1. Click **Apply**.
 
 Now that your inventory is added, you can complete onboarding and choose to share the deployable architecture to other accounts or enterprises, or publish to the {{site.data.keyword.cloud_notm}} catalog.
 

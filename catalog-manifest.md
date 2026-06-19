@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-03-05"
+lastupdated: "2026-06-19"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -12,7 +12,7 @@ subcollection: secure-enterprise
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Editing the catalog manifest locally 
+# Editing the catalog manifest locally
 {: #manifest-values}
 
 The catalog manifest file specifies the information about your onboarded solution that you want to share with users through a catalog. You can provide licensing and compliance information, make specific settings, and provide descriptions about the intended purpose of your product.
@@ -335,7 +335,7 @@ The `module_info` value indicates information about other products that the depl
 #### `works_with`
 {: #works_with}
 
-Section header for information about a singular product that is compatible with the deployable architecture. The following values can be included in the `works_with` section: 
+Section header for information about a singular product that is compatible with the deployable architecture. The following values can be included in the `works_with` section:
 
 `works_with[].catalog_id` (optional)
 :   ID of the catalog that houses the product. If not specified, the {{site.data.keyword.cloud_notm}} catalog is the default.
@@ -368,7 +368,7 @@ Variation display name.
 #### `name`
 {: #flavor-name}
 
-Variation programmatic name. 
+Variation programmatic name.
 
 #### `short_description`
 {: #flavor-shortdesc}
@@ -378,7 +378,7 @@ A short description for this version of the variation.
 #### `index`
 {: #flavor-index}
 
-The order that the variations are listed in the catalog listing. 
+The order that the variations are listed in the catalog listing.
 
 #### `working_directory`
 {: #working-dir}
@@ -475,7 +475,7 @@ The following values can be included in the `compliance` section:
 :   {{site.data.keyword.sysdigsecure_short}} v1 is the only authority accepted. This is programmatically written as `scc-wp-v1`.
 
 `compliance.profiles[]`
-:   Array of policies that contain the controls being claimed. You can view [predefined policies in {{site.data.keyword.sysdigsecure_short}}](/docs/workload-protection?topic=workload-protection-about&interface=ui#about-available-policies).
+:   Array of policies that contain the controls being claimed. You can view [predefined policies in {{site.data.keyword.sysdigsecure_short}}]((/docs/workload-protection?topic=workload-protection-posture-policies-services).
 
 `compliance.profiles[].profile_name`
 :   The name of the policy. For example, `NIST`. You can find the policy name in {{site.data.keyword.sysdigsecure_short}}.
@@ -730,18 +730,18 @@ The following values can be included in the `dependencies` section:
 #### `dependency_version_2` (optional)
 {: #dependency_version_2}
 
-Peer to the `dependencies` section, `dependency_version_2` Specifies that the updated dependency handling is used with this deployable architecture. If you are using the `optional` property or the `input_mapping` sections within the `dependencies` section, set this value to `true`. If not, set it to `false`. If this property is set to `true`, all dependencies that have the `optional` property set to `false` are required to deploy the architecture that you're onboarding. 
+Peer to the `dependencies` section, `dependency_version_2` Specifies that the updated dependency handling is used with this deployable architecture. If you are using the `optional` property or the `input_mapping` sections within the `dependencies` section, set this value to `true`. If not, set it to `false`. If this property is set to `true`, all dependencies that have the `optional` property set to `false` are required to deploy the architecture that you're onboarding.
 
-#### `swappable_dependencies` (optional) 
+#### `swappable_dependencies` (optional)
 {: #swappable}
 
-Section header for a list of products that are compatible with the deployable architecture. Unlike the `dependencies` array, the products in this section are swappable. The user can pick which product they want to use to meet the dependency. Swappable dependencies can be required or optional. A dependency included here can't be added to the `dependencies` array as well. Information includes the programmatic name of the product and product versions. Optionally, you can include the catalog ID and a list of dependent variations. To use this property, you must also set `dependency_version_2` to `true`. 
+Section header for a list of products that are compatible with the deployable architecture. Unlike the `dependencies` array, the products in this section are swappable. The user can pick which product they want to use to meet the dependency. Swappable dependencies can be required or optional. A dependency included here can't be added to the `dependencies` array as well. Information includes the programmatic name of the product and product versions. Optionally, you can include the catalog ID and a list of dependent variations. To use this property, you must also set `dependency_version_2` to `true`.
 
 ```json
 {
   "optional": "true or false",
   "name": "Name for this group of swappable dependencies",
-  "default_dependency": "the name of the dependency that is selected by default", 
+  "default_dependency": "the name of the dependency that is selected by default",
   "dependencies": [
     {
       	"name": "offering name",
@@ -838,7 +838,7 @@ The following values can be included in the `configuration` section:
 :   The configuration key. The value should match the name of a deployment variable.
 
 `configuration[].type`
-:   The type of input that a customer can define or select. The data type must be supported by the Catalog Management service. Native Terraform types map to some of the supported types. For example, the Terraform type `map` equates to `object`. The Terraform type `list` equates to `array`. A Terraform type `string` with a sensitive attribute equates to `password`. Customers that consume your deployable architecture must provide values for the input type that you define in the catalog manifest. 
+:   The type of input that a customer can define or select. The data type must be supported by the Catalog Management service. Native Terraform types map to some of the supported types. For example, the Terraform type `map` equates to `object`. The Terraform type `list` equates to `array`. A Terraform type `string` with a sensitive attribute equates to `password`. Customers that consume your deployable architecture must provide values for the input type that you define in the catalog manifest.
 
     Supported predefined types:
     * `boolean` requires a `true` or `false` string input from users.
@@ -1006,7 +1006,7 @@ If set to `true`, the readme file is not used when you onboard this version, and
 #### `terraform_version`
 {: #terraform_version}
 
-The Hashicorp Terraform runtime version that is needed to validate and install the version. Setting this value in the manifest overrides what is specified in the source code. 
+The Hashicorp Terraform runtime version that is needed to validate and install the version. Setting this value in the manifest overrides what is specified in the source code.
 
 #### `outputs`
 {: #outputs-cm}
@@ -1021,7 +1021,7 @@ Section header for information about Terraform output values.
 ```
 {: codeblock}
 
-The following values can be included in the `outputs` section: 
+The following values can be included in the `outputs` section:
 
 `outputs[].key`
 :   Specifies the output value.
@@ -1032,7 +1032,7 @@ The following values can be included in the `outputs` section:
 #### `install_type`
 {: #install_type}
 
-Specifies whether a deployable architecture is `fullstack` or `extension`. Architectures listed as extensions require prerequisites. The `dependencies` array must also completed if you set this value to `extension`. This property is ignored if `dependency_version_2` is set to `true`. 
+Specifies whether a deployable architecture is `fullstack` or `extension`. Architectures listed as extensions require prerequisites. The `dependencies` array must also completed if you set this value to `extension`. This property is ignored if `dependency_version_2` is set to `true`.
 
 #### `scripts`
 {: #scripts}
