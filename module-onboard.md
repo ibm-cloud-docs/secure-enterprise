@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2026
-lastupdated: "2026-01-07"
+lastupdated: "2026-06-19"
 
 keywords: catalog, catalogs, private catalogs, account catalogs, catalog visibility, module visibility, import module, module registry, terraform module
 
@@ -175,7 +175,7 @@ When you onboard a module to a private catalog, you can specify the specific com
 2. Select your {{site.data.keyword.sysdigsecure_short}} instance and policy. You can choose to select a predefined policy or go to {{site.data.keyword.sysdigsecure_short}} and create one of your own.
 3. Specify whether your module meets all of the controls in the policy or whether it can satisfy the requirements for a subset of the controls.
 4. If your module can meet only a subset of the controls, then you must select the controls that can be satisfied and add them.
-5. Use {{site.data.keyword.sysdigsecure_short}} to confirm compliance with the controls that you identified. {{site.data.keyword.sysdigsecure_short}} uses an inventory to track compliance. The inventory results are updated daily. Deploy the resources that your module creates, and wait for the inventory results to be updated. For more information, go to [inventory](/docs/workload-protection?topic=workload-protection-inventory)
+5. Use {{site.data.keyword.sysdigsecure_short}} to confirm compliance with the controls that you identified. {{site.data.keyword.sysdigsecure_short}} uses an inventory to track compliance. The inventory results are updated daily. Deploy the resources that your module creates, and wait for the inventory results to be updated. For more information, go to [review and prioritize remediation](/docs/workload-protection?topic=workload-protection-bp#bp-cspm-remediation).
 6. In the **Manage compliance** tab of the catalog UI, click **Add results**.
 7. Select an **Instance** and click **Apply** to apply the latest inventory results.
 
