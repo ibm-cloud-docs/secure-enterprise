@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-06-19"
+lastupdated: "2026-06-22"
 
 keywords: onboard, catalog management, private catalog, catalog manifest, software, automation, metadata
 
@@ -475,7 +475,7 @@ The following values can be included in the `compliance` section:
 :   {{site.data.keyword.sysdigsecure_short}} v1 is the only authority accepted. This is programmatically written as `scc-wp-v1`.
 
 `compliance.profiles[]`
-:   Array of policies that contain the controls being claimed. You can view [predefined policies in {{site.data.keyword.sysdigsecure_short}}]((/docs/workload-protection?topic=workload-protection-posture-policies-services).
+:   Array of policies that contain the controls being claimed. You can view [predefined policies in {{site.data.keyword.sysdigsecure_short}}](/docs/workload-protection?topic=workload-protection-posture-policies-services).
 
 `compliance.profiles[].profile_name`
 :   The name of the policy. For example, `NIST`. You can find the policy name in {{site.data.keyword.sysdigsecure_short}}.
