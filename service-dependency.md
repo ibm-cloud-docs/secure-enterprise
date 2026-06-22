@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-03-31"
+lastupdated: "2026-06-22"
 
 keywords:
 
@@ -82,8 +82,8 @@ The following dependencies apply to the following deployment locations: Dallas (
 
 |Dependencies|Dependency impacts|Customer provided|Control or data plane|Location of dependency|
 |:---|:---|:---|:---|:---|
-| None| Operations, Security compliance | No | Both |  Same region  |
-| None| Operations, Security compliance | No | Both |  Same region  |
+| corporate-uptycs| Operations, Security compliance | No | Both |  Same region  |
+| corporate-palo-alto| Operations, Security compliance | No | Both |  Same region  |
 {: row-headers}
 {: caption="IBM Cloud Projects - Data and Control plane deployment service dependency information - Minimal dependencies" caption-side="top"}
 {: tab-title="Minimal dependencies"}
