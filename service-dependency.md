@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-06-22"
+lastupdated: "2026-08-14"
 
 keywords:
 
@@ -64,7 +64,7 @@ The following dependencies apply to the following deployment locations: Dallas (
 | IBM Cloud Business Support Services | Availability | No | Both |  Same region  |
 | IBM Log Analysis and IBM Cloud Activity Tracker | Access management, Availability, Operations, Security compliance | No | Both |  Same region  |
 | IBM Cloud Classic NTP Servers | Availability, Change management | No | Both |  Same data center  |
-| IBM Cloud Kubernetes Service and Red Hat OpenShift on IBM Cloud | Availability, Change management, Disaster recovery | No | Both |  Same region  |
+| IBM Cloud Kubernetes Service and Red Hat OpenShift on IBM Cloud and ROVS | Availability, Change management, Disaster recovery | No | Both |  Same region  |
 | {{site.data.keyword.secrets-manager_full}} | Availability, Change management, Disaster recovery, Security compliance | Yes | Both |  Same region  |
 | {{site.data.keyword.monitoringlong}} | Availability, Operations | No | Both |  Same region  |
 | Akamai | Availability, Change management, Disaster recovery | No | Both |  Same region  |
