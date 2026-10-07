@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023, 2025
-lastupdated: "2025-05-27"
+  years: 2023, 2026
+lastupdated: "2026-10-07"
 
 keywords:
 
@@ -16,6 +16,10 @@ subcollection: secure-enterprise
 {: #ha-dr}
 
 {{site.data.keyword.Bluemix}} projects is a general availability (GA) service that is offered in multiple regions: Dallas, Washington, Frankfurt, and London. Each location has three different data centers for redundancy. The data for each location is kept in the three data centers near that location. If all of the data centers in a location fail, the {{site.data.keyword.cloud_notm}} Projects service for that location becomes unavailable.
+{: shortdesc}
+
+This topic contains specific information about the high availability and disaster recovery strategies and configurations for {{site.data.keyword.cloud_notm}} projects. For more information about how high availability and disaster recovery are handled for the {{site.data.keyword.cloud_notm}} platform, including concepts like cross regions, global services, and fault domains, check out the [Resiliency documentation](/docs/resiliency?topic=resiliency-ha-redundancy).
+{: tip}
 
 See [ensure zero downtime](/docs/resiliency?topic=resiliency-ha-redundancy#zero-downtime) to learn more about the disaster recovery standards. You can also find information about {{site.data.keyword.cloud_notm}} [Service Level Objectives](/docs/resiliency?topic=resiliency-slo).
 
