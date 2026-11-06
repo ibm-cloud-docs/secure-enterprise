@@ -4,7 +4,7 @@ copyright:
 
   years: 2023, 2026
 
-lastupdated: "2026-05-01"
+lastupdated: "2026-11-06"
 
 keywords:
 
@@ -20,7 +20,7 @@ subcollection: secure-enterprise
 If you experience an issue or have questions, you can use the following resources before you open a support case.
 {: shortdesc}
 
-* Ask a question in the [AI assistant](/docs/overview?topic=overview-ask-ai-assistant) from the console or the {{site.data.keyword.cloud_notm}} CLI.
+* Troubleshoot with {{site.data.keyword.paver_full}}{: external}. {{site.data.keyword.paver}} is an embedded AI operator that understands your account context, creates a resolution plan, and executes changes on your behalf, while always requiring your approval before touching your live environment.
 * Review the [FAQs about projects](/docs/secure-enterprise?topic=secure-enterprise-project-faqs) in the product documentation.
 * Review the troubleshooting documentation for [projects](/docs/secure-enterprise?topic=secure-enterprise-troubleshoot-project-access) to troubleshoot and resolve common issues.
 * Check the status of the {{site.data.keyword.cloud_notm}} platform and resources by going to the [Status page](https://cloud.ibm.com/status){: external}.
