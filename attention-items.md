@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-04-17"
+lastupdated: "2026-11-09"
 
 keywords: best practice projects, manage projects, needs attention
 
@@ -12,10 +12,11 @@ subcollection: secure-enterprise
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Viewing needs attention items
+# Viewing needs attention items to monitor project lifecycle events
 {: #needs-attention-projects}
 
 Needs attention items are events that specifically impact the project lifecycle. By viewing the needs attention items, you can monitor and address all project lifecycle events. They are located in the Needs attention widget, a centralized place to view and control these events. Events include changes that need to be reviewed, validation and deployment failures, configuration and compliance issues, and new available versions of deployable architectures.
+{: shortdesc}
 
 If you want to send and receive notifications about a project by using email, SMS, or other supported delivery channels, you can [enable event notifications for projects](/docs/secure-enterprise?topic=secure-enterprise-event-notifications-events&interface=ui).
 {: tip}

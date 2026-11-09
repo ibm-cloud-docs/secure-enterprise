@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023, 2024
-lastupdated: "2024-11-22"
+  years: 2023, 2026
+lastupdated: "2026-11-09"
 
 subcollection: secure-enterprise
 
@@ -13,10 +13,11 @@ keywords: project json, project metadata, JSON config, project config, export JS
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Project JSON
+# Understanding your project's JSON configuration in {{site.data.keyword.cloud_notm}}
 {: #json-project}
 
-Each configuration in a project is stored as JSON in a file called `project.json`. Projects require governance over configuration changes that are stored in `project.json`, for example, requiring approvals and ensuring that automated checks pass before changes are saved.
+Each configuration in an {{site.data.keyword.cloud_notm}} project is stored as JSON in a file called `project.json`. Projects require governance over configuration changes that are stored in `project.json`, for example, requiring approvals and ensuring that automated checks pass before changes are saved.
+{: shortdesc}
 
 ## What's in my Project.json file?
 {: #project-json}
@@ -111,7 +112,7 @@ Each validated and approved configuration in a project has an object in the conf
 {: #json-export}
 {: ui}
 
-As a user that's working with projects, you can export the project JSON to back up the project information outside of the {{site.data.keyword.cloud_notm}} Projects service. 
+As a user that's working with projects, you can export the project JSON to back up the project information outside of the {{site.data.keyword.cloud_notm}} Projects service.
 
 Interested in managing your project in your own Git repository? While you can export the project JSON to manually manage your project, you can also integrate your project with a Git repository directly. For more information, go to [Integrating a project with a Git repository](/docs/secure-enterprise?topic=secure-enterprise-connect-to-git).
 {: tip}
@@ -132,16 +133,16 @@ By using the following `--output json` option on the command line, you can set t
 ```
 {: codeblock}
 
-## Exporting the project JSON by using the CLI 
+## Exporting the project JSON by using the CLI
 {: #json-export-cli}
 {: cli}
 
-As a user that's working with projects, you can export the project JSON to back up the project information outside of the {{site.data.keyword.cloud_notm}} Projects service. 
+As a user that's working with projects, you can export the project JSON to back up the project information outside of the {{site.data.keyword.cloud_notm}} Projects service.
 
 Interested in managing your project in your own Git repository? While you can export the project JSON to manually manage your project, you can also integrate your project with a Git repository directly. For more information, go to [Integrating a project with a Git repository](/docs/secure-enterprise?topic=secure-enterprise-connect-to-git).
 {: tip}
 
-To export the project JSON by using the CLI, run the following `ibmcloud project get` command: 
+To export the project JSON by using the CLI, run the following `ibmcloud project get` command:
 
 ```sh
 ibmcloud project get --id ID
@@ -154,16 +155,16 @@ See [**`ibmcloud project get`**](/docs/secure-enterprise?topic=secure-enterprise
 {: #json-export-api}
 {: api}
 
-As a user that's working with projects, you can export the project JSON to back up the project information outside of the {{site.data.keyword.cloud_notm}} Projects service. 
+As a user that's working with projects, you can export the project JSON to back up the project information outside of the {{site.data.keyword.cloud_notm}} Projects service.
 
 Interested in managing your project in your own Git repository? While you can export the project JSON to manually manage your project, you can also integrate your project with a Git repository directly. For more information, go to [Integrating a project with a Git repository](/docs/secure-enterprise?topic=secure-enterprise-connect-to-git).
 {: tip}
 
-You can programmatically export the project JSON by calling the [Projects API](/apidocs/projects#get-project){: external} as shown in the following sample request: 
+You can programmatically export the project JSON by calling the [Projects API](/apidocs/projects#get-project){: external} as shown in the following sample request:
 
 ```bash
 curl -X GET --location --header "Authorization: Bearer {iam_token}" \
-  --header "Accept: application/json" \  
+  --header "Accept: application/json" \
   "{base_url}/v1/projects/{id}"
 ```
 {: curl}

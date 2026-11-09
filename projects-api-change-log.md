@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-06-05"
+  years:  2023, 2026
+lastupdated: "2026-11-09"
 
 keywords: change log for Projects API, updates to Projects API, projects API, API
 
@@ -15,7 +15,8 @@ subcollection: secure-enterprise
 # Projects API change log
 {: #projects-api-change-log}
 
-In this change log, you can learn about the latest changes, improvements, and updates for the [Projects API](/apidocs/projects). The change log lists changes that have been made, ordered by the date they were released. Changes to existing API versions are designed to be compatible with existing client applications.
+In this change log, you can learn about the latest changes, improvements, and updates for the [{{site.data.keyword.cloud_notm}} Projects API](/apidocs/projects). The change log lists changes that have been made, ordered by the date they were released. Changes to existing API versions are designed to be compatible with existing client applications.
+{: shortdesc}
 
 
 

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2024, 2025
+  years: 2024, 2026
 
-lastupdated: "2025-04-09"
+lastupdated: "2026-11-09"
 
 keywords: manage project, deploy project, merge request, merge changes, deploy configuration, deploy architecture
 
@@ -15,12 +15,13 @@ subcollection: secure-enterprise
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Deploying an architecture
+# Deploying an architecture on {{site.data.keyword.cloud_notm}}
 {: #deploy-project}
 
 After your deployment updates are validated and approved, you can deploy your architecture to your target account. You can deploy to any account that has authorized your project for deployments. For more information, see [Using an API key with Secrets Manager to authorize a project to deploy an architecture](/docs/secure-enterprise?topic=secure-enterprise-authorize-project).
+{: shortdesc}
 
-You can edit your project settings to automatically approve and deploy changes that are successfully validated. To do so, open your project and go to **Manage** > **Settings** and toggle **Auto-deploy** on. With this setting enabled, if any deployable architectures are stacked together in your project, after the first architecture is successfully validated, the remaining deployable architectures are validated, approved, and deployed sequentially according to their dependencies. If no dependencies exist between the architectures, they are deployed in parallel with one another. 
+You can edit your project settings to automatically approve and deploy changes that are successfully validated. To do so, open your project and go to **Manage** > **Settings** and toggle **Auto-deploy** on. With this setting enabled, if any deployable architectures are stacked together in your project, after the first architecture is successfully validated, the remaining deployable architectures are validated, approved, and deployed sequentially according to their dependencies. If no dependencies exist between the architectures, they are deployed in parallel with one another.
 {: tip}
 
 ## Deploying your architecture by using the console
