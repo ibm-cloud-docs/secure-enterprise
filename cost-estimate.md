@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2022, 2024
+  years: 2022, 2026
 
-lastupdated: "2024-06-04"
+lastupdated: "2026-11-09"
 
 keywords: cost estimate, starting cost, project cost
 
@@ -14,14 +14,15 @@ subcollection: secure-enterprise
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Estimating architecture costs in a project
+# Estimating architecture costs in an {{site.data.keyword.cloud_notm}} project
 {: #cost-estimate-project}
 
 Cost estimation is available for deployable architectures in the {{site.data.keyword.cloud_notm}} catalog. Depending on the deployable architecture, a starting cost is estimated based on the available data. This estimate is meant to be a starting point to help you determine how much your account could be charged for deploying an architecture. This estimated amount is subject to change as the architecture is customized within a project, and it does not include all resources, usage, licenses, fees, discounts, or taxes.
+{: shortdesc}
 
 
 
- 
+
 
 ## Viewing the starting cost for your deployable architecture
 {: #cost-deploy-arch}
@@ -43,5 +44,3 @@ After you add the deployable architecture to your project, you can configure the
 
 This estimated amount is subject to change as the architecture is customized and deployed, and it does not include all resources, usage, licenses, fees, discounts, or taxes.
 {: important}
-
-

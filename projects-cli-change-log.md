@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-06-04"
+  years:  2023, 2026
+lastupdated: "2026-11-09"
 
 keywords: change log for Project, updates to Project CLI
 
@@ -15,7 +15,8 @@ subcollection: secure-enterprise
 # Project CLI change log
 {: #cli-change-log}
 
-In this change log, you can learn about the latest changes, improvements, and updates for the Project CLI.
+In this change log, you can learn about the latest changes, improvements, and updates for the {{site.data.keyword.cloud_notm}} Project CLI.
+{: shortdesc}
 
 ## Version 0.0.37
 {: #cli-0036}
